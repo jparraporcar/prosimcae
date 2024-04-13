@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { Icon } from "./icon";
 
 import { cn } from "@/lib/utils";
 import { Icons } from "@/components/icons";
@@ -14,6 +15,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import "@/components/custom/navigation.css";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -55,10 +57,10 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function Navigation() {
   return (
-    <div className="rounded-lg border-slate-400 shadow-xl p-1 bg-slate-200">
+    <div className="fixed flex rounded-lg border-slate-400 shadow-xl p-1 bg-slate-100 h-16">
       <NavigationMenu>
         <NavigationMenuList>
-          <NavigationMenuItem>
+          <NavigationMenuItem className="flex">
             <NavigationMenuTrigger
               onPointerLeave={(event) => {
                 event.preventDefault();
@@ -69,8 +71,15 @@ export function Navigation() {
               onPointerMove={(event) => {
                 event.preventDefault();
               }}
-              className="bg-transparent"
+              className="border-2 border-transparent hover:border-2 hover:border-slate-300 p-6"
             >
+              <Icon
+                src="/images/cae-icon.webp"
+                width={30}
+                height={30}
+                alt="cae icon text"
+                className=""
+              />
               CAE Analisys
             </NavigationMenuTrigger>
             <NavigationMenuContent
@@ -112,7 +121,7 @@ export function Navigation() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          <NavigationMenuItem>
+          <NavigationMenuItem className="flex">
             <NavigationMenuTrigger
               onPointerLeave={(event) => {
                 event.preventDefault();
@@ -123,8 +132,15 @@ export function Navigation() {
               onPointerMove={(event) => {
                 event.preventDefault();
               }}
-              className="bg-transparent"
+              className="border-2 border-transparent hover:border-2 hover:border-slate-300 p-6"
             >
+              <Icon
+                src="/images/dev.webp"
+                width={45}
+                height={45}
+                alt="cae icon text"
+                className=""
+              />
               Software Development
             </NavigationMenuTrigger>
             <NavigationMenuContent
@@ -148,10 +164,10 @@ export function Navigation() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          <NavigationMenuItem>
+          <NavigationMenuItem className="flex">
             <Link href="/docs" legacyBehavior passHref>
               <NavigationMenuLink
-                className={`${navigationMenuTriggerStyle()} bg-transparent`}
+                className={`py-6 ${navigationMenuTriggerStyle()} border-2 border-transparent hover:border-2 hover:border-slate-300 p-6`}
               >
                 Contact
               </NavigationMenuLink>
