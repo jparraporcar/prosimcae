@@ -23,15 +23,9 @@ export function Navigation() {
         <NavigationMenuList>
           <NavigationMenuItem className="flex">
             <NavigationMenuTrigger
-              onPointerLeave={(event) => {
-                event.preventDefault();
-              }}
-              onPointerEnter={(event) => {
-                event.preventDefault();
-              }}
-              onPointerMove={(event) => {
-                event.preventDefault();
-              }}
+              // onPointerLeave={(event) => event.preventDefault()}
+              // onPointerEnter={(event) => event.preventDefault()}
+              // onPointerMove={(event) => event.preventDefault()}
               className="border-2 border-transparent hover:border-2 hover:border-slate-300 p-6"
             >
               <Icon
@@ -44,8 +38,8 @@ export function Navigation() {
               CAE Analisys
             </NavigationMenuTrigger>
             <NavigationMenuContent
-              onPointerLeave={(event) => event.preventDefault()}
-              onPointerEnter={(event) => event.preventDefault()}
+              // onPointerLeave={(event) => event.preventDefault()}
+              // onPointerEnter={(event) => event.preventDefault()}
               className="left-auto"
             >
               <ul className="grid lg:justify-items-center lg:items-start w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-3 lg:w-[800px]">
@@ -109,15 +103,9 @@ export function Navigation() {
           </NavigationMenuItem>
           <NavigationMenuItem className="flex">
             <NavigationMenuTrigger
-              onPointerLeave={(event) => {
-                event.preventDefault();
-              }}
-              onPointerEnter={(event) => {
-                event.preventDefault();
-              }}
-              onPointerMove={(event) => {
-                event.preventDefault();
-              }}
+              // onPointerLeave={(event) => event.preventDefault()}
+              // onPointerEnter={(event) => event.preventDefault()}
+              // onPointerMove={(event) => event.preventDefault()}
               className="border-2 border-transparent hover:border-2 hover:border-slate-300 p-6"
             >
               <Icon
@@ -130,12 +118,8 @@ export function Navigation() {
               Software Development
             </NavigationMenuTrigger>
             <NavigationMenuContent
-              onPointerLeave={(event) => {
-                event.preventDefault();
-              }}
-              onPointerEnter={(event) => {
-                event.preventDefault();
-              }}
+            // onPointerLeave={(event) => event.preventDefault()}
+            // onPointerEnter={(event) => event.preventDefault()}
             >
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-3 lg:w-[800px] "></ul>
             </NavigationMenuContent>
