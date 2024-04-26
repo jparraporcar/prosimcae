@@ -1,15 +1,29 @@
+"use client";
+
 import { PageIntro } from "@/components/custom/page-intro";
 import { PageSection } from "@/components/custom/page-section";
 
 const sections = [
   {
-    Id: "fluid",
-    image: {
-      alt: "Computer Fluid Dynamics picture",
-      height: 400,
-      src: "/images/cfd.png",
-      width: 400,
-    },
+    id: "fluid",
+    images: [
+      {
+        alt: "Laminar flow analysis",
+        height: 500,
+        src: "/images/cfd.png",
+        width: 500,
+        className: "object-contain mx-0 mb-2",
+        caption: "Laminar flow analysis",
+      },
+      {
+        alt: "GPU-Based CFD analysis",
+        height: 700,
+        src: "/images/lattice.png",
+        width: 700,
+        className: "object-contain mx-0 mt-14 mb-4",
+        caption: "GPU-Based CFD analysis",
+      },
+    ],
     title: "Computer Fluid Dynamics",
     subSections: [
       {
@@ -33,15 +47,28 @@ const sections = [
           "Our fluid mechanics analysis employs a state-of-the-art GPU-based Computational Fluid Dynamics (CFD) solver, leveraging the Lattice Boltzmann Method (LBM). This approach significantly accelerates the computation process, enabling us to handle complex simulations with enhanced speed and accuracy. LBM is particularly effective for capturing detailed fluid flow patterns and dynamic behaviors in complex geometries.",
       },
     ],
+    effectIsActive: true,
   },
   {
-    Id: "solid",
-    image: {
-      alt: "Solid Mechanics picture",
-      height: 400,
-      src: "/images/solid.png",
-      width: 400,
-    },
+    id: "solid",
+    images: [
+      {
+        alt: "Dynamics analysis",
+        height: 500,
+        src: "/images/solid.png",
+        width: 500,
+        className: "object-contain mx-0 mb-4",
+        caption: "Dynamics analysis",
+      },
+      {
+        alt: "Modal analysis",
+        height: 500,
+        src: "/images/modal.png",
+        width: 500,
+        className: "object-contain mx-0 mt-14",
+        caption: "Modal analysis",
+      },
+    ],
     title: "Solid Mechanics (FEM)",
     subSections: [
       {
@@ -60,15 +87,20 @@ const sections = [
           "Modal analysis focuses on determining the natural vibration characteristics of a structure, such as its natural frequencies and mode shapes. This type of analysis is critical for predicting potential issues with resonance and for designing systems that operate safely within their harmonic response limits. Modal analysis is particularly valuable in automotive, aerospace, and civil engineering projects, where understanding the vibrational properties can prevent failures and optimize product performance.",
       },
     ],
+    effectIsActive: true,
   },
   {
-    Id: "thermal",
-    image: {
-      alt: "Thermal analysis picture",
-      height: 400,
-      src: "/images/thermal.jpeg",
-      width: 400,
-    },
+    id: "thermal",
+    images: [
+      {
+        alt: "Mixed heat transfer analysis",
+        height: 600,
+        src: "/images/thermal.jpeg",
+        width: 600,
+        className: "object-contain mb-2",
+        caption: "Mixed heat transfer analysis",
+      },
+    ],
     title: "Thermal analysis",
     subSections: [
       {
@@ -91,10 +123,11 @@ const sections = [
           "Radiation analysis addresses heat transfer through electromagnetic waves, which is critical in environments without direct contact or medium, such as space applications or high-temperature furnaces. We model radiative heat transfer between surfaces and within participating media, allowing for accurate thermal management and control in both vacuum and atmospheric conditions.",
       },
     ],
+    effectIsActive: true,
   },
 ];
 
-const CFDPage: React.FC = () => {
+const CfdPage: React.FC = () => {
   return (
     <div className="my-28 flex text-lg flex-col space-y-16 md:space-y-24 lg:space-y-32">
       <header id="fluid" className="container px-4 md:px-6">
@@ -112,12 +145,17 @@ const CFDPage: React.FC = () => {
         />
       </header>
       {sections.map((section, index) => (
-        <section id={section.Id} key={index} className="container px-4 md:px-6">
+        <section
+          id={section.id}
+          key={index}
+          className="container px-4 md:px-6 relative -z-50"
+        >
           <PageSection
             title={section.title}
-            image={section.image}
+            images={section.images}
             subSections={section.subSections}
             imageContainerClass={`${index === 1 ? "order-last" : ""}`}
+            effectIsActive={section.effectIsActive}
           />
         </section>
       ))}
@@ -125,4 +163,4 @@ const CFDPage: React.FC = () => {
   );
 };
 
-export default CFDPage;
+export default CfdPage;

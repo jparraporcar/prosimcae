@@ -1,0 +1,12 @@
+.box {
+  transition: opacity 0.3s ease-out;
+  opacity: 0; /* Start as hidden */
+}
+
+.visible {
+  opacity: 1; /* Fully visible when in the viewport */
+}
+
+.hidden {
+  opacity: 0; /* Hidden when out of the viewport */
+}
