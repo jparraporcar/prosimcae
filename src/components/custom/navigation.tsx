@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Icon } from "./icon";
 
 import {
   NavigationMenu,
@@ -14,12 +13,17 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { ItemsList } from "./items-list";
+import Image from "next/image";
+import { Logo } from "./logo";
 
 export function Navigation() {
   return (
     <div className="fixed flex rounded-lg border-slate-400 shadow-xl p-1 bg-slate-100 h-16">
       <NavigationMenu>
         <NavigationMenuList>
+          <NavigationMenuItem>
+            <Logo />
+          </NavigationMenuItem>
           <NavigationMenuItem className="flex">
             <NavigationMenuTrigger
               // onPointerLeave={(event) => event.preventDefault()}
@@ -27,12 +31,12 @@ export function Navigation() {
               // onPointerMove={(event) => event.preventDefault()}
               className="border-2 border-transparent hover:border-2 hover:border-slate-300 p-6"
             >
-              <Icon
+              <Image
                 src="/images/cae-icon.webp"
                 width={30}
                 height={30}
                 alt="cae icon text"
-                className=""
+                className="mx-1"
               />
               CAE Analisys
             </NavigationMenuTrigger>
@@ -107,7 +111,7 @@ export function Navigation() {
               // onPointerMove={(event) => event.preventDefault()}
               className="border-2 border-transparent hover:border-2 hover:border-slate-300 p-6"
             >
-              <Icon
+              <Image
                 src="/images/dev.webp"
                 width={45}
                 height={45}

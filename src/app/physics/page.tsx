@@ -114,10 +114,6 @@ const sections = [
           "Convection analysis is vital for applications where heat transfer occurs between a surface and a moving fluid or gas. This includes natural convection, where the movement is caused by buoyancy forces due to temperature variations, and forced convection, which involves external influences like fans or pumps. Our expertise helps in designing efficient cooling strategies, enhancing heat exchanger performance, and predicting fluid flow and temperature patterns in various engineering systems.",
       },
       {
-        title: "",
-        description: "",
-      },
-      {
         title: "Radiation",
         description:
           "Radiation analysis addresses heat transfer through electromagnetic waves, which is critical in environments without direct contact or medium, such as space applications or high-temperature furnaces. We model radiative heat transfer between surfaces and within participating media, allowing for accurate thermal management and control in both vacuum and atmospheric conditions.",
@@ -131,18 +127,7 @@ const CfdPage: React.FC = () => {
   return (
     <div className="my-28 flex text-lg flex-col space-y-16 md:space-y-24 lg:space-y-32">
       <header id="fluid" className="container px-4 md:px-6">
-        <PageIntro
-          descriptionText="Our Computational Fluid Dynamics (CFD) services employ cutting-edge
-            simulation technologies to analyze and optimize fluid behavior in a
-            range of applications. From aerodynamics in automotive design to
-            convection heat transfer in thermal management systems, our advanced
-            CFD solutions help predict complex fluid interactions, pressure
-            dynamics, and flow patterns. By leveraging our deep expertise in
-            fluid dynamics, we provide precise, actionable insights that enhance
-            performance, ensure safety, and drive innovation, addressing the
-            specific fluid-related challenges of your projects with customized,
-            high-impact solutions."
-        />
+        <PageIntro descriptionText="At Innova Solutions, we are also providing comprehensive Computational Aided Engineering (CAE) solutions that encompass advanced Computational Fluid Dynamics (CFD), Solid Mechanics, and Thermal Management. Our expert team combines technical precision with innovative analysis techniques to deliver actionable insights that enhance product performance, reliability, and efficiency." />
       </header>
       {sections.map((section, index) => (
         <section
