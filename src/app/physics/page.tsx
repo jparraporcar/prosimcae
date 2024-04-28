@@ -127,7 +127,7 @@ const CfdPage: React.FC = () => {
   return (
     <div className="my-28 flex text-lg flex-col space-y-16 md:space-y-24 lg:space-y-32">
       <header id="fluid" className="container px-4 md:px-6">
-        <PageIntro descriptionText="At Innova Solutions, we are also providing comprehensive Computational Aided Engineering (CAE) solutions that encompass advanced Computational Fluid Dynamics (CFD), Solid Mechanics, and Thermal Management. Our expert team combines technical precision with innovative analysis techniques to deliver actionable insights that enhance product performance, reliability, and efficiency." />
+        <PageIntro descriptionText="At Proengine labs, we are also providing comprehensive Computational Aided Engineering (CAE) solutions that encompass advanced Computational Fluid Dynamics (CFD), Solid Mechanics, and Thermal Management. Our expert team combines technical precision with innovative analysis techniques to deliver actionable insights that enhance product performance, reliability, and efficiency." />
       </header>
       {sections.map((section, index) => (
         <section

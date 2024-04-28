@@ -3,7 +3,7 @@ import Link from "next/link";
 export const Logo: React.FC = () => {
   return (
     <Link href="/">
-      <div className="flex flex-col items-center justify-center text-base p-1 me-4">
+      <div className="flex flex-col items-center justify-center text-base p-1 me-4 hover:rounded-lg hover:bg-slate-200">
         <div>
           <span className="font-bold text-base">&lt;Pro/&gt;</span>engine
         </div>

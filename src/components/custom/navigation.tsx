@@ -45,7 +45,7 @@ export function Navigation() {
               // onPointerEnter={(event) => event.preventDefault()}
               className="left-auto"
             >
-              <ul className="grid lg:justify-items-center lg:items-start w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-3 lg:w-[800px]">
+              <ul className="grid lg:justify-items-center lg:items-start w-[400px] gap-3 p-4 md:w-[300px] md:grid-cols-2 lg:w-[500px]">
                 <li className="mx-0">
                   <ItemsList
                     title="Physics"
@@ -83,24 +83,6 @@ export function Navigation() {
                     ]}
                   />
                 </li>
-                <li className="mx-0">
-                  <ItemsList
-                    title="Industry"
-                    items={[
-                      { name: "Automotive", href: "/industry/automotive" },
-                      { name: "Electronics", href: "/industry/electronics" },
-                      { name: "Energy", href: "/energy/energy" },
-                      {
-                        name: "Manufacturing",
-                        href: "/industry/manufacturing",
-                      },
-                      {
-                        name: "Industrial equipment",
-                        href: "/industry/industrialequipment",
-                      },
-                    ]}
-                  />
-                </li>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -124,17 +106,49 @@ export function Navigation() {
             // onPointerLeave={(event) => event.preventDefault()}
             // onPointerEnter={(event) => event.preventDefault()}
             >
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-3 lg:w-[800px] "></ul>
+              <ul className="grid lg:justify-items-center lg:items-start w-[400px] gap-3 p-4 md:w-[300px] md:grid-cols-2 lg:w-[500px]">
+                <li className="mx-0">
+                  <ItemsList
+                    title="Web development"
+                    items={[
+                      {
+                        name: "Single page application",
+                        href: "/dev/#web",
+                      },
+                      {
+                        name: "Server side rendering",
+                        href: "/dev/#ssr",
+                      },
+                      {
+                        name: "Rest API development",
+                        href: "/dev/#rest",
+                      },
+                      {
+                        name: "Cloud deployment",
+                        href: "/dev/#rest",
+                      },
+                    ]}
+                  />
+                </li>
+                <li className="mx-0">
+                  <ItemsList
+                    title="Cross-platform app"
+                    items={[
+                      { name: "Android", href: "/crossplatform/#android" },
+                      { name: "IOS", href: "/crossplatform/#ios" },
+                      {
+                        name: "Progressive web app",
+                        href: "/crossplatform/#ios",
+                      },
+                      {
+                        name: "Native API integration",
+                        href: "/crossplatform/#nativeapi",
+                      },
+                    ]}
+                  />
+                </li>
+              </ul>
             </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem className="flex">
-            <Link href="/docs" legacyBehavior passHref>
-              <NavigationMenuLink
-                className={`py-6 ${navigationMenuTriggerStyle()} border-2 border-transparent hover:border-2 hover:border-slate-300 p-6`}
-              >
-                Contact
-              </NavigationMenuLink>
-            </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
