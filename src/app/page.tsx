@@ -1,9 +1,13 @@
-import Image from "next/image";
+import { Service } from "@/components/custom/Service";
+import Link from "next/link";
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Hello World
+    <main className="w-full flex flex-row flex-wrap gap-y-20 justify-evenly mt-28">
+      <Service sectionClass="" serviceName="Software Development" />
+      <Service sectionClass="" serviceName="CAE Analysis" />
     </main>
   );
-}
+};
+
+export default Home;
