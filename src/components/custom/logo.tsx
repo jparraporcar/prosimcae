@@ -1,9 +1,16 @@
 import Link from "next/link";
+import { navigationMenuTriggerStyle } from "../ui/navigation-menu";
+import { cn } from "@/lib/utils";
 
 export const Logo: React.FC = () => {
   return (
     <Link href="/">
-      <div className="flex flex-col items-center justify-center text-base p-2 me-4 hover:rounded-lg hover:bg-slate-200">
+      <div
+        className={cn([
+          navigationMenuTriggerStyle(),
+          "flex flex-col items-center justify-center text-base border-2 border-transparent hover:border-2 hover:bg-white hover:border-slate-300 py-6 pr-4 pl-1",
+        ])}
+      >
         <div>
           <span className="font-bold text-base">&lt;Pro/&gt;</span>engine
         </div>

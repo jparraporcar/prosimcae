@@ -17,10 +17,11 @@ import Image from "next/image";
 import { Logo } from "./logo";
 import { cn } from "@/lib/utils";
 import { Separator } from "../ui/separator";
+import { GiWorld } from "react-icons/gi";
 
 export function Navigation() {
   return (
-    <div className="fixed flex rounded-lg border-slate-400 shadow-xl p-1 bg-slate-100 h-16">
+    <div className="fixed flex rounded-lg border-slate-400 shadow-xl p-1 bg-slate-100 h-14">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
@@ -31,7 +32,7 @@ export function Navigation() {
               <NavigationMenuLink
                 className={cn([
                   navigationMenuTriggerStyle(),
-                  "border-2 border-transparent hover:border-2 hover:border-slate-300 py-6 pr-4 pl-1",
+                  "border-2 border-transparent hover:border-2 hover:bg-white hover:border-slate-300 py-6 pr-4 pl-1",
                 ])}
               >
                 <Image
@@ -69,9 +70,10 @@ export function Navigation() {
               <NavigationMenuLink
                 className={cn([
                   navigationMenuTriggerStyle(),
-                  "border-2 border-transparent hover:border-2 hover:border-slate-300 p-6",
+                  "border-2 border-transparent hover:border-2 hover:border-slate-300 py-6 pr-4 pl-3",
                 ])}
               >
+                <GiWorld size={22} className="mr-2" />
                 Contact us
               </NavigationMenuLink>
             </Link>
