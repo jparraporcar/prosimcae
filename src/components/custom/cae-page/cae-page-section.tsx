@@ -3,9 +3,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import "./page-section.css";
+import "../page-section.css";
 
-export interface PageSectionProps {
+export interface CaePageSectionProps {
   images: {
     alt: string;
     className?: string;
@@ -18,16 +18,16 @@ export interface PageSectionProps {
   imageContainerClass?: string;
   descriptionContainerClass?: string;
   title: string;
-  subSections: SubSection[];
+  subSections: CaeSubSection[];
   effectIsActive: boolean;
 }
 
-type SubSection = {
+type CaeSubSection = {
   title: string;
   description: string;
 };
 
-export const PageSection: React.FC<PageSectionProps> = (props) => {
+export const CaePageSection: React.FC<CaePageSectionProps> = (props) => {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -56,7 +56,7 @@ export const PageSection: React.FC<PageSectionProps> = (props) => {
       ref={ref}
       className={cn([
         `${props.effectIsActive && (isVisible ? "box visible" : "box hidden")}`,
-        "grid gap-8 md:grid-cols-2 md:items-center",
+        "grid gap-8 grid-cols-2 items-center",
         props.mainContainerClass,
       ])}
     >

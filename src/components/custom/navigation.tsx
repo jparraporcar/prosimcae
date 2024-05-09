@@ -61,7 +61,7 @@ export function Navigation() {
                   alt="cae icon text"
                   className=""
                 />
-                Software Development
+                Web Development
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>

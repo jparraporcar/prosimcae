@@ -1,9 +1,9 @@
 "use client";
 
 import { PageIntro } from "@/components/custom/page-intro";
-import { PageSection } from "@/components/custom/page-section";
+import { CaePageSection } from "@/components/custom/cae-page/cae-page-section";
 
-const sections = [
+const caeSections = [
   {
     id: "fluid",
     images: [
@@ -123,29 +123,34 @@ const sections = [
   },
 ];
 
-const CfdPage: React.FC = () => {
+const CaePage: React.FC = () => {
   return (
     <div className="my-28 flex text-lg flex-col space-y-16 md:space-y-24 lg:space-y-32">
       <header className="container px-4 md:px-6">
-        <PageIntro descriptionText="At Proengine labs, we are also providing comprehensive Computational Aided Engineering (CAE) solutions that encompass advanced Computational Fluid Dynamics (CFD), Solid Mechanics, and Thermal Management. Our expert team combines technical precision with innovative analysis techniques to deliver actionable insights that enhance product performance, reliability, and efficiency." />
+        <PageIntro
+          descriptionClass="text-gray-500 text-xl italic"
+          descriptionText="At Proengine labs, we are providing comprehensive Computational Aided Engineering (CAE) solutions that encompass advanced Computational Fluid Dynamics (CFD), Solid Mechanics, and Thermal Management. Our expert team combines technical precision with innovative analysis techniques."
+        />
       </header>
-      {sections.map((section, index) => (
-        <section
-          id={section.id}
-          key={index}
-          className="container px-4 md:px-6 relative -z-50"
-        >
-          <PageSection
-            title={section.title}
-            images={section.images}
-            subSections={section.subSections}
-            imageContainerClass={`${index === 1 ? "order-last" : ""}`}
-            effectIsActive={section.effectIsActive}
-          />
-        </section>
-      ))}
+      <div className="flex flex-col gap-y-16" style={{ marginTop: "60px" }}>
+        {caeSections.map((section, index) => (
+          <section
+            id={section.id}
+            key={index}
+            className="container px-4 md:px-6 relative -z-50"
+          >
+            <CaePageSection
+              title={section.title}
+              images={section.images}
+              subSections={section.subSections}
+              imageContainerClass={`${index === 0 || index == 2 ? "order-last" : ""}`}
+              effectIsActive={section.effectIsActive}
+            />
+          </section>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default CfdPage;
+export default CaePage;

@@ -8,8 +8,6 @@ const devData = {
     "Server Side Rendering for optimal search engine results",
     "Single Page Application to obtain the best reactive layout",
     "RestAPI design and documentation",
-    "Cross-platform mobile app design",
-    "Mobile native API integration",
     "Infrastructure on the cloud powered by AWS",
     "Continuous Deployment/Continuous integration",
   ],
@@ -24,8 +22,6 @@ const caeData = {
     "Computer Fluid Dynamics (CFD) simulations with OpenFoam",
     "Fast CFD simulations using GPU-based solver PaceFish(r)",
     "Heat transfer effects coupled",
-    "We process your custom material and apply it to our model",
-    "Postprocessing of desired vector, scalar or tensor fields",
     "Design optimization",
   ],
   serviceIntro:
@@ -102,9 +98,9 @@ const Home: React.FC = () => {
                   fill="currentColor"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M9.293 15.707a1 1 0 001.414 0l6-6a1 1 0 00-1.414-1.414L10 13.586l-4.293-4.293a1 1 0 00-1.414 1.414l5 5a1 1 0 001.414 0z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   />
                 </svg>
               </span>
@@ -125,9 +121,9 @@ const Home: React.FC = () => {
                   fill="currentColor"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M9.293 15.707a1 1 0 001.414 0l6-6a1 1 0 00-1.414-1.414L10 13.586l-4.293-4.293a1 1 0 00-1.414 1.414l5 5a1 1 0 001.414 0z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   />
                 </svg>
               </span>
