@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import "../page-section.css";
+import "./section.css";
 
 export interface CaePageSectionProps {
   images: {
@@ -27,7 +27,7 @@ type CaeSubSection = {
   description: string;
 };
 
-export const CaePageSection: React.FC<CaePageSectionProps> = (props) => {
+export const StudyCases: React.FC<CaePageSectionProps> = (props) => {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -90,7 +90,7 @@ export const CaePageSection: React.FC<CaePageSectionProps> = (props) => {
           props.descriptionContainerClass,
         ])}
       >
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+        <h2 className="text-center text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl">
           {props.title}
         </h2>
         <div className="grid gap-4 md:gap-6">

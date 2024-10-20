@@ -1,19 +1,8 @@
+import { Intro } from "@/components/custom/intro";
 import { Service } from "@/components/custom/Service";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
-
-const devData = {
-  items: [
-    "Integrated Fullstack web development",
-    "Server Side Rendering for optimal search engine results",
-    "Single Page Application to obtain the best reactive layout",
-    "RestAPI design and documentation",
-    "Infrastructure on the cloud powered by AWS",
-    "Continuous Deployment/Continuous integration",
-  ],
-  serviceIntro:
-    "We specialize in integrated full-stack web development, including server-side rendering for optimal search engine visibility and single-page applications for superior reactive layouts. Our expertise extends to REST API design, comprehensive documentation, and developing cross-platform mobile apps with Ionic. We seamlessly integrate native mobile APIs, and our cloud infrastructure is robustly powered by AWS. With a focus on continuous deployment and integration, we ensure our code is not only easily maintainable but also cleanly readable.",
-};
+import { StudyCases } from "@/components/custom/study-cases";
 
 const caeData = {
   items: [
@@ -28,43 +17,161 @@ const caeData = {
     "We deliver excellence in engineering with our cloud-based infrastructure powered by Simscale. Our services include solid mechanics simulations utilizing the robust capabilities of Code Aster, and a comprehensive suite of CFD simulations through OpenFoam. For rapid results, we leverage the GPU-based solver, PaceFish®, ensuring quick and accurate CFD analyses. Our expertise extends to heat transfer effects, custom material processing for model applications, and advanced postprocessing of vector, scalar, or tensor fields.",
 };
 
+const caeSections = [
+  {
+    id: "fluid",
+    images: [
+      {
+        alt: "Laminar flow analysis",
+        height: 500,
+        src: "/images/cfd.png",
+        width: 500,
+        className: "object-contain mx-0 mb-2",
+        caption: "Laminar flow analysis",
+      },
+      {
+        alt: "GPU-Based CFD analysis",
+        height: 700,
+        src: "/images/lattice.png",
+        width: 700,
+        className: "object-contain mx-0 mt-14 mb-4",
+        caption: "GPU-Based CFD analysis",
+      },
+    ],
+    title: "Computer Fluid Dynamics (CFD)",
+    subSections: [
+      {
+        title: "Incompressible and Compressible Flow",
+        description:
+          "We provide comprehensive solutions for both incompressible and compressible flows. Our expertise in handling incompressible flow is ideal for applications involving liquids and low-speed gases, where density remains nearly constant. Conversely, our compressible flow analysis is perfect for high-speed applications such as aerospace dynamics, where variations in density and state variables are critical.",
+      },
+      {
+        title: "Laminar Flow and Turbulent Flow",
+        description:
+          "Depending on the application requirements, we offer simulations of both laminar and turbulent flows. Our laminar flow analysis is suited for flows where the fluid moves in smooth layers, with minimal mixing. Turbulent flow, characterized by chaotic fluid particle movements, is crucial for complex simulations requiring a detailed understanding of fluid behavior under varied conditions.",
+      },
+      {
+        title: "Thermal transport",
+        description:
+          "Our fluid mechanics services also extend to thermal transport analyses, where we assess the heat transfer in conjunction with fluid flow. This analysis is vital for evaluating the thermal performance of systems in automotive, aerospace, and HVAC applications, ensuring that devices operate efficiently under varying thermal conditions.",
+      },
+      {
+        title: "GPU-Based CFD Solver Using Lattice Boltzmann Method",
+        description:
+          "Our fluid mechanics analysis employs a state-of-the-art GPU-based Computational Fluid Dynamics (CFD) solver, leveraging the Lattice Boltzmann Method (LBM). This approach significantly accelerates the computation process, enabling us to handle complex simulations with enhanced speed and accuracy. LBM is particularly effective for capturing detailed fluid flow patterns and dynamic behaviors in complex geometries.",
+      },
+    ],
+    effectIsActive: true,
+  },
+  {
+    id: "solid",
+    images: [
+      {
+        alt: "Dynamics analysis",
+        height: 500,
+        src: "/images/solid.png",
+        width: 500,
+        className: "object-contain mx-0 mb-4",
+        caption: "Dynamics analysis",
+      },
+      {
+        alt: "Modal analysis",
+        height: 500,
+        src: "/images/modal.png",
+        width: 500,
+        className: "object-contain mx-0 mt-14",
+        caption: "Modal analysis",
+      },
+    ],
+    title: "Solid Mechanics (FEM)",
+    subSections: [
+      {
+        title: "Static Analysis",
+        description:
+          "Our static analysis capabilities are split into two primary categories: linear and non-linear analyses. Linear static analysis evaluates structures under static, stable loads where the material remains within its elastic limits, ensuring that the deformations are directly proportional to the loads applied. This type of analysis is fundamental for quick checks and design verification in mechanical and structural engineering.",
+      },
+      {
+        title: "Dynamic Analysis",
+        description:
+          "Dynamic analysis is essential for evaluating the response of structures subject to time-varying loads, such as impacts, oscillations, and other transient forces. We employ sophisticated CAE tools to simulate real-world dynamic conditions, providing insights into how structures will behave under operational stresses, such as vibrations, blasts, and crash impacts. This analysis helps in designing structures that are not only stable but also resilient to dynamic and potentially disruptive forces.",
+      },
+      {
+        title: "Modal Analysis",
+        description:
+          "Modal analysis focuses on determining the natural vibration characteristics of a structure, such as its natural frequencies and mode shapes. This type of analysis is critical for predicting potential issues with resonance and for designing systems that operate safely within their harmonic response limits. Modal analysis is particularly valuable in automotive, aerospace, and civil engineering projects, where understanding the vibrational properties can prevent failures and optimize product performance.",
+      },
+    ],
+    effectIsActive: true,
+  },
+  {
+    id: "thermal",
+    images: [
+      {
+        alt: "Mixed heat transfer analysis",
+        height: 600,
+        src: "/images/thermal.jpeg",
+        width: 600,
+        className: "object-contain mb-2",
+        caption: "Mixed heat transfer analysis",
+      },
+    ],
+    title: "Thermal analysis",
+    subSections: [
+      {
+        title: "Conduction",
+        description:
+          "Our conduction analysis evaluates the heat transfer within and between solid materials without involving material motion. This process is critical for understanding how heat moves through materials like metals, insulation, or building components. We use advanced simulation tools to predict temperature distributions, heat flux, and thermal gradients, essential for optimizing material selection and thickness in heat-sensitive designs.",
+      },
+      {
+        title: "Convection",
+        description:
+          "Convection analysis is vital for applications where heat transfer occurs between a surface and a moving fluid or gas. This includes natural convection, where the movement is caused by buoyancy forces due to temperature variations, and forced convection, which involves external influences like fans or pumps. Our expertise helps in designing efficient cooling strategies, enhancing heat exchanger performance, and predicting fluid flow and temperature patterns in various engineering systems.",
+      },
+      {
+        title: "Radiation",
+        description:
+          "Radiation analysis addresses heat transfer through electromagnetic waves, which is critical in environments without direct contact or medium, such as space applications or high-temperature furnaces. We model radiative heat transfer between surfaces and within participating media, allowing for accurate thermal management and control in both vacuum and atmospheric conditions.",
+      },
+    ],
+    effectIsActive: true,
+  },
+];
+
 const Home: React.FC = () => {
   return (
-    <main className="flex flex-col items-center my-28">
-      <div className="flex flex-row justify-center text-slate-700 mb-8 gap-x-14">
-        <div className="relative">
-          <Image
-            src="/images/cae-dev-1.webp"
-            alt="Your image description"
-            width={450}
-            height={450}
-            className="rounded-lg"
-          />
-        </div>
-        <div className="flex flex-row justify-center items-center w-5/12">
-          <p className=" text-gray-500 text-2xl italic">
-            Welcome to ProEngineLabs, where we blend expertise and innovation to
-            redefine engineering solutions. Our services encompass from
-            integrated full-stack web development to cutting-edge CAE Analysis.
-            Whether you are looking to enhance your digital presence or delve
-            into advanced engineering simulations, we have the tools and
-            knowledge to elevate your projects. Join us as we embark on a
-            journey of engineering excellence and technological advancement.
-          </p>
+    <main className="flex flex-col items-center m-28">
+      <div className=" text-slate-700 mb-8">
+        <Intro
+          descriptionClass="text-gray-500 text-2xl italic"
+          descriptionText="At ProSimLabs, we are providing comprehensive Computational Aided Engineering (CAE) solutions that encompass advanced Computational Fluid Dynamics (CFD), Solid Mechanics, and Thermal Management. Our expertise combines technical precision with innovative analysis techniques."
+        />
+      </div>
+      <div
+        id="study-cases"
+        className="mb-7 flex text-lg flex-col space-y-16 md:space-y-24 lg:space-y-32"
+      >
+        <h1 className="">Study cases</h1>
+        <div className="flex flex-col gap-y-8" style={{ marginTop: "60px" }}>
+          {caeSections.map((section, index) => (
+            <section
+              id={section.id}
+              key={index}
+              className="container px-4 md:px-6 relative -z-50"
+            >
+              <StudyCases
+                title={section.title}
+                images={section.images}
+                subSections={section.subSections}
+                imageContainerClass={`${index === 0 || index == 2 ? "order-last" : ""}`}
+                effectIsActive={section.effectIsActive}
+              />
+            </section>
+          ))}
         </div>
       </div>
       <Separator orientation="horizontal" className="my-16" />
+      <h1 className="">Our Services</h1>
       <div className="w-full flex flex-row flex-wrap gap-y-20 justify-evenly text-white">
-        <Service
-          sectionClass=""
-          serviceIntro={devData.serviceIntro}
-          serviceName="Software Development"
-          items={devData.items}
-          hrefDiscover="/dev"
-        />
-        <div>
-          <Separator orientation="vertical" />
-        </div>
         <Service
           sectionClass=""
           serviceIntro={caeData.serviceIntro}
@@ -143,5 +250,21 @@ const Home: React.FC = () => {
     </main>
   );
 };
+
+// Name and surname
+
+// Job title
+
+// Company
+
+// Email
+
+// Phone number
+
+// Service name (CAE or DEV)
+
+// Service type (B2B or project)
+
+// Request explanation
 
 export default Home;

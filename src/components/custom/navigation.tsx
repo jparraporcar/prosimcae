@@ -28,40 +28,14 @@ export function Navigation() {
             <Logo />
           </NavigationMenuItem>
           <NavigationMenuItem className="flex">
-            <Link href="/cae" legacyBehavior passHref>
+            <Link href="#study-cases" legacyBehavior passHref>
               <NavigationMenuLink
                 className={cn([
                   navigationMenuTriggerStyle(),
-                  "border-2 border-transparent hover:border-2 hover:bg-white hover:border-slate-300 py-6 pr-4 pl-1",
+                  "border-2 border-transparent hover:border-2 hover:bg-white hover:border-slate-300 py-6 pr-4",
                 ])}
               >
-                <Image
-                  src="/images/cae-icon.webp"
-                  width={30}
-                  height={30}
-                  alt="cae icon text"
-                  className="mx-1"
-                />
-                CAE Analisys
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem className="flex">
-            <Link href="/dev" legacyBehavior passHref>
-              <NavigationMenuLink
-                className={cn([
-                  navigationMenuTriggerStyle(),
-                  "border-2 border-transparent hover:border-2 hover:border-slate-300 py-6 pr-4 pl-1",
-                ])}
-              >
-                <Image
-                  src="/images/dev.webp"
-                  width={45}
-                  height={45}
-                  alt="cae icon text"
-                  className=""
-                />
-                Web Development
+                Study Cases
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
@@ -73,8 +47,43 @@ export function Navigation() {
                   "border-2 border-transparent hover:border-2 hover:border-slate-300 py-6 pr-4 pl-3",
                 ])}
               >
-                <GiWorld size={22} className="mr-2" />
-                Contact us
+                Our Services
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink
+                className={cn([
+                  navigationMenuTriggerStyle(),
+                  "border-2 border-transparent hover:border-2 hover:border-slate-300 py-6 pr-4 pl-3",
+                ])}
+              >
+                Our Tools
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink
+                className={cn([
+                  navigationMenuTriggerStyle(),
+                  "border-2 border-transparent hover:border-2 hover:border-slate-300 py-6 pr-4 pl-3",
+                ])}
+              >
+                Collaborators
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink
+                className={cn([
+                  navigationMenuTriggerStyle(),
+                  "border-2 border-transparent hover:border-2 hover:border-slate-300 py-6 pr-4 pl-3",
+                ])}
+              >
+                Contact Us
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
