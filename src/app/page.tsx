@@ -1,8 +1,9 @@
-import { Intro } from "@/components/custom/intro";
-import { Service } from "@/components/custom/Service";
+import { MainSectionIntro } from "@/components/custom/main-section-intro";
+import { Service } from "@/components/custom/service";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
-import { StudyCases } from "@/components/custom/study-cases";
+import { StudyCasesSection } from "@/components/custom/study-cases-section";
+import { MainSectionTitle } from "@/components/custom/main-section-title";
 
 const caeData = {
   items: [
@@ -17,157 +18,131 @@ const caeData = {
     "We deliver excellence in engineering with our cloud-based infrastructure powered by Simscale. Our services include solid mechanics simulations utilizing the robust capabilities of Code Aster, and a comprehensive suite of CFD simulations through OpenFoam. For rapid results, we leverage the GPU-based solver, PaceFish®, ensuring quick and accurate CFD analyses. Our expertise extends to heat transfer effects, custom material processing for model applications, and advanced postprocessing of vector, scalar, or tensor fields.",
 };
 
-const caeSections = [
+const studyCasesSections = [
   {
-    id: "fluid",
-    images: [
+    sectionId: "solid",
+    title: "Computer Solid Mechanics (FEM)",
+    effectIsActive: true,
+    studyCases: [
       {
-        alt: "Laminar flow analysis",
-        height: 500,
-        src: "/images/cfd.png",
-        width: 500,
-        className: "object-contain mx-0 mb-2",
-        caption: "Laminar flow analysis",
+        studyCaseTitle:
+          "Explicit simulation of a pendrive impacting in the ground - part1",
+        images: [
+          {
+            title: "Energy balance",
+            description:
+              " In this picture we can see an energy balance including kinetic energy and internal energy",
+            alt: "Laminar flow analysis",
+            height: 500,
+            src: "/images/cfd.png",
+            width: 500,
+            className: "object-contain mx-0 mb-2",
+            caption: "Laminar flow analysis",
+          },
+          {
+            title: "Von Misses Stress Distribution",
+            description:
+              " In this picture we can see The Von Misses stress distribution along the part",
+            alt: "vonmisses stress",
+            height: 500,
+            src: "/images/cfd.png",
+            width: 500,
+            className: "object-contain mx-0 mb-2",
+            caption: "vonmisses stress",
+          },
+        ],
       },
       {
-        alt: "GPU-Based CFD analysis",
-        height: 700,
-        src: "/images/lattice.png",
-        width: 700,
-        className: "object-contain mx-0 mt-14 mb-4",
-        caption: "GPU-Based CFD analysis",
+        studyCaseTitle:
+          "Explicit simulation of a pendrive impacting in the ground - part2",
+        images: [
+          {
+            title: "Energy balance",
+            description:
+              " In this picture we can see an energy balance including kinetic energy and internal energy",
+            alt: "Laminar flow analysis",
+            height: 500,
+            src: "/images/cfd.png",
+            width: 500,
+            className: "object-contain mx-0 mb-2",
+            caption: "Laminar flow analysis",
+          },
+          {
+            title: "Von Misses Stress Distribution",
+            description:
+              " In this picture we can see The Von Misses stress distribution along the part",
+            alt: "vonmisses stress",
+            height: 500,
+            src: "/images/cfd.png",
+            width: 500,
+            className: "object-contain mx-0 mb-2",
+            caption: "vonmisses stress",
+          },
+        ],
       },
     ],
+  },
+  {
+    sectionId: "fluid",
     title: "Computer Fluid Dynamics (CFD)",
-    subSections: [
-      {
-        title: "Incompressible and Compressible Flow",
-        description:
-          "We provide comprehensive solutions for both incompressible and compressible flows. Our expertise in handling incompressible flow is ideal for applications involving liquids and low-speed gases, where density remains nearly constant. Conversely, our compressible flow analysis is perfect for high-speed applications such as aerospace dynamics, where variations in density and state variables are critical.",
-      },
-      {
-        title: "Laminar Flow and Turbulent Flow",
-        description:
-          "Depending on the application requirements, we offer simulations of both laminar and turbulent flows. Our laminar flow analysis is suited for flows where the fluid moves in smooth layers, with minimal mixing. Turbulent flow, characterized by chaotic fluid particle movements, is crucial for complex simulations requiring a detailed understanding of fluid behavior under varied conditions.",
-      },
-      {
-        title: "Thermal transport",
-        description:
-          "Our fluid mechanics services also extend to thermal transport analyses, where we assess the heat transfer in conjunction with fluid flow. This analysis is vital for evaluating the thermal performance of systems in automotive, aerospace, and HVAC applications, ensuring that devices operate efficiently under varying thermal conditions.",
-      },
-      {
-        title: "GPU-Based CFD Solver Using Lattice Boltzmann Method",
-        description:
-          "Our fluid mechanics analysis employs a state-of-the-art GPU-based Computational Fluid Dynamics (CFD) solver, leveraging the Lattice Boltzmann Method (LBM). This approach significantly accelerates the computation process, enabling us to handle complex simulations with enhanced speed and accuracy. LBM is particularly effective for capturing detailed fluid flow patterns and dynamic behaviors in complex geometries.",
-      },
-    ],
     effectIsActive: true,
-  },
-  {
-    id: "solid",
-    images: [
+    studyCases: [
       {
-        alt: "Dynamics analysis",
-        height: 500,
-        src: "/images/solid.png",
-        width: 500,
-        className: "object-contain mx-0 mb-4",
-        caption: "Dynamics analysis",
-      },
-      {
-        alt: "Modal analysis",
-        height: 500,
-        src: "/images/modal.png",
-        width: 500,
-        className: "object-contain mx-0 mt-14",
-        caption: "Modal analysis",
-      },
-    ],
-    title: "Solid Mechanics (FEM)",
-    subSections: [
-      {
-        title: "Static Analysis",
-        description:
-          "Our static analysis capabilities are split into two primary categories: linear and non-linear analyses. Linear static analysis evaluates structures under static, stable loads where the material remains within its elastic limits, ensuring that the deformations are directly proportional to the loads applied. This type of analysis is fundamental for quick checks and design verification in mechanical and structural engineering.",
-      },
-      {
-        title: "Dynamic Analysis",
-        description:
-          "Dynamic analysis is essential for evaluating the response of structures subject to time-varying loads, such as impacts, oscillations, and other transient forces. We employ sophisticated CAE tools to simulate real-world dynamic conditions, providing insights into how structures will behave under operational stresses, such as vibrations, blasts, and crash impacts. This analysis helps in designing structures that are not only stable but also resilient to dynamic and potentially disruptive forces.",
-      },
-      {
-        title: "Modal Analysis",
-        description:
-          "Modal analysis focuses on determining the natural vibration characteristics of a structure, such as its natural frequencies and mode shapes. This type of analysis is critical for predicting potential issues with resonance and for designing systems that operate safely within their harmonic response limits. Modal analysis is particularly valuable in automotive, aerospace, and civil engineering projects, where understanding the vibrational properties can prevent failures and optimize product performance.",
+        studyCaseTitle: "Study of thermal efficiency within a apartment room",
+        images: [
+          {
+            title: "Stream lines",
+            description:
+              " In this picture we can see the stream lines going through the room",
+            alt: "streamlines",
+            height: 500,
+            src: "/images/cfd.png",
+            width: 500,
+            className: "object-contain mx-0 mb-2",
+            caption: "streamlines",
+          },
+          {
+            title: "Temperature distribution in the room",
+            description:
+              " In this picture we can see the temperature distribution in the room",
+            alt: "temperaturedistr",
+            height: 500,
+            src: "/images/cfd.png",
+            width: 500,
+            className: "object-contain mx-0 mb-2",
+            caption: "temperaturedistr",
+          },
+        ],
       },
     ],
-    effectIsActive: true,
-  },
-  {
-    id: "thermal",
-    images: [
-      {
-        alt: "Mixed heat transfer analysis",
-        height: 600,
-        src: "/images/thermal.jpeg",
-        width: 600,
-        className: "object-contain mb-2",
-        caption: "Mixed heat transfer analysis",
-      },
-    ],
-    title: "Thermal analysis",
-    subSections: [
-      {
-        title: "Conduction",
-        description:
-          "Our conduction analysis evaluates the heat transfer within and between solid materials without involving material motion. This process is critical for understanding how heat moves through materials like metals, insulation, or building components. We use advanced simulation tools to predict temperature distributions, heat flux, and thermal gradients, essential for optimizing material selection and thickness in heat-sensitive designs.",
-      },
-      {
-        title: "Convection",
-        description:
-          "Convection analysis is vital for applications where heat transfer occurs between a surface and a moving fluid or gas. This includes natural convection, where the movement is caused by buoyancy forces due to temperature variations, and forced convection, which involves external influences like fans or pumps. Our expertise helps in designing efficient cooling strategies, enhancing heat exchanger performance, and predicting fluid flow and temperature patterns in various engineering systems.",
-      },
-      {
-        title: "Radiation",
-        description:
-          "Radiation analysis addresses heat transfer through electromagnetic waves, which is critical in environments without direct contact or medium, such as space applications or high-temperature furnaces. We model radiative heat transfer between surfaces and within participating media, allowing for accurate thermal management and control in both vacuum and atmospheric conditions.",
-      },
-    ],
-    effectIsActive: true,
   },
 ];
 
 const Home: React.FC = () => {
   return (
     <main className="flex flex-col items-center m-28">
-      <div className=" text-slate-700 mb-8">
-        <Intro
-          descriptionClass="text-gray-500 text-2xl italic"
+      <div id="main-section-intro" className=" text-slate-700 mb-8 pb-4">
+        <MainSectionIntro
+          descriptionClass="text-gray-500 text-2xl italic text-center"
           descriptionText="At ProSimLabs, we are providing comprehensive Computational Aided Engineering (CAE) solutions that encompass advanced Computational Fluid Dynamics (CFD), Solid Mechanics, and Thermal Management. Our expertise combines technical precision with innovative analysis techniques."
         />
       </div>
+      <div id="main-section-title">
+        <MainSectionTitle title="Study Cases" />
+      </div>
       <div
-        id="study-cases"
-        className="mb-7 flex text-lg flex-col space-y-16 md:space-y-24 lg:space-y-32"
+        id="main-section-study-cases"
+        className="flex flex-col mb-7 text-lg"
+        style={{ marginTop: "60px" }}
       >
-        <h1 className="">Study cases</h1>
-        <div className="flex flex-col gap-y-8" style={{ marginTop: "60px" }}>
-          {caeSections.map((section, index) => (
-            <section
-              id={section.id}
-              key={index}
-              className="container px-4 md:px-6 relative -z-50"
-            >
-              <StudyCases
-                title={section.title}
-                images={section.images}
-                subSections={section.subSections}
-                imageContainerClass={`${index === 0 || index == 2 ? "order-last" : ""}`}
-                effectIsActive={section.effectIsActive}
-              />
-            </section>
-          ))}
-        </div>
+        {studyCasesSections.map((studyCaseSection, index) => (
+          <StudyCasesSection
+            key={index}
+            title={studyCaseSection.title}
+            studyCases={studyCaseSection.studyCases}
+            effectIsActive={studyCaseSection.effectIsActive}
+          />
+        ))}
       </div>
       <Separator orientation="horizontal" className="my-16" />
       <h1 className="">Our Services</h1>

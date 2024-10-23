@@ -47,7 +47,7 @@ export function Navigation() {
                   "border-2 border-transparent hover:border-2 hover:border-slate-300 py-6 pr-4 pl-3",
                 ])}
               >
-                Our Services
+                Services
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
@@ -59,7 +59,7 @@ export function Navigation() {
                   "border-2 border-transparent hover:border-2 hover:border-slate-300 py-6 pr-4 pl-3",
                 ])}
               >
-                Our Tools
+                Technology
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
@@ -71,7 +71,7 @@ export function Navigation() {
                   "border-2 border-transparent hover:border-2 hover:border-slate-300 py-6 pr-4 pl-3",
                 ])}
               >
-                Collaborators
+                Collaborations
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>

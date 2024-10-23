@@ -7,7 +7,7 @@ interface PageIntroProps {
   descriptionClass?: string;
 }
 
-export const Intro: React.FC<PageIntroProps> = (props) => {
+export const MainSectionIntro: React.FC<PageIntroProps> = (props) => {
   return (
     <div
       id="descriptionContainer"
