@@ -132,7 +132,7 @@ const Home: React.FC = () => {
       </div>
       <div
         id="main-section-study-cases"
-        className="flex flex-col mb-7 text-lg"
+        className="flex flex-col mb-7 text-lg items-center"
         style={{ marginTop: "60px" }}
       >
         {studyCasesSections.map((studyCaseSection, index) => (

@@ -7,6 +7,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Separator } from "@radix-ui/react-separator";
+import "./study-case.css";
 
 interface StudyCaseProps {
   images: {
@@ -17,7 +19,6 @@ interface StudyCaseProps {
     src: string;
     width: number;
     className?: string;
-    caption: string;
   }[];
 }
 
@@ -28,10 +29,10 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
         <CarouselContent>
           {props.images.map((image, index) => (
             <CarouselItem key={index}>
-              <div className="flex flex-col mb-16 border">
-                <h1 className="text-center">{image.title}</h1>
-                <div className="flex flex-row">
-                  <div className="w-1/2">{image.description}</div>
+              <div className="flex flex-col mb-16">
+                <h1 className="text-center p-2">{image.title}</h1>
+                <div className="flex flex-row items-center ">
+                  <div className="w-1/2 p-4">{image.description}</div>
                   <figure className="w-1/2">
                     <Image
                       alt={image.alt}
@@ -42,18 +43,16 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
                       height={image.height}
                       src={image.src}
                       width={image.width}
+                      style={{ marginBottom: 0 }}
                     />
-                    <figcaption className="text-center">
-                      {image.caption}
-                    </figcaption>
                   </figure>
                 </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious size="lg" />
+        <CarouselNext size="lg" />
       </Carousel>
     </>
   );

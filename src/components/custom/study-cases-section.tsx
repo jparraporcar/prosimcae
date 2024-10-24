@@ -16,7 +16,6 @@ interface StudyCase {
     src: string;
     width: number;
     className?: string;
-    caption: string;
   }[];
 }
 
@@ -55,16 +54,20 @@ export const StudyCasesSection: React.FC<StudyCasesSectionProps> = (props) => {
       ref={ref}
       className={cn([
         `${props.effectIsActive && (isVisible ? "box visible" : "box hidden")}`,
-        "flex flex-col",
+        "flex flex-col w-10/12 items-center",
       ])}
     >
-      <h2 className="text-center text-2xl font-bold tracking-tighter mb-6">
+      <h2 className="text-center text-3xl font-bold tracking-tighter mb-6">
         {props.title}
       </h2>
       {props.studyCases.map((studyCase, index) => (
-        <div key={index} className="flex flex-col mb-4">
-          <h1 className="text-center">{studyCase.studyCaseTitle}</h1>
-          <StudyCase images={studyCase.images} />
+        <div key={index} className="flex flex-col w-11/12 mb-20">
+          <h1 className="text-center border-t border-l border-r p-2 rounded-tl-2xl rounded-tr-2xl border-slate-300 bg-slate-200">
+            {studyCase.studyCaseTitle}
+          </h1>
+          <div className="border rounded-bl-2xl rounded-br-2xl border-slate-300">
+            <StudyCase images={studyCase.images} />
+          </div>
         </div>
       ))}
     </div>
