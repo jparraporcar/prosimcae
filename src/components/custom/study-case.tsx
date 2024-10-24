@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import { Separator } from "@radix-ui/react-separator";
 import "./study-case.css";
+import { SeparatorVertical } from "lucide-react";
 
 interface StudyCaseProps {
   images: {
@@ -30,7 +31,10 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
           {props.images.map((image, index) => (
             <CarouselItem key={index}>
               <div className="flex flex-col mb-16">
-                <h1 className="text-center p-2">{image.title}</h1>
+                <h1 className="text-center px-2 pt-2 pb-1">{image.title}</h1>
+                <div
+                  className={cn(["w-56 h-1 border-b border-gray-300 mx-auto"])}
+                ></div>
                 <div className="flex flex-row items-center ">
                   <div className="w-1/2 p-4">{image.description}</div>
                   <figure className="w-1/2">

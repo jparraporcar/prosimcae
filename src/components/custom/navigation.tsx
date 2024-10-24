@@ -21,7 +21,7 @@ import { GiWorld } from "react-icons/gi";
 
 export function Navigation() {
   return (
-    <div className="fixed flex rounded-lg border-slate-400 shadow-xl p-1 bg-slate-100 h-14">
+    <div className="fixed flex rounded-lg border-slate-400 shadow-xl p-1 bg-slate-200">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
