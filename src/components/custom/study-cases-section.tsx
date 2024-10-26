@@ -57,9 +57,7 @@ export const StudyCasesSection: React.FC<StudyCasesSectionProps> = (props) => {
         "flex flex-col w-10/12 items-center",
       ])}
     >
-      <h2 className="text-center text-3xl font-bold tracking-tighter mb-6">
-        {props.title}
-      </h2>
+      <h2 className="text-center text-3xl font-bold mb-6">{props.title}</h2>
       {props.studyCases.map((studyCase, index) => (
         <div key={index} className="flex flex-col w-11/12 mb-20">
           <h1 className="text-center border-t border-l border-r p-2 rounded-tl-2xl rounded-tr-2xl border-slate-300 bg-slate-300">

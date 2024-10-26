@@ -12,7 +12,7 @@ export const Logo: React.FC = () => {
         ])}
       >
         <div>
-          <span className="font-bold text-center">Pro</span>SimLabs
+          <span className="font-bold text-center">Pro</span>EngineLabs
         </div>
       </div>
     </Link>

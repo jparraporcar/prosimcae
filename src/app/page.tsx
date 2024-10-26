@@ -4,18 +4,35 @@ import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import { StudyCasesSection } from "@/components/custom/study-cases-section";
 import { MainSectionTitle } from "@/components/custom/main-section-title";
+import RotatingImageCarousel from "@/components/custom/rotating-image-carousel";
 
-const caeData = {
-  items: [
-    "Infrastructure on the cloud powered by Simscale",
-    "Higly reliable Solid mechanics simulations with Code Aster",
-    "Computer Fluid Dynamics (CFD) simulations with OpenFoam",
-    "Fast CFD simulations using GPU-based solver PaceFish(r)",
-    "Heat transfer effects coupled",
-    "Design optimization",
-  ],
+const customEngineering = {
+  sectionClass: "bg-gray-100 dark:bg-gray-800",
+  serviceName: "Custom Engineering",
   serviceIntro:
-    "We deliver excellence in engineering with our cloud-based infrastructure powered by Simscale. Our services include solid mechanics simulations utilizing the robust capabilities of Code Aster, and a comprehensive suite of CFD simulations through OpenFoam. For rapid results, we leverage the GPU-based solver, PaceFish®, ensuring quick and accurate CFD analyses. Our expertise extends to heat transfer effects, custom material processing for model applications, and advanced postprocessing of vector, scalar, or tensor fields.",
+    "Comprehensive simulation services tailored to the specific needs of each client. We specialize in providing reliable, cost-effective solutions that address both small-scale problems and large, complex projects. Our custom engineering approach includes flexible engagement models, whether you’re looking for a long-term B2B partnership or a project-based solution. With ProEngineLabs, clients can achieve precise, validated outcomes aligned with their unique engineering challenges and standards.",
+
+  hrefDiscover: "/contact", // Adjust for routing
+
+  items: [
+    "Computational Fluid Dynamics (CFD): Expertise in fluid mechanics simulations for internal and external flows, accurately modeling heat transfer phenomena.",
+    "Finite Element Analysis (FEM): Static, dynamic, and modal analyses for solid mechanics to enhance structural integrity and predict vibrational behaviors.",
+    "Standards Compliance: Tailored solutions for meeting industry standards, ensuring project compliance with required specifications.",
+    "Flexible Engineering Solutions: B2B long-term collaboration or project-based services, customizable to fit any project scope and timeline.",
+  ],
+};
+
+const onDemandEngineering = {
+  serviceName: "On-Demand Engineering",
+  serviceIntro:
+    "Specialized on-demand engineering services, focusing on in-house simulations tailored to the automotive sector. While our initial emphasis is on BiW crash analysis and highly dynamic crash simulations, we aim to remain flexible for future expansions into other engineering areas. This service is designed to ensure that our clients can effectively meet their engineering needs while maintaining control over the simulation process.",
+  items: [
+    "Dynamic crash simulations emphasizing BiW structures to enhance safety.",
+    "Focus on helping clients meet NCAP standards, covering MDB, frontal crash, and ODB tests comprehensively.",
+    "Specialized geometry reparation for CFD simulations, ensuring all components are watertight for accurate results.",
+    "Comprehensive results post-processing and professional presentations in both English and Spanish for clarity.",
+    "Flexible engagement models cater to both small challenges and extensive projects, adapting to client needs.",
+  ],
 };
 
 const studyCasesSections = [
@@ -118,22 +135,74 @@ const studyCasesSections = [
   },
 ];
 
+const images = [
+  {
+    src: "/images/open-logos/calculix.jpg",
+    alt: "CalculiX",
+    description: "Open-source FEA solver for structural analysis.",
+  },
+  {
+    src: "/images/open-logos/lsprepost-logo.png",
+    alt: "LS-PrePost",
+    description: "Tool for LS-DYNA solver result processing.",
+  },
+  {
+    src: "/images/open-logos/openradioss.jpg",
+    alt: "OpenRadioss",
+    description: "Dynamic analysis solver for crash simulations.",
+  },
+  {
+    src: "/images/open-logos/paraview-logo.svg",
+    alt: "ParaView",
+    description: "3D visualization for simulation data.",
+  },
+  {
+    src: "/images/open-logos/prepomax-logo.jpg",
+    alt: "PrePoMax",
+    description: "Pre-processor for CalculiX solver.",
+  },
+  {
+    src: "/images/open-logos/openfoam-logo.png",
+    alt: "OpenFOAM",
+    description: "CFD solver for fluid simulations.",
+  },
+];
+
 const Home: React.FC = () => {
   return (
     <main className="flex flex-col items-center m-28">
       <div id="main-section-intro" className=" text-slate-700 mb-8 pb-4">
         <MainSectionIntro
           descriptionClass="text-gray-500 text-2xl italic text-center"
-          descriptionText="At ProSimLabs, we are providing comprehensive Computational Aided Engineering (CAE) solutions that encompass advanced Computational Fluid Dynamics (CFD), Solid Mechanics, and Thermal Management. Our expertise combines technical precision with innovative analysis techniques."
+          descriptionText="At ProEngineLabs, we are providing comprehensive Computational Aided Engineering (CAE) solutions that encompass advanced Computational Fluid Dynamics (CFD), Solid Mechanics, and Thermal Management. Our expertise combines technical precision with innovative analysis techniques."
         />
       </div>
-      <div id="main-section-title">
+      <div id="main-section-title-our-services">
+        <MainSectionTitle title="Our Services" />
+      </div>
+      <div className="w-full flex flex-row flex-wrap gap-y-20 justify-evenly">
+        <Service
+          sectionClass=""
+          serviceIntro={customEngineering.serviceIntro}
+          serviceName={customEngineering.serviceName}
+          items={customEngineering.items}
+          hrefDiscover="/"
+        />
+        <Service
+          sectionClass="bg-gray-100 mt-6 flex flex-col justify-between"
+          serviceName={onDemandEngineering.serviceName}
+          serviceIntro={onDemandEngineering.serviceIntro}
+          hrefDiscover="/on-demand-engineering"
+          items={onDemandEngineering.items}
+        />
+      </div>
+      <Separator orientation="horizontal" className="my-16" />
+      <div id="main-section-title-study-cases">
         <MainSectionTitle title="Study Cases" />
       </div>
       <div
         id="main-section-study-cases"
-        className="flex flex-col mb-7 text-lg items-center"
-        style={{ marginTop: "60px" }}
+        className="flex flex-col mb-7 text-lg items-center mt-6"
       >
         {studyCasesSections.map((studyCaseSection, index) => (
           <StudyCasesSection
@@ -145,86 +214,44 @@ const Home: React.FC = () => {
         ))}
       </div>
       <Separator orientation="horizontal" className="my-16" />
-      <h1 className="">Our Services</h1>
-      <div className="w-full flex flex-row flex-wrap gap-y-20 justify-evenly text-white">
-        <Service
-          sectionClass=""
-          serviceIntro={caeData.serviceIntro}
-          serviceName="CAE Analysis"
-          items={caeData.items}
-          hrefDiscover="/cae"
-        />
+      <div id="main-section-title-study-cases">
+        <MainSectionTitle title="Technology Stack" />
       </div>
-      <Separator orientation="horizontal" className="my-16" />
-      <div className="flex flex-row justify-start ml-24 gap-x-12">
-        <div>
-          <Image
-            src="/images/workplace.webp"
-            alt="Your image description"
-            width={300}
-            height={300}
-            className="rounded-lg"
-          />
-        </div>
-        <div className=" w-6/12 flex flex-col justify-center gap-y-6 text-xl">
-          <p className="text-slate-500">
-            Our services offer two flexible options:
-          </p>
-          <ul className="space-y-2 text-gray-500 dark:text-gray-400">
-            <li className="flex items-start">
-              <span>
-                <svg
-                  className="mr-2 h-5 w-5 flex-shrink-0 text-gray-500 dark:text-gray-400"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M9.293 15.707a1 1 0 001.414 0l6-6a1 1 0 00-1.414-1.414L10 13.586l-4.293-4.293a1 1 0 00-1.414 1.414l5 5a1 1 0 001.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </span>
-              <span>
-                Request a custom project where we provide a free budget,
-                timeline, and cost estimate after discussing your needs. Once
-                approved, we manage the project using the Scrum methodology,
-                ensuring regular online meetings for progress updates and
-                adaptations.
-              </span>
-            </li>
-            <li className="flex items-start">
-              <span>
-                <svg
-                  className="mr-2 h-5 w-5 flex-shrink-0 text-gray-500 dark:text-gray-400"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M9.293 15.707a1 1 0 001.414 0l6-6a1 1 0 00-1.414-1.414L10 13.586l-4.293-4.293a1 1 0 00-1.414 1.414l5 5a1 1 0 001.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </span>
-              <span>
-                Hire an engineer for a B2B contract, guaranteeing their
-                availability throughout the project. Requesting a budget is free
-                of charge.
-              </span>
-            </li>
-          </ul>
-          <p className="text-slate-500">
-            Specific details for each option are discussed on the service
-            webpage
-          </p>
-        </div>
+      <div>
+        <RotatingImageCarousel images={images} />
       </div>
     </main>
   );
 };
+
+// Open-Source Tools and Expertise
+// Trusted Open-Source Software
+// OpenFOAM for Computational Fluid Dynamics (CFD) simulations
+// [Your FEM Software] for Finite Element Method (FEM) analyses
+// Why Open-Source?
+// Transparency: Full access to methodologies and algorithms
+// Community-Driven Excellence: Continuous improvements and updates
+// Cost-Effectiveness: No licensing fees reduce project costs
+// Flexibility: Customizable to meet specific project requirements
+// Scientific Research Supporting Open-Source Tools
+// Description
+// A collection of peer-reviewed research articles and case studies using open-source software (e.g., OpenFOAM) to successfully tackle real-world engineering challenges.
+// Research Highlights
+// Example 1: Study on CFD analysis of industrial fluid flow using OpenFOAM
+// Example 2: Open-source FEM applications in structural integrity assessment
+// Purpose
+// Reinforce the credibility of open-source tools by demonstrating their use in various validated academic and industry applications.
+// Collaboration Opportunities
+// Join Our Network of Professionals
+// Invitation for skilled engineers to collaborate on innovative projects.
+// CTA Button
+// "Submit Your CV" (links to Collaboration Form)
+// Contact Us
+// For Clients
+// Custom Solutions Contact Form
+// B2B Partnerships Contact Form
+// For Collaborators
+// Collaboration Submission Form
 
 // Name and surname
 
