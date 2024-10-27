@@ -18,7 +18,7 @@ export const Service: React.FC<ServiceProps> = (props) => {
         props.sectionClass,
       ])}
     >
-      <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-50 mb-4">
+      <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-50 mb-4 self-center">
         {props.serviceName}
       </h2>
       <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed">
@@ -34,12 +34,12 @@ export const Service: React.FC<ServiceProps> = (props) => {
           ))}
         </ul>
       </div>
-      <div className="mt-6">
+      <div className="mt-6 mx-auto">
         <Link
-          className="inline-flex items-center px-6 py-2 text-sm font-medium text-white bg-gray-600 rounded-md shadow hover:bg-gray-700 dark:bg-gray-500 dark:hover:bg-gray-600"
+          className="inline-flex items-center px-6 py-2 text-xl font-medium text-white bg-gray-600 rounded-md shadow hover:bg-gray-700 dark:bg-gray-500 dark:hover:bg-gray-600"
           href={props.hrefDiscover}
         >
-          Discover
+          Get in touch!
         </Link>
       </div>
     </section>

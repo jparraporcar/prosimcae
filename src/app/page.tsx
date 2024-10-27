@@ -5,6 +5,15 @@ import Image from "next/image";
 import { StudyCasesSection } from "@/components/custom/study-cases-section";
 import { MainSectionTitle } from "@/components/custom/main-section-title";
 import RotatingImageCarousel from "@/components/custom/rotating-image-carousel";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardHeader,
+  CardContent,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 
 const customEngineering = {
   sectionClass: "bg-gray-100 dark:bg-gray-800",
@@ -135,7 +144,7 @@ const studyCasesSections = [
   },
 ];
 
-const images = [
+const openImages = [
   {
     src: "/images/open-logos/calculix.jpg",
     alt: "CalculiX",
@@ -168,6 +177,29 @@ const images = [
   },
 ];
 
+const comImages = [
+  {
+    src: "/images/com-logos/ansa-logo.svg",
+    alt: "ANSA",
+    description: "Pre-processor for advanced CAE modeling.",
+  },
+  {
+    src: "/images/com-logos/meta-logo.svg",
+    alt: "META",
+    description: "Post-processing tool for CAE data analysis.",
+  },
+  {
+    src: "/images/com-logos/simulia-abaqus-logo.png",
+    alt: "SIMULIA Abaqus Standard",
+    description: "Implicit FEA solver for structural analysis.",
+  },
+  {
+    src: "/images/com-logos/lsdyna-logo.svg",
+    alt: "LS-DYNA",
+    description: "Explicit FEA solver for dynamic simulations.",
+  },
+];
+
 const Home: React.FC = () => {
   return (
     <main className="flex flex-col items-center m-28">
@@ -178,7 +210,7 @@ const Home: React.FC = () => {
         />
       </div>
       <div id="main-section-title-our-services">
-        <MainSectionTitle title="Our Services" />
+        <MainSectionTitle title="Services" />
       </div>
       <div className="w-full flex flex-row flex-wrap gap-y-20 justify-evenly">
         <Service
@@ -198,6 +230,28 @@ const Home: React.FC = () => {
       </div>
       <Separator orientation="horizontal" className="my-16" />
       <div id="main-section-title-study-cases">
+        <MainSectionTitle title="Technology" />
+      </div>
+      <div className="w-full flex flex-row flex-wrap gap-y-20 justify-evenly">
+        <section className="w-5/12 flex flex-col px-6 py-4 mt-2 bg-white dark:bg-gray-800 items-center">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-50">
+            {customEngineering.serviceName}
+          </h2>
+          <div>
+            <RotatingImageCarousel images={openImages} />
+          </div>
+        </section>
+        <section className="w-5/12 flex flex-col px-6 py-4 mt-2 bg-white dark:bg-gray-800 items-center">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-50">
+            {onDemandEngineering.serviceName}
+          </h2>
+          <div>
+            <RotatingImageCarousel images={comImages} />
+          </div>
+        </section>
+      </div>
+      <Separator orientation="horizontal" className="mt-4 mb-16" />
+      <div id="main-section-title-study-cases">
         <MainSectionTitle title="Study Cases" />
       </div>
       <div
@@ -215,11 +269,40 @@ const Home: React.FC = () => {
       </div>
       <Separator orientation="horizontal" className="my-16" />
       <div id="main-section-title-study-cases">
-        <MainSectionTitle title="Technology Stack" />
+        <MainSectionTitle title="Collaborations" />
       </div>
-      <div>
-        <RotatingImageCarousel images={images} />
-      </div>
+      <section className="bg-gray-100 py-12">
+        <div className="container mx-auto px-6">
+          <Card className="bg-white shadow-lg rounded-lg">
+            <CardHeader className="text-center pb-6">
+              <CardTitle className="text-gray-900 text-3xl">
+                Join Our Network of Professionals
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4 flex flex-col items-center gap-y-4">
+              <p className="text-center text-gray-700 text-2xl">
+                We invite skilled engineers and simulation experts to
+                collaborate on innovative projects.
+              </p>
+              <ul className="text-gray-700 list-disc list-inside mx-4 text-xl flex flex-col gap-y-3">
+                <li>Work on diverse and exciting projects</li>
+                <li>Professional growth and skill enhancement</li>
+                <li>Flexible collaboration arrangements</li>
+              </ul>
+              <div className="text-center mt-8">
+                <Link href="/collaboration-form">
+                  <Button
+                    variant="outline"
+                    className="border-gray-500 text-gray-700 bg-gray-200 hover:bg-gray-500 text-xl"
+                  >
+                    Submit Your CV
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
     </main>
   );
 };

@@ -35,24 +35,12 @@ export function Navigation() {
                   "border-2 border-transparent hover:border-2 hover:bg-white hover:border-slate-300 py-6 pr-4",
                 ])}
               >
-                Study Cases
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href="/contactus" legacyBehavior passHref>
-              <NavigationMenuLink
-                className={cn([
-                  navigationMenuTriggerStyle(),
-                  "border-2 border-transparent hover:border-2 hover:border-slate-300 py-6 pr-4 pl-3",
-                ])}
-              >
                 Services
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/" legacyBehavior passHref>
+            <Link href="/contactus" legacyBehavior passHref>
               <NavigationMenuLink
                 className={cn([
                   navigationMenuTriggerStyle(),
@@ -71,7 +59,7 @@ export function Navigation() {
                   "border-2 border-transparent hover:border-2 hover:border-slate-300 py-6 pr-4 pl-3",
                 ])}
               >
-                Collaborations
+                Study Cases
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
@@ -83,7 +71,7 @@ export function Navigation() {
                   "border-2 border-transparent hover:border-2 hover:border-slate-300 py-6 pr-4 pl-3",
                 ])}
               >
-                Contact Us
+                Collaborations
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>

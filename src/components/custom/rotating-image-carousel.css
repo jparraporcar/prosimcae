@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -20px;
 }
 
 .image-wrapper {
@@ -28,7 +29,7 @@
 }
 
 .image {
-  width: 110px;
+  width: 115px;
   height: auto; /* Preserve aspect ratio */
   border-radius: 8px;
 }

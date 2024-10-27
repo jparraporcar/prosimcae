@@ -12,7 +12,7 @@ export default function RotatingImageCarousel({
   images,
 }: RotatingImageCarouselProps) {
   const [angle, setAngle] = useState(0);
-  const radius = 225; // Adjust radius based on design needs
+  const radius = 220; // Adjust radius based on design needs
 
   useEffect(() => {
     const interval = setInterval(() => {
