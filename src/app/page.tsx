@@ -205,30 +205,31 @@ const Home: React.FC = () => {
     <main className="flex flex-col items-center m-28">
       <div id="main-section-intro" className=" text-slate-700 mb-8 pb-4">
         <MainSectionIntro
-          descriptionClass="text-gray-500 text-2xl italic text-center"
+          descriptionContainerClass="appear-fading"
+          descriptionClass="text-gray-500 text-2xl italic text-center "
           descriptionText="At ProEngineLabs, we are providing comprehensive Computational Aided Engineering (CAE) solutions that encompass advanced Computational Fluid Dynamics (CFD), Solid Mechanics, and Thermal Management. Our expertise combines technical precision with innovative analysis techniques."
         />
       </div>
-      <div id="main-section-title-our-services">
+      <div id="main-section-title-our-services" className="slide-in-top">
         <MainSectionTitle title="Services" />
       </div>
-      <div className="w-full flex flex-row flex-wrap gap-y-20 justify-evenly">
+      <div className="w-full flex flex-row flex-wrap gap-y-20 justify-evenly mt-4">
         <Service
-          sectionClass=""
+          sectionClass="slide-in-left"
           serviceIntro={customEngineering.serviceIntro}
           serviceName={customEngineering.serviceName}
           items={customEngineering.items}
           hrefDiscover="/"
         />
         <Service
-          sectionClass="bg-gray-100 mt-6 flex flex-col justify-between"
+          sectionClass="slide-in-right"
           serviceName={onDemandEngineering.serviceName}
           serviceIntro={onDemandEngineering.serviceIntro}
           hrefDiscover="/on-demand-engineering"
           items={onDemandEngineering.items}
         />
       </div>
-      <Separator orientation="horizontal" className="my-16" />
+      <Separator orientation="horizontal" className="mt-20 mb-16" />
       <div id="main-section-title-study-cases">
         <MainSectionTitle title="Technology" />
       </div>
@@ -250,13 +251,13 @@ const Home: React.FC = () => {
           </div>
         </section>
       </div>
-      <Separator orientation="horizontal" className="mt-4 mb-16" />
+      <Separator orientation="horizontal" className="mb-16 mt-20" />
       <div id="main-section-title-study-cases">
         <MainSectionTitle title="Study Cases" />
       </div>
       <div
         id="main-section-study-cases"
-        className="flex flex-col mb-7 text-lg items-center mt-6"
+        className="flex flex-col text-lg items-center mt-6"
       >
         {studyCasesSections.map((studyCaseSection, index) => (
           <StudyCasesSection
@@ -267,7 +268,7 @@ const Home: React.FC = () => {
           />
         ))}
       </div>
-      <Separator orientation="horizontal" className="my-16" />
+      <Separator orientation="horizontal" className="mb-20" />
       <div id="main-section-title-study-cases">
         <MainSectionTitle title="Collaborations" />
       </div>

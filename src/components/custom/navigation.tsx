@@ -12,27 +12,34 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { ItemsList } from "./items-list";
-import Image from "next/image";
-import { Logo } from "./logo";
 import { cn } from "@/lib/utils";
-import { Separator } from "../ui/separator";
-import { GiWorld } from "react-icons/gi";
 
 export function Navigation() {
   return (
-    <div className="fixed flex rounded-lg border-slate-400 shadow-xl p-1 bg-slate-200">
+    <div className="fixed flex rounded-lg shadow-xl p-1 bg-white">
       <NavigationMenu>
         <NavigationMenuList>
-          <NavigationMenuItem>
-            <Logo />
-          </NavigationMenuItem>
-          <NavigationMenuItem className="flex">
-            <Link href="#study-cases" legacyBehavior passHref>
+          <NavigationMenuItem id="navitemtest">
+            <Link href="/" legacyBehavior passHref>
               <NavigationMenuLink
                 className={cn([
                   navigationMenuTriggerStyle(),
-                  "border-2 border-transparent hover:border-2 hover:bg-white hover:border-slate-300 py-6 pr-4",
+                  "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
+                ])}
+              >
+                <span className="font-bold text-center bg-transparent">
+                  Pro
+                </span>
+                EngineLabs
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem className="flex">
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink
+                className={cn([
+                  navigationMenuTriggerStyle(),
+                  "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
                 ])}
               >
                 Services
@@ -40,11 +47,11 @@ export function Navigation() {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/contactus" legacyBehavior passHref>
+            <Link href="/" legacyBehavior passHref>
               <NavigationMenuLink
                 className={cn([
                   navigationMenuTriggerStyle(),
-                  "border-2 border-transparent hover:border-2 hover:border-slate-300 py-6 pr-4 pl-3",
+                  "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
                 ])}
               >
                 Technology
@@ -56,7 +63,7 @@ export function Navigation() {
               <NavigationMenuLink
                 className={cn([
                   navigationMenuTriggerStyle(),
-                  "border-2 border-transparent hover:border-2 hover:border-slate-300 py-6 pr-4 pl-3",
+                  "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
                 ])}
               >
                 Study Cases
@@ -68,7 +75,7 @@ export function Navigation() {
               <NavigationMenuLink
                 className={cn([
                   navigationMenuTriggerStyle(),
-                  "border-2 border-transparent hover:border-2 hover:border-slate-300 py-6 pr-4 pl-3",
+                  "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
                 ])}
               >
                 Collaborations

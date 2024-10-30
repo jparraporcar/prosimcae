@@ -2,7 +2,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 interface PageIntroProps {
-  descriptionText: string;
+  descriptionText?: string;
   descriptionContainerClass?: string;
   descriptionClass?: string;
 }
