@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import "./study-cases-section.css";
 
-import { StudyCase } from "./study-case";
+import { StudyCase } from "../study-case";
 
 interface StudyCase {
   studyCaseTitle: string;
