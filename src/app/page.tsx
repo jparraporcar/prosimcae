@@ -1,5 +1,5 @@
 import { MainSectionIntro } from "@/components/custom/main-section-intro";
-import { Service } from "@/components/custom/service";
+import { Service } from "../components/custom/service";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import { StudyCasesSection } from "@/components/custom/client/study-cases-section";
