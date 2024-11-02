@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { FaCheck } from "react-icons/fa";
 import "./service.css";
+import { ContactDialogCustom } from "./contact-dialog-custom";
 
 interface ServiceProps {
   sectionClass?: string;
@@ -9,6 +10,7 @@ interface ServiceProps {
   serviceIntro: string;
   hrefDiscover: string;
   items: string[];
+  dialogElement: React.ReactNode;
 }
 
 export const Service: React.FC<ServiceProps> = (props) => {
@@ -31,14 +33,7 @@ export const Service: React.FC<ServiceProps> = (props) => {
           </li>
         ))}
       </ul>
-      <div className="mt-6 mx-auto">
-        <Link
-          className="px-6 py-2 text-xl rounded-md shadow gradient-effect"
-          href={props.hrefDiscover}
-        >
-          Get in touch!
-        </Link>
-      </div>
+      <div className="mt-6 mx-auto">{props.dialogElement}</div>
     </section>
   );
 };

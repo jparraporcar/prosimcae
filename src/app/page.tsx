@@ -21,6 +21,7 @@ import {
   openImages,
   studyCasesSections,
 } from "@/lib/content-landing";
+import { ContactDialogCustom } from "@/components/custom/contact-dialog-custom";
 
 const Home: React.FC = () => {
   return (
@@ -42,6 +43,7 @@ const Home: React.FC = () => {
           serviceName={customEngineering.serviceName}
           items={customEngineering.items}
           hrefDiscover="/"
+          dialogElement={<ContactDialogCustom />}
         />
         <Service
           sectionClass="slide-in-right"
@@ -49,6 +51,7 @@ const Home: React.FC = () => {
           serviceIntro={onDemandEngineering.serviceIntro}
           hrefDiscover="/on-demand-engineering"
           items={onDemandEngineering.items}
+          dialogElement={<ContactDialogCustom />}
         />
       </div>
       <Separator orientation="horizontal" className="mt-20 mb-16" />
