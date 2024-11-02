@@ -1,0 +1,9 @@
+button[role="combobox"] {
+  width: 208px;
+  margin-left: 0px;
+}
+
+button[id=":r6:-form-item"] {
+  margin-left: 0px;
+  width: 208px;
+}
