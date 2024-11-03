@@ -3,7 +3,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -22,35 +21,61 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
 import "./contact-dialog-custom-form.css";
 
+const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(20[0-9]{2})$/;
+
 const formSchema = z.object({
-  company: z.string().min(4, {
-    message: "Company name must be at least 4 characters.",
+  company: z.string({ required_error: "This field is required" }).min(4, {
+    message: "At least 4 characters.",
   }),
-  country: z.string().min(4, {
-    message: "Company location name must be at least 4 characters.", // look for collection of states and change to selection component
+  country: z.string({ required_error: "This field is required" }).min(4, {
+    message: "At least 4 characters.", // look for collection of states and change to selection component
   }),
-  contact: z.string().min(6, {
-    message: "Contact name must be at least 6 characters.",
+  contactName: z.string({ required_error: "This field is required" }).min(6, {
+    message: "At least 4 characters.",
   }),
-  email: z.string().email({
-    message: "Please enter a valid email address.",
+  contactEmail: z.string({ required_error: "This field is required" }).email({
+    message: "Invalid email address.",
   }),
-  complexity: z.string({
-    required_error: "Please select a level of complexity.",
-  }),
+  complexity: z
+    .string({ required_error: "This field is required" })
+    .refine((value) => ["Low", "Middle", "High"].includes(value), {
+      message: "Levels: Low, Middle, or High.",
+    }),
+  estDeadline: z
+    .string({ required_error: "This field is required" })
+    .refine((value) => dateRegex.test(value), {
+      message: "Format: DD/MM/YYYY",
+    }),
+  explanation: z.string({ required_error: "This field is required" }).refine(
+    (value) => {
+      const wordCount = value.trim().split(/\s+/).length; // Count the number of words
+      return wordCount <= 300; // Validate the word count
+    },
+    {
+      message: "Project explanation should not exceed 300 words.",
+    }
+  ),
 });
 
-export const ContactDialogCustomForm = () => {
+interface ContactDialogCustomForm {
+  closeDialog: () => void;
+}
+
+export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
+  props
+) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       company: "",
       country: "",
-      contact: "",
-      email: "",
+      contactName: "",
+      contactEmail: "",
       complexity: "",
+      estDeadline: "",
     },
   });
 
@@ -58,6 +83,7 @@ export const ContactDialogCustomForm = () => {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values);
+    props.closeDialog();
   }
   return (
     <Form {...form}>
@@ -104,10 +130,10 @@ export const ContactDialogCustomForm = () => {
           <div className="w-52">
             <FormField
               control={form.control}
-              name="contact"
+              name="contactName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Contact</FormLabel>
+                  <FormLabel>Contact name</FormLabel>
                   <FormControl>
                     <Input placeholder="" {...field} />
                   </FormControl>
@@ -122,10 +148,10 @@ export const ContactDialogCustomForm = () => {
           <div className="w-52">
             <FormField
               control={form.control}
-              name="email"
+              name="contactEmail"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>Contact email</FormLabel>
                   <FormControl>
                     <Input placeholder="" {...field} />
                   </FormControl>
@@ -138,28 +164,71 @@ export const ContactDialogCustomForm = () => {
             />
           </div>
         </div>
+        <div className="w-full flex flex-row justify-between">
+          <div className="w-52">
+            <FormField
+              control={form.control}
+              name="complexity"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Project complexity</FormLabel>
+                  <Select
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                  >
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Project complexity" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectItem value="Low">Low</SelectItem>
+                      <SelectItem value="Middle">Middle</SelectItem>
+                      <SelectItem value="High">High</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+          <div className="w-52">
+            <FormField
+              control={form.control}
+              name="estDeadline"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Estimated Deadline</FormLabel>
+                  <FormControl>
+                    <Input placeholder="DD/MM/YYYY" {...field} />
+                  </FormControl>
+                  {/* <FormDescription>
+                Please indicate your corporate email
+              </FormDescription> */}
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+        </div>
         <FormField
           control={form.control}
-          name="complexity"
+          name="explanation"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Project complexity</FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <FormControl>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Project complexity" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  <SelectItem value="Low">Low</SelectItem>
-                  <SelectItem value="Middle">Middle</SelectItem>
-                  <SelectItem value="High">High</SelectItem>
-                </SelectContent>
-              </Select>
+              <FormLabel>Project explanation</FormLabel>
+              <FormControl>
+                <Textarea
+                  className="resize-none h-28"
+                  placeholder="Explain briefly your project request here please. We will contact you to know more details :)!"
+                  {...field}
+                />
+              </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
+
         <div className="w-full flex flex-row justify-end">
           <Button className="mr-0" type="submit">
             Submit

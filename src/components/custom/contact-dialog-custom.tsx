@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -11,10 +13,17 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ContactDialogCustomForm } from "./contact-dialog-custom-form";
+import { useState } from "react";
 
 export const ContactDialogCustom: React.FC = () => {
+  const [switchDialog, setSwitchDialog] = useState<boolean>(false);
+
+  const handleSwitchDialog = () => {
+    setSwitchDialog((prevState) => !prevState);
+  };
+
   return (
-    <Dialog>
+    <Dialog onOpenChange={handleSwitchDialog} open={switchDialog}>
       <DialogTrigger asChild>
         <Button className="px-6 py-2 text-xl rounded-md shadow gradient-effect">
           Get In Touch
@@ -31,7 +40,7 @@ export const ContactDialogCustom: React.FC = () => {
             contact you as soon as posible
           </DialogDescription>
         </DialogHeader>
-        <ContactDialogCustomForm />
+        <ContactDialogCustomForm closeDialog={() => setSwitchDialog(false)} />
       </DialogContent>
     </Dialog>
   );
