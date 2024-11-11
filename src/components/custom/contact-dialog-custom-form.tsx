@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import "./contact-dialog-custom-form.css";
+import { useEffect } from "react";
 
 const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(20[0-9]{2})$/;
 
@@ -76,15 +77,40 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
       contactEmail: "",
       complexity: "",
       estDeadline: "",
+      explanation: "",
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
-    props.closeDialog();
-  }
+  const { isSubmitting, isSubmitSuccessful, errors } = form.formState;
+  console.log(isSubmitSuccessful, "first");
+
+  useEffect(() => {
+    if (isSubmitSuccessful) {
+      console.log(isSubmitSuccessful, "second");
+      props.closeDialog();
+    }
+  }, [isSubmitSuccessful]);
+
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    const rawData = {
+      company: data.company,
+      country: data.country,
+      contactName: data.contactName,
+      contactEmail: data.contactEmail,
+      complexity: data.complexity,
+      estDeadline: data.estDeadline,
+      explanation: data.explanation,
+    };
+
+    const res = await fetch("http://localhost:3001/api/custom", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(rawData),
+    });
+  };
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
