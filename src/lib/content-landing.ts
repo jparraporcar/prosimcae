@@ -11,19 +11,22 @@ export const customEngineering = {
     "Finite Element Analysis (FEM): Static, dynamic, and modal analyses for solid mechanics to enhance structural integrity and predict vibrational behaviors.",
     "Standards Compliance: Tailored solutions for meeting industry standards, ensuring project compliance with required specifications.",
     "Flexible Engineering Solutions: B2B long-term collaboration or project-based services, customizable to fit any project scope and timeline.",
+    "Highly paralellalized simulations can be performed and results obtained in a timely manner",
+    "This service is provided remotely, however inhouse work can be done prior agreement on the conditions",
   ],
 };
 
 export const onDemandEngineering = {
   serviceName: "On-Demand Engineering",
   serviceIntro:
-    "Specialized on-demand engineering services, focusing on in-house simulations tailored to the automotive sector. While our initial emphasis is on BiW crash analysis and highly dynamic crash simulations, we aim to remain flexible for future expansions into other engineering areas. This service is designed to ensure that our clients can effectively meet their engineering needs while maintaining control over the simulation process.",
+    "Specialized on-demand engineering services, focusing on in-house simulations tailored to the automotive sector. While our initial emphasis is on BiW crash analysis and highly dynamic crash simulations, we aim to remain flexible for future expansions into other engineering areas. This service is designed to ensure that our clients can effectively meet their engineering needs while maintaining control over the simulation process",
   items: [
-    "Dynamic crash simulations emphasizing BiW structures to enhance safety.",
+    "Dynamic crash simulations emphasizing BiW structures to enhance safety, however Occupant Injury Criteria and dummy dynamics can also assessed depending on the projects goal and scope.",
     "Focus on helping clients meet NCAP standards, covering MDB, frontal crash, and ODB tests comprehensively.",
     "Specialized geometry reparation for CFD simulations, ensuring all components are watertight for accurate results.",
     "Comprehensive results post-processing and professional presentations in both English and Spanish for clarity.",
     "Flexible engagement models cater to both small challenges and extensive projects, adapting to client needs.",
+    "This service is provided inhouse, however remote work can be performed prior agreement on the conditions",
   ],
 };
 

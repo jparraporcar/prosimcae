@@ -22,6 +22,7 @@ import {
   studyCasesSections,
 } from "@/lib/content-landing";
 import { ContactDialogCustom } from "@/components/custom/contact-dialog-custom";
+import { ContactDialogOndemand } from "@/components/custom/contact-dialog-ondemand";
 
 const Home: React.FC = () => {
   return (
@@ -51,7 +52,7 @@ const Home: React.FC = () => {
           serviceIntro={onDemandEngineering.serviceIntro}
           hrefDiscover="/on-demand-engineering"
           items={onDemandEngineering.items}
-          dialogElement={<ContactDialogCustom />}
+          dialogElement={<ContactDialogOndemand />}
         />
       </div>
       <Separator orientation="horizontal" className="mt-20 mb-16" />

@@ -24,7 +24,9 @@ export const Service: React.FC<ServiceProps> = (props) => {
       <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-50 mb-4 self-center">
         {props.serviceName}
       </h2>
-      <p className="text-gray-700 dark:text-gray-300">{props.serviceIntro}</p>
+      <p className="text-gray-700 dark:text-gray-300 text-xl">
+        {props.serviceIntro}
+      </p>
       <ul className="flex flex-col mt-4 gap-4 text-gray-700">
         {props.items.map((item, index) => (
           <li key={index} className="flex flex-row items-start text-lg">

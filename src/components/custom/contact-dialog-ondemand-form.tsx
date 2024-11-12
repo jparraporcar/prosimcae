@@ -1,7 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import {
@@ -23,7 +23,7 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import "./contact-dialog-custom-form.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(20[0-9]{2})$/;
 
@@ -42,16 +42,12 @@ const formSchema = z.object({
   contactEmail: z.string({ required_error: "This field is required" }).email({
     message: "Invalid email address.",
   }),
-  complexity: z
+  defProjDuration: z
     .string({ required_error: "This field is required" })
-    .refine((value) => ["Low", "Middle", "High"].includes(value), {
-      message: "Levels: Low, Middle, or High.",
+    .refine((value) => ["Yes", "No"].includes(value), {
+      message: "Answers: Yes or Not.",
     }),
-  estDeadline: z
-    .string({ required_error: "This field is required" })
-    .refine((value) => dateRegex.test(value), {
-      message: "Format: DD/MM/YYYY",
-    }),
+  expectProjDurationHours: z.string().optional(),
   explanation: z.string({ required_error: "This field is required" }).refine(
     (value) => {
       const wordCount = value.trim().split(/\s+/).length; // Count the number of words
@@ -67,7 +63,7 @@ interface ContactDialogCustomForm {
   closeDialog: () => void;
 }
 
-export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
+export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
   props
 ) => {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -77,18 +73,16 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
       companyCountry: "",
       contactName: "",
       contactEmail: "",
-      complexity: "",
-      estDeadline: "",
+      defProjDuration: "",
+      expectProjDurationHours: undefined,
       explanation: "",
     },
   });
 
   const { isSubmitting, isSubmitSuccessful, errors } = form.formState;
-  console.log(isSubmitSuccessful, "first");
 
   useEffect(() => {
     if (isSubmitSuccessful) {
-      console.log(isSubmitSuccessful, "second");
       props.closeDialog();
     }
   }, [isSubmitSuccessful]);
@@ -99,12 +93,12 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
       companyCountry: data.companyCountry,
       contactName: data.contactName,
       contactEmail: data.contactEmail,
-      complexity: data.complexity,
-      estDeadline: data.estDeadline,
+      defProjDuration: data.defProjDuration,
+      expectProjDurationHours: data.expectProjDurationHours,
       explanation: data.explanation,
     };
 
-    const res = await fetch("http://localhost:3001/api/custom", {
+    const res = await fetch("http://localhost:3001/api/ondemand", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -112,7 +106,20 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
       body: JSON.stringify(rawData),
     });
   };
+  const defProjDurationFieldValue = form.watch("defProjDuration");
+  const [projDurationFieldIsVisible, setProjDurationFieldIsVisible] =
+    useState(true);
 
+  useEffect(() => {
+    if (defProjDurationFieldValue === "No") {
+      setProjDurationFieldIsVisible(false);
+    }
+    if (defProjDurationFieldValue === "Yes") {
+      setProjDurationFieldIsVisible(true);
+    }
+  }, [defProjDurationFieldValue]);
+
+  console.log("projDurationFieldIsVisible=", projDurationFieldIsVisible);
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -196,23 +203,22 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
           <div className="w-52">
             <FormField
               control={form.control}
-              name="complexity"
+              name="defProjDuration"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Project complexity</FormLabel>
+                  <FormLabel>Defined Project Duration</FormLabel>
                   <Select
                     onValueChange={field.onChange}
                     defaultValue={field.value}
                   >
                     <FormControl>
                       <SelectTrigger>
-                        <SelectValue placeholder="Project complexity" />
+                        <SelectValue placeholder="Yes" />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      <SelectItem value="Low">Low</SelectItem>
-                      <SelectItem value="Middle">Middle</SelectItem>
-                      <SelectItem value="High">High</SelectItem>
+                      <SelectItem value="Yes">Yes</SelectItem>
+                      <SelectItem value="No">No</SelectItem>
                     </SelectContent>
                   </Select>
                   <FormMessage />
@@ -222,13 +228,14 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
           </div>
           <div className="w-52">
             <FormField
+              disabled={!projDurationFieldIsVisible}
               control={form.control}
-              name="estDeadline"
+              name="expectProjDurationHours"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Estimated Deadline</FormLabel>
+                  <FormLabel>Expected project duration (h)</FormLabel>
                   <FormControl>
-                    <Input placeholder="DD/MM/YYYY" {...field} />
+                    <Input placeholder="200" {...field} />
                   </FormControl>
                   {/* <FormDescription>
                 Please indicate your corporate email
@@ -244,7 +251,7 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
           name="explanation"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Project explanation</FormLabel>
+              <FormLabel>Request explanation</FormLabel>
               <FormControl>
                 <Textarea
                   className="resize-none h-28"
