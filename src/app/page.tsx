@@ -21,10 +21,11 @@ import {
 import { ContactDialogCustom } from "@/components/custom/contact-dialog-custom";
 import { ContactDialogOndemand } from "@/components/custom/contact-dialog-ondemand";
 import { ResumeUploadDialog } from "@/components/custom/resume-upload-dialog";
+import Footer from "@/components/custom/footer";
 
 const Home: React.FC = () => {
   return (
-    <main className="flex flex-col items-center m-28">
+    <main className="flex flex-col items-center mt-24">
       <div id="main-section-intro" className=" text-slate-700 mb-8 pb-4">
         <MainSectionIntro
           descriptionContainerClass="appear-fading"
@@ -120,6 +121,10 @@ const Home: React.FC = () => {
             </CardContent>
           </Card>
         </div>
+      </section>
+      <Separator orientation="horizontal" className="mb-20" />
+      <section className="w-full">
+        <Footer />
       </section>
     </main>
   );
