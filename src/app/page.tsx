@@ -1,12 +1,9 @@
 import { MainSectionIntro } from "@/components/custom/main-section-intro";
 import { Service } from "../components/custom/service";
 import { Separator } from "@/components/ui/separator";
-import Image from "next/image";
 import { StudyCasesSection } from "@/components/custom/client/study-cases-section";
 import { MainSectionTitle } from "@/components/custom/main-section-title";
 import RotatingImageCarousel from "@/components/custom/client/rotating-image-carousel";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardHeader,
@@ -23,6 +20,7 @@ import {
 } from "@/lib/content-landing";
 import { ContactDialogCustom } from "@/components/custom/contact-dialog-custom";
 import { ContactDialogOndemand } from "@/components/custom/contact-dialog-ondemand";
+import { ResumeUploadDialog } from "@/components/custom/resume-upload-dialog";
 
 const Home: React.FC = () => {
   return (
@@ -116,15 +114,8 @@ const Home: React.FC = () => {
                 <li>Professional growth and skill enhancement</li>
                 <li>Flexible collaboration arrangements</li>
               </ul>
-              <div className="text-center mt-8">
-                <Link href="/collaboration-form">
-                  <Button
-                    variant="outline"
-                    className="border-gray-500 text-gray-700 bg-gray-200 hover:bg-gray-500 text-xl"
-                  >
-                    Submit Your CV
-                  </Button>
-                </Link>
+              <div>
+                <ResumeUploadDialog />
               </div>
             </CardContent>
           </Card>
