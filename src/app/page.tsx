@@ -33,7 +33,7 @@ const Home: React.FC = () => {
           descriptionText="At ProEngineLabs, we are providing comprehensive Computational Aided Engineering (CAE) solutions that encompass advanced Computational Fluid Dynamics (CFD), Solid Mechanics, and Thermal Management. Our expertise combines technical precision with innovative analysis techniques."
         />
       </div>
-      <div id="main-section-title-our-services" className="slide-in-top">
+      <div id="main-section-title-services" className="slide-in-top section">
         <MainSectionTitle title="Services" />
       </div>
       <div className="w-full flex flex-row flex-wrap gap-y-20 justify-evenly mt-4">
@@ -55,7 +55,7 @@ const Home: React.FC = () => {
         />
       </div>
       <Separator orientation="horizontal" className="mt-20 mb-16" />
-      <div id="main-section-title-study-cases">
+      <div id="main-section-title-technology" className="section">
         <MainSectionTitle title="Technology" />
       </div>
       <div className="w-full flex flex-row flex-wrap gap-y-20 justify-evenly">
@@ -77,13 +77,10 @@ const Home: React.FC = () => {
         </section>
       </div>
       <Separator orientation="horizontal" className="mb-16 mt-20" />
-      <div id="main-section-title-study-cases">
+      <div id="main-section-title-study-cases" className="section">
         <MainSectionTitle title="Study Cases" />
       </div>
-      <div
-        id="main-section-study-cases"
-        className="flex flex-col text-lg items-center mt-6"
-      >
+      <div className="flex flex-col text-lg items-center mt-6">
         {studyCasesSections.map((studyCaseSection, index) => (
           <StudyCasesSection
             key={index}
@@ -94,7 +91,7 @@ const Home: React.FC = () => {
         ))}
       </div>
       <Separator orientation="horizontal" className="mb-20" />
-      <div id="main-section-title-study-cases">
+      <div id="main-section-title-collaborations" className="section">
         <MainSectionTitle title="Collaborations" />
       </div>
       <section className="bg-gray-100 py-12">
@@ -129,50 +126,5 @@ const Home: React.FC = () => {
     </main>
   );
 };
-
-// Open-Source Tools and Expertise
-// Trusted Open-Source Software
-// OpenFOAM for Computational Fluid Dynamics (CFD) simulations
-// [Your FEM Software] for Finite Element Method (FEM) analyses
-// Why Open-Source?
-// Transparency: Full access to methodologies and algorithms
-// Community-Driven Excellence: Continuous improvements and updates
-// Cost-Effectiveness: No licensing fees reduce project costs
-// Flexibility: Customizable to meet specific project requirements
-// Scientific Research Supporting Open-Source Tools
-// Description
-// A collection of peer-reviewed research articles and case studies using open-source software (e.g., OpenFOAM) to successfully tackle real-world engineering challenges.
-// Research Highlights
-// Example 1: Study on CFD analysis of industrial fluid flow using OpenFOAM
-// Example 2: Open-source FEM applications in structural integrity assessment
-// Purpose
-// Reinforce the credibility of open-source tools by demonstrating their use in various validated academic and industry applications.
-// Collaboration Opportunities
-// Join Our Network of Professionals
-// Invitation for skilled engineers to collaborate on innovative projects.
-// CTA Button
-// "Submit Your CV" (links to Collaboration Form)
-// Contact Us
-// For Clients
-// Custom Solutions Contact Form
-// B2B Partnerships Contact Form
-// For Collaborators
-// Collaboration Submission Form
-
-// Name and surname
-
-// Job title
-
-// Company
-
-// Email
-
-// Phone number
-
-// Service name (CAE or DEV)
-
-// Service type (B2B or project)
-
-// Request explanation
 
 export default Home;
