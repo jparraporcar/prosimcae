@@ -19,9 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex flex-row justify-center my-6 relative z-10">
+        {/* <div className="flex flex-row justify-center my-6 relative z-10">
           <Navigation />
-        </div>
+        </div> */}
         {children}
       </body>
     </html>
