@@ -36,7 +36,7 @@ const Home: React.FC = () => {
       <div id="main-section-title-services" className="slide-in-top section">
         <MainSectionTitle title="Services" />
       </div>
-      <div className="w-full flex flex-row flex-wrap gap-y-20 justify-evenly mt-4">
+      <div className="w-full flex flex-row max-xl:flex-col max-xl:items-center flex-wrap gap-y-20 justify-evenly mt-4">
         <Service
           sectionClass="slide-in-left"
           serviceIntro={customEngineering.serviceIntro}
@@ -58,7 +58,7 @@ const Home: React.FC = () => {
       <div id="main-section-title-technology" className="section">
         <MainSectionTitle title="Technology" />
       </div>
-      <div className="w-full flex flex-row flex-wrap gap-y-20 justify-evenly">
+      <div className="w-full flex flex-row max-xl:flex-col max-xl:items-center flex-wrap gap-y-20 max-xl:gap-y-4 justify-evenly">
         <section className="w-5/12 flex flex-col px-6 py-4 mt-2 bg-white dark:bg-gray-800 items-center">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-50">
             {customEngineering.serviceName}

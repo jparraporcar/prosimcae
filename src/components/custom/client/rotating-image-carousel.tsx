@@ -12,7 +12,21 @@ export default function RotatingImageCarousel({
   images,
 }: RotatingImageCarouselProps) {
   const [angle, setAngle] = useState(0);
-  const radius = 220; // Adjust radius based on design needs
+  const [radius, setRadius] = useState(220);
+
+  const [screenSize, setScreenSize] = useState("");
+
+  useEffect(() => {
+    const setScreenClass = () => {
+      const width = window.innerWidth;
+      if (width < 767) {
+        setScreenSize("max-md");
+      } else if (width >= 767 && width < 1279) {
+        setScreenSize("max-xl");
+      }
+    };
+    setScreenClass();
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,6 +35,12 @@ export default function RotatingImageCarousel({
 
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    if (screenSize === "max-xl") {
+      setRadius(250);
+    }
+  }, [screenSize]);
 
   return (
     <div className="carousel-container">
