@@ -29,7 +29,7 @@ const Home: React.FC = () => {
       <div id="main-section-intro" className=" text-slate-700 mb-8 pb-4">
         <MainSectionIntro
           descriptionContainerClass="appear-fading"
-          descriptionClass="text-gray-500 text-2xl italic text-center "
+          descriptionClass="text-gray-500 text-2xl max-md:text-lg italic text-center "
           descriptionText="At ProEngineLabs, we are providing comprehensive Computational Aided Engineering (CAE) solutions that encompass advanced Computational Fluid Dynamics (CFD), Solid Mechanics, and Thermal Management. Our expertise combines technical precision with innovative analysis techniques."
         />
       </div>
@@ -58,7 +58,7 @@ const Home: React.FC = () => {
       <div id="main-section-title-technology" className="section">
         <MainSectionTitle title="Technology" />
       </div>
-      <div className="w-full flex flex-row max-xl:flex-col max-xl:items-center flex-wrap gap-y-20 max-xl:gap-y-4 justify-evenly">
+      {/* <div className="w-full flex flex-row max-xl:flex-col max-xl:items-center flex-wrap gap-y-20 max-xl:gap-y-4 justify-evenly">
         <section className="w-5/12 flex flex-col px-6 py-4 mt-2 bg-white dark:bg-gray-800 items-center">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-50">
             {customEngineering.serviceName}
@@ -75,8 +75,8 @@ const Home: React.FC = () => {
             <RotatingImageCarousel images={comImages} />
           </div>
         </section>
-      </div>
-      <Separator orientation="horizontal" className="mb-16 mt-20" />
+      </div> */}
+      {/* <Separator orientation="horizontal" className="mb-16 mt-20" />
       <div id="main-section-title-study-cases" className="section">
         <MainSectionTitle title="Study Cases" />
       </div>
@@ -89,7 +89,7 @@ const Home: React.FC = () => {
             effectIsActive={studyCaseSection.effectIsActive}
           />
         ))}
-      </div>
+      </div> */}
       <Separator orientation="horizontal" className="mb-20" />
       <div id="main-section-title-collaborations" className="section">
         <MainSectionTitle title="Collaborations" />

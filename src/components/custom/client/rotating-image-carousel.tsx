@@ -39,6 +39,8 @@ export default function RotatingImageCarousel({
   useEffect(() => {
     if (screenSize === "max-xl") {
       setRadius(250);
+    } else if (screenSize === "max-md") {
+      setRadius(150);
     }
   }, [screenSize]);
 
