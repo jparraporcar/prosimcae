@@ -27,7 +27,7 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
   return (
     <>
       <Carousel>
-        <CarouselContent>
+        <CarouselContent className="max-md:-mx-2">
           {props.images.map((image, index) => (
             <CarouselItem key={index}>
               <div className="flex flex-col items-center mb-16">
