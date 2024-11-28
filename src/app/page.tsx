@@ -66,7 +66,7 @@ const Home: React.FC = () => {
         />
       </div>
       <div className="w-full flex flex-row max-lg:flex-col flex-wrap gap-y-20 max-lg:gap-y-0 justify-evenly max-lg:items-center">
-        <section className="w-5/12 max-md:w-11/12 flex flex-col px-6 py-4 mt-2 bg-white dark:bg-gray-800 items-center">
+        <section className="w-5/12 max-md:w-full flex flex-col px-6 max-md:px-3 py-4 mt-2 bg-white dark:bg-gray-800 items-center">
           <h2 className="text-3xl max-md:text-2xl font-bold text-gray-900 dark:text-gray-50">
             {customEngineering.serviceName}
           </h2>
@@ -74,7 +74,7 @@ const Home: React.FC = () => {
             <CarouselWrapper images={openImages} />
           </div>
         </section>
-        <section className="w-5/12 max-md:w-11/12  flex flex-col px-6 py-4 mt-2 max-md:mt-0 bg-white dark:bg-gray-800 items-center">
+        <section className="w-5/12 max-md:w-full  flex flex-col px-6 max-md:px-3 py-4 max-md:pt-0 mt-2 max-md:mt-0 bg-white dark:bg-gray-800 items-center">
           <h2 className="text-3xl max-md:text-2xl font-bold text-gray-900 dark:text-gray-50">
             {onDemandEngineering.serviceName}
           </h2>

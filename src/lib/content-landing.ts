@@ -137,7 +137,7 @@ export const openImages = [
     description: "Open-source FEA solver for structural analysis.",
   },
   {
-    src: "/images/open-logos/lsprepost-logo2.jpeg",
+    src: "/images/open-logos/lsprepost-logo.jpeg",
     alt: "LS-PrePost",
     description: "Tool for LS-DYNA solver result processing.",
   },
@@ -147,7 +147,7 @@ export const openImages = [
     description: "Dynamic analysis solver for crash simulations.",
   },
   {
-    src: "/images/open-logos/paraview-logo.svg",
+    src: "/images/open-logos/paraview-logo.png",
     alt: "ParaView",
     description: "3D visualization for simulation data.",
   },
