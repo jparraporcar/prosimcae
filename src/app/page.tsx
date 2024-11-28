@@ -27,11 +27,11 @@ const Home: React.FC = () => {
   return (
     <main className="flex flex-col items-center mt-24 overflow-x-hidden">
       <div id="main-section-intro" className=" text-slate-700 mb-8 pb-4">
-        {/* <MainSectionIntro
+        <MainSectionIntro
           descriptionContainerClass="appear-fading"
           descriptionClass="text-gray-500 text-md italic text-center "
           descriptionText="At ProEngineLabs, we are providing comprehensive Computational Aided Engineering (CAE) solutions that encompass advanced Computational Fluid Dynamics (CFD), Solid Mechanics, and Thermal Management. Our expertise combines technical precision with innovative analysis techniques."
-        /> */}
+        />
       </div>
       <div id="main-section-title-services" className="slide-in-top section">
         <MainSectionTitle title="Services" />
