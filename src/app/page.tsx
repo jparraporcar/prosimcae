@@ -83,14 +83,17 @@ const Home: React.FC = () => {
           </div>
         </section>
       </div>
-      <Separator orientation="horizontal" className="mb-16 mt-20" />
+      <Separator
+        orientation="horizontal"
+        className="mb-16 mt-20 max-md:mt-10"
+      />
       <div id="main-section-title-study-cases" className="section">
         <MainSectionTitle
           title="Study Cases"
           titleContainerClass="max-md:text-3xl"
         />
       </div>
-      {/* <div className="flex flex-col text-lg items-center mt-6">
+      <div className="flex flex-col text-lg items-center mt-6">
         {studyCasesSections.map((studyCaseSection, index) => (
           <StudyCasesSection
             key={index}
@@ -99,7 +102,7 @@ const Home: React.FC = () => {
             effectIsActive={studyCaseSection.effectIsActive}
           />
         ))}
-      </div> */}
+      </div>
       <Separator orientation="horizontal" className="mb-20" />
       <div id="main-section-title-collaborations" className="section">
         <MainSectionTitle
