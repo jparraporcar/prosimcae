@@ -25,7 +25,7 @@ export const CarouselWrapper: React.FC<NavigationWrapperProps> = (props) => {
   return (
     <>
       {isSmall ? (
-        <CarouselMobile />
+        <CarouselMobile images={props.images} />
       ) : (
         <RotatingImageCarousel images={props.images} />
       )}

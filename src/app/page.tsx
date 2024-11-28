@@ -60,19 +60,22 @@ const Home: React.FC = () => {
       </div>
       <Separator orientation="horizontal" className="mt-20 mb-16" />
       <div id="main-section-title-technology" className="section">
-        <MainSectionTitle title="Technology" />
+        <MainSectionTitle
+          title="Technology"
+          titleContainerClass="max-md:text-3xl"
+        />
       </div>
       <div className="w-full flex flex-row max-lg:flex-col flex-wrap gap-y-20 max-lg:gap-y-0 justify-evenly max-lg:items-center">
-        <section className="w-5/12 flex flex-col px-6 py-4 mt-2 bg-white dark:bg-gray-800 items-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-50">
+        <section className="w-5/12 max-md:w-11/12 flex flex-col px-6 py-4 mt-2 bg-white dark:bg-gray-800 items-center">
+          <h2 className="text-3xl max-md:text-2xl font-bold text-gray-900 dark:text-gray-50">
             {customEngineering.serviceName}
           </h2>
           <div>
             <CarouselWrapper images={openImages} />
           </div>
         </section>
-        <section className="w-5/12 flex flex-col px-6 py-4 mt-2 bg-white dark:bg-gray-800 items-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-50">
+        <section className="w-5/12 max-md:w-11/12  flex flex-col px-6 py-4 mt-2 max-md:mt-0 bg-white dark:bg-gray-800 items-center">
+          <h2 className="text-3xl max-md:text-2xl font-bold text-gray-900 dark:text-gray-50">
             {onDemandEngineering.serviceName}
           </h2>
           <div>
@@ -82,7 +85,10 @@ const Home: React.FC = () => {
       </div>
       <Separator orientation="horizontal" className="mb-16 mt-20" />
       <div id="main-section-title-study-cases" className="section">
-        <MainSectionTitle title="Study Cases" />
+        <MainSectionTitle
+          title="Study Cases"
+          titleContainerClass="max-md:text-3xl"
+        />
       </div>
       {/* <div className="flex flex-col text-lg items-center mt-6">
         {studyCasesSections.map((studyCaseSection, index) => (
@@ -96,7 +102,10 @@ const Home: React.FC = () => {
       </div> */}
       <Separator orientation="horizontal" className="mb-20" />
       <div id="main-section-title-collaborations" className="section">
-        <MainSectionTitle title="Collaborations" />
+        <MainSectionTitle
+          title="Collaborations"
+          titleContainerClass="max-md:text-3xl"
+        />
       </div>
       <section className="bg-gray-100 py-12">
         <div className="container mx-auto px-6">

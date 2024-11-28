@@ -12,26 +12,35 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import dynamic from "next/dynamic";
+import Image from "next/image";
+import "./carousel-mobile.css";
 
-export const CarouselMobile = () => {
+interface RotatingImageCarouselProps {
+  images: { src: string; alt: string; description: string }[];
+}
+
+export const CarouselMobile: React.FC<RotatingImageCarouselProps> = (props) => {
   return (
     <Carousel
       className="w-full max-w-sm"
       plugins={[
         Autoplay({
-          delay: 1000,
+          delay: 2000,
         }) as any,
       ]}
     >
-      <CarouselContent className="-ml-1">
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-2xl font-semibold">{index + 1}</span>
-                </CardContent>
-              </Card>
+      <CarouselContent>
+        {props.images.map((image, index) => (
+          <CarouselItem key={index}>
+            <div className="image-container-mobile">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={150}
+                height={150}
+                className="image"
+              />
+              <p className="description-mobile">{image.description}</p>
             </div>
           </CarouselItem>
         ))}
