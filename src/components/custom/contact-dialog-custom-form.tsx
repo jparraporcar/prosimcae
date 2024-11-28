@@ -117,15 +117,19 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <div className="w-full flex flex-row justify-between">
-          <div className="w-52">
+          <div className="w-52 max-md:w-2/5">
             <FormField
               control={form.control}
               name="companyName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Company name</FormLabel>
+                  <FormLabel className="max-md:text-xs">Company name</FormLabel>
                   <FormControl>
-                    <Input placeholder="" {...field} />
+                    <Input
+                      placeholder=""
+                      {...field}
+                      className="max-md:text-xs"
+                    />
                   </FormControl>
                   {/* <FormDescription>
                 Please indicate your company&apos;s full name
@@ -135,15 +139,21 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
               )}
             />
           </div>
-          <div className="w-52">
+          <div className="w-52 max-md:w-2/5">
             <FormField
               control={form.control}
               name="companyCountry"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Company country</FormLabel>
+                  <FormLabel className="max-md:text-xs">
+                    Company country
+                  </FormLabel>
                   <FormControl>
-                    <Input placeholder="" {...field} />
+                    <Input
+                      placeholder=""
+                      {...field}
+                      className="max-md:text-xs"
+                    />
                   </FormControl>
                   {/* <FormDescription>
                 Please indicate your company&apos;s country
@@ -155,15 +165,19 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
           </div>
         </div>
         <div className="w-full flex flex-row justify-between">
-          <div className="w-52">
+          <div className="w-52 max-md:w-2/5">
             <FormField
               control={form.control}
               name="contactName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Contact name</FormLabel>
+                  <FormLabel className="max-md:text-xs">Contact name</FormLabel>
                   <FormControl>
-                    <Input placeholder="" {...field} />
+                    <Input
+                      placeholder=""
+                      {...field}
+                      className="max-md:text-xs"
+                    />
                   </FormControl>
                   {/* <FormDescription>
                 Please indicate you name and surname
@@ -173,15 +187,21 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
               )}
             />
           </div>
-          <div className="w-52">
+          <div className="w-52 max-md:w-2/5">
             <FormField
               control={form.control}
               name="contactEmail"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Contact email</FormLabel>
+                  <FormLabel className="max-md:text-xs">
+                    Contact email
+                  </FormLabel>
                   <FormControl>
-                    <Input placeholder="" {...field} />
+                    <Input
+                      placeholder=""
+                      {...field}
+                      className="max-md:text-xs"
+                    />
                   </FormControl>
                   {/* <FormDescription>
                 Please indicate your corporate email
@@ -193,26 +213,34 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
           </div>
         </div>
         <div className="w-full flex flex-row justify-between">
-          <div className="w-52">
+          <div className="w-52 max-md:w-2/5">
             <FormField
               control={form.control}
               name="complexity"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Project complexity</FormLabel>
+                  <FormLabel className="max-md:text-xs">
+                    Project complexity
+                  </FormLabel>
                   <Select
                     onValueChange={field.onChange}
                     defaultValue={field.value}
                   >
                     <FormControl>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Project complexity" />
+                      <SelectTrigger className="max-md:text-xs">
+                        <SelectValue className="max-md:text-xs" />
                       </SelectTrigger>
                     </FormControl>
-                    <SelectContent>
-                      <SelectItem value="Low">Low</SelectItem>
-                      <SelectItem value="Middle">Middle</SelectItem>
-                      <SelectItem value="High">High</SelectItem>
+                    <SelectContent className="max-md:text-xs">
+                      <SelectItem value="Low" className="max-md:text-xs">
+                        Low
+                      </SelectItem>
+                      <SelectItem value="Middle" className="max-md:text-xs">
+                        Middle
+                      </SelectItem>
+                      <SelectItem value="High" className="max-md:text-xs">
+                        High
+                      </SelectItem>
                     </SelectContent>
                   </Select>
                   <FormMessage />
@@ -220,15 +248,21 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
               )}
             />
           </div>
-          <div className="w-52">
+          <div className="w-52 max-md:w-2/5">
             <FormField
               control={form.control}
               name="estDeadline"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Estimated Deadline</FormLabel>
+                  <FormLabel className="max-md:text-xs">
+                    Estimated Deadline
+                  </FormLabel>
                   <FormControl>
-                    <Input placeholder="DD/MM/YYYY" {...field} />
+                    <Input
+                      placeholder="DD/MM/YYYY"
+                      {...field}
+                      className="placeholder:text-xs max-md:text-xs"
+                    />
                   </FormControl>
                   {/* <FormDescription>
                 Please indicate your corporate email
@@ -244,10 +278,12 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
           name="explanation"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Project explanation</FormLabel>
+              <FormLabel className="max-md:text-xs">
+                Project explanation
+              </FormLabel>
               <FormControl>
                 <Textarea
-                  className="resize-none h-28"
+                  className="resize-none h-28 max-md:text-xs placeholder:text-xs"
                   placeholder="Explain briefly your project request here please. We will contact you to know more details :)!"
                   {...field}
                 />

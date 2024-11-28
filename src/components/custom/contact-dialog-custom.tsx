@@ -29,10 +29,7 @@ export const ContactDialogCustom: React.FC = () => {
           Get In Touch
         </Button>
       </DialogTrigger>
-      <DialogContent
-        className="p-16"
-        style={{ width: "600px", maxWidth: "600px" }}
-      >
+      <DialogContent className="p-16 max-md:p-6 w-[600px] max-md:w-[340px] max-w-[600px] max-md:max-w-[340px]">
         <DialogHeader>
           <DialogTitle className="mb-2">Get in Touch</DialogTitle>
           <DialogDescription>
