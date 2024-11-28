@@ -6,11 +6,14 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 
 export const NavigationMobile: React.FC = () => {
   return (
     <Sheet>
-      <SheetTrigger>Open</SheetTrigger>
+      <SheetTrigger>
+        <Menu size="34px" />
+      </SheetTrigger>
       <SheetContent>
         <SheetHeader>
           <SheetTitle>Are you absolutely sure?</SheetTitle>

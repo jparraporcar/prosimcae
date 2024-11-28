@@ -25,7 +25,7 @@ import Footer from "@/components/custom/footer";
 
 const Home: React.FC = () => {
   return (
-    <main className="flex flex-col items-center mt-24 overflow-x-hidden">
+    <main className="flex flex-col items-center mt-24 max-md:mt-0 overflow-x-hidden">
       <div id="main-section-intro" className=" text-slate-700 mb-8 pb-4">
         <MainSectionIntro
           descriptionContainerClass="appear-fading"

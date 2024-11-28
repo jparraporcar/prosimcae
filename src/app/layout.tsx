@@ -18,9 +18,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="mx-4">
       <body className={inter.className}>
-        <div className="flex flex-row justify-center my-6 relative z-10">
+        <div className="flex flex-row justify-end mr-6 my-6 relative z-10">
           <NavigationWrapper />
         </div>
         {children}
