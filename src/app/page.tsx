@@ -34,9 +34,12 @@ const Home: React.FC = () => {
         />
       </div>
       <div id="main-section-title-services" className="slide-in-top section">
-        <MainSectionTitle title="Services" />
+        <MainSectionTitle
+          title="Services"
+          titleContainerClass="max-md:text-3xl"
+        />
       </div>
-      <div className="w-full flex flex-row flex-wrap gap-y-20 justify-evenly mt-4">
+      <div className="w-full flex flex-row max-md:flex-col flex-wrap gap-y-20 max-md:gap-y-4 justify-evenly max-md:items-center mt-4">
         <Service
           sectionClass="slide-in-left"
           serviceIntro={customEngineering.serviceIntro}
@@ -45,14 +48,14 @@ const Home: React.FC = () => {
           hrefDiscover="/"
           dialogElement={<ContactDialogCustom />}
         />
-        {/* <Service
+        <Service
           sectionClass="slide-in-right"
           serviceName={onDemandEngineering.serviceName}
           serviceIntro={onDemandEngineering.serviceIntro}
           hrefDiscover="/on-demand-engineering"
           items={onDemandEngineering.items}
           dialogElement={<ContactDialogOndemand />}
-        /> */}
+        />
       </div>
       <Separator orientation="horizontal" className="mt-20 mb-16" />
       <div id="main-section-title-technology" className="section">
