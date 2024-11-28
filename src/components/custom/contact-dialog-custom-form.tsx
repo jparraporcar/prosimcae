@@ -116,7 +116,7 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <div className="w-full flex flex-row justify-between">
+        <div className="w-full flex flex-row justify-between max-md:mt-4">
           <div className="w-52 max-md:w-2/5">
             <FormField
               control={form.control}
@@ -164,7 +164,7 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
             />
           </div>
         </div>
-        <div className="w-full flex flex-row justify-between">
+        <div className="w-full flex flex-row justify-between !max-md:mt-2">
           <div className="w-52 max-md:w-2/5">
             <FormField
               control={form.control}
