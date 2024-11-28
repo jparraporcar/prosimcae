@@ -22,6 +22,7 @@ import { ContactDialogCustom } from "@/components/custom/contact-dialog-custom";
 import { ContactDialogOndemand } from "@/components/custom/contact-dialog-ondemand";
 import { ResumeUploadDialog } from "@/components/custom/resume-upload-dialog";
 import Footer from "@/components/custom/footer";
+import { CarouselWrapper } from "@/components/custom/client/carousel-wrapper";
 
 const Home: React.FC = () => {
   return (
@@ -67,7 +68,7 @@ const Home: React.FC = () => {
             {customEngineering.serviceName}
           </h2>
           <div>
-            <RotatingImageCarousel images={openImages} />
+            <CarouselWrapper images={openImages} />
           </div>
         </section>
         <section className="w-5/12 flex flex-col px-6 py-4 mt-2 bg-white dark:bg-gray-800 items-center">
@@ -75,7 +76,7 @@ const Home: React.FC = () => {
             {onDemandEngineering.serviceName}
           </h2>
           <div>
-            <RotatingImageCarousel images={comImages} />
+            <CarouselWrapper images={comImages} />
           </div>
         </section>
       </div>

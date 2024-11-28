@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import "./rotating-image-carousel.css";
-import { useMediaQuery } from "react-responsive";
 
 interface RotatingImageCarouselProps {
   images: { src: string; alt: string; description: string }[];
@@ -13,8 +12,7 @@ export const RotatingImageCarousel = ({
   images,
 }: RotatingImageCarouselProps) => {
   const [angle, setAngle] = useState(0);
-  const isSmallScreen = useMediaQuery({ query: "(max-width: 600px)" });
-  const radius = isSmallScreen ? 120 : 165; // Adjust radius based on design needs
+  const radius = 165; // Adjust radius based on design needs
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -43,15 +41,11 @@ export const RotatingImageCarousel = ({
               <Image
                 src={image.src}
                 alt={image.alt}
-                width={isSmallScreen ? 65 : 100}
-                height={isSmallScreen ? 65 : 100}
+                width={100}
+                height={100}
                 className="image"
               />
-              <p
-                className={isSmallScreen ? "description-small" : "description"}
-              >
-                {image.description}
-              </p>
+              <p className="description">{image.description}</p>
             </div>
           </div>
         );
