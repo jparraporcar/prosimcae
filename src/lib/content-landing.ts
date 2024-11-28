@@ -137,7 +137,7 @@ export const openImages = [
     description: "Open-source FEA solver for structural analysis.",
   },
   {
-    src: "/images/open-logos/lsprepost-logo.png",
+    src: "/images/open-logos/lsprepost-logo2.jpeg",
     alt: "LS-PrePost",
     description: "Tool for LS-DYNA solver result processing.",
   },

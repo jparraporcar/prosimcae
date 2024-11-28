@@ -13,6 +13,13 @@
   margin-top: -20px;
 }
 
+@media (max-width: 1024px) {
+  .carousel-container {
+    width: 600px;
+    height: 600px;
+  }
+}
+
 .image-wrapper {
   position: absolute;
   display: flex;
@@ -29,7 +36,7 @@
 }
 
 .image {
-  width: 115px;
+  /* width: 80px; */
   height: auto; /* Preserve aspect ratio */
   border-radius: 8px;
 }
@@ -38,4 +45,10 @@
   margin-top: 5px;
   font-size: 12px;
   width: 150px;
+}
+
+.description-small {
+  margin-top: 5px;
+  font-size: 8px;
+  width: 100px;
 }

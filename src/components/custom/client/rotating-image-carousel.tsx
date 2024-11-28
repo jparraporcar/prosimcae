@@ -3,16 +3,18 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import "./rotating-image-carousel.css";
+import { useMediaQuery } from "react-responsive";
 
 interface RotatingImageCarouselProps {
   images: { src: string; alt: string; description: string }[];
 }
 
-export default function RotatingImageCarousel({
+export const RotatingImageCarousel = ({
   images,
-}: RotatingImageCarouselProps) {
+}: RotatingImageCarouselProps) => {
   const [angle, setAngle] = useState(0);
-  const radius = 220; // Adjust radius based on design needs
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 600px)" });
+  const radius = isSmallScreen ? 120 : 165; // Adjust radius based on design needs
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -26,8 +28,8 @@ export default function RotatingImageCarousel({
     <div className="carousel-container">
       {images.map((image, index) => {
         const theta = (2 * Math.PI * index) / images.length;
-        const x = radius * Math.cos(theta + angle);
-        const y = radius * Math.sin(theta + angle);
+        const x = Math.round(radius * Math.cos(theta + angle));
+        const y = Math.round(radius * Math.sin(theta + angle));
 
         return (
           <div
@@ -41,15 +43,19 @@ export default function RotatingImageCarousel({
               <Image
                 src={image.src}
                 alt={image.alt}
-                width={300}
-                height={300}
+                width={isSmallScreen ? 65 : 100}
+                height={isSmallScreen ? 65 : 100}
                 className="image"
               />
-              <p className="description">{image.description}</p>
+              <p
+                className={isSmallScreen ? "description-small" : "description"}
+              >
+                {image.description}
+              </p>
             </div>
           </div>
         );
       })}
     </div>
   );
-}
+};

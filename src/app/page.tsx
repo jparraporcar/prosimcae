@@ -3,7 +3,7 @@ import { Service } from "../components/custom/service";
 import { Separator } from "@/components/ui/separator";
 import { StudyCasesSection } from "@/components/custom/client/study-cases-section";
 import { MainSectionTitle } from "@/components/custom/main-section-title";
-import RotatingImageCarousel from "@/components/custom/client/rotating-image-carousel";
+import { RotatingImageCarousel } from "@/components/custom/client/rotating-image-carousel";
 import {
   Card,
   CardHeader,
@@ -61,8 +61,8 @@ const Home: React.FC = () => {
       <div id="main-section-title-technology" className="section">
         <MainSectionTitle title="Technology" />
       </div>
-      {/* <div className="w-full flex flex-row flex-wrap gap-y-20 justify-evenly"> */}
-      {/* <section className="w-5/12 flex flex-col px-6 py-4 mt-2 bg-white dark:bg-gray-800 items-center">
+      <div className="w-full flex flex-row max-lg:flex-col flex-wrap gap-y-20 max-lg:gap-y-0 justify-evenly max-lg:items-center">
+        <section className="w-5/12 flex flex-col px-6 py-4 mt-2 bg-white dark:bg-gray-800 items-center">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-50">
             {customEngineering.serviceName}
           </h2>
@@ -78,7 +78,7 @@ const Home: React.FC = () => {
             <RotatingImageCarousel images={comImages} />
           </div>
         </section>
-      </div> */}
+      </div>
       <Separator orientation="horizontal" className="mb-16 mt-20" />
       <div id="main-section-title-study-cases" className="section">
         <MainSectionTitle title="Study Cases" />
