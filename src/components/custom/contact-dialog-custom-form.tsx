@@ -24,6 +24,7 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import "./contact-dialog-custom-form.css";
 import { useEffect } from "react";
+import { Separator } from "../ui/separator";
 
 const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(20[0-9]{2})$/;
 
@@ -134,7 +135,7 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
                   {/* <FormDescription>
                 Please indicate your company&apos;s full name
               </FormDescription> */}
-                  <FormMessage />
+                  <FormMessage className="max-md:text-xs" />
                 </FormItem>
               )}
             />
@@ -158,13 +159,13 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
                   {/* <FormDescription>
                 Please indicate your company&apos;s country
               </FormDescription> */}
-                  <FormMessage />
+                  <FormMessage className="max-md:text-xs" />
                 </FormItem>
               )}
             />
           </div>
         </div>
-        <div className="w-full flex flex-row justify-between !max-md:mt-2">
+        <div className="w-full flex flex-row justify-between">
           <div className="w-52 max-md:w-2/5">
             <FormField
               control={form.control}
@@ -182,7 +183,7 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
                   {/* <FormDescription>
                 Please indicate you name and surname
               </FormDescription> */}
-                  <FormMessage />
+                  <FormMessage className="max-md:text-xs" />
                 </FormItem>
               )}
             />
@@ -206,7 +207,7 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
                   {/* <FormDescription>
                 Please indicate your corporate email
               </FormDescription> */}
-                  <FormMessage />
+                  <FormMessage className="max-md:text-xs" />
                 </FormItem>
               )}
             />
@@ -243,7 +244,7 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
                       </SelectItem>
                     </SelectContent>
                   </Select>
-                  <FormMessage />
+                  <FormMessage className="max-md:text-xs" />
                 </FormItem>
               )}
             />
@@ -267,7 +268,7 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
                   {/* <FormDescription>
                 Please indicate your corporate email
               </FormDescription> */}
-                  <FormMessage />
+                  <FormMessage className="max-md:text-xs" />
                 </FormItem>
               )}
             />
@@ -288,13 +289,13 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
                   {...field}
                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="max-md:text-xs" />
             </FormItem>
           )}
         />
 
         <div className="w-full flex flex-row justify-end">
-          <Button className="mr-0" type="submit">
+          <Button className="mr-0 mt-2" type="submit">
             Submit
           </Button>
         </div>

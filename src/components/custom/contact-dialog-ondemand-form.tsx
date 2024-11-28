@@ -123,102 +123,131 @@ export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <div className="w-full flex flex-row justify-between">
-          <div className="w-52">
+        <div className="w-full flex flex-row justify-between max-md:mt-4">
+          <div className="w-52 max-md:w-2/5">
             <FormField
               control={form.control}
               name="companyName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Company name</FormLabel>
+                  <FormLabel className="max-md:text-xs">Company name</FormLabel>
                   <FormControl>
-                    <Input placeholder="" {...field} />
+                    <Input
+                      placeholder=""
+                      {...field}
+                      className="max-md:text-xs"
+                    />
                   </FormControl>
                   {/* <FormDescription>
                 Please indicate your company&apos;s full name
               </FormDescription> */}
-                  <FormMessage />
+                  <FormMessage className="max-md:text-xs" />
                 </FormItem>
               )}
             />
           </div>
-          <div className="w-52">
+          <div className="w-52 max-md:w-2/5">
             <FormField
               control={form.control}
               name="companyCountry"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Company country</FormLabel>
+                  <FormLabel className="max-md:text-xs">
+                    Company country
+                  </FormLabel>
                   <FormControl>
-                    <Input placeholder="" {...field} />
+                    <Input
+                      placeholder=""
+                      {...field}
+                      className="max-md:text-xs"
+                    />
                   </FormControl>
                   {/* <FormDescription>
                 Please indicate your company&apos;s country
               </FormDescription> */}
-                  <FormMessage />
+                  <FormMessage className="max-md:text-xs" />
                 </FormItem>
               )}
             />
           </div>
         </div>
         <div className="w-full flex flex-row justify-between">
-          <div className="w-52">
+          <div className="w-52 max-md:w-2/5">
             <FormField
               control={form.control}
               name="contactName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Contact name</FormLabel>
+                  <FormLabel className="max-md:text-xs">Contact name</FormLabel>
                   <FormControl>
-                    <Input placeholder="" {...field} />
+                    <Input
+                      placeholder=""
+                      {...field}
+                      className="max-md:text-xs"
+                    />
                   </FormControl>
                   {/* <FormDescription>
                 Please indicate you name and surname
               </FormDescription> */}
-                  <FormMessage />
+                  <FormMessage className="max-md:text-xs" />
                 </FormItem>
               )}
             />
           </div>
-          <div className="w-52">
+          <div className="w-52 max-md:w-2/5">
             <FormField
               control={form.control}
               name="contactEmail"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Contact email</FormLabel>
+                  <FormLabel className="max-md:text-xs">
+                    Contact email
+                  </FormLabel>
                   <FormControl>
-                    <Input placeholder="" {...field} />
+                    <Input
+                      placeholder=""
+                      {...field}
+                      className="max-md:text-xs"
+                    />
                   </FormControl>
                   {/* <FormDescription>
                 Please indicate your corporate email
               </FormDescription> */}
-                  <FormMessage />
+                  <FormMessage className="max-md:text-xs" />
                 </FormItem>
               )}
             />
           </div>
         </div>
         <div className="w-full flex flex-row justify-between">
-          <div className="w-52">
+          <div className="w-52 max-md:w-2/5">
             <FormField
               control={form.control}
               name="defProjDuration"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Defined Project Duration</FormLabel>
+                  <FormLabel className="max-md:text-xs">
+                    Project Duration
+                  </FormLabel>
                   <Select
                     onValueChange={field.onChange}
                     defaultValue={field.value}
                   >
                     <FormControl>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Yes" />
+                      <SelectTrigger className="max-md:text-xs">
+                        <SelectValue
+                          placeholder="Yes"
+                          className="max-md:text-xs"
+                        />
                       </SelectTrigger>
                     </FormControl>
-                    <SelectContent>
-                      <SelectItem value="Yes">Yes</SelectItem>
-                      <SelectItem value="No">No</SelectItem>
+                    <SelectContent className="max-md:text-xs">
+                      <SelectItem value="Yes" className="max-md:text-xs">
+                        Yes
+                      </SelectItem>
+                      <SelectItem value="No" className="max-md:text-xs">
+                        No
+                      </SelectItem>
                     </SelectContent>
                   </Select>
                   <FormMessage />
@@ -226,21 +255,25 @@ export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
               )}
             />
           </div>
-          <div className="w-52">
+          <div className="w-52 max-md:w-2/5">
             <FormField
               disabled={!projDurationFieldIsVisible}
               control={form.control}
               name="expectProjDurationHours"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Expected project duration (h)</FormLabel>
+                  <FormLabel className="max-md:text-xs">Expected (h)</FormLabel>
                   <FormControl>
-                    <Input placeholder="200" {...field} />
+                    <Input
+                      placeholder="200"
+                      {...field}
+                      className="placeholder:text-xs max-md:text-xs"
+                    />
                   </FormControl>
                   {/* <FormDescription>
                 Please indicate your corporate email
               </FormDescription> */}
-                  <FormMessage />
+                  <FormMessage className="max-md:text-xs" />
                 </FormItem>
               )}
             />
@@ -251,21 +284,23 @@ export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
           name="explanation"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Request explanation</FormLabel>
+              <FormLabel className="max-md:text-xs">
+                Request explanation
+              </FormLabel>
               <FormControl>
                 <Textarea
-                  className="resize-none h-28"
+                  className="resize-none h-28 max-md:text-xs placeholder:text-xs"
                   placeholder="Explain briefly your project request here please. We will contact you to know more details :)!"
                   {...field}
                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="max-md:text-xs" />
             </FormItem>
           )}
         />
 
         <div className="w-full flex flex-row justify-end">
-          <Button className="mr-0" type="submit">
+          <Button className="mr-0 mt-2" type="submit">
             Submit
           </Button>
         </div>
