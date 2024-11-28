@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils";
 
 export function Navigation() {
   return (
-    <div className="fixed flex rounded-lg shadow-xl p-1 bg-white">
+    <div className="hidden md:block fixed rounded-lg shadow-xl p-1 bg-white">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem id="navitemtest">

@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/custom/client/navigation";
 import { Button } from "@/components/ui/button";
+import { NavigationWrapper } from "@/components/custom/navigation-wrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <div className="flex flex-row justify-center my-6 relative z-10">
-          <Navigation />
-        </div> */}
+        <div className="flex flex-row justify-center my-6 relative z-10">
+          <NavigationWrapper />
+        </div>
         {children}
       </body>
     </html>
