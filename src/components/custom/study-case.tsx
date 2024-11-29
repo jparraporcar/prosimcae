@@ -25,7 +25,6 @@ interface StudyCaseProps {
 
 export const StudyCase: React.FC<StudyCaseProps> = (props) => {
   const isSmall = useMediaQuery({ query: "(max-width: 767px)" });
-  console.log(isSmall, "isSmall");
   return (
     <>
       <Carousel>
