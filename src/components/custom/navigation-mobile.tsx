@@ -28,7 +28,7 @@ export const NavigationMobile: React.FC = () => {
       <SheetTrigger className="h-6">
         <Menu size={34} onClick={() => setIsOpen(true)} />
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent onInteractOutside={() => setIsOpen(false)}>
         <div
           id="mobile-nav-container"
           className="flex flex-col mt-8 ml-4 gap-y-6 text-xl"
