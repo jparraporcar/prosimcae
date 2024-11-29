@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="mx-0">
       <body className={inter.className}>
-        <div className="flex flex-row max-md:justify-end justify-center mr-6 my-6 relative z-10">
+        <div className="w-full flex flex-row max-md:justify-end justify-center relative z-10">
           <NavigationWrapper />
         </div>
         {children}

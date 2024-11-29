@@ -8,7 +8,10 @@ export const NavigationWrapper: React.FC = () => {
       <div className="max-md:hidden flex flex-row justify-center">
         <Navigation />
       </div>
-      <div id="menu-trigger" className="md:hidden">
+      <div
+        id="menu-trigger"
+        className="flex flex-row justify-end w-full md:hidden bg-white fixed m-0 p-2 pb-4 border-b-2"
+      >
         <NavigationMobile />
       </div>
     </>

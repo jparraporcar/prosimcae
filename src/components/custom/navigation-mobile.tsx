@@ -2,13 +2,14 @@
 
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "../ui/button";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -17,7 +18,7 @@ export const NavigationMobile: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   const handleClick = (id: string) => {
-    setIsOpen(false);
+    setIsOpen((prevState) => !prevState);
     setTimeout(() => router.push(id), 400);
   };
 
@@ -53,6 +54,10 @@ export const NavigationMobile: React.FC = () => {
             Collaborations
           </Button>
         </div>
+        <SheetClose className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-white transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-slate-100 dark:ring-offset-slate-950 dark:focus:ring-slate-300 dark:data-[state=open]:bg-slate-800">
+          <X className="h-4 w-4" onClick={() => setIsOpen(false)} />
+          <span className="sr-only">Close</span>
+        </SheetClose>
       </SheetContent>
     </Sheet>
   );
