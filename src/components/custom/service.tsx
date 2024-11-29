@@ -17,7 +17,7 @@ export const Service: React.FC<ServiceProps> = (props) => {
   return (
     <section
       className={cn([
-        "w-5/12 max-md:w-11/12 flex flex-col justify-between gap-4 px-6 py-6 mt-6 border rounded-lg shadow-md bg-white dark:bg-gray-800",
+        "w-5/12 max-md:w-11/12 flex flex-col justify-between gap-4 px-6 py-6 max-md:px-3 mt-6 border rounded-lg shadow-md bg-white dark:bg-gray-800",
         props.sectionClass,
       ])}
     >

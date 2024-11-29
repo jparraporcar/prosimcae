@@ -29,7 +29,7 @@ export const CarouselMobile: React.FC<RotatingImageCarouselProps> = (props) => {
         }) as any,
       ]}
     >
-      <CarouselContent>
+      <CarouselContent className="max-md:h-120">
         {props.images.map((image, index) => (
           <CarouselItem key={index}>
             <div className="image-container-mobile">
@@ -45,8 +45,6 @@ export const CarouselMobile: React.FC<RotatingImageCarouselProps> = (props) => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
     </Carousel>
   );
 };

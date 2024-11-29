@@ -26,11 +26,11 @@ import { CarouselWrapper } from "@/components/custom/client/carousel-wrapper";
 
 const Home: React.FC = () => {
   return (
-    <main className="flex flex-col items-center mt-24 max-md:mt-0 overflow-x-hidden">
+    <main className="w-full flex flex-col items-center mt-24 max-md:mt-0 overflow-x-hidden">
       <div id="main-section-intro" className=" text-slate-700 mb-8 pb-4">
         <MainSectionIntro
           descriptionContainerClass="appear-fading"
-          descriptionClass="text-gray-500 text-2xl max-md:text-base italic text-center "
+          descriptionClass="text-gray-500 text-2xl max-md:text-base max-md:px-4 italic text-center "
           descriptionText="At ProEngineLabs, we are providing comprehensive Computational Aided Engineering (CAE) solutions that encompass advanced Computational Fluid Dynamics (CFD), Solid Mechanics, and Thermal Management. Our expertise combines technical precision with innovative analysis techniques."
         />
       </div>
@@ -66,7 +66,7 @@ const Home: React.FC = () => {
         />
       </div>
       <div className="w-full flex flex-row max-lg:flex-col flex-wrap gap-y-20 max-lg:gap-y-0 justify-evenly max-lg:items-center">
-        <section className="w-5/12 max-md:w-full flex flex-col px-6 max-md:px-3 py-4 mt-2 bg-white dark:bg-gray-800 items-center">
+        <section className="w-5/12 max-md:h-[250px] max-md:w-full flex flex-col px-6 max-md:px-3 py-4 mt-2 bg-white dark:bg-gray-800 items-center max-md:justify-center">
           <h2 className="text-3xl max-md:text-2xl font-bold text-gray-900 dark:text-gray-50">
             {customEngineering.serviceName}
           </h2>
@@ -74,7 +74,7 @@ const Home: React.FC = () => {
             <CarouselWrapper images={openImages} />
           </div>
         </section>
-        <section className="w-5/12 max-md:w-full  flex flex-col px-6 max-md:px-3 py-4 max-md:pt-0 mt-2 max-md:mt-0 bg-white dark:bg-gray-800 items-center">
+        <section className="w-5/12 max-md:h-[250px] max-md:w-full flex flex-col px-6 max-md:px-3 py-4 mt-2 bg-white dark:bg-gray-800 items-center max-md:justify-center">
           <h2 className="text-3xl max-md:text-2xl font-bold text-gray-900 dark:text-gray-50">
             {onDemandEngineering.serviceName}
           </h2>

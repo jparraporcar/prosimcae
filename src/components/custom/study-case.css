@@ -8,8 +8,8 @@ button {
 @media (max-width: 767px) {
   button {
     height: 25px !important;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 }
 
