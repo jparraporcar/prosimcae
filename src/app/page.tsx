@@ -113,7 +113,7 @@ const Home: React.FC = () => {
           titleContainerClass="max-md:text-3xl"
         />
       </div>
-      <section className="bg-gray-100 py-12">
+      <section className="bg-white py-12">
         <div className="container mx-auto px-6">
           <Card className="bg-white shadow-lg rounded-lg">
             <CardHeader className="text-center pb-6 max-md:px-3">
