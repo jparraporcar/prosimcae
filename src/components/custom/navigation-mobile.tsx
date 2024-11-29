@@ -11,8 +11,8 @@ import { Menu } from "lucide-react";
 export const NavigationMobile: React.FC = () => {
   return (
     <Sheet>
-      <SheetTrigger>
-        <Menu size="34px" />
+      <SheetTrigger className="h-5">
+        <Menu size={34} />
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>

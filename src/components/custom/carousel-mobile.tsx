@@ -23,6 +23,7 @@ export const CarouselMobile: React.FC<RotatingImageCarouselProps> = (props) => {
   return (
     <Carousel
       className="w-full max-w-sm"
+      opts={{ duration: 60 }}
       plugins={[
         Autoplay({
           delay: 2000,

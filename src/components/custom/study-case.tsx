@@ -8,8 +8,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Separator } from "@radix-ui/react-separator";
-import "./study-case.css";
 import { SeparatorVertical } from "lucide-react";
+import { useMediaQuery } from "react-responsive";
 
 interface StudyCaseProps {
   images: {
@@ -24,6 +24,8 @@ interface StudyCaseProps {
 }
 
 export const StudyCase: React.FC<StudyCaseProps> = (props) => {
+  const isSmall = useMediaQuery({ query: "(max-width: 767px)" });
+  console.log(isSmall, "isSmall");
   return (
     <>
       <Carousel>

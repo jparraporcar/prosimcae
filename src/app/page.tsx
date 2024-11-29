@@ -66,7 +66,7 @@ const Home: React.FC = () => {
         />
       </div>
       <div className="w-full flex flex-row max-lg:flex-col flex-wrap gap-y-20 max-lg:gap-y-0 justify-evenly max-lg:items-center">
-        <section className="w-5/12 max-md:h-[250px] max-md:w-full flex flex-col px-6 max-md:px-3 py-4 mt-2 bg-white dark:bg-gray-800 items-center max-md:justify-center">
+        <section className="w-6/12 max-md:h-[300px] max-md:w-full flex flex-col px-6 max-md:px-3 py-4 mt-2 bg-white dark:bg-gray-800 items-center max-md:justify-center">
           <h2 className="text-3xl max-md:text-2xl font-bold text-gray-900 dark:text-gray-50">
             {customEngineering.serviceName}
           </h2>
@@ -74,7 +74,7 @@ const Home: React.FC = () => {
             <CarouselWrapper images={openImages} />
           </div>
         </section>
-        <section className="w-5/12 max-md:h-[250px] max-md:w-full flex flex-col px-6 max-md:px-3 py-4 mt-2 bg-white dark:bg-gray-800 items-center max-md:justify-center">
+        <section className="w-6/12 max-md:h-[300px] max-md:w-full flex flex-col px-6 max-md:px-3 py-4 mt-2 bg-white dark:bg-gray-800 items-center max-md:justify-center">
           <h2 className="text-3xl max-md:text-2xl font-bold text-gray-900 dark:text-gray-50">
             {onDemandEngineering.serviceName}
           </h2>
@@ -93,7 +93,10 @@ const Home: React.FC = () => {
           titleContainerClass="max-md:text-3xl"
         />
       </div>
-      <div className="flex flex-col text-lg items-center mt-6">
+      <div
+        id="study-cases-container"
+        className="flex flex-col text-lg items-center mt-6"
+      >
         {studyCasesSections.map((studyCaseSection, index) => (
           <StudyCasesSection
             key={index}
