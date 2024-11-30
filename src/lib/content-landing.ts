@@ -2,7 +2,7 @@ export const customEngineering = {
   sectionClass: "bg-gray-100 dark:bg-gray-800",
   serviceName: "Custom Engineering",
   serviceIntro:
-    "Comprehensive simulation services tailored to the specific needs of each client. We specialize in providing reliable, cost-effective solutions that address both small-scale problems and large, complex projects. Our custom engineering approach includes flexible engagement models, whether you’re looking for a long-term B2B partnership or a project-based solution. With ProEngineLabs, clients can achieve precise, validated outcomes aligned with their unique engineering challenges and standards.",
+    "Comprehensive simulation services tailored to the specific needs of each client. We specialize in providing reliable, cost-effective solutions that address both small-scale problems and large, complex projects. Our custom engineering approach includes flexible engagement models, whether you’re looking for a long-term B2B partnership or a project-based solution. With Procaesim, clients can achieve precise, validated outcomes aligned with their unique engineering challenges and standards.",
 
   hrefDiscover: "/contact", // Adjust for routing
 

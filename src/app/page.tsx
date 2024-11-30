@@ -31,7 +31,7 @@ const Home: React.FC = () => {
         <MainSectionIntro
           descriptionContainerClass="appear-fading"
           descriptionClass="text-gray-500 text-2xl max-md:text-base max-md:px-4 italic text-center "
-          descriptionText="At ProEngineLabs, we are providing comprehensive Computational Aided Engineering (CAE) solutions that encompass advanced Computational Fluid Dynamics (CFD), Solid Mechanics, and Thermal Management. Our expertise combines technical precision with innovative analysis techniques."
+          descriptionText="At Procaesim, we are providing comprehensive Computational Aided Engineering (CAE) solutions that encompass advanced Computational Fluid Dynamics (CFD), Solid Mechanics, and Thermal Management. Our expertise combines technical precision with innovative analysis techniques."
         />
       </div>
       <div id="main-section-title-services" className="slide-in-top section">
