@@ -16,7 +16,13 @@ import Image from "next/image";
 import "./carousel-mobile.css";
 
 interface RotatingImageCarouselProps {
-  images: { src: string; alt: string; description: string }[];
+  images: {
+    src: string;
+    alt: string;
+    description: string;
+    width: number;
+    height: number;
+  }[];
 }
 
 export const CarouselMobile: React.FC<RotatingImageCarouselProps> = (props) => {
@@ -34,11 +40,10 @@ export const CarouselMobile: React.FC<RotatingImageCarouselProps> = (props) => {
         {props.images.map((image, index) => (
           <CarouselItem key={index}>
             <div className="image-container-mobile">
-              <Image
+              <img
                 src={image.src}
                 alt={image.alt}
-                width={150}
-                height={150}
+                width={image.width}
                 className="image"
               />
               <p className="description-mobile">{image.description}</p>

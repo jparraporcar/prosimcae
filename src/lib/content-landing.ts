@@ -134,31 +134,38 @@ export const openImages = [
   {
     src: "/images/open-logos/calculix.jpg",
     alt: "CalculiX",
+    width: 150,
     description: "Open-source FEA solver for structural analysis.",
   },
   {
     src: "/images/open-logos/lsprepost-logo2.png",
     alt: "LS-PrePost",
+    width: 150,
     description: "Tool for LS-DYNA solver result processing.",
   },
   {
     src: "/images/open-logos/openradioss.jpg",
     alt: "OpenRadioss",
+    width: 150,
     description: "Dynamic analysis solver for crash simulations.",
   },
   {
     src: "/images/open-logos/paraview-logo.png",
     alt: "ParaView",
+    width: 150,
     description: "3D visualization for simulation data.",
   },
   {
     src: "/images/open-logos/prepomax-logo.jpg",
     alt: "PrePoMax",
+    width: 150,
     description: "Pre-processor for CalculiX solver.",
   },
   {
     src: "/images/open-logos/openfoam-logo.png",
     alt: "OpenFOAM",
+    width: 150,
+    height: "auto",
     description: "CFD solver for fluid simulations.",
   },
 ];
@@ -167,21 +174,25 @@ export const comImages = [
   {
     src: "/images/com-logos/ansa-logo.svg",
     alt: "ANSA",
+    width: 150,
     description: "Pre-processor for advanced CAE modeling.",
   },
   {
     src: "/images/com-logos/meta-logo.svg",
     alt: "META",
+    width: 150,
     description: "Post-processing tool for CAE data analysis.",
   },
   {
     src: "/images/com-logos/simulia-abaqus-logo.png",
     alt: "SIMULIA Abaqus Standard",
+    width: 150,
     description: "Implicit FEA solver for structural analysis.",
   },
   {
     src: "/images/com-logos/lsdyna-logo.svg",
     alt: "LS-DYNA",
+    width: 150,
     description: "Explicit FEA solver for dynamic simulations.",
   },
 ];
