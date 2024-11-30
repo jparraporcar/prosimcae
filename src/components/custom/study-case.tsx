@@ -7,8 +7,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Separator } from "@radix-ui/react-separator";
-import { SeparatorVertical } from "lucide-react";
 import { useMediaQuery } from "react-responsive";
 
 interface StudyCaseProps {
