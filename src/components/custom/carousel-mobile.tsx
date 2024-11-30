@@ -26,7 +26,7 @@ export const CarouselMobile: React.FC<RotatingImageCarouselProps> = (props) => {
       opts={{ duration: 60 }}
       plugins={[
         Autoplay({
-          delay: 2000,
+          delay: 4000,
         }) as any,
       ]}
     >
