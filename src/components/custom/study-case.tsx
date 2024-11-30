@@ -43,7 +43,7 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
                   <Image
                     alt={image.alt}
                     className={cn([
-                      "mx-auto aspect-video rounded-xl object-cover",
+                      "mx-auto aspect-video rounded-xl object-cover md:w-full",
                       image.className,
                     ])}
                     height={image.height}
