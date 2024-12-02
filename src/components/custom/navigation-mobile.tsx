@@ -36,7 +36,7 @@ export const NavigationMobile: React.FC = () => {
       >
         <div
           id="mobile-nav-container"
-          className="flex flex-col -mt-4 ml-4 gap-y-6 text-xl"
+          className="flex flex-col -mt-2 -ml-2 gap-y-6 text-xl"
         >
           <div className="mr-auto ml-4 border-b-2">
             <Image
