@@ -30,7 +30,7 @@ const Home: React.FC = () => {
       <div id="main-section-intro" className=" text-slate-700 mb-8 mt-16 pb-4">
         <MainSectionIntro
           descriptionContainerClass="appear-fading"
-          descriptionClass="text-gray-500 text-2xl max-md:text-base px-6 max-md:px-4 italic text-center max-md:mt-10 "
+          descriptionClass="text-gray-500 text-2xl max-md:text-base max-md:px-6 px-3 max-md:px-4 italic text-center max-md:mt-10 "
           descriptionText="At Procaesim, we are providing comprehensive Computational Aided Engineering (CAE) solutions that encompass advanced Computational Fluid Dynamics (CFD), Solid Mechanics, and Thermal Management. Our expertise combines technical precision with innovative analysis techniques."
         />
       </div>

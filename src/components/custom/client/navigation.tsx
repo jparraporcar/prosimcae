@@ -13,24 +13,24 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export function Navigation() {
   return (
-    <div className="fixed rounded-lg shadow-xl p-1 bg-white mt-4">
+    <div className="fixed rounded-lg shadow-xl p-1 bg-white mt-4 align-middle">
       <NavigationMenu>
         <NavigationMenuList>
-          <NavigationMenuItem id="navitemtest">
+          <NavigationMenuItem id="navitemtest" className="-mt-1 mr-4">
             <Link href="/" legacyBehavior passHref>
-              <NavigationMenuLink
-                className={cn([
-                  navigationMenuTriggerStyle(),
-                  "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
-                ])}
-              >
-                <span className="font-bold text-center bg-transparent">
-                  Pro
-                </span>
-                EngineLabs
+              <NavigationMenuLink>
+                <div className="mr-auto ml-4">
+                  <Image
+                    src="/images/provisional-logo-prosimcae.jpg"
+                    alt="logo"
+                    width={150}
+                    height={15}
+                  />
+                </div>
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
