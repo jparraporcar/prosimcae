@@ -21,7 +21,7 @@ export const NavigationWrapper: React.FC = () => {
             height={15}
           />
         </div>
-        <div style={{ placeContent: "center", marginTop: "0px" }}>
+        <div style={{ placeContent: "center", marginTop: "4px" }}>
           <NavigationMobile />
         </div>
       </div>
