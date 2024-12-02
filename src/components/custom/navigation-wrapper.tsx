@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Navigation } from "./client/navigation";
 import { NavigationMobile } from "./navigation-mobile";
 import "./navigation-wrapper.css";
@@ -10,9 +11,19 @@ export const NavigationWrapper: React.FC = () => {
       </div>
       <div
         id="menu-trigger"
-        className="flex flex-row justify-end w-full md:hidden bg-white fixed m-0 p-2 pb-4 border-b-2"
+        className="flex flex-row justify-end w-full md:hidden bg-white fixed m-0 p-2 border-b-2"
       >
-        <NavigationMobile />
+        <div className="mr-auto ml-4">
+          <Image
+            src="/images/provisional-logo-prosimcae.jpg"
+            alt="logo"
+            width={200}
+            height={15}
+          />
+        </div>
+        <div style={{ placeContent: "center", marginTop: "-2px" }}>
+          <NavigationMobile />
+        </div>
       </div>
     </>
   );

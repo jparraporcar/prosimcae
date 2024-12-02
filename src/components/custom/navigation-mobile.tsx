@@ -13,6 +13,8 @@ import { Menu, X } from "lucide-react";
 import { Button } from "../ui/button";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+
 import "./navigation-mobile.css";
 
 export const NavigationMobile: React.FC = () => {
@@ -28,11 +30,22 @@ export const NavigationMobile: React.FC = () => {
       <SheetTrigger className="h-6">
         <Menu size={34} onClick={() => setIsOpen(true)} />
       </SheetTrigger>
-      <SheetContent onInteractOutside={() => setIsOpen(false)}>
+      <SheetContent
+        onInteractOutside={() => setIsOpen(false)}
+        className="ml-auto"
+      >
         <div
           id="mobile-nav-container"
-          className="flex flex-col mt-8 ml-4 gap-y-6 text-xl"
+          className="flex flex-col -mt-4 ml-4 gap-y-6 text-xl"
         >
+          <div className="mr-auto ml-4 border-b-2">
+            <Image
+              src="/images/provisional-logo-prosimcae.jpg"
+              alt="logo"
+              width={200}
+              height={15}
+            />
+          </div>
           <button
             onClick={() => handleClick("#main-section-title-services")}
             className="text-black bg-white inline-flex border-white h-10 w-max items-center justify-center rounded-md bg-transparent px-4 text-lg font-medium py-4 pr-4 active:bg-slate-300 active:border-white focus:outline-none focus:border-white -webkit-appearance-none"
