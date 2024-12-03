@@ -1,0 +1,8 @@
+.max-md\:-mx-2 {
+  margin-left: 0rem;
+  margin-right: 0rem;
+}
+
+div[role="group"] {
+  padding: 0px !important;
+}
