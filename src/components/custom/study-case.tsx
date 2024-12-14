@@ -30,13 +30,13 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
           {props.images.map((image, index) => (
             <CarouselItem key={index} className="pl-0">
               <div className="flex flex-col items-center mb-16">
-                <h1 className="text-center px-2 pt-2 pb-1 max-md:text-sm">
+                <h1 className="text-center text-lg px-2 pt-2 pb-1 max-md:text-sm">
                   {image.title}
                 </h1>
                 <div
                   className={cn(["w-56 h-1 border-b border-gray-300 mx-auto"])}
                 ></div>
-                <div className="w-1/2 max-md:w-full max-md:text-center p-4 max-md:p-1 max-md:text-xs">
+                <div className="w-11/12 text-base max-md:w-full max-md:text-center p-4 max-md:p-1 max-md:text-xs">
                   {image.description}
                 </div>
                 <figure className="w-full">

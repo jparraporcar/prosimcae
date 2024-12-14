@@ -37,30 +37,29 @@ export const studyCasesSections = [
     effectIsActive: true,
     studyCases: [
       {
-        studyCaseTitle:
-          "Explicit simulation of a pendrive impacting in the ground - part1",
+        studyCaseTitle: "Drop test of a Portable Storage Device",
         images: [
           {
-            title: "Energy balance",
+            title: "Impact position",
             description:
-              " In this picture we can see an energy balance including kinetic energy and internal energy",
-            alt: "Laminar flow analysis",
+              "Perspective view of the device as it is prior to the ground impact - no exploded",
+            alt: "perspective view no exploded",
             height: 500,
-            src: "/images/cfd.png",
+            src: "/images/post/pen/persp_colour_initial_noexplode.jpeg",
             width: 500,
             className: "object-contain mx-0 mb-2",
-            caption: "Laminar flow analysis",
+            caption: "no exploded view",
           },
           {
             title: "Von Misses Stress Distribution",
             description:
-              " In this picture we can see The Von Misses stress distribution along the part",
-            alt: "vonmisses stress",
+              "Perspective view of the device as it is prior to the ground impact - exploded",
+            alt: "perspective view exploded",
             height: 500,
-            src: "/images/cfd.png",
+            src: "/images/post/pen/persp_colour_initial_explode.jpeg",
             width: 500,
             className: "object-contain mx-0 mb-2",
-            caption: "vonmisses stress",
+            caption: "exploded view",
           },
         ],
       },
