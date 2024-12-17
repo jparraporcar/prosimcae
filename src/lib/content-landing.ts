@@ -1,3 +1,6 @@
+import Autoplay from "embla-carousel-autoplay";
+import { mediaItem } from "./types";
+
 export const customEngineering = {
   sectionClass: "bg-gray-100 dark:bg-gray-800",
   serviceName: "Custom Engineering",
@@ -38,8 +41,9 @@ export const studyCasesSections = [
     studyCases: [
       {
         studyCaseTitle: "Drop test of a Portable Storage Device",
-        images: [
+        mediaItems: [
           {
+            type: "image",
             title: "Impact position",
             description:
               "Perspective view of the device as it is prior to the ground impact - no exploded",
@@ -51,6 +55,7 @@ export const studyCasesSections = [
             caption: "no exploded view",
           },
           {
+            type: "image",
             title: "Von Misses Stress Distribution",
             description:
               "Perspective view of the device as it is prior to the ground impact - exploded",
@@ -61,35 +66,49 @@ export const studyCasesSections = [
             className: "object-contain mx-0 mb-2",
             caption: "exploded view",
           },
-        ],
+          {
+            type: "video",
+            title: "Plastic deformation view 1",
+            description: "Plastic deformation view 1",
+            height: 500,
+            src: "/videos/pers_near_ps.mp4",
+            width: 500,
+            controls: true,
+            muted: true,
+            loop: true,
+            autoPlay: true,
+          },
+        ] as mediaItem[],
       },
       {
         studyCaseTitle:
           "Explicit simulation of a pendrive impacting in the ground - part2",
-        images: [
+        mediaItems: [
           {
-            title: "Energy balance",
-            description:
-              " In this picture we can see an energy balance including kinetic energy and internal energy",
-            alt: "Laminar flow analysis",
-            height: 500,
-            src: "/images/cfd.png",
-            width: 500,
-            className: "object-contain mx-0 mb-2",
-            caption: "Laminar flow analysis",
-          },
-          {
+            type: "image",
             title: "Von Misses Stress Distribution",
             description:
-              " In this picture we can see The Von Misses stress distribution along the part",
-            alt: "vonmisses stress",
+              "Perspective view of the device as it is prior to the ground impact - exploded",
+            alt: "perspective view exploded",
             height: 500,
-            src: "/images/cfd.png",
+            src: "/images/post/pen/persp_colour_initial_explode.jpeg",
             width: 500,
             className: "object-contain mx-0 mb-2",
-            caption: "vonmisses stress",
+            caption: "exploded view",
           },
-        ],
+          {
+            type: "image",
+            title: "Von Misses Stress Distribution",
+            description:
+              "Perspective view of the device as it is prior to the ground impact - exploded",
+            alt: "perspective view exploded",
+            height: 500,
+            src: "/images/post/pen/persp_colour_initial_explode.jpeg",
+            width: 500,
+            className: "object-contain mx-0 mb-2",
+            caption: "exploded view",
+          },
+        ] as mediaItem[],
       },
     ],
   },
@@ -100,30 +119,32 @@ export const studyCasesSections = [
     studyCases: [
       {
         studyCaseTitle: "Study of thermal efficiency within a apartment room",
-        images: [
+        mediaItems: [
           {
-            title: "Stream lines",
+            type: "image",
+            title: "Von Misses Stress Distribution",
             description:
-              " In this picture we can see the stream lines going through the room",
-            alt: "streamlines",
+              "Perspective view of the device as it is prior to the ground impact - exploded",
+            alt: "perspective view exploded",
             height: 500,
-            src: "/images/cfd.png",
+            src: "/images/post/pen/persp_colour_initial_explode.jpeg",
             width: 500,
             className: "object-contain mx-0 mb-2",
-            caption: "streamlines",
+            caption: "exploded view",
           },
           {
-            title: "Temperature distribution in the room",
+            type: "image",
+            title: "Von Misses Stress Distribution",
             description:
-              " In this picture we can see the temperature distribution in the room",
-            alt: "temperaturedistr",
+              "Perspective view of the device as it is prior to the ground impact - exploded",
+            alt: "perspective view exploded",
             height: 500,
-            src: "/images/cfd.png",
+            src: "/images/post/pen/persp_colour_initial_explode.jpeg",
             width: 500,
             className: "object-contain mx-0 mb-2",
-            caption: "temperaturedistr",
+            caption: "exploded view",
           },
-        ],
+        ] as mediaItem[],
       },
     ],
   },

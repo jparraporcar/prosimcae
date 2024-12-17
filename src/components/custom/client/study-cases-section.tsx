@@ -5,18 +5,11 @@ import { cn } from "@/lib/utils";
 import "./study-cases-section.css";
 
 import { StudyCase } from "../study-case";
+import { mediaItem } from "@/lib/types";
 
 interface StudyCase {
   studyCaseTitle: string;
-  images: {
-    title: string;
-    description: string;
-    alt: string;
-    height: number;
-    src: string;
-    width: number;
-    className?: string;
-  }[];
+  mediaItems: mediaItem[];
 }
 
 interface StudyCasesSectionProps {
@@ -66,7 +59,7 @@ export const StudyCasesSection: React.FC<StudyCasesSectionProps> = (props) => {
             {studyCase.studyCaseTitle}
           </h1>
           <div className="border rounded-bl-2xl rounded-br-2xl border-slate-300">
-            <StudyCase images={studyCase.images} />
+            <StudyCase mediaItems={studyCase.mediaItems} />
           </div>
         </div>
       ))}
