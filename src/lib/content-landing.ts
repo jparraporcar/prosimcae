@@ -48,9 +48,9 @@ export const studyCasesSections = [
             description:
               "Perspective view of the device as it is prior to the ground impact - no exploded",
             alt: "perspective view no exploded",
-            height: 500,
+            height: 600,
             src: "/images/post/pen/persp_colour_initial_noexplode.jpeg",
-            width: 500,
+            width: 600,
             className: "object-contain mx-0 mb-2",
             caption: "no exploded view",
           },

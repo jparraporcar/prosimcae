@@ -47,7 +47,7 @@ export const StudyCasesSection: React.FC<StudyCasesSectionProps> = (props) => {
       ref={ref}
       className={cn([
         `${props.effectIsActive && (isVisible ? "box visible" : "box hidden")}`,
-        "flex flex-col w-10/12 max-md:w-12/12 items-center",
+        "flex flex-col w-8/12 max-md:w-10/12 items-center",
       ])}
     >
       <h2 className="text-center text-3xl max-md:text-2xl max-md:-mx-1 font-bold mb-8">
