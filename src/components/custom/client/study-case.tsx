@@ -12,7 +12,7 @@ import { mediaItem } from "@/lib/types";
 import AutoScroll from "embla-carousel-auto-scroll";
 import { useEffect, useState } from "react";
 import { type CarouselApi } from "@/components/ui/carousel";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 
 interface StudyCaseProps {
   mediaItems: mediaItem[];
@@ -54,7 +54,7 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
         <CarouselContent className="-ml-1">
           {props.mediaItems.map((item, index) => (
             <CarouselItem key={index} className="pl-0">
-              <div className="flex flex-col items-center mb-16">
+              <div className="flex flex-col items-center mb-2">
                 <h1 className="text-center text-lg px-2 pt-2 pb-1 max-md:text-sm">
                   {item.title}
                 </h1>
@@ -70,7 +70,7 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
                     <Image
                       alt={item.alt}
                       className={cn([
-                        "mx-auto aspect-video rounded-xl object-cover md:w-full",
+                        "mx-auto aspect-video rounded-xl object-cover md:w-full mt-4",
                         item.className,
                       ])}
                       height={item.height}
@@ -83,7 +83,7 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
                 {item.type === "video" && (
                   <video
                     className={cn([
-                      "mx-auto aspect-video rounded-xl object-cover md:w-11/12",
+                      "mx-auto aspect-video rounded-xl object-cover md:w-11/12 mt-4",
                       item.className,
                     ])}
                     autoPlay={item.autoPlay}
@@ -98,9 +98,18 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <Button onClick={() => setIsPlaying((prevState) => !prevState)}>
-          {isPlaying ? "Stop" : "Start"}
-        </Button>
+        <div className="flex flex-row justify-end">
+          <Button
+            size="lg"
+            onClick={() => setIsPlaying((prevState) => !prevState)}
+            style={{
+              marginRight: "10px",
+              marginBottom: "10px",
+            }}
+          >
+            {isPlaying ? "Stop" : "Start"}
+          </Button>
+        </div>
       </Carousel>
     </>
   );

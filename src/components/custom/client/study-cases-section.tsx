@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import "./study-cases-section.css";
 
-import { StudyCase } from "../study-case";
+import { StudyCase } from "./study-case";
 import { mediaItem } from "@/lib/types";
 
 interface StudyCase {
@@ -47,14 +47,14 @@ export const StudyCasesSection: React.FC<StudyCasesSectionProps> = (props) => {
       ref={ref}
       className={cn([
         `${props.effectIsActive && (isVisible ? "box visible" : "box hidden")}`,
-        "flex flex-col w-10/12 max-md:w-9/12 items-center",
+        "flex flex-col w-10/12 max-md:w-12/12 items-center",
       ])}
     >
       <h2 className="text-center text-3xl max-md:text-2xl max-md:-mx-1 font-bold mb-8">
         {props.title}
       </h2>
       {props.studyCases.map((studyCase, index) => (
-        <div key={index} className="flex flex-col w-11/12 mb-20">
+        <div key={index} className="flex flex-col w-full mb-20">
           <h1 className="text-center text-xl border-t border-l border-r p-2 rounded-tl-2xl rounded-tr-2xl border-slate-300 bg-slate-300">
             {studyCase.studyCaseTitle}
           </h1>

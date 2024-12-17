@@ -95,7 +95,7 @@ const Home: React.FC = () => {
       </div>
       <div
         id="study-cases-container"
-        className="flex flex-col text-lg items-center mt-6"
+        className="flex flex-col text-lg items-center mt-6 max-md:w-full"
       >
         {studyCasesSections.map((studyCaseSection, index) => (
           <StudyCasesSection
