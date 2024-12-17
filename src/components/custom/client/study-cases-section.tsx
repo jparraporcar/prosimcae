@@ -20,7 +20,7 @@ interface StudyCasesSectionProps {
 
 export const StudyCasesSection: React.FC<StudyCasesSectionProps> = (props) => {
   const ref = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
