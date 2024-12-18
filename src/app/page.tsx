@@ -26,7 +26,7 @@ import { CarouselWrapper } from "@/components/custom/client/carousel-wrapper";
 
 const Home: React.FC = () => {
   return (
-    <main className="w-full flex flex-col items-center mt-24 max-md:mt-0 overflow-x-hidden">
+    <main className="w-full flex flex-col items-center max-md:mt-0 overflow-x-hidden mt-12">
       <div id="main-section-intro" className=" text-slate-700 mb-8 mt-16 pb-4">
         <MainSectionIntro
           descriptionContainerClass="appear-fading"

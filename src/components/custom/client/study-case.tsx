@@ -84,7 +84,7 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
                 {item.type === "video" && (
                   <video
                     className={cn([
-                      "mx-auto aspect-video rounded-xl object-cover md:w-11/12 mt-4",
+                      "mx-auto aspect-video rounded-xl object-cover md:w-10/12 mt-4 px-4",
                       item.className,
                     ])}
                     autoPlay={item.autoPlay}
