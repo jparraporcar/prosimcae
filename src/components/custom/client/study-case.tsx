@@ -48,6 +48,7 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
         plugins={[
           AutoScroll({
             playOnInit: true,
+            speed: 3,
           }),
         ]}
       >
@@ -66,7 +67,7 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
                 </div>
 
                 {item.type === "image" && (
-                  <figure className="w-full">
+                  <figure className="w-11/12">
                     <Image
                       alt={item.alt}
                       className={cn([
