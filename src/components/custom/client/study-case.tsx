@@ -91,7 +91,7 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
                       loop={item.loop}
                       muted={item.muted}
                       controls={item.controls}
-                      playsInline={isMobile && true}
+                      playsInline
                     >
                       <source src={item.src} type="video/mp4" />
                     </video>
