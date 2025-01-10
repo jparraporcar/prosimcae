@@ -10,9 +10,11 @@ import {
 import { useMediaQuery } from "react-responsive";
 import { mediaItem } from "@/lib/types";
 import AutoScroll from "embla-carousel-auto-scroll";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { type CarouselApi } from "@/components/ui/carousel";
 import { Button } from "../../ui/button";
+import { useInView } from "react-intersection-observer";
+import { VideoItem } from "./video-item";
 
 interface StudyCaseProps {
   mediaItems: mediaItem[];
@@ -35,7 +37,7 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
     }
   }, [api, isPlaying]);
 
-  // this useEffect is to be fired when the user drags on the carousel and the event stop is emitted
+  // this useEffect is to be fired when the user drags on the carousel and the event stop is emitted in order to update the button
   useEffect(() => {
     api?.on("autoScroll:stop", () => setIsPlaying(false));
   }, [api]);
@@ -81,21 +83,13 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
                   </figure>
                 )}
                 {item.type === "video" && (
-                  <div className="h-full flex items-center justify-center">
-                    <video
-                      className={cn([
-                        "mx-auto aspect-video rounded-xl object-cover md:w-10/12 mt-4 mb-4 px-4",
-                        item.className,
-                      ])}
-                      autoPlay={item.autoPlay}
-                      loop={item.loop}
-                      muted={item.muted}
-                      controls={item.controls}
-                      playsInline
-                    >
-                      <source src={item.src} type="video/mp4" />
-                    </video>
-                  </div>
+                  <VideoItem
+                    src={item.src}
+                    loop={item.loop}
+                    muted={item.muted}
+                    controls={item.controls}
+                    className={item.className}
+                  />
                 )}
               </div>
             </CarouselItem>

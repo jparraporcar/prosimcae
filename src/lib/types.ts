@@ -15,7 +15,6 @@ export type mediaItem =
       title: string;
       description: string;
       src: string;
-      autoPlay: boolean;
       loop: boolean;
       muted: boolean;
       controls: boolean;

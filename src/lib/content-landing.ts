@@ -1,4 +1,3 @@
-import Autoplay from "embla-carousel-autoplay";
 import { mediaItem } from "./types";
 
 export const customEngineering = {
@@ -72,7 +71,6 @@ export const studyCasesSections = [
             controls: true,
             muted: true,
             loop: true,
-            autoPlay: true,
           },
           {
             type: "video",
@@ -84,7 +82,6 @@ export const studyCasesSections = [
             controls: true,
             muted: true,
             loop: true,
-            autoPlay: true,
           },
           {
             type: "image",
@@ -123,7 +120,6 @@ export const studyCasesSections = [
             controls: true,
             muted: true,
             loop: true,
-            autoPlay: true,
           },
           {
             type: "video",
@@ -135,7 +131,6 @@ export const studyCasesSections = [
             controls: true,
             muted: true,
             loop: true,
-            autoPlay: true,
           },
           {
             type: "video",
@@ -147,7 +142,6 @@ export const studyCasesSections = [
             controls: true,
             muted: true,
             loop: true,
-            autoPlay: true,
           },
           {
             type: "video",
@@ -159,7 +153,6 @@ export const studyCasesSections = [
             controls: true,
             muted: true,
             loop: true,
-            autoPlay: true,
           },
         ] as mediaItem[],
       },
@@ -187,7 +180,6 @@ export const studyCasesSections = [
             controls: true,
             muted: true,
             loop: true,
-            autoPlay: true,
           },
           {
             type: "video",
@@ -199,7 +191,6 @@ export const studyCasesSections = [
             controls: true,
             muted: true,
             loop: true,
-            autoPlay: true,
           },
           {
             type: "video",
@@ -211,7 +202,6 @@ export const studyCasesSections = [
             controls: true,
             muted: true,
             loop: true,
-            autoPlay: true,
           },
           {
             type: "video",
@@ -223,7 +213,6 @@ export const studyCasesSections = [
             controls: true,
             muted: true,
             loop: true,
-            autoPlay: true,
           },
           {
             type: "video",
@@ -235,7 +224,6 @@ export const studyCasesSections = [
             controls: true,
             muted: true,
             loop: true,
-            autoPlay: true,
           },
         ] as mediaItem[],
       },
@@ -279,7 +267,6 @@ export const studyCasesSections = [
             controls: true,
             muted: true,
             loop: true,
-            autoPlay: true,
           },
           {
             type: "video",
@@ -291,7 +278,6 @@ export const studyCasesSections = [
             controls: true,
             muted: true,
             loop: true,
-            autoPlay: true,
           },
           {
             type: "video",
@@ -303,7 +289,6 @@ export const studyCasesSections = [
             controls: true,
             muted: true,
             loop: true,
-            autoPlay: true,
           },
           {
             type: "video",
@@ -315,7 +300,6 @@ export const studyCasesSections = [
             controls: true,
             muted: true,
             loop: true,
-            autoPlay: true,
           },
         ] as mediaItem[],
       },
