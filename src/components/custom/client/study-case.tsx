@@ -19,7 +19,7 @@ interface StudyCaseProps {
 }
 
 export const StudyCase: React.FC<StudyCaseProps> = (props) => {
-  const isSmall = useMediaQuery({ query: "(max-width: 767px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const [api, setApi] = useState<CarouselApi>();
   const [isPlaying, setIsPlaying] = useState(true);
 
@@ -91,6 +91,7 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
                       loop={item.loop}
                       muted={item.muted}
                       controls={item.controls}
+                      playsInline={isMobile && true}
                     >
                       <source src={item.src} type="video/mp4" />
                     </video>
