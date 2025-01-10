@@ -55,7 +55,7 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
         <CarouselContent className="-ml-1">
           {props.mediaItems.map((item, index) => (
             <CarouselItem key={index} className="pl-0">
-              <div className="flex flex-col items-center mb-2">
+              <div className="flex flex-col items-center mb-2 h-full">
                 <h1 className="text-center text-lg px-2 pt-2 pb-1 max-md:text-sm">
                   {item.title}
                 </h1>
@@ -71,29 +71,30 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
                     <Image
                       alt={item.alt}
                       className={cn([
-                        "mx-auto aspect-video rounded-xl object-cover md:w-full mt-4",
+                        "mx-auto aspect-video rounded-xl object-contain md:w-full mt-4 mb-4",
                         item.className,
                       ])}
                       height={item.height}
                       src={item.src}
                       width={item.width}
-                      style={{ marginBottom: 0 }}
                     />
                   </figure>
                 )}
                 {item.type === "video" && (
-                  <video
-                    className={cn([
-                      "mx-auto aspect-video rounded-xl object-cover md:w-10/12 mt-4 px-4",
-                      item.className,
-                    ])}
-                    autoPlay={item.autoPlay}
-                    loop={item.loop}
-                    muted={item.muted}
-                    controls={item.controls}
-                  >
-                    <source src={item.src} type="video/mp4" />
-                  </video>
+                  <div className="h-full flex items-center justify-center">
+                    <video
+                      className={cn([
+                        "mx-auto aspect-video rounded-xl object-cover md:w-10/12 mt-4 mb-4 px-4",
+                        item.className,
+                      ])}
+                      autoPlay={item.autoPlay}
+                      loop={item.loop}
+                      muted={item.muted}
+                      controls={item.controls}
+                    >
+                      <source src={item.src} type="video/mp4" />
+                    </video>
+                  </div>
                 )}
               </div>
             </CarouselItem>

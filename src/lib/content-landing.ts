@@ -50,7 +50,6 @@ export const studyCasesSections = [
             height: 600,
             src: "/images/post/sim-usb/geo-1.JPG",
             width: 600,
-            className: "object-contain mx-0 mb-2",
             caption: "Image 1",
           },
           {
@@ -61,7 +60,6 @@ export const studyCasesSections = [
             height: 600,
             src: "/images/post/sim-usb/geo-2.JPG",
             width: 600,
-            className: "object-contain mx-0 mb-2",
             caption: "Image 2",
           },
           {
@@ -96,7 +94,6 @@ export const studyCasesSections = [
             height: 600,
             src: "/images/post/sim-usb/energy.jpeg",
             width: 600,
-            className: "object-contain mx-0 mb-2",
             caption: "Image 3",
           },
         ] as mediaItem[],
@@ -113,7 +110,6 @@ export const studyCasesSections = [
             height: 600,
             src: "/images/post/sim-alprofile/geo-1.jpg",
             width: 600,
-            className: "object-contain mx-0 mb-2",
             caption: "Image 1",
           },
           ,
@@ -179,7 +175,6 @@ export const studyCasesSections = [
             height: 600,
             src: "/images/post/sim-metaltable/geo-1.JPG",
             width: 600,
-            className: "object-contain mx-0 mb-2",
             caption: "Image 1",
           },
           {
@@ -262,7 +257,6 @@ export const studyCasesSections = [
             height: 600,
             src: "/images/post/sim-room/geo-1.JPG",
             width: 600,
-            className: "object-contain mx-0 mb-2",
             caption: "Image 1",
           },
           {
@@ -273,7 +267,6 @@ export const studyCasesSections = [
             height: 600,
             src: "/images/post/sim-room/geo-2.JPG",
             width: 600,
-            className: "object-contain mx-0 mb-2",
             caption: "Image 2",
           },
           {
