@@ -21,7 +21,7 @@ interface StudyCaseProps {
 export const StudyCase: React.FC<StudyCaseProps> = (props) => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const [api, setApi] = useState<CarouselApi>();
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   // this useEffect is to be fired when the user clicks the button to start or stop the carousel
   useEffect(() => {
