@@ -14,6 +14,9 @@ import Autoplay from "embla-carousel-autoplay";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import "./carousel-mobile.css";
+import { useInView } from "react-intersection-observer";
+import { type CarouselApi } from "@/components/ui/carousel";
+import { useEffect, useState } from "react";
 
 interface RotatingImageCarouselProps {
   images: {
@@ -26,31 +29,50 @@ interface RotatingImageCarouselProps {
 }
 
 export const CarouselMobile: React.FC<RotatingImageCarouselProps> = (props) => {
+  const { ref: carouselRef, inView } = useInView({ threshold: 0.1 });
+  const [api, setApi] = useState<CarouselApi>();
+
+  useEffect(() => {
+    if (!inView && !api?.plugins().autoplay.isPlaying()) {
+      return;
+    }
+    if (!inView && api?.plugins().autoplay.isPlaying()) {
+      api?.plugins().autoplay.stop();
+    }
+    if (inView && !api?.plugins().autoplay.isPlaying()) {
+      api?.plugins().autoplay.play();
+    }
+  }, [api, inView]);
+
   return (
-    <Carousel
-      className="w-full max-w-sm"
-      opts={{ duration: 60 }}
-      plugins={[
-        Autoplay({
-          delay: 2000,
-        }) as any,
-      ]}
-    >
-      <CarouselContent className="max-md:h-120">
-        {props.images.map((image, index) => (
-          <CarouselItem key={index}>
-            <div className="image-container-mobile">
-              <img
-                src={image.src}
-                alt={image.alt}
-                width={image.width}
-                className="image"
-              />
-              <p className="description-mobile">{image.description}</p>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-    </Carousel>
+    <div ref={carouselRef}>
+      <Carousel
+        className="w-full max-w-sm"
+        setApi={setApi}
+        plugins={[
+          Autoplay({
+            delay: 2000,
+            playOnInit: false,
+          }) as any,
+        ]}
+      >
+        <CarouselContent className="max-md:h-120">
+          {props.images.map((image, index) => (
+            <CarouselItem key={index}>
+              <div className="image-container-mobile">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  width={image.width}
+                  className="image"
+                  loading="lazy"
+                />
+                <p className="description-mobile">{image.description}</p>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+    </div>
   );
 };

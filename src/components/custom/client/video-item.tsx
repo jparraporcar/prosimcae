@@ -8,7 +8,6 @@ interface VideoItemProps {
   src: string;
   loop: boolean;
   muted: boolean;
-  controls: boolean;
   className?: string;
 }
 
@@ -16,7 +15,6 @@ export const VideoItem: React.FC<VideoItemProps> = ({
   src,
   loop,
   muted,
-  controls,
   className,
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -41,7 +39,6 @@ export const VideoItem: React.FC<VideoItemProps> = ({
         ref={videoRef}
         loop={loop}
         muted={muted}
-        controls={controls}
         playsInline
         webkit-playsinline="true"
         className={cn(
