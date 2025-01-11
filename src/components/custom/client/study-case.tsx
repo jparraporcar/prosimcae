@@ -43,11 +43,16 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
     if (!inView && api?.plugins().autoScroll.isPlaying()) {
       api?.plugins().autoScroll.stop();
     }
+
+    if (inView && !api?.plugins().autoScroll.isPlaying()) {
+      api?.plugins().autoScroll.play();
+    }
   }, [api, inView]);
 
   // this useEffect is to be fired when the user drags on the carousel and the event stop is emitted in order to update the button
   useEffect(() => {
     api?.on("autoScroll:stop", () => setIsPlaying(false));
+    api?.on("autoScroll:play", () => setIsPlaying(true));
   }, [api]);
 
   return (
