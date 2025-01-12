@@ -7,7 +7,7 @@ export type mediaItem =
       description: string;
       alt: string;
       height?: number;
-      width: number;
+      width?: number;
       src: string | StaticImageData;
       placeholder?: "blur";
       className?: string;

@@ -42,8 +42,9 @@ export const RotatingImageCarousel = ({
               <Image
                 src={image.src}
                 alt={image.alt}
-                width={100}
-                height={100}
+                width={image.width}
+                height={image.height}
+                placeholder={image.placeholder}
                 className="image"
               />
               <p className="description">{image.description}</p>

@@ -59,7 +59,8 @@ export const CarouselMobile: React.FC<RotatingImageCarouselProps> = (props) => {
                   src={image.src}
                   alt={image.alt}
                   width={image.width}
-                  placeholder="blur"
+                  height={image.height}
+                  placeholder={image.placeholder}
                   className="image"
                 />
                 <p className="description-mobile">{image.description}</p>
