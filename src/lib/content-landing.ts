@@ -393,6 +393,9 @@ export const openImages = [
 ] as imageItem[];
 
 import comLogosSimuliaAbaqus from "@/images/com-logos/com-logos-simulia-abaqus.png";
+import comLogosMeta from "@/images/com-logos/com-logos-meta-logo.png";
+import comLogosAnsa from "@/images/com-logos/com-logos-ansa-logo.png";
+import comLogosLsdyna from "@/images/com-logos/com-logos-lsdyna-logo.png";
 
 export const comImages = [
   {
@@ -401,7 +404,7 @@ export const comImages = [
     alt: "ANSA",
     width: 100,
     height: 100,
-    src: "/images/com-logos/com-logos-ansa-logo.svg",
+    src: comLogosAnsa,
     caption: "Pre-processor for advanced CAE modeling",
   },
   {
@@ -410,7 +413,7 @@ export const comImages = [
     alt: "META",
     width: 100,
     height: 100,
-    src: "/images/com-logos/com-logos-meta-logo.svg",
+    src: comLogosMeta,
     caption: "Post-processing tool for CAE data analysis",
   },
   {
@@ -429,7 +432,7 @@ export const comImages = [
     alt: "LS-DYNA",
     width: 100,
     height: 100,
-    src: "/images/com-logos/com-logos-lsdyna-logo.svg",
+    src: comLogosLsdyna,
     caption: "Explicit FEA solver for dynamic simulations",
   },
 ] as imageItem[];
