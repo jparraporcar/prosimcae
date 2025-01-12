@@ -17,15 +17,10 @@ import "./carousel-mobile.css";
 import { useInView } from "react-intersection-observer";
 import { type CarouselApi } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
+import { imageItem } from "@/lib/types";
 
 interface RotatingImageCarouselProps {
-  images: {
-    src: string;
-    alt: string;
-    description: string;
-    width?: number;
-    height?: number;
-  }[];
+  images: imageItem[];
 }
 
 export const CarouselMobile: React.FC<RotatingImageCarouselProps> = (props) => {
@@ -60,12 +55,12 @@ export const CarouselMobile: React.FC<RotatingImageCarouselProps> = (props) => {
           {props.images.map((image, index) => (
             <CarouselItem key={index}>
               <div className="image-container-mobile">
-                <img
+                <Image
                   src={image.src}
                   alt={image.alt}
                   width={image.width}
+                  placeholder="blur"
                   className="image"
-                  loading="lazy"
                 />
                 <p className="description-mobile">{image.description}</p>
               </div>

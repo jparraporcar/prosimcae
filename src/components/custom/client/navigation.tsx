@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import logo from "@/images/provisional-logo-prosimcae.jpg";
 
 export function Navigation() {
   return (
@@ -25,10 +26,11 @@ export function Navigation() {
               <NavigationMenuLink>
                 <div className="mr-auto ml-4">
                   <Image
-                    src="/images/provisional-logo-prosimcae.jpg"
+                    src={logo}
                     alt="logo"
                     width={150}
                     height={15}
+                    placeholder="blur"
                   />
                 </div>
               </NavigationMenuLink>

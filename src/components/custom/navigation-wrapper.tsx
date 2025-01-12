@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Navigation } from "./client/navigation";
 import { NavigationMobile } from "./navigation-mobile";
 import "./navigation-wrapper.css";
+import logo from "@/images/provisional-logo-prosimcae.jpg";
 
 export const NavigationWrapper: React.FC = () => {
   return (
@@ -15,10 +16,11 @@ export const NavigationWrapper: React.FC = () => {
       >
         <div className="mr-auto ml-4">
           <Image
-            src="/images/provisional-logo-prosimcae.jpg"
+            src={logo}
             alt="logo"
             width={200}
             height={15}
+            placeholder="blur"
           />
         </div>
         <div style={{ placeContent: "center", marginTop: "4px" }}>

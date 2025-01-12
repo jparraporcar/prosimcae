@@ -3,9 +3,10 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import "./rotating-image-carousel.css";
+import { imageItem } from "@/lib/types";
 
 interface RotatingImageCarouselProps {
-  images: { src: string; alt: string; description: string }[];
+  images: imageItem[];
 }
 
 export const RotatingImageCarousel = ({

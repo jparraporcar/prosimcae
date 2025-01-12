@@ -14,6 +14,7 @@ import { Button } from "../ui/button";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import logo from "@/images/provisional-logo-prosimcae.jpg";
 
 import "./navigation-mobile.css";
 
@@ -40,10 +41,11 @@ export const NavigationMobile: React.FC = () => {
         >
           <div className="mr-auto ml-4 border-b-2">
             <Image
-              src="/images/provisional-logo-prosimcae.jpg"
+              src={logo}
               alt="logo"
               width={200}
               height={15}
+              placeholder="blur"
             />
           </div>
           <button

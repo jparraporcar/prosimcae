@@ -1,4 +1,4 @@
-import { mediaItem } from "./types";
+import { imageItem, mediaItem } from "./types";
 
 export const customEngineering = {
   sectionClass: "bg-gray-100 dark:bg-gray-800",
@@ -32,6 +32,14 @@ export const onDemandEngineering = {
   ],
 };
 
+import simUsbGeo1 from "@/images/post/sim-usb/sim-usb-geo-1.jpg";
+import simUsbGeo2 from "@/images/post/sim-usb/sim-usb-geo-2.jpg";
+import simUsbEnergy from "@/images/post/sim-usb/sim-usb-energy.jpeg";
+import simAlprofileGeo1 from "@/images/post/sim-alprofile/sim-alprofile-geo-1.jpg";
+import simMetaltableGeo1 from "@/images/post/sim-metaltable/sim-metaltable-geo-1.jpg";
+import simRoomGeo1 from "@/images/post/sim-room/sim-room-geo-1.jpg";
+import simRoomGeo2 from "@/images/post/sim-room/sim-room-geo-2.jpg";
+
 export const studyCasesSections = [
   {
     sectionId: "solid",
@@ -47,8 +55,9 @@ export const studyCasesSections = [
             description: "Image 1",
             alt: "Image 1",
             height: 600,
-            src: "/images/post/sim-usb/geo-1.JPG",
             width: 600,
+            src: simUsbGeo1,
+            placeholder: "blur",
             caption: "Image 1",
           },
           {
@@ -57,8 +66,9 @@ export const studyCasesSections = [
             description: "Image 2",
             alt: "Image 2",
             height: 600,
-            src: "/images/post/sim-usb/geo-2.JPG",
             width: 600,
+            src: simUsbGeo2,
+            placeholder: "blur",
             caption: "Image 2",
           },
           {
@@ -66,8 +76,8 @@ export const studyCasesSections = [
             title: "Video 1",
             description: "Video 1",
             height: 500,
-            src: "/images/post/sim-usb/ps-1.mp4",
             width: 500,
+            src: "/videos/post/sim-usb/ps-1.mp4",
             controls: true,
             muted: true,
             loop: true,
@@ -77,8 +87,8 @@ export const studyCasesSections = [
             title: "Video 2",
             description: "Video 2",
             height: 500,
-            src: "/images/post/sim-usb/ps-2.mp4",
             width: 500,
+            src: "/videos/post/sim-usb/ps-2.mp4",
             controls: true,
             muted: true,
             loop: true,
@@ -89,8 +99,9 @@ export const studyCasesSections = [
             description: "Image 3",
             alt: "Image 3",
             height: 600,
-            src: "/images/post/sim-usb/energy.jpeg",
             width: 600,
+            src: simUsbEnergy,
+            placeholder: "blur",
             caption: "Image 3",
           },
         ] as mediaItem[],
@@ -105,8 +116,9 @@ export const studyCasesSections = [
             description: "Image 1",
             alt: "Image 1",
             height: 600,
-            src: "/images/post/sim-alprofile/geo-1.jpg",
             width: 600,
+            src: simAlprofileGeo1,
+            placeholder: "blur",
             caption: "Image 1",
           },
           ,
@@ -115,8 +127,8 @@ export const studyCasesSections = [
             title: "Video 1",
             description: "Video 1",
             height: 500,
-            src: "/images/post/sim-alprofile/displ.mp4",
             width: 500,
+            src: "/videos/post/sim-alprofile/displ.mp4",
             controls: true,
             muted: true,
             loop: true,
@@ -126,8 +138,8 @@ export const studyCasesSections = [
             title: "Video 2",
             description: "Video 2",
             height: 500,
-            src: "/images/post/sim-alprofile/plastics.mp4",
             width: 500,
+            src: "/videos/post/sim-alprofile/plastics.mp4",
             controls: true,
             muted: true,
             loop: true,
@@ -137,8 +149,8 @@ export const studyCasesSections = [
             title: "Video 3",
             description: "Video 3",
             height: 500,
-            src: "/images/post/sim-alprofile/reactf.mp4",
             width: 500,
+            src: "/videos/post/sim-alprofile/reactf.mp4",
             controls: true,
             muted: true,
             loop: true,
@@ -148,8 +160,8 @@ export const studyCasesSections = [
             title: "Video 4",
             description: "Video 4",
             height: 500,
-            src: "/images/post/sim-alprofile/vmstr.mp4",
             width: 500,
+            src: "/videos/post/sim-alprofile/vmstr.mp4",
             controls: true,
             muted: true,
             loop: true,
@@ -166,8 +178,9 @@ export const studyCasesSections = [
             description: "Image 1",
             alt: "Image 1",
             height: 600,
-            src: "/images/post/sim-metaltable/geo-1.JPG",
             width: 600,
+            src: simMetaltableGeo1,
+            placeholder: "blur",
             caption: "Image 1",
           },
           {
@@ -175,7 +188,7 @@ export const studyCasesSections = [
             title: "Video 1",
             description: "Video 1",
             height: 500,
-            src: "/images/post/sim-metaltable/basic_frame_f1_81Hz.mp4",
+            src: "/videos/post/sim-metaltable/basic_frame_f1_81Hz.mp4",
             width: 500,
             controls: true,
             muted: true,
@@ -186,7 +199,7 @@ export const studyCasesSections = [
             title: "Video 2",
             description: "Video 2",
             height: 500,
-            src: "/images/post/sim-metaltable/basic_frame_f2_84Hz.mp4",
+            src: "/videos/post/sim-metaltable/basic_frame_f2_84Hz.mp4",
             width: 500,
             controls: true,
             muted: true,
@@ -197,7 +210,7 @@ export const studyCasesSections = [
             title: "Video 3",
             description: "Video 3",
             height: 500,
-            src: "/images/post/sim-metaltable/basic_frame_f3_110Hz.mp4",
+            src: "/videos/post/sim-metaltable/basic_frame_f3_110Hz.mp4",
             width: 500,
             controls: true,
             muted: true,
@@ -208,7 +221,7 @@ export const studyCasesSections = [
             title: "Video 4",
             description: "Video 4",
             height: 500,
-            src: "/images/post/sim-metaltable/basic_frame_f4_147Hz.mp4",
+            src: "/videos/post/sim-metaltable/basic_frame_f4_147Hz.mp4",
             width: 500,
             controls: true,
             muted: true,
@@ -219,7 +232,7 @@ export const studyCasesSections = [
             title: "Video 5",
             description: "Video 5",
             height: 500,
-            src: "/images/post/sim-metaltable/basic_frame_f5_155Hz.mp4",
+            src: "/videos/post/sim-metaltable/basic_frame_f5_155Hz.mp4",
             width: 500,
             controls: true,
             muted: true,
@@ -243,8 +256,9 @@ export const studyCasesSections = [
             description: "Image 1",
             alt: "Image 1",
             height: 600,
-            src: "/images/post/sim-room/geo-1.JPG",
             width: 600,
+            src: simRoomGeo1,
+            placeholder: "blur",
             caption: "Image 1",
           },
           {
@@ -253,8 +267,9 @@ export const studyCasesSections = [
             description: "Image 2",
             alt: "Image 2",
             height: 600,
-            src: "/images/post/sim-room/geo-2.JPG",
             width: 600,
+            src: simRoomGeo2,
+            placeholder: "blur",
             caption: "Image 2",
           },
           {
@@ -262,7 +277,7 @@ export const studyCasesSections = [
             title: "Video 1",
             description: "Video 1",
             height: 500,
-            src: "/images/post/sim-room/vel-temp-1.mp4",
+            src: "/videos/post/sim-room/vel-temp-1.mp4",
             width: 500,
             controls: true,
             muted: true,
@@ -273,7 +288,7 @@ export const studyCasesSections = [
             title: "Video 2",
             description: "Video 2",
             height: 500,
-            src: "/images/post/sim-room/vel-temp-2.mp4",
+            src: "/videos/post/sim-room/vel-temp-2.mp4",
             width: 500,
             controls: true,
             muted: true,
@@ -284,7 +299,7 @@ export const studyCasesSections = [
             title: "Video 3",
             description: "Video 3",
             height: 500,
-            src: "/images/post/sim-room/vector.mp4",
+            src: "/videos/post/sim-room/vector.mp4",
             width: 500,
             controls: true,
             muted: true,
@@ -295,7 +310,7 @@ export const studyCasesSections = [
             title: "Video 4",
             description: "Video 4",
             height: 500,
-            src: "/images/post/sim-room/isovol.mp4",
+            src: "/videos/post/sim-room/isovol.mp4",
             width: 500,
             controls: true,
             muted: true,
@@ -307,69 +322,103 @@ export const studyCasesSections = [
   },
 ];
 
+import openLogosCalculix from "@/images/open-logos/open-logos-calculix.jpg";
+import openLogosLsprepost from "@/images/open-logos/open-logos-lsprepost.png";
+import openLogosOpenradioss from "@/images/open-logos/open-logos-openradioss.jpg";
+import openLogosParaview from "@/images/open-logos/open-logos-paraview.png";
+import openLogosPrepomax from "@/images/open-logos/open-logos-prepomax.jpg";
+import openLogosOpenfoam from "@/images/open-logos/open-logos-openfoam.png";
+
 export const openImages = [
   {
-    src: "/images/open-logos/calculix.jpg",
+    type: "image",
+    description: "Open-source FEA solver for structural analysis",
     alt: "CalculiX",
     width: 150,
-    description: "Open-source FEA solver for structural analysis.",
+    src: openLogosCalculix,
+    placeholder: "blur",
+    caption: "Open-source FEA solver for structural analysis",
   },
   {
-    src: "/images/open-logos/lsprepost-logo2.png",
+    type: "image",
+    description: "Tool for LS-DYNA solver result processing",
     alt: "LS-PrePost",
     width: 150,
-    description: "Tool for LS-DYNA solver result processing.",
+    src: openLogosLsprepost,
+    placeholder: "blur",
+    caption: "Tool for LS-DYNA solver result processing",
   },
   {
-    src: "/images/open-logos/openradioss.jpg",
+    type: "image",
+    description: "Dynamic analysis solver for crash simulations",
     alt: "OpenRadioss",
     width: 150,
-    description: "Dynamic analysis solver for crash simulations.",
+    src: openLogosOpenradioss,
+    placeholder: "blur",
+    caption: "Dynamic analysis solver for crash simulations",
   },
   {
-    src: "/images/open-logos/paraview-logo.png",
+    type: "image",
+    description: "3D visualization for simulation data",
     alt: "ParaView",
     width: 150,
-    description: "3D visualization for simulation data.",
+    src: openLogosParaview,
+    placeholder: "blur",
+    caption: "3D visualization for simulation data",
   },
   {
-    src: "/images/open-logos/prepomax-logo.jpg",
+    type: "image",
+    description: "Pre-processor for CalculiX solver",
     alt: "PrePoMax",
     width: 150,
-    description: "Pre-processor for CalculiX solver.",
+    src: openLogosPrepomax,
+    placeholder: "blur",
+    caption: "Pre-processor for CalculiX solver",
   },
   {
-    src: "/images/open-logos/openfoam-logo.png",
+    type: "image",
+    description: "CFD solver for fluid simulations",
     alt: "OpenFOAM",
     width: 150,
-    height: "auto",
-    description: "CFD solver for fluid simulations.",
+    src: openLogosOpenfoam,
+    placeholder: "blur",
+    caption: "CFD solver for fluid simulations",
   },
-];
+] as imageItem[];
+
+import comLogosSimuliaAbaqus from "@/images/com-logos/com-logos-simulia-abaqus.png";
 
 export const comImages = [
   {
-    src: "/images/com-logos/ansa-logo.svg",
+    type: "image",
+    description: "Pre-processor for advanced CAE modeling",
     alt: "ANSA",
     width: 150,
-    description: "Pre-processor for advanced CAE modeling.",
+    src: "/images/com-logos/com-logos-ansa-logo.svg",
+    caption: "Pre-processor for advanced CAE modeling",
   },
   {
-    src: "/images/com-logos/meta-logo.svg",
+    type: "image",
+    description: "Post-processing tool for CAE data analysis",
     alt: "META",
     width: 150,
-    description: "Post-processing tool for CAE data analysis.",
+    src: "/images/com-logos/com-logos-meta-logo.svg",
+    caption: "Post-processing tool for CAE data analysis",
   },
   {
-    src: "/images/com-logos/simulia-abaqus-logo.png",
+    type: "image",
+    description: "Implicit FEA solver for structural analysis",
     alt: "SIMULIA Abaqus Standard",
     width: 150,
-    description: "Implicit FEA solver for structural analysis.",
+    src: comLogosSimuliaAbaqus,
+    caption: "Implicit FEA solver for structural analysis",
   },
   {
-    src: "/images/com-logos/lsdyna-logo.svg",
+    type: "image",
+    description: "Explicit FEA solver for dynamic simulations",
     alt: "LS-DYNA",
     width: 150,
-    description: "Explicit FEA solver for dynamic simulations.",
+    src: "/images/com-logos/com-logos-lsdyna-logo.svg",
+    caption: "Explicit FEA solver for dynamic simulations",
   },
-];
+] as imageItem[];

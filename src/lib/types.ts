@@ -1,22 +1,29 @@
+import { StaticImageData } from "next/image";
+
 export type mediaItem =
   | {
       type: "image";
-      title: string;
+      title?: string;
       description: string;
       alt: string;
-      height: number;
-      src: string;
+      height?: number;
       width: number;
+      src: string | StaticImageData;
+      placeholder?: "blur";
       className?: string;
       caption: string;
     }
   | {
       type: "video";
-      title: string;
+      title?: string;
       description: string;
+      height: number;
+      width: number;
       src: string;
       loop: boolean;
       muted: boolean;
       controls: boolean;
       className?: string;
     };
+
+export type imageItem = Extract<mediaItem, { type: "image" }>;

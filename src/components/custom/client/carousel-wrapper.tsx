@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { CarouselMobile } from "../carousel-mobile";
+import { CarouselMobile } from "./carousel-mobile";
 import { RotatingImageCarousel } from "./rotating-image-carousel";
 import { useMediaQuery } from "react-responsive";
+import { imageItem } from "@/lib/types";
 
 interface NavigationWrapperProps {
-  images: { src: string; alt: string; description: string }[];
+  images: imageItem[];
 }
 
 export const CarouselWrapper: React.FC<NavigationWrapperProps> = (props) => {
