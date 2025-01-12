@@ -3,22 +3,24 @@
 import React, { useRef, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { cn } from "@/lib/utils";
+import { useMediaQuery } from "react-responsive";
 
 interface VideoItemProps {
-  src: string;
+  srcs: string[];
   loop: boolean;
   muted: boolean;
   className?: string;
 }
 
 export const VideoItem: React.FC<VideoItemProps> = ({
-  src,
+  srcs,
   loop,
   muted,
   className,
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const { ref: intersectionRef, inView } = useInView({ threshold: 0.1 });
+  const isSmall = useMediaQuery({ query: "(max-width: 767px)" });
 
   useEffect(() => {
     if (!videoRef.current) return;
@@ -32,6 +34,10 @@ export const VideoItem: React.FC<VideoItemProps> = ({
       videoRef.current.currentTime = 0; // Reset if desired
     }
   }, [inView]);
+
+  useEffect(() => {
+    console.log("isSmall:", isSmall);
+  }, [isSmall]);
 
   return (
     <div
@@ -52,7 +58,11 @@ export const VideoItem: React.FC<VideoItemProps> = ({
           className
         )}
       >
-        <source src={src} type="video/mp4" />
+        {isSmall ? (
+          <source src={srcs[1]} type="video/mp4" />
+        ) : (
+          <source src={srcs[0]} type="video/mp4" />
+        )}
       </video>
     </div>
   );

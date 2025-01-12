@@ -19,7 +19,7 @@ export type mediaItem =
       description: string;
       height: number;
       width: number;
-      src: string;
+      srcs: string[];
       loop: boolean;
       muted: boolean;
       controls: boolean;

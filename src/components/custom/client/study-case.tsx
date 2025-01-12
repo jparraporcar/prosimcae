@@ -100,7 +100,7 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
                   )}
                   {item.type === "video" && (
                     <VideoItem
-                      src={item.src}
+                      srcs={item.srcs}
                       loop={item.loop}
                       muted={item.muted}
                       className={item.className}
