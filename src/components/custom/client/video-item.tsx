@@ -23,6 +23,13 @@ export const VideoItem: React.FC<VideoItemProps> = ({
   const isSmall = useMediaQuery({ query: "(max-width: 767px)" });
 
   useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.src = isSmall ? srcs[1] : srcs[0];
+      videoRef.current.load(); // Load the new source
+    }
+  }, [isSmall, srcs]);
+
+  useEffect(() => {
     if (!videoRef.current) return;
 
     if (inView) {
@@ -37,7 +44,8 @@ export const VideoItem: React.FC<VideoItemProps> = ({
 
   useEffect(() => {
     console.log("isSmall:", isSmall);
-  }, [isSmall]);
+    console.log("srcs", srcs);
+  }, [isSmall, srcs]);
 
   return (
     <div
@@ -58,11 +66,7 @@ export const VideoItem: React.FC<VideoItemProps> = ({
           className
         )}
       >
-        {isSmall ? (
-          <source src={srcs[1]} type="video/mp4" />
-        ) : (
-          <source src={srcs[0]} type="video/mp4" />
-        )}
+        {<p>Your browser does not support the video tag.</p>}
       </video>
     </div>
   );
