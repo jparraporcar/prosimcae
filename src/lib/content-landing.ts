@@ -34,7 +34,7 @@ export const onDemandEngineering = {
 
 import simUsbGeo1 from "@/images/post/sim-usb/sim-usb-geo-1.jpg";
 import simUsbGeo2 from "@/images/post/sim-usb/sim-usb-geo-2.jpg";
-import simUsbEnergy from "@/images/post/sim-usb/sim-usb-energy.jpeg";
+import simUsbEnergy from "@/images/post/sim-usb/sim-usb-energy.jpg";
 import simAlprofileGeo1 from "@/images/post/sim-alprofile/sim-alprofile-geo-1.jpg";
 import simMetaltableGeo1 from "@/images/post/sim-metaltable/sim-metaltable-geo-1.jpg";
 import simRoomGeo1 from "@/images/post/sim-room/sim-room-geo-1.jpg";
