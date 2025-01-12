@@ -405,6 +405,7 @@ export const comImages = [
     width: 100,
     height: 100,
     src: comLogosAnsa,
+    placeholder: "blur",
     caption: "Pre-processor for advanced CAE modeling",
   },
   {
@@ -414,6 +415,7 @@ export const comImages = [
     width: 100,
     height: 100,
     src: comLogosMeta,
+    placeholder: "blur",
     caption: "Post-processing tool for CAE data analysis",
   },
   {
@@ -433,6 +435,7 @@ export const comImages = [
     width: 100,
     height: 100,
     src: comLogosLsdyna,
+    placeholder: "blur",
     caption: "Explicit FEA solver for dynamic simulations",
   },
 ] as imageItem[];
