@@ -95,7 +95,6 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
                         height={item.height}
                         src={item.src}
                         width={item.width}
-                        loading="lazy"
                       />
                     </figure>
                   )}

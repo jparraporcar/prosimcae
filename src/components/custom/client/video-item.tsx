@@ -34,7 +34,13 @@ export const VideoItem: React.FC<VideoItemProps> = ({
   }, [inView]);
 
   return (
-    <div ref={intersectionRef} className="flex items-center justify-center">
+    <div
+      ref={intersectionRef}
+      className={cn([
+        inView ? "box visible" : "box hidden",
+        "flex items-center justify-center",
+      ])}
+    >
       <video
         ref={videoRef}
         loop={loop}
