@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Navigation } from "./client/navigation";
 import { NavigationMobile } from "./navigation-mobile";
 import "./navigation-wrapper.css";
-import logo from "@/images/provisional-logo-prosimcae.jpg";
+import logo from "@/images/provisional-logo-prosimcae.webp";
 
 export const NavigationWrapper: React.FC = () => {
   return (

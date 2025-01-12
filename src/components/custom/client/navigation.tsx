@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import logo from "@/images/provisional-logo-prosimcae.jpg";
+import logo from "@/images/provisional-logo-prosimcae.webp";
 
 export function Navigation() {
   return (

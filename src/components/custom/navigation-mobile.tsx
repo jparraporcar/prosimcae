@@ -14,7 +14,7 @@ import { Button } from "../ui/button";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import logo from "@/images/provisional-logo-prosimcae.jpg";
+import logo from "@/images/provisional-logo-prosimcae.webp";
 
 import "./navigation-mobile.css";
 
