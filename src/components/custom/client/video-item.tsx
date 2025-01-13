@@ -18,6 +18,7 @@ export const VideoItem: React.FC<VideoItemProps> = ({ videoItem }) => {
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.src = isSmall ? videoItem.srcs[1] : videoItem.srcs[0];
+      videoRef.current.controls = isSmall ? false : true;
       videoRef.current.load();
     }
   }, [isSmall, videoItem.srcs]);
@@ -45,7 +46,6 @@ export const VideoItem: React.FC<VideoItemProps> = ({ videoItem }) => {
         ref={videoRef}
         loop={videoItem.loop}
         muted={videoItem.muted}
-        controls={isSmall ? videoItem.controls : true}
         autoPlay={videoItem.autoPlay}
         playsInline
         webkit-playsinline="true"
