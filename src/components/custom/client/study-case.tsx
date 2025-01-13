@@ -14,6 +14,7 @@ import { type CarouselApi } from "@/components/ui/carousel";
 import { Button } from "../../ui/button";
 import { useInView } from "react-intersection-observer";
 import { VideoItem } from "./video-item";
+import { useMediaQuery } from "react-responsive";
 
 interface StudyCaseProps {
   mediaItems: mediaItem[];
@@ -23,6 +24,7 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
   const [api, setApi] = useState<CarouselApi>();
   const [isPlaying, setIsPlaying] = useState(false);
   const { ref: carouselRef, inView } = useInView({ threshold: 0.1 });
+  const isSmall = useMediaQuery({ query: "(max-width: 767px)" });
 
   // this useEffect is to be fired when the user clicks the button to start or stop the carousel
   useEffect(() => {
@@ -64,7 +66,7 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
           plugins={[
             AutoScroll({
               playOnInit: true,
-              speed: 2,
+              speed: isSmall ? 2 : 3,
             }),
           ]}
         >
