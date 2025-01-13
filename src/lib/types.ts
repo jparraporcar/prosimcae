@@ -23,7 +23,9 @@ export type mediaItem =
       loop: boolean;
       muted: boolean;
       controls: boolean;
+      autoPlay: boolean;
       className?: string;
     };
 
 export type imageItem = Extract<mediaItem, { type: "image" }>;
+export type videoItem = Extract<mediaItem, { type: "video" }>;

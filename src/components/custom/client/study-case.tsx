@@ -98,14 +98,7 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
                       />
                     </figure>
                   )}
-                  {item.type === "video" && (
-                    <VideoItem
-                      srcs={item.srcs}
-                      loop={item.loop}
-                      muted={item.muted}
-                      className={item.className}
-                    />
-                  )}
+                  {item.type === "video" && <VideoItem videoItem={item} />}
                 </div>
               </CarouselItem>
             ))}
