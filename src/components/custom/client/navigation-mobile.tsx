@@ -10,9 +10,9 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
 import logo from "@/images/provisional-logo-prosimcae.webp";
 
@@ -20,10 +20,30 @@ import "./navigation-mobile.css";
 
 export const NavigationMobile: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
   const router = useRouter();
+
   const handleClick = (id: string) => {
     setIsOpen((prevState) => !prevState);
-    setTimeout(() => router.push(id), 400);
+    if (pathname === "/") {
+      // On the main page, scroll to the section
+      setTimeout(() => {
+        const section = document.querySelector(id);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 400);
+    } else {
+      // Navigate to the main page and reset to the top
+      router.push("/");
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        const section = document.querySelector(id);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 400);
+    }
   };
 
   return (

@@ -4,6 +4,11 @@ import "./globals.css";
 import { Navigation } from "@/components/custom/client/navigation";
 import { Button } from "@/components/ui/button";
 import { NavigationWrapper } from "@/components/custom/navigation-wrapper";
+import Head from "next/head";
+import Script from "next/script";
+import { useCookies } from "react-cookie";
+import CookieBanner from "@/components/custom/client/cookie-banner";
+import { AnalyticsProvider } from "@/components/custom/client/analytics-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +24,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="mx-0">
+      <Head>
+        <title>prosimcae</title>
+        <meta name="description" content="Welcome to prosimcae" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <CookieBanner />
+      <AnalyticsProvider />
       <body className={inter.className}>
         <div className="w-full flex flex-row max-md:justify-end justify-center relative z-10">
           <NavigationWrapper />

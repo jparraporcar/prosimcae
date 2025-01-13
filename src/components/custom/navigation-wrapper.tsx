@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Navigation } from "./client/navigation";
-import { NavigationMobile } from "./navigation-mobile";
+import { NavigationMobile } from "./client/navigation-mobile";
 import "./navigation-wrapper.css";
 import logo from "@/images/provisional-logo-prosimcae.webp";
 

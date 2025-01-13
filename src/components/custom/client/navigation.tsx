@@ -37,7 +37,7 @@ export function Navigation() {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem className="flex">
-            <Link href="#main-section-title-services" legacyBehavior passHref>
+            <Link href="/#main-section-title-services" legacyBehavior passHref>
               <NavigationMenuLink
                 className={cn([
                   navigationMenuTriggerStyle(),
@@ -49,7 +49,11 @@ export function Navigation() {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="#main-section-title-technology" legacyBehavior passHref>
+            <Link
+              href="/#main-section-title-technology"
+              legacyBehavior
+              passHref
+            >
               <NavigationMenuLink
                 className={cn([
                   navigationMenuTriggerStyle(),
@@ -62,7 +66,7 @@ export function Navigation() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link
-              href="#main-section-title-study-cases"
+              href="/#main-section-title-study-cases"
               legacyBehavior
               passHref
             >
@@ -78,7 +82,7 @@ export function Navigation() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link
-              href="#main-section-title-collaborations"
+              href="/#main-section-title-collaborations"
               legacyBehavior
               passHref
             >
