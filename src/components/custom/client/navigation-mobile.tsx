@@ -17,6 +17,7 @@ import Image from "next/image";
 import logo from "@/images/provisional-logo-prosimcae.webp";
 
 import "./navigation-mobile.css";
+import Link from "next/link";
 
 export const NavigationMobile: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,14 +60,20 @@ export const NavigationMobile: React.FC = () => {
           id="mobile-nav-container"
           className="flex flex-col -mt-2 -ml-2 gap-y-6 text-xl"
         >
-          <div className="mr-auto ml-4 border-b-2">
-            <Image
-              src={logo}
-              alt="logo"
-              width={200}
-              height={15}
-              placeholder="blur"
-            />
+          <div
+            className="mr-auto ml-4 border-b-2"
+            role="button"
+            onClick={() => setIsOpen((prevState) => !prevState)}
+          >
+            <Link href="/" passHref>
+              <Image
+                src={logo}
+                alt="logo"
+                width={200}
+                height={15}
+                placeholder="blur"
+              />
+            </Link>
           </div>
           <button
             onClick={() => handleClick("#main-section-title-services")}

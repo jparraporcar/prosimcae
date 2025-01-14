@@ -37,12 +37,12 @@ export default function Footer() {
             >
               Legal Notice
             </Link>
-            <Link
-              href="/contact"
+            <a
+              href="mailto:info@prosimcae.com"
               className="hover:text-white transition-colors"
             >
-              Contact Information
-            </Link>
+              Contact Us
+            </a>
           </nav>
           <div className="flex gap-4">
             <a

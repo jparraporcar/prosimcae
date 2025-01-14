@@ -3,6 +3,7 @@ import { Navigation } from "./client/navigation";
 import { NavigationMobile } from "./client/navigation-mobile";
 import "./navigation-wrapper.css";
 import logo from "@/images/provisional-logo-prosimcae.webp";
+import Link from "next/link";
 
 export const NavigationWrapper: React.FC = () => {
   return (
@@ -15,13 +16,15 @@ export const NavigationWrapper: React.FC = () => {
         className="flex flex-row justify-end w-full md:hidden bg-white fixed m-0 p-2 border-b-2"
       >
         <div className="mr-auto ml-4">
-          <Image
-            src={logo}
-            alt="logo"
-            width={200}
-            height={15}
-            placeholder="blur"
-          />
+          <Link href="/" passHref>
+            <Image
+              src={logo}
+              alt="logo"
+              width={200}
+              height={15}
+              placeholder="blur"
+            />
+          </Link>
         </div>
         <div style={{ placeContent: "center", marginTop: "4px" }}>
           <NavigationMobile />
