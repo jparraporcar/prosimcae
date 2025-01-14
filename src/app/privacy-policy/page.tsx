@@ -3,8 +3,8 @@ import { Separator } from "@/components/ui/separator";
 
 const PrivacyPolicy: React.FC = () => {
   return (
-    <main className="w-full flex flex-col items-center px-6 md:px-12 py-8 text-gray-700 mt-16">
-      <header className="w-full max-w-4xl text-center mb-8">
+    <main className="w-full flex flex-col items-center px-6 md:px-12 py-8 text-gray-700">
+      <header className="w-full max-w-4xl text-center mb-8 mt-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
         <p className="text-lg md:text-xl">
           Learn how we collect, use, and protect your data at Prosimcae.

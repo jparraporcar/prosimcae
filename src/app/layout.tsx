@@ -9,6 +9,7 @@ import Script from "next/script";
 import { useCookies } from "react-cookie";
 import CookieBanner from "@/components/custom/client/cookie-banner";
 import { AnalyticsProvider } from "@/components/custom/client/analytics-provider";
+import Footer from "@/components/custom/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,6 +37,9 @@ export default function RootLayout({
           <NavigationWrapper />
         </div>
         {children}
+        <section className="w-full">
+          <Footer />
+        </section>
       </body>
     </html>
   );

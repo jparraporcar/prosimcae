@@ -21,7 +21,6 @@ import {
 import { ContactDialogCustom } from "@/components/custom/contact-dialog-custom";
 import { ContactDialogOndemand } from "@/components/custom/contact-dialog-ondemand";
 import { ResumeUploadDialog } from "@/components/custom/resume-upload-dialog";
-import Footer from "@/components/custom/footer";
 import { CarouselWrapper } from "@/components/custom/client/carousel-wrapper";
 
 const Home: React.FC = () => {
@@ -139,9 +138,6 @@ const Home: React.FC = () => {
         </div>
       </section>
       <Separator orientation="horizontal" className="mb-20" />
-      <section className="w-full">
-        <Footer />
-      </section>
     </main>
   );
 };
