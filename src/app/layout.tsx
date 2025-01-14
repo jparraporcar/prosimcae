@@ -26,9 +26,43 @@ export default function RootLayout({
   return (
     <html lang="en" className="mx-0">
       <Head>
-        <title>prosimcae</title>
-        <meta name="description" content="Welcome to prosimcae" />
+        {/* Basic Metadata */}
+        <title>Prosimcae - Engineering and Simulation Services</title>
+        <meta
+          name="description"
+          content="Prosimcae provides high-quality engineering simulations and services, specializing in computational fluid dynamics and solid mechanics."
+        />
+        <meta name="robots" content="index, follow" />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://www.prosimcae.com/" />
+
+        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Logo Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            url: "https://www.prosimcae.com/",
+            logo: "https://www.prosimcae.com/logo.webp",
+          })}
+        </script>
+
+        {/* Website Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            url: "https://www.prosimcae.com/",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: "https://www.prosimcae.com/search?q={search_term_string}",
+              "query-input": "required name=search_term_string",
+            },
+          })}
+        </script>
       </Head>
       <CookieBanner />
       <AnalyticsProvider />
