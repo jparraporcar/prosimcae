@@ -73,7 +73,7 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
           <CarouselContent className="-ml-1">
             {props.mediaItems.map((item, index) => (
               <CarouselItem key={index} className="pl-0">
-                <div className="flex flex-col items-center mb-2 h-full">
+                <div className="flex flex-col justify-evenly mb-2 h-full">
                   <h1 className="text-center text-lg px-2 pt-2 pb-1 max-md:text-sm">
                     {item.title}
                   </h1>
@@ -82,10 +82,9 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
                       "w-56 h-1 border-b border-gray-300 mx-auto",
                     ])}
                   ></div>
-                  <div className="text-justify tracking-wide w-11/12 text-base p-4 max-md:w-full max-md:p-3 max-md:text-xs">
+                  <div className="max-md:text-justify text-center tracking-wide w-11/12 text-base p-4 max-md:w-full max-md:p-3 max-md:text-xs">
                     {item.description}
                   </div>
-
                   {item.type === "image" && (
                     <figure className="w-11/12">
                       <Image

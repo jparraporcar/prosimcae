@@ -53,7 +53,7 @@ export const studyCasesSections = [
             type: "image",
             title: "Impact position: exploded",
             description:
-              "The aluminum enclosure absorbs impact energy, protecting the ABS internal structure and sensitive parts. Minimizing acceleration at sensitive components is crucial to ensuring their structural integrity. Key dimensions, material properties, DOFs, and element types are included to provide context for the simulation.",
+              "The aluminum enclosure absorbs impact energy, protecting the internal structure. Minimizing acceleration at sensitive components is crucial. Key dimensions, material properties as well as other data is included to provide context for the simulation.",
             alt: "Impact position: exploded",
             height: 600,
             width: 600,
@@ -65,7 +65,7 @@ export const studyCasesSections = [
             type: "image",
             title: "Impact position: non-exploded",
             description:
-              "The assembly is positioned close to a rigid wall to reduce simulation time, with an initial velocity of -5.5 m/s in the vertical direction. The rigid wall is modeled as non-deformable, ensuring the structural integrity of the device can be evaluated under controlled conditions. This setup allows for an efficient analysis.",
+              "The assembly is positioned close to a rigid wall to reduce simulation time, with an initial velocity of -5.5 m/s in the vertical direction. The non-deformability of the wall ensures that the structural integrity of the device can be evaluated under controlled conditions.",
             alt: "Impact position: non-exploded",
             height: 600,
             width: 600,
@@ -93,7 +93,7 @@ export const studyCasesSections = [
             type: "video",
             title: "Plastic strain: view 2",
             description:
-              "The video shows plastic strain from the opposite side, revealing deformation within the PSD. The aluminum undergoes visible elastic deformation during the impact, with plastic strain concentrated at the impact area and noticeable partial recovery afterward.",
+              "The video shows plastic strain from the opposite side. The aluminum undergoes visible elastic deformation during the impact, with plastic strain concentrated at the impact area and noticeable partial recovery afterward.",
             height: 500,
             width: 500,
             srcs: [
