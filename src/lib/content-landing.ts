@@ -93,7 +93,7 @@ export const studyCasesSections = [
             type: "video",
             title: "Plastic strain: view 2",
             description:
-              "The video shows plastic strain from the opposite side. The aluminum undergoes visible elastic deformation during the impact, with plastic strain concentrated at the impact area and noticeable partial recovery afterward.",
+              "The video shows plastic strain from the opposite side. The aluminum undergoes visible elastic deformation during the impact, with plastic strain concentrated at the impact area and noticeable elastic recovery afterward.",
             height: 500,
             width: 500,
             srcs: [
@@ -124,8 +124,9 @@ export const studyCasesSections = [
         mediaItems: [
           {
             type: "image",
-            title: "Image 1",
-            description: "Image 1",
+            title: "Aluminum profile test: initial position",
+            description:
+              "The setup shows an aluminum profile displaced 3mm at the top by a rigid moving part. Supported by rigid fixations, its material properties, boundary conditions, and key dimensions provide context for structural analysis.",
             alt: "Image 1",
             height: 600,
             width: 600,
@@ -136,8 +137,9 @@ export const studyCasesSections = [
           ,
           {
             type: "video",
-            title: "Video 1",
-            description: "Video 1",
+            title: "Displacement vs iteration",
+            description:
+              "The video shows the aluminum profile undergoing iterative displacement until reaching the imposed 3mm Z displacement boundary condition. The deformation evolves symmetrically across iterations, as anticipated.",
             height: 500,
             width: 500,
             srcs: [
@@ -151,8 +153,9 @@ export const studyCasesSections = [
           },
           {
             type: "video",
-            title: "Video 2",
-            description: "Video 2",
+            title: "Plastic strain vs iteration",
+            description:
+              "The video illustrates the evolution of plastic strain as the aluminum profile reaches the imposed 3mm Z displacement. Maximum plastic strain occurs symmetrically at the point of maximum impactor displacement, as expected.",
             height: 500,
             width: 500,
             srcs: [
@@ -166,8 +169,9 @@ export const studyCasesSections = [
           },
           {
             type: "video",
-            title: "Video 3",
-            description: "Video 3",
+            title: "Reaction forces vs iteration",
+            description:
+              "The video shows the reaction forces during the simulation, peaking at maximum displacement. Forces are uniformly distributed across the surface where displacement is applied and concentrated at the fixations, reflecting part interactions through contact surfaces.",
             height: 500,
             width: 500,
             srcs: [
@@ -181,8 +185,9 @@ export const studyCasesSections = [
           },
           {
             type: "video",
-            title: "Video 4",
-            description: "Video 4",
+            title: "Von misses vs iteration",
+            description:
+              "The video illustrates the von Mises stress distribution, primarily concentrated around the interaction area of the moving part. Additional stress concentrations appear in regions with sharp geometric changes in the profile.",
             height: 500,
             width: 500,
             srcs: [
