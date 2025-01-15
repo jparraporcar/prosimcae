@@ -73,7 +73,7 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
           <CarouselContent className="-ml-1">
             {props.mediaItems.map((item, index) => (
               <CarouselItem key={index} className="pl-0">
-                <div className="flex flex-col justify-evenly mb-2 h-full">
+                <div className="flex flex-col justify-evenly items-center mb-2 h-full">
                   <h1 className="text-center text-lg px-2 pt-2 pb-1 max-md:text-sm">
                     {item.title}
                   </h1>
