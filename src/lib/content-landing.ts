@@ -206,8 +206,9 @@ export const studyCasesSections = [
         mediaItems: [
           {
             type: "image",
-            title: "Image 1",
-            description: "Image 1",
+            title: "Lightweight Aluminum Frame Structure",
+            description:
+              "The structure is designed to be lightweight and corrosion-resistant. It features beam profiles with specified dimensions and thicknesses, anchored to the ground. A natural frequency study is performed to ensure its suitability under dynamic conditions",
             alt: "Image 1",
             height: 600,
             width: 600,
