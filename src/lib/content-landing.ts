@@ -63,10 +63,10 @@ export const studyCasesSections = [
           },
           {
             type: "image",
-            title: "Impact position: exploded",
+            title: "Impact position: non-exploded",
             description:
               "The assembly is positioned close to a rigid wall to reduce simulation time, with an initial velocity of -5.5 m/s in the vertical direction. The rigid wall is modeled as non-deformable, ensuring the structural integrity of the device can be evaluated under controlled conditions. This setup allows for an efficient analysis.",
-            alt: "Impact position: exploded",
+            alt: "Impact position: non-exploded",
             height: 600,
             width: 600,
             src: simUsbGeo2,
@@ -120,8 +120,7 @@ export const studyCasesSections = [
         ] as mediaItem[],
       },
       {
-        studyCaseTitle:
-          "Implicit simulation of a 3 point bending test in an aluminum profile",
+        studyCaseTitle: "Implicit simulation of a 3 point bending test",
         mediaItems: [
           {
             type: "image",
@@ -198,8 +197,7 @@ export const studyCasesSections = [
         ] as mediaItem[],
       },
       {
-        studyCaseTitle:
-          "Study of the natural vibrational modes of a metal structure",
+        studyCaseTitle: "Study of the natural vibrational modes",
         mediaItems: [
           {
             type: "image",
@@ -297,7 +295,7 @@ export const studyCasesSections = [
     effectIsActive: true,
     studyCases: [
       {
-        studyCaseTitle: "Study of thermal efficiency within a apartment room",
+        studyCaseTitle: "Study of a room thermal efficiency",
         mediaItems: [
           {
             type: "image",

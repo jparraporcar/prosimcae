@@ -50,12 +50,12 @@ export const StudyCasesSection: React.FC<StudyCasesSectionProps> = (props) => {
         "flex flex-col w-8/12 max-md:w-[87.5%] items-center",
       ])}
     >
-      <h2 className="text-center text-3xl max-md:text-2xl max-md:-mx-1 font-bold mb-8">
+      <h2 className="text-center text-3xl max-md:text-xl max-md:-mx-1 font-bold mb-8">
         {props.title}
       </h2>
       {props.studyCases.map((studyCase, index) => (
         <div key={index} className="flex flex-col w-full mb-20">
-          <h1 className="text-center text-xl max-md:text-base border-t border-l border-r p-2 rounded-tl-2xl rounded-tr-2xl border-slate-300 bg-slate-300">
+          <h1 className="text-center text-xl max-md:text-sm border-t border-l border-r p-2 rounded-tl-2xl rounded-tr-2xl border-slate-300 bg-slate-300">
             {studyCase.studyCaseTitle}
           </h1>
           <div className="border rounded-bl-2xl rounded-br-2xl border-slate-300">
