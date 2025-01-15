@@ -47,34 +47,37 @@ export const studyCasesSections = [
     effectIsActive: true,
     studyCases: [
       {
-        studyCaseTitle: "Drop test of a Portable Storage Device",
+        studyCaseTitle: "Drop test of a Portable Storage Device (PSD)",
         mediaItems: [
           {
             type: "image",
-            title: "Image 1",
-            description: "Image 1",
-            alt: "Image 1",
+            title: "Impact position: exploded",
+            description:
+              "The aluminum enclosure absorbs impact energy, protecting the ABS internal structure and sensitive parts. Minimizing acceleration at sensitive components is crucial to ensuring their structural integrity. Key dimensions, material properties, DOFs, and element types are included to provide context for the simulation.",
+            alt: "Impact position: exploded",
             height: 600,
             width: 600,
             src: simUsbGeo1,
             placeholder: "blur",
-            caption: "Image 1",
+            caption: "Impact position: exploded",
           },
           {
             type: "image",
-            title: "Image 2",
-            description: "Image 2",
-            alt: "Image 2",
+            title: "Impact position: exploded",
+            description:
+              "The assembly is positioned close to a rigid wall to reduce simulation time, with an initial velocity of -5.5 m/s in the vertical direction. The rigid wall is modeled as non-deformable, ensuring the structural integrity of the device can be evaluated under controlled conditions. This setup allows for an efficient analysis.",
+            alt: "Impact position: exploded",
             height: 600,
             width: 600,
             src: simUsbGeo2,
             placeholder: "blur",
-            caption: "Image 2",
+            caption: "Impact position: non-exploded",
           },
           {
             type: "video",
-            title: "Video 1",
-            description: "Video 1",
+            title: "Plastic strain: view 1",
+            description:
+              "The video illustrates the evolution of plastic strain at the impact corner, the most disadvantageous position due to concentrated forces. Despite this, the aluminum enclosure effectively absorbs energy, limiting plastic strain to a low max value of ~0.02.",
             height: 500,
             width: 500,
             srcs: [
@@ -88,8 +91,9 @@ export const studyCasesSections = [
           },
           {
             type: "video",
-            title: "Video 2",
-            description: "Video 2",
+            title: "Plastic strain: view 2",
+            description:
+              "The video shows plastic strain from the opposite side, revealing deformation within the PSD. The aluminum undergoes visible elastic deformation during the impact, with plastic strain concentrated at the impact area and noticeable partial recovery afterward.",
             height: 500,
             width: 500,
             srcs: [
@@ -103,14 +107,15 @@ export const studyCasesSections = [
           },
           {
             type: "image",
-            title: "Image 3",
-            description: "Image 3",
-            alt: "Image 3",
+            title: "Energy balance",
+            description:
+              "The graph illustrates energy transfer during impact, showing kinetic energy converting into internal energy. Kinetic energy decreases rapidly, while internal energy rises, reflecting material energy absorption and stabilization.",
+            alt: "Energy balance",
             height: 600,
             width: 600,
             src: simUsbEnergy,
             placeholder: "blur",
-            caption: "Image 3",
+            caption: "Energy balance",
           },
         ] as mediaItem[],
       },

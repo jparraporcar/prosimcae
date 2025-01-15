@@ -82,7 +82,7 @@ export const StudyCase: React.FC<StudyCaseProps> = (props) => {
                       "w-56 h-1 border-b border-gray-300 mx-auto",
                     ])}
                   ></div>
-                  <div className="w-11/12 text-base max-md:w-full max-md:text-center p-4 max-md:p-1 max-md:text-xs">
+                  <div className="text-justify tracking-wide w-11/12 text-base p-4 max-md:w-full max-md:p-3 max-md:text-xs">
                     {item.description}
                   </div>
 
