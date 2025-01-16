@@ -14,7 +14,6 @@ export const customEngineering = {
     "Standards Compliance: Tailored solutions for meeting industry standards, ensuring project compliance with required specifications.",
     "Flexible Engineering Solutions: B2B long-term collaboration or project-based services, customizable to fit any project scope and timeline.",
     "Highly paralellalized simulations can be performed and results obtained in a timely manner",
-    "This service is provided remotely, however inhouse work can be done prior agreement on the conditions",
   ],
 };
 
@@ -28,7 +27,6 @@ export const onDemandEngineering = {
     "Specialized geometry reparation for CFD simulations, ensuring all components are watertight for accurate results.",
     "Comprehensive results post-processing and professional presentations in both English and Spanish for clarity.",
     "Flexible engagement models cater to both small challenges and extensive projects, adapting to client needs.",
-    "This service is provided inhouse, however remote work can be performed prior agreement on the conditions",
   ],
 };
 
