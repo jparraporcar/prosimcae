@@ -4,6 +4,7 @@ import { NavigationWrapper } from "@/components/custom/navigation-wrapper";
 import CookieBanner from "@/components/custom/client/cookie-banner";
 import { AnalyticsProvider } from "@/components/custom/client/analytics-provider";
 import Footer from "@/components/custom/footer";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -57,6 +58,7 @@ export default function RootLayout({
         <section className="w-full">
           <Footer />
         </section>
+        <Analytics />
       </body>
     </html>
   );
