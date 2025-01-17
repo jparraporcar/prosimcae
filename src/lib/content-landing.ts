@@ -216,8 +216,9 @@ export const studyCasesSections = [
           },
           {
             type: "video",
-            title: "Video 1",
-            description: "Video 1",
+            title: "First bending mode - 81Hz",
+            description:
+              "First bending mode along the table’s longer axis, with the legs acting like pivot points at the floor. As the structure oscillates in a cantilever-like fashion, the maximum displacement occurs near the middle of the tabletop. This mode illustrates how the table deforms when subjected to bending loads in its primary longitudinal direction.",
             height: 500,
             srcs: [
               "/videos/post/sim-metaltable/basic_frame_f1_81Hz.mp4",
@@ -231,8 +232,9 @@ export const studyCasesSections = [
           },
           {
             type: "video",
-            title: "Video 2",
-            description: "Video 2",
+            title: "Second bending mode - 84Hz",
+            description:
+              "Second bending mode along the table’s shorter axis, with the legs again acting as pivot points at the floor. As the structure flexes in a similar cantilever-like fashion, the midpoint experiences the largest displacement. This mode highlights how the table displays a slightly higher frequency in this direction due to the reduced span length.",
             height: 500,
             srcs: [
               "/videos/post/sim-metaltable/basic_frame_f2_84Hz.mp4",
@@ -246,8 +248,9 @@ export const studyCasesSections = [
           },
           {
             type: "video",
-            title: "Video 3",
-            description: "Video 3",
+            title: "First torsinal mode - 110Hz",
+            description:
+              "The top ring twists about the vertical axis. There’s minimal out-of-plane bending and the ring stays nearly flat in the plane parallel to the floor. The four legs serve as pivot points, and the 'open' rectangular geometry of the frame allows each corner to shift slightly, creating that in-plane twisting motion.",
             height: 500,
             srcs: [
               "/videos/post/sim-metaltable/basic_frame_f3_110Hz.mp4",
@@ -261,8 +264,9 @@ export const studyCasesSections = [
           },
           {
             type: "video",
-            title: "Video 4",
-            description: "Video 4",
+            title: "local in-plane bending - 147Hz",
+            description:
+              "This mode primarily involves the table’s smaller middle ring profiles along its longer axis moving inward and outward, while the upper, stiffer ring sees less motion. Because these profiles are thinner, they flex more easily, explaining why the top ring remains relatively still during this vibration.",
             height: 500,
             srcs: [
               "/videos/post/sim-metaltable/basic_frame_f4_147Hz.mp4",
@@ -276,8 +280,9 @@ export const studyCasesSections = [
           },
           {
             type: "video",
-            title: "Video 5",
-            description: "Video 5",
+            title: "In-plane shear mode - 155Hz",
+            description:
+              "The top frame oscillates between two rhombic shapes. Because the ring’s in-plane stiffness is relatively low in shear, each welded corner can slightly pivot, allowing the rectangular frame to deform like a rhombus. This motion remains mostly in the plane of the table, rather than bending out of plane.",
             height: 500,
             srcs: [
               "/videos/post/sim-metaltable/basic_frame_f5_155Hz.mp4",
