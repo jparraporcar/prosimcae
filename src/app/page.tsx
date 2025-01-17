@@ -18,9 +18,9 @@ import {
   openImages,
   studyCasesSections,
 } from "@/lib/content-landing";
-import { ContactDialogCustom } from "@/components/custom/contact-dialog-custom";
-import { ContactDialogOndemand } from "@/components/custom/contact-dialog-ondemand";
-import { ResumeUploadDialog } from "@/components/custom/resume-upload-dialog";
+import { ContactDialogCustom } from "@/components/custom/client/contact-dialog-custom";
+import { ContactDialogOndemand } from "@/components/custom/client/contact-dialog-ondemand";
+import { ResumeUploadDialog } from "@/components/custom/client/resume-upload-dialog";
 import { CarouselWrapper } from "@/components/custom/client/carousel-wrapper";
 
 const Home: React.FC = () => {

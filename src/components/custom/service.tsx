@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { FaCheck } from "react-icons/fa";
 import "./service.css";
-import { ContactDialogCustom } from "./contact-dialog-custom";
+import { ContactDialogCustom } from "./client/contact-dialog-custom";
 
 interface ServiceProps {
   sectionClass?: string;
