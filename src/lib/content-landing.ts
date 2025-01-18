@@ -51,7 +51,7 @@ export const studyCasesSections = [
             type: "image",
             title: "Impact position: exploded",
             description:
-              "The aluminum enclosure absorbs impact energy, protecting the internal structure. Minimizing acceleration at sensitive components is crucial. Key dimensions, material properties as well as other data is included to provide context for the simulation.",
+              "Minimizing acceleration at sensitive components is crucial, therefore the aluminum enclosure absorbs impact energy, protecting the internal structure. Key dimensions, material properties as well as other data is included to provide context for the simulation.",
             alt: "Impact position: exploded",
             height: 600,
             width: 600,
@@ -75,7 +75,7 @@ export const studyCasesSections = [
             type: "video",
             title: "Plastic strain: view 1",
             description:
-              "The video illustrates the evolution of plastic strain at the impact corner, the most disadvantageous position due to concentrated forces. Despite this, the aluminum enclosure effectively absorbs energy, limiting plastic strain to a low max value of ~0.02.",
+              "The video illustrates the evolution of plastic strain at the impact corner, the most disadvantageous position due to resulting stress concetration. Despite this, the aluminum enclosure effectively absorbs energy, limiting plastic strain to a low max value of ~0.02.",
             height: 500,
             width: 500,
             srcs: [
@@ -91,7 +91,7 @@ export const studyCasesSections = [
             type: "video",
             title: "Plastic strain: view 2",
             description:
-              "The video shows plastic strain from the opposite side. The aluminum undergoes visible elastic deformation during the impact, with plastic strain concentrated at the impact area and noticeable elastic recovery afterward.",
+              "The video shows plastic strain from the opposite side. The aluminum undergoes visible plastic deformation concentrated at the impact as well as noticeable elastic deformation recovered post impact.",
             height: 500,
             width: 500,
             srcs: [
@@ -107,7 +107,7 @@ export const studyCasesSections = [
             type: "image",
             title: "Energy balance",
             description:
-              "The graph illustrates energy transfer during impact, showing kinetic energy converting into internal energy. Kinetic energy decreases rapidly, while internal energy rises, reflecting material energy absorption and stabilization.",
+              "The graph illustrates energy transfer during impact, showing kinetic energy converting into internal energy. Kinetic energy decreases rapidly, while internal energy rises, reflecting material energy absorption and stabilization after releasing a certain amount of elastic energy.",
             alt: "Energy balance",
             height: 600,
             width: 600,
@@ -124,7 +124,7 @@ export const studyCasesSections = [
             type: "image",
             title: "Aluminum profile test: initial position",
             description:
-              "The setup shows an aluminum profile displaced 3mm at the top by a rigid moving part. Supported by rigid fixations, its material properties, boundary conditions, and key dimensions provide context for structural analysis.",
+              "The setup shows an aluminum profile with 3mm of imposed displacement at the top by a rigid moving part and supported by rigid fixations. Its material properties, boundary conditions, and key dimensions provide context for structural analysis.",
             alt: "Image 1",
             height: 600,
             width: 600,
@@ -137,7 +137,7 @@ export const studyCasesSections = [
             type: "video",
             title: "Displacement vs iteration",
             description:
-              "The video shows the aluminum profile undergoing iterative displacement until reaching the imposed 3mm Z displacement boundary condition. The deformation evolves symmetrically across iterations, as anticipated.",
+              "The video shows the aluminum profile undergoing iterative displacement until reaching the imposed 3mm Z displacement boundary condition. The deformation evolves symmetrically in both sides of the profile across iterations, as anticipated.",
             height: 500,
             width: 500,
             srcs: [
@@ -153,7 +153,7 @@ export const studyCasesSections = [
             type: "video",
             title: "Plastic strain vs iteration",
             description:
-              "The video illustrates the evolution of plastic strain as the aluminum profile reaches the imposed 3mm Z displacement. Maximum plastic strain occurs symmetrically at the point of maximum impactor displacement, as expected.",
+              "The video illustrates the evolution of plastic strain as the aluminum profile reaches the imposed 3mm Z displacement. Maximum plastic strain occurs symmetrically at the center of symetry of the profile, as expected.",
             height: 500,
             width: 500,
             srcs: [
@@ -169,7 +169,7 @@ export const studyCasesSections = [
             type: "video",
             title: "Reaction forces vs iteration",
             description:
-              "The video shows the reaction forces during the simulation, peaking at maximum displacement. Forces are uniformly distributed across the surface where displacement is applied and concentrated at the fixations, reflecting part interactions through contact surfaces.",
+              "The video shows the reaction forces during the simulation, peaking at maximum displacement. Forces are uniformly distributed across the surface where displacement is applied and also concentrated at the fixations, showcasing the interaction through contact surfaces.",
             height: 500,
             width: 500,
             srcs: [
@@ -282,7 +282,7 @@ export const studyCasesSections = [
             type: "video",
             title: "In-plane shear mode - 155Hz",
             description:
-              "The top frame oscillates between two rhombic shapes. Because the ring’s in-plane stiffness is relatively low in shear, each welded corner can slightly pivot, allowing the rectangular frame to deform like a rhombus. This motion remains mostly in the plane of the table, rather than bending out of plane.",
+              "The top frame oscillates between two rhombic shapes. Because the ring’s in-plane stiffness is relatively low, each welded corner can slightly pivot, allowing the rectangular frame to deform like a rhombus. This motion remains mostly in the plane of the table, rather than bending out of plane.",
             height: 500,
             srcs: [
               "/videos/post/sim-metaltable/basic_frame_f5_155Hz.mp4",
@@ -308,8 +308,9 @@ export const studyCasesSections = [
         mediaItems: [
           {
             type: "image",
-            title: "Image 1",
-            description: "Image 1",
+            title: "Building room main dimensions",
+            description:
+              "The image outlines the building room's key dimensions, highlighting heat sources and furniture in reddish tones. The air conditioning unit (inlet) position will be detailed in the next picture. The simulation assumes closed doors and models transient convective heat transfer within the room.",
             alt: "Image 1",
             height: 600,
             width: 600,
@@ -319,8 +320,9 @@ export const studyCasesSections = [
           },
           {
             type: "image",
-            title: "Image 2",
-            description: "Image 2",
+            title: "Heat sources and BCs",
+            description:
+              "The image shows the room’s boundary conditions with a simplified window heat source, ignoring radiation or conduction. Two people and a TV act as fixed-temperature sources. Cooler air enters from the AC at a 45° angle, while the door bottoms serve as pressure outlets.",
             alt: "Image 2",
             height: 600,
             width: 600,
@@ -330,8 +332,9 @@ export const studyCasesSections = [
           },
           {
             type: "video",
-            title: "Video 1",
-            description: "Video 1",
+            title: "Velocity and temperature - view 1",
+            description:
+              "This video tracks velocity magnitudes and temperatures over a 50s simulation. Tracer lines from the AC show cooling air mostly affecting a less critical zone, leaving occupants’ area relatively warm. Although only some paths are displayed, friction implies a similar pattern near the pathlines. These findings confirm the AC’s suboptimal placement.",
             height: 500,
             srcs: [
               "/videos/post/sim-room/vel-temp-1.mp4",
@@ -345,8 +348,9 @@ export const studyCasesSections = [
           },
           {
             type: "video",
-            title: "Video 2",
-            description: "Video 2",
+            title: "Velocity and temperature - view 2",
+            description:
+              "This video highlights how the cooling air remains mostly within a confined zone, suggesting potential recirculation and inefficient heat dissipation. Although the recirculation is not directly visible here, the surrounding walls create a space prone to airflow loops, situation that will be examined in the next video.",
             height: 500,
             srcs: [
               "/videos/post/sim-room/vel-temp-2.mp4",
@@ -360,8 +364,9 @@ export const studyCasesSections = [
           },
           {
             type: "video",
-            title: "Video 3",
-            description: "Video 3",
+            title: "Recirculation pattern",
+            description:
+              "This video presents a plane section through the AC unit, displaying in-plane velocity vectors. Notably, the flow descending from the top of the unit forms a recirculation loop constrained by surrounding walls, limiting direct airflow to occupant areas and suggesting inefficiencies in the system's placement.",
             height: 500,
             srcs: [
               "/videos/post/sim-room/vector.mp4",
@@ -375,8 +380,9 @@ export const studyCasesSections = [
           },
           {
             type: "video",
-            title: "Video 4",
-            description: "Video 4",
+            title: "Temperature isovolume",
+            description:
+              "This video displays an isovolume zone marking temperatures within a specified range, highlighting the 3D distribution of cooler air. The room, initially at 300K, experiences about a max. of 1.5K drop in these regions, while other areas remain above the threshold. This limited cooling area indicates suboptimal air distribution, and potentially the need for higher AC power resulting in an increase in energy costs with the current AC position.",
             height: 500,
             srcs: [
               "/videos/post/sim-room/isovol.mp4",
