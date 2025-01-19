@@ -10,10 +10,9 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Prosimcae - Engineering and Simulation Services",
+  title: "Cost-Effective Accurate Engineering Simulations | Prosimcae",
   description:
-    "Prosimcae provides high-quality engineering simulations and services, specializing in computational fluid dynamics and solid mechanics.",
-  robots: "index, follow",
+    "Prosimcae offers expert engineering simulation services to optimize your product designs and reduce costs. Enhance performance and accelerate development with our reliable solutions. Contact us now!",
   icons: {
     icon: "/favicon.ico",
   },

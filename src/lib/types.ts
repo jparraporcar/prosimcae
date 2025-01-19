@@ -3,7 +3,7 @@ import { StaticImageData } from "next/image";
 export type mediaItem =
   | {
       type: "image";
-      title?: string;
+      title: string;
       description: string;
       alt: string;
       height?: number;
@@ -15,7 +15,7 @@ export type mediaItem =
     }
   | {
       type: "video";
-      title?: string;
+      title: string;
       description: string;
       height: number;
       width: number;

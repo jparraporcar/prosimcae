@@ -30,12 +30,12 @@ const Home: React.FC = () => {
         <MainSectionIntro
           descriptionContainerClass="appear-fading"
           descriptionClass="text-gray-500 text-2xl max-md:text-base max-md:px-6 px-3 max-md:px-4 italic text-center max-md:mt-10 "
-          descriptionText="At prosimcae, we are providing comprehensive Computational Aided Engineering (CAE) solutions that encompass advanced Computational Fluid Dynamics (CFD), Solid Mechanics, and Thermal Management. Our expertise combines technical precision with innovative analysis techniques."
+          descriptionText="From Fluid Dynamics to Structural Analysis and Thermal Management, we use efficient methods to help you optimize product performance and reduce testing expenses. Contact us and we will support you every step of the way!"
         />
       </div>
       <div id="main-section-title-services" className="slide-in-top section">
         <MainSectionTitle
-          title="Services"
+          title="Simulation Services"
           titleContainerClass="max-md:text-3xl"
         />
       </div>
@@ -60,7 +60,7 @@ const Home: React.FC = () => {
       <Separator orientation="horizontal" className="mt-20 mb-16" />
       <div id="main-section-title-technology" className="section">
         <MainSectionTitle
-          title="Technology"
+          title="How we work"
           titleContainerClass="max-md:text-3xl"
         />
       </div>
@@ -88,7 +88,7 @@ const Home: React.FC = () => {
       />
       <div id="main-section-title-study-cases" className="section">
         <MainSectionTitle
-          title="Study Cases"
+          title="Case studies"
           titleContainerClass="max-md:text-3xl"
         />
       </div>
@@ -108,7 +108,7 @@ const Home: React.FC = () => {
       <Separator orientation="horizontal" className="mb-20" />
       <div id="main-section-title-collaborations" className="section">
         <MainSectionTitle
-          title="Collaborations"
+          title="Partner with Us"
           titleContainerClass="max-md:text-3xl"
         />
       </div>

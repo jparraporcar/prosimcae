@@ -44,7 +44,7 @@ export function Navigation() {
                   "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
                 ])}
               >
-                Services
+                Simulation Services
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
@@ -60,7 +60,7 @@ export function Navigation() {
                   "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
                 ])}
               >
-                Technology
+                How we work
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
@@ -76,7 +76,7 @@ export function Navigation() {
                   "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
                 ])}
               >
-                Study Cases
+                Case studies
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
@@ -92,7 +92,7 @@ export function Navigation() {
                   "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
                 ])}
               >
-                Collaborations
+                Partner with Us
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
