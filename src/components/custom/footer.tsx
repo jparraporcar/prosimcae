@@ -44,7 +44,10 @@ export default function Footer() {
               Contact Us
             </a>
           </nav>
-          <div className="flex gap-4">
+          <div className="flex gap-4 items-center">
+            <p className="max-md:text-xs">
+              &copy; 2025 prosimcae. All rights reserved.
+            </p>
             <a
               href="https://x.com"
               target="_blank"
@@ -64,7 +67,7 @@ export default function Footer() {
               <span className="sr-only">Instagram</span>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/jordiparraporcar/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"

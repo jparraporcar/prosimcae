@@ -22,6 +22,8 @@ import { ContactDialogCustom } from "@/components/custom/client/contact-dialog-c
 import { ContactDialogOndemand } from "@/components/custom/client/contact-dialog-ondemand";
 import { ResumeUploadDialog } from "@/components/custom/client/resume-upload-dialog";
 import { CarouselWrapper } from "@/components/custom/client/carousel-wrapper";
+import AboutProsimcaeSection from "@/components/custom/about-prosimcae-section";
+import JoinNetworkSection from "@/components/custom/join-network-section";
 
 const Home: React.FC = () => {
   return (
@@ -112,32 +114,15 @@ const Home: React.FC = () => {
           titleContainerClass="max-md:text-3xl"
         />
       </div>
-      <section className="bg-white py-12">
-        <div className="container mx-auto px-6">
-          <Card className="bg-white shadow-lg rounded-lg">
-            <CardHeader className="text-center pb-6 max-md:px-3">
-              <CardTitle className="text-gray-900 text-3xl max-md:text-2xl">
-                Join Our Network of Professionals
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4 flex flex-col items-center gap-y-4 max-md:px-3">
-              <p className="text-center text-gray-700 text-xl max-md:text-xl">
-                We invite skilled engineers and simulation experts to
-                collaborate on innovative projects.
-              </p>
-              <ul className="text-gray-700 list-disc list-inside mx-4 text-xl max-md:text-xs flex flex-col gap-y-3">
-                <li>Work on diverse and exciting projects</li>
-                <li>Professional growth and skill enhancement</li>
-                <li>Flexible collaboration arrangements</li>
-              </ul>
-              <div>
-                <ResumeUploadDialog />
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-      <Separator orientation="horizontal" className="mb-20" />
+      <JoinNetworkSection />
+      <Separator orientation="horizontal" className="mb-20 mt-20" />
+      <div id="main-section-title-about-prosimcae" className="section">
+        <MainSectionTitle
+          title="About prosimcae"
+          titleContainerClass="max-md:text-3xl"
+        />
+      </div>
+      <AboutProsimcaeSection />
     </main>
   );
 };

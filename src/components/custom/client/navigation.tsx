@@ -44,7 +44,7 @@ export function Navigation() {
                   "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
                 ])}
               >
-                Simulation Services
+                Simulation services
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
@@ -92,7 +92,23 @@ export function Navigation() {
                   "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
                 ])}
               >
-                Partner with Us
+                Partner with us
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link
+              href="/#main-section-title-about-prosimcae"
+              legacyBehavior
+              passHref
+            >
+              <NavigationMenuLink
+                className={cn([
+                  navigationMenuTriggerStyle(),
+                  "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
+                ])}
+              >
+                About prosimcae
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
