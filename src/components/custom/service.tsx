@@ -29,7 +29,7 @@ export const Service: React.FC<ServiceProps> = (props) => {
         <h2 className="text-2xl max-md:text-xl font-bold text-gray-900 dark:text-gray-50 mb-3 text-center">
           {props.serviceName}
         </h2>
-        <p className="text-gray-700 dark:text-gray-300 text-lg max-md:text-sm leading-relaxed text-center">
+        <p className="text-gray-700 dark:text-gray-300 text-lg max-md:text-sm leading-relaxed text-center max-md:text-justify max-md:px-4">
           {props.serviceIntro}
         </p>
       </div>

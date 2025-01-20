@@ -4,9 +4,9 @@ import { Linkedin } from "lucide-react"; // Example icon import; adjust as neede
 export default function AboutProsimcaeSection() {
   return (
     <section>
-      <div className="mt-6 mb-24 mx-8">
+      <div className="mt-6 mb-14 mx-8">
         <Card className="bg-white shadow-2xl rounded-xl">
-          <CardHeader className="p-4 bg-slate-300 rounded-t-xl">
+          <CardHeader className="p-4 bg-slate-300 rounded-t-xl ">
             <CardTitle>
               <p className="text-black text-xl max-md:text-base leading-relaxed text-center">
                 Created by{" "}
