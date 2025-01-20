@@ -98,7 +98,7 @@ export function Navigation() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link
-              href="/#main-section-title-about-prosimcae"
+              href="/main-section-title-about-prosimcae"
               legacyBehavior
               passHref
             >

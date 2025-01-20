@@ -1,32 +1,93 @@
 import { imageItem, mediaItem } from "./types";
 
+// New interfaces (for reference):
+// interface ServiceItem {
+//   title: string;
+//   description: string;
+// }
+//
+// interface ServiceProps {
+//   sectionClass?: string;
+//   serviceName: string;
+//   serviceIntro: string;
+//   hrefDiscover: string;
+//   items: ServiceItem[]; // changed from string[] to ServiceItem[]
+//   dialogElement: React.ReactNode;
+// }
+
 export const customEngineering = {
   sectionClass: "bg-gray-100 dark:bg-gray-800",
   serviceName: "Custom Engineering",
   serviceIntro:
-    "Comprehensive simulation services tailored to the specific needs of each client. We specialize in providing reliable, cost-effective solutions that address both small-scale problems and large, complex projects. Our custom engineering approach includes flexible engagement models, whether you’re looking for a long-term B2B partnership or a project-based solution. With prosimcae, clients can achieve precise, validated outcomes aligned with their unique engineering challenges and standards.",
+    "Need simulations to reduce testing and solve mechanical problems? Our custom engineering approach finds solutions using battle-tested open-source tools. We reduce cost, ensure accuracy, and meet compliance standards—all while adapting to your timeline.",
 
-  hrefDiscover: "/contact", // Adjust for routing
+  // Link or route where users can learn more or contact
+  hrefDiscover: "/contact",
 
+  // Each item now has a { title, description }
   items: [
-    "Computational Fluid Dynamics (CFD): Expertise in fluid mechanics simulations for internal and external flows, accurately modeling heat transfer phenomena.",
-    "Finite Element Analysis (FEM): Static, dynamic, and modal analyses for solid mechanics to enhance structural integrity and predict vibrational behaviors.",
-    "Standards Compliance: Tailored solutions for meeting industry standards, ensuring project compliance with required specifications.",
-    "Flexible Engineering Solutions: B2B long-term collaboration or project-based services, customizable to fit any project scope and timeline.",
-    "Highly paralellalized simulations can be performed and results obtained in a timely manner",
+    {
+      title: "Cost-Effective Simulations",
+      description:
+        "Tap into open-source software to cut heavy licensing fees and focus on real design needs.",
+    },
+    {
+      title: "Reduce Testing Requirements",
+      description:
+        "Use proven virtual analyses to minimize physical prototypes and accelerate development.",
+    },
+    {
+      title: "Mechanical Problem-Solving",
+      description:
+        "Address fluid flow, structural integrity, and thermal issues tailored to your product challenges.",
+    },
+    {
+      title: "Compliance & Reliability",
+      description:
+        "Rely on validated solvers aligned with industry standards for consistent, accurate outcomes.",
+    },
+    {
+      title: "Flexible Project Management",
+      description:
+        "Adapt resources, schedules, and deliverables to fit your unique goals and budget.",
+    },
   ],
 };
 
 export const onDemandEngineering = {
+  sectionClass: "bg-white dark:bg-gray-900",
   serviceName: "On-Demand Engineering",
   serviceIntro:
-    "Specialized on-demand engineering services, focusing on in-house simulations tailored to the automotive sector. While our initial emphasis is on BiW crash analysis and highly dynamic crash simulations, we aim to remain flexible for future expansions into other engineering areas. This service is designed to ensure that our clients can effectively meet their engineering needs while maintaining control over the simulation process",
+    "Need specialized help with commercial simulation software? Our on-demand approach tackles advanced crash or mechanical challenges for automotive and beyond. We adapt to your environment—remote or on-site—and deliver results under your own infrastructure.",
+
+  hrefDiscover: "/contact",
+
   items: [
-    "Dynamic crash simulations emphasizing BiW structures to enhance safety, however Occupant Injury Criteria and dummy dynamics can also assessed depending on the projects goal and scope.",
-    "Focus on helping clients meet NCAP standards, covering MDB, frontal crash, and ODB tests comprehensively.",
-    "Specialized geometry reparation for CFD simulations, ensuring all components are watertight for accurate results.",
-    "Comprehensive results post-processing and professional presentations in both English and Spanish for clarity.",
-    "Flexible engagement models cater to both small challenges and extensive projects, adapting to client needs.",
+    {
+      title: "BiW & Crash Simulations",
+      description:
+        "Handle occupant safety and dynamic crash events with high-impact loads.",
+    },
+    {
+      title: "NCAP Standards",
+      description:
+        "Cover MDB, frontal crash, ODB, and occupant injury criteria for regulated compliance.",
+    },
+    {
+      title: "Commercial Software Mastery",
+      description:
+        "LS-DYNA, Abaqus, ANSA, and META integrated seamlessly into your workflows.",
+    },
+    {
+      title: "Professional Post-Processing",
+      description:
+        "Deliver clear visualizations and presentations for all project stakeholders.",
+    },
+    {
+      title: "Flexible Collaboration",
+      description:
+        "Scale daily hours or full projects—either remotely or on-site—to match your needs.",
+    },
   ],
 };
 

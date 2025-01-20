@@ -12,7 +12,7 @@ export const MainSectionIntro: React.FC<PageIntroProps> = (props) => {
     <div
       id="descriptionContainer"
       className={cn([
-        "max-w-4xl mx-auto space-y-4 md:space-y-6",
+        "mx-36 max-md:mx-1 max-lg:mx-20 space-y-4 md:space-y-6",
         props.descriptionContainerClass,
       ])}
     >

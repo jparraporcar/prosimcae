@@ -47,14 +47,14 @@ export const StudyCasesSection: React.FC<StudyCasesSectionProps> = (props) => {
       ref={ref}
       className={cn([
         `${props.effectIsActive && (isVisible ? "box visible" : "box hidden")}`,
-        "flex flex-col w-8/12 max-md:w-[87.5%] items-center",
+        "flex flex-col w-8/12 max-md:w-[87.5%] max-h-fit items-center",
       ])}
     >
-      <h2 className="text-center text-3xl max-md:text-xl max-md:-mx-1 font-bold mb-8">
+      <h2 className="text-center text-2xl max-md:text-xl max-md:-mx-1 font-bold mb-4">
         {props.title}
       </h2>
       {props.studyCases.map((studyCase, index) => (
-        <div key={index} className="flex flex-col w-full mb-20">
+        <div key={index} className="flex flex-col w-full mb-20 max-md:mb-14">
           <h1 className="text-center text-xl max-md:text-sm border-t border-l border-r p-2 rounded-tl-2xl rounded-tr-2xl border-slate-300 bg-slate-300">
             {studyCase.studyCaseTitle}
           </h1>

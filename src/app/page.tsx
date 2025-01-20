@@ -28,18 +28,18 @@ import JoinNetworkSection from "@/components/custom/join-network-section";
 const Home: React.FC = () => {
   return (
     <main className="w-full flex flex-col items-center max-md:mt-0 overflow-x-hidden mt-12">
-      <div id="main-section-intro" className=" text-slate-700 mb-8 mt-16 pb-4">
+      <div
+        id="main-section-intro"
+        className=" text-slate-700 mb-2 max-md:mb-1 mt-14 max-md:mt-16 pb-4"
+      >
         <MainSectionIntro
           descriptionContainerClass="appear-fading"
-          descriptionClass="text-gray-500 text-2xl max-md:text-base max-md:px-6 px-3 max-md:px-4 italic text-center max-md:mt-10 "
+          descriptionClass="text-gray-500 text-2xl max-md:text-base max-md:px-2 px-3 italic text-center max-md:mt-8 "
           descriptionText="From Fluid Dynamics to Structural Analysis and Thermal Management, we use efficient methods to help you optimize product performance and reduce testing expenses. Contact us and we will support you every step of the way!"
         />
       </div>
       <div id="main-section-title-services" className="slide-in-top section">
-        <MainSectionTitle
-          title="Simulation Services"
-          titleContainerClass="max-md:text-3xl"
-        />
+        <MainSectionTitle title="Simulation Services" />
       </div>
       <div className="w-full flex flex-row max-md:flex-col flex-wrap gap-y-20 max-md:gap-y-4 justify-evenly max-md:items-center mt-4">
         <Service
@@ -61,10 +61,7 @@ const Home: React.FC = () => {
       </div>
       <Separator orientation="horizontal" className="mt-20 mb-16" />
       <div id="main-section-title-technology" className="section">
-        <MainSectionTitle
-          title="How we work"
-          titleContainerClass="max-md:text-3xl"
-        />
+        <MainSectionTitle title="How we work" />
       </div>
       <div className="w-full flex flex-row max-lg:flex-col flex-wrap gap-y-20 max-lg:gap-y-0 justify-evenly max-lg:items-center">
         <section className="w-6/12 max-md:h-[300px] max-md:w-full flex flex-col px-6 max-md:px-3 py-4 mt-2 bg-white dark:bg-gray-800 items-center max-md:justify-center">
@@ -84,15 +81,9 @@ const Home: React.FC = () => {
           </div>
         </section>
       </div>
-      <Separator
-        orientation="horizontal"
-        className="mb-16 mt-20 max-md:mt-10"
-      />
+      <Separator orientation="horizontal" className="mb-16 mt-0 max-md:mt-10" />
       <div id="main-section-title-study-cases" className="section">
-        <MainSectionTitle
-          title="Case studies"
-          titleContainerClass="max-md:text-3xl"
-        />
+        <MainSectionTitle title="Case studies" />
       </div>
       <div
         id="study-cases-container"
@@ -107,20 +98,14 @@ const Home: React.FC = () => {
           />
         ))}
       </div>
-      <Separator orientation="horizontal" className="mb-20" />
+      <Separator orientation="horizontal" className="mb-14" />
       <div id="main-section-title-collaborations" className="section">
-        <MainSectionTitle
-          title="Partner with Us"
-          titleContainerClass="max-md:text-3xl"
-        />
+        <MainSectionTitle title="Partner with Us" />
       </div>
       <JoinNetworkSection />
-      <Separator orientation="horizontal" className="mb-20 mt-20" />
+      <Separator orientation="horizontal" className="mb-14 mt-20" />
       <div id="main-section-title-about-prosimcae" className="section">
-        <MainSectionTitle
-          title="About prosimcae"
-          titleContainerClass="max-md:text-3xl"
-        />
+        <MainSectionTitle title="About prosimcae" />
       </div>
       <AboutProsimcaeSection />
     </main>
