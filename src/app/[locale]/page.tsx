@@ -1,26 +1,19 @@
 import { MainSectionIntro } from "@/components/custom/main-section-intro";
-import { Service } from "../components/custom/service";
+import { Service } from "../../components/custom/service";
 import { Separator } from "@/components/ui/separator";
 import { StudyCasesSection } from "@/components/custom/client/study-cases-section";
 import { MainSectionTitle } from "@/components/custom/main-section-title";
-import { RotatingImageCarousel } from "@/components/custom/client/rotating-image-carousel";
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
 import {
   comImages,
   customEngineering,
+  mainSectionIntroDescription,
+  mainSectionTitles,
   onDemandEngineering,
   openImages,
   studyCasesSections,
 } from "@/lib/content-landing";
 import { ContactDialogCustom } from "@/components/custom/client/contact-dialog-custom";
 import { ContactDialogOndemand } from "@/components/custom/client/contact-dialog-ondemand";
-import { ResumeUploadDialog } from "@/components/custom/client/resume-upload-dialog";
 import { CarouselWrapper } from "@/components/custom/client/carousel-wrapper";
 import AboutProsimcaeSection from "@/components/custom/about-prosimcae-section";
 import JoinNetworkSection from "@/components/custom/join-network-section";
@@ -35,11 +28,11 @@ const Home: React.FC = () => {
         <MainSectionIntro
           descriptionContainerClass="appear-fading"
           descriptionClass="text-gray-500 text-2xl max-md:text-base max-md:px-2 px-3 max-md:px-6 italic text-center max-md:text-justify max-md:mt-8 "
-          descriptionText="From Fluid Dynamics to Structural Analysis and Thermal Management, we use efficient methods to help you optimize product performance and reduce testing expenses. Contact us and we will support you every step of the way!"
+          descriptionText={mainSectionIntroDescription}
         />
       </div>
       <div id="main-section-title-services" className="slide-in-top section">
-        <MainSectionTitle title="Simulation Services" />
+        <MainSectionTitle title={mainSectionTitles.simulationServices} />
       </div>
       <div className="w-full flex flex-row max-md:flex-col flex-wrap gap-y-20 max-md:gap-y-8 justify-evenly max-md:items-center mt-4">
         <Service
@@ -64,7 +57,7 @@ const Home: React.FC = () => {
         className="mt-16 mb-12 max-md:mt-12 max-md:mb-8"
       />
       <div id="main-section-title-technology" className="section">
-        <MainSectionTitle title="How we work" />
+        <MainSectionTitle title={mainSectionTitles.howWeWork} />
       </div>
       <div className="w-full flex flex-row max-lg:flex-col flex-wrap gap-y-20 max-lg:gap-y-0 justify-evenly max-lg:items-center">
         <section className="w-6/12 max-md:h-[300px] max-md:w-full flex flex-col px-6 max-md:px-3 py-0 mt-2 bg-white dark:bg-gray-800 items-center max-md:justify-center">
@@ -89,7 +82,7 @@ const Home: React.FC = () => {
         className="mb-16 -mt-4 max-md:mt-4 max-md:mb-12"
       />
       <div id="main-section-title-study-cases" className="section">
-        <MainSectionTitle title="Case studies" />
+        <MainSectionTitle title={mainSectionTitles.caseStudies} />
       </div>
       <div
         id="study-cases-container"
@@ -106,12 +99,12 @@ const Home: React.FC = () => {
       </div>
       <Separator orientation="horizontal" className="mb-14" />
       <div id="main-section-title-collaborations" className="section">
-        <MainSectionTitle title="Partner with Us" />
+        <MainSectionTitle title={mainSectionTitles.partnerWithUs} />
       </div>
       <JoinNetworkSection />
       <Separator orientation="horizontal" className="mb-10 mt-14" />
       <div id="main-section-title-about-prosimcae" className="section">
-        <MainSectionTitle title="About prosimcae" />
+        <MainSectionTitle title={mainSectionTitles.aboutProsimcae} />
       </div>
       <AboutProsimcaeSection />
     </main>

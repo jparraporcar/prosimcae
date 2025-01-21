@@ -1,20 +1,5 @@
 import { imageItem, mediaItem } from "./types";
 
-// New interfaces (for reference):
-// interface ServiceItem {
-//   title: string;
-//   description: string;
-// }
-//
-// interface ServiceProps {
-//   sectionClass?: string;
-//   serviceName: string;
-//   serviceIntro: string;
-//   hrefDiscover: string;
-//   items: ServiceItem[]; // changed from string[] to ServiceItem[]
-//   dialogElement: React.ReactNode;
-// }
-
 export const customEngineering = {
   sectionClass: "bg-gray-100 dark:bg-gray-800",
   serviceName: "Custom Engineering",
@@ -467,6 +452,17 @@ import openLogosOpenradioss from "@/images/open-logos/open-logos-openradioss.jpg
 import openLogosParaview from "@/images/open-logos/open-logos-paraview.png";
 import openLogosPrepomax from "@/images/open-logos/open-logos-prepomax.jpg";
 import openLogosOpenfoam from "@/images/open-logos/open-logos-openfoam.png";
+
+export const mainSectionIntroDescription =
+  "From Fluid Dynamics to Structural Analysis and Thermal Management, we use efficient methods to help you optimize product performance and reduce testing expenses. Contact us and we will support you every step of the way!";
+
+export const mainSectionTitles = {
+  simulationServices: "Simulation Services",
+  howWeWork: "How we work",
+  caseStudies: "Case studies",
+  partnerWithUs: "Partner with Us",
+  aboutProsimcae: "About prosimcae",
+};
 
 export const openImages = [
   {
