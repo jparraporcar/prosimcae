@@ -6,61 +6,72 @@ import { AnalyticsProvider } from "@/components/custom/client/analytics-provider
 import Footer from "@/components/custom/footer";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
+import { getTranslations } from "next-intl/server";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Cost-Effective Accurate Engineering Simulations | Prosimcae",
-  description:
-    "Prosimcae offers expert engineering simulation services to optimize your product designs and reduce costs. Enhance performance and accelerate development with our reliable solutions. Contact us now!",
-  icons: {
-    icon: "/favicon.ico",
-  },
-  alternates: {
-    canonical: "https://www.prosimcae.com/",
-  },
-  other: {
-    "script:ld+json": JSON.stringify([
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        url: "https://www.prosimcae.com/",
-        logo: "https://www.prosimcae.com/logo.webp",
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        url: "https://www.prosimcae.com/",
-        potentialAction: {
-          "@type": "SearchAction",
-          target: "https://www.prosimcae.com/search?q={search_term_string}",
-          "query-input": "required name=search_term_string",
-        },
-      },
-    ]),
-  },
-};
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
-export default function RootLayout({
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  // Enable static rendering
+  const t = await getTranslations({ locale });
+
+  return {
+    title: t("metadata.title"),
+    description: t("metadata.description"),
+    icons: {
+      icon: "/favicon.ico",
+    },
+    alternates: {
+      canonical: t("metadata.alternates.canonical"),
+    },
+  };
+}
+
+export default async function LocaleLayout({
   children,
-}: Readonly<{
+  params: { locale },
+}: {
   children: React.ReactNode;
-}>) {
+  params: { locale: string };
+}) {
+  // Ensure that the incoming `locale` is valid
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
+  // Providing all messages to the client
+  // side is the easiest way to get started
+  const messages = await getMessages();
+
   return (
-    <html lang="en" className="mx-0">
-      <CookieBanner />
-      <AnalyticsProvider />
-      <body className={inter.className}>
-        <div className="w-full flex flex-row max-md:justify-end justify-center relative z-10">
-          <NavigationWrapper />
-        </div>
-        {children}
-        <section className="w-full">
-          <Footer />
-        </section>
-        <SpeedInsights />
-        <Analytics />
-      </body>
+    <html lang={locale} className="mx-0">
+      <NextIntlClientProvider messages={messages}>
+        <body className={inter.className}>
+          <CookieBanner />
+          <AnalyticsProvider />
+          <SpeedInsights />
+          <Analytics />
+          <div className="w-full flex flex-row max-md:justify-end justify-center relative z-10">
+            <NavigationWrapper />
+          </div>
+          {children}
+          <section className="w-full">
+            <Footer />
+          </section>
+        </body>
+      </NextIntlClientProvider>
     </html>
   );
 }

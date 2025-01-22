@@ -6,6 +6,7 @@ import "./study-cases-section.css";
 
 import { StudyCase } from "./study-case";
 import { mediaItem } from "@/lib/types";
+import { useTranslations } from "next-intl";
 
 interface StudyCase {
   studyCaseTitle: string;
@@ -21,6 +22,7 @@ interface StudyCasesSectionProps {
 export const StudyCasesSection: React.FC<StudyCasesSectionProps> = (props) => {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(true);
+  const t = useTranslations();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -51,12 +53,12 @@ export const StudyCasesSection: React.FC<StudyCasesSectionProps> = (props) => {
       ])}
     >
       <h2 className="text-center text-2xl max-md:text-xl max-md:-mx-1 font-bold mb-4">
-        {props.title}
+        {t(props.title)}
       </h2>
       {props.studyCases.map((studyCase, index) => (
         <div key={index} className="flex flex-col w-full mb-20 max-md:mb-14">
           <h1 className="text-center text-xl max-md:text-sm border-t border-l border-r p-2 rounded-tl-2xl rounded-tr-2xl border-slate-300 bg-slate-300">
-            {studyCase.studyCaseTitle}
+            {t(studyCase.studyCaseTitle)}
           </h1>
           <div className="border rounded-bl-2xl rounded-br-2xl border-slate-300">
             <StudyCase mediaItems={studyCase.mediaItems} />

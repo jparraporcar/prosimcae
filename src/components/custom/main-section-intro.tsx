@@ -1,5 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 interface PageIntroProps {
   descriptionText?: string;
@@ -8,6 +9,8 @@ interface PageIntroProps {
 }
 
 export const MainSectionIntro: React.FC<PageIntroProps> = (props) => {
+  const t = useTranslations();
+
   return (
     <div
       id="descriptionContainer"
@@ -23,7 +26,7 @@ export const MainSectionIntro: React.FC<PageIntroProps> = (props) => {
           props.descriptionClass,
         ])}
       >
-        {props.descriptionText}
+        {t(props.descriptionText)}
       </p>
     </div>
   );

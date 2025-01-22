@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 interface MainSectiontitleProps {
   title: string;
@@ -8,6 +9,8 @@ interface MainSectiontitleProps {
 }
 
 export const MainSectionTitle: React.FC<MainSectiontitleProps> = (props) => {
+  const t = useTranslations();
+
   return (
     <div className={cn(["text-center", props.mainContainerClass])}>
       <h1
@@ -16,7 +19,7 @@ export const MainSectionTitle: React.FC<MainSectiontitleProps> = (props) => {
           props.titleContainerClass,
         ])}
       >
-        {props.title}
+        {t(props.title)}
       </h1>
       <div
         className={cn([

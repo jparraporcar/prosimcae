@@ -11,14 +11,17 @@ import {
   onDemandEngineering,
   openImages,
   studyCasesSections,
-} from "@/lib/content-landing";
+} from "@/lib/content";
 import { ContactDialogCustom } from "@/components/custom/client/contact-dialog-custom";
 import { ContactDialogOndemand } from "@/components/custom/client/contact-dialog-ondemand";
 import { CarouselWrapper } from "@/components/custom/client/carousel-wrapper";
 import AboutProsimcaeSection from "@/components/custom/about-prosimcae-section";
 import JoinNetworkSection from "@/components/custom/join-network-section";
+import { setRequestLocale } from "next-intl/server";
 
-const Home: React.FC = () => {
+const Home = ({ params: { locale } }: { params: { locale: string } }) => {
+  setRequestLocale(locale);
+
   return (
     <main className="w-full flex flex-col items-center max-md:mt-0 overflow-x-hidden mt-12">
       <div
