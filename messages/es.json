@@ -378,5 +378,9 @@
       "x": "X",
       "linkedin": "LinkedIn"
     }
+  },
+  "resumeUploadDialog": {
+    "submitButton": "Envíe su CV",
+    "dialogTitle": "Suba su currículum, por favor"
   }
 }

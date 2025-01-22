@@ -17,16 +17,18 @@ import Image from "next/image";
 import logo from "@/images/provisional-logo-prosimcae.webp";
 import { navButtonLabels } from "@/lib/content";
 import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 
 export function Navigation() {
   const t = useTranslations();
+  const locale = useLocale();
 
   return (
     <div className="fixed rounded-lg shadow-xl p-1 bg-white mt-4 align-middle">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem id="navitemtest" className="-mt-1 mr-4">
-            <Link href="/" legacyBehavior passHref>
+            <Link href={`/${locale}`} legacyBehavior passHref>
               <NavigationMenuLink>
                 <div className="mr-auto ml-4">
                   <Image

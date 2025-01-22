@@ -378,5 +378,9 @@
       "x": "X",
       "linkedin": "LinkedIn"
     }
+  },
+  "resumeUploadDialog": {
+    "submitButton": "Submit Your CV",
+    "dialogTitle": "Upload your resume please"
   }
 }

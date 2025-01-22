@@ -15,24 +15,25 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "../../ui/button";
-
-const pdfFileSchema = z.object({
-  fileUpload: z
-    .instanceof(File)
-    .refine(
-      (file) => file.type === "application/pdf" && file.name.endsWith(".pdf"),
-      {
-        message: "The file must be a valid PDF.",
-      }
-    )
-    .optional(),
-});
+import { useLocale } from "next-intl";
 
 interface ResumeUploadFormProps {
   closeDialog: () => void;
 }
 
 export const ResumeUploadForm: React.FC<ResumeUploadFormProps> = (props) => {
+  const locale = useLocale();
+  const pdfFileSchema = z.object({
+    fileUpload: z
+      .instanceof(File)
+      .refine(
+        (file) => file.type === "application/pdf" && file.name.endsWith(".pdf"),
+        {
+          message: "The file must be a valid PDF.",
+        }
+      )
+      .optional(),
+  });
   const form = useForm({
     resolver: zodResolver(pdfFileSchema),
     defaultValues: {
@@ -49,7 +50,7 @@ export const ResumeUploadForm: React.FC<ResumeUploadFormProps> = (props) => {
     const formData = new FormData();
     formData.append("fileUpload", data.fileUpload);
     props.closeDialog();
-    const res = await fetch("http://localhost:3001/api/resumeup", {
+    const res = await fetch(`${process.env.SITE_URL}/${locale}/api/resumeup`, {
       method: "POST",
       body: formData,
     });

@@ -28,7 +28,7 @@ export const NavigationMobile: React.FC = () => {
 
   const handleClick = (id: string) => {
     setIsOpen((prevState) => !prevState);
-    if (pathname === "/") {
+    if (pathname === "/" || "/en" || "/es") {
       // On the main page, scroll to the section
       setTimeout(() => {
         const section = document.querySelector(id);
@@ -38,7 +38,7 @@ export const NavigationMobile: React.FC = () => {
       }, 400);
     } else {
       // Navigate to the main page and reset to the top
-      router.push("/");
+      router.push(pathname);
       setTimeout(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
         const section = document.querySelector(id);

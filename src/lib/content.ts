@@ -720,3 +720,8 @@ export const footer = {
     linkedin: "footer.social.linkedin",
   },
 };
+
+export const resumeUploadDialog = {
+  submitButton: "resumeUploadDialog.submitButton",
+  dialogTitle: "resumeUploadDialog.dialogTitle",
+};
