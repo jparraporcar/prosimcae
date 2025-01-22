@@ -1,9 +1,6 @@
-# *
 User-agent: *
-Allow: /
+Disallow:
 
-# Host
-Host: https://www.prosimcae.com
-
-# Sitemaps
 Sitemap: https://www.prosimcae.com/sitemap.xml
+Sitemap: https://www.prosimcae.com/es/sitemap.xml
+Sitemap: https://www.prosimcae.com/en/sitemap.xml
