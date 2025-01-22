@@ -1,49 +1,49 @@
 {
   "metadata": {
     "title": "Simulaciones de Ingeniería Precisas y Rentables | Prosimcae",
-    "description": "Prosimcae ofrece servicios expertos de simulación de ingeniería para optimizar el diseño de sus productos y reducir costos. Mejore el rendimiento y acelere el desarrollo con nuestras soluciones confiables. ¡Contáctenos ahora!",
+    "description": "Prosimcae ofrece servicios expertos de simulación para optimizar el diseño de sus productos y reducir costos. Mejore el rendimiento y acelere el desarrollo con nuestras soluciones. ¡Contáctenos ahora!",
     "alternates": {
       "canonical": "https://www.prosimcae.com/es/"
     }
   },
-  "mainSectionIntroDescription": "Desde la Dinámica de Fluidos hasta el Análisis Estructural y la Gestión Térmica, utilizamos métodos eficientes para ayudarte a optimizar el rendimiento del producto y reducir los gastos de prueba. ¡Contáctanos y te apoyaremos en cada paso del camino!",
+  "mainSectionIntroDescription": "Desde la Dinámica de Fluidos hasta el Análisis Estructural y la Gestión Térmica, utilizamos métodos eficientes para ayudarle a optimizar el rendimiento de su producto y reducir los gastos en tests. ¡Contáctenos y le apoyaremos en cada fase del proyecto!",
   "mainSectionTitles": {
     "simulationServices": "Servicios de Simulación",
     "howWeWork": "Cómo trabajamos",
-    "caseStudies": "Estudios de caso",
-    "partnerWithUs": "Asóciate con Nosotros",
+    "caseStudies": "Casos de ejemplo",
+    "partnerWithUs": "Colabora con Nosotros",
     "aboutProsimcae": "Sobre prosimcae"
   },
   "onDemandEngineering": {
-    "serviceName": "Ingeniería a Demanda",
-    "serviceIntro": "¿Necesitas ayuda especializada con software de simulación comercial? Nuestro enfoque a demanda aborda desafíos avanzados de choques o mecánicos para la automoción y más allá. Nos adaptamos a tu entorno—remoto o en sitio—y entregamos resultados bajo tu propia infraestructura.",
+    "serviceName": "Ingeniería por demanda",
+    "serviceIntro": "¿Necesitas ayuda especializada con software de simulación comercial? Nuestro enfoque por demanda aborda tanto casos áltamente dinámicos así como estáticos, para todo tipo de industrias. Nos adaptamos a tu entorno—remoto o en oficina—y entregamos resultados bajo tu propia infraestructura.",
     "hrefDiscover": "/contact",
     "items": {
       "0": {
         "title": "Simulaciones BiW & Choques",
-        "description": "Maneja la seguridad de los ocupantes y eventos dinámicos de alto impacto fácilmente."
+        "description": "Estudia la seguridad de los ocupantes, modela y analiza impactos con precisión."
       },
       "1": {
         "title": "Estándares NCAP",
-        "description": "Cubre MDB, choques frontales y criterios de lesiones para cumplimiento regulado."
+        "description": "Estudiamos cualquier tipo de impacto dentro de su normativa estatal."
       },
       "2": {
-        "title": "Maestría en Software Comercial",
-        "description": "Integramos LS-DYNA, Abaqus, ANSA y META sin problemas en tus flujos de trabajo."
+        "title": "Dominio en Software Comercial",
+        "description": "Te ayudamos a lograr tus objetivos en tu desarrollo con LS-DYNA, Abaqus, ANSA y META."
       },
       "3": {
         "title": "Postprocesamiento Profesional",
-        "description": "Ofrece visualizaciones claras y presentaciones aptas para los interesados."
+        "description": "Ofrece visualizaciones claras y presentaciones aptas para el cliente."
       },
       "4": {
         "title": "Colaboración Flexible",
-        "description": "Escala horas diarias o proyectos—remotamente o en sitio—según tus necesidades."
+        "description": "Escala horas diarias o proyectos—remotamente o en oficina—según tus necesidades."
       }
     }
   },
   "customEngineering": {
     "serviceName": "Ingeniería por proyecto",
-    "serviceIntro": "¿Necesitas simulaciones para reducir pruebas y resolver problemas mecánicos? Nuestro enfoque de ingeniería a medida encuentra soluciones utilizando herramientas de código abierto probadas en combate. Reducimos costos, garantizamos precisión y cumplimos con los estándares de cumplimiento, todo mientras nos adaptamos a tu cronograma.",
+    "serviceIntro": "¿Necesitas simulaciones para reducir pruebas y resolver problemas mecánicos? Nuestro enfoque de ingeniería por proyecto encuentra soluciones utilizando herramientas de código abierto. Reducimos costos, garantizamos precisión y cumplimos con los estándares de cumplimiento, todo mientras nos adaptamos a tus fechas de entrega.",
     "hrefDiscover": "/contact",
     "items": {
       "0": {
@@ -60,7 +60,7 @@
       },
       "3": {
         "title": "Cumplimiento y Confiabilidad",
-        "description": "Utiliza solucionadores validados para resultados consistentes alineados a estándares."
+        "description": "Utiliza solvers validados para resultados consistentes alineados a estándares."
       },
       "4": {
         "title": "Gestión de Proyectos Flexible",
