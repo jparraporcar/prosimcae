@@ -42,7 +42,7 @@
     }
   },
   "customEngineering": {
-    "serviceName": "Ingeniería a Medida",
+    "serviceName": "Ingeniería por proyecto",
     "serviceIntro": "¿Necesitas simulaciones para reducir pruebas y resolver problemas mecánicos? Nuestro enfoque de ingeniería a medida encuentra soluciones utilizando herramientas de código abierto probadas en combate. Reducimos costos, garantizamos precisión y cumplimos con los estándares de cumplimiento, todo mientras nos adaptamos a tu cronograma.",
     "hrefDiscover": "/contact",
     "items": {
