@@ -592,3 +592,85 @@ export const comImages = [
     caption: "comImages.3.caption",
   },
 ] as imageItem[];
+
+export const about = {
+  createdBy: {
+    part1: "aboutProsimcae.createdByPart1",
+    name: "aboutProsimcae.name",
+    part2: "aboutProsimcae.createdByPart2",
+  },
+  list: {
+    item1: {
+      part1: "aboutProsimcae.list.item1Part1",
+      automotive: "aboutProsimcae.list.automotive",
+      and: "aboutProsimcae.list.and",
+      industrialSectors: "aboutProsimcae.list.industrialSectors",
+    },
+    item2: {
+      part1: "aboutProsimcae.list.item2Part1",
+      fea: "aboutProsimcae.list.fea",
+      andCFD: "aboutProsimcae.list.andCFD",
+    },
+    item3: {
+      part1: "aboutProsimcae.list.item3Part1",
+      publication: "aboutProsimcae.list.publication",
+      andSuccessfully: "aboutProsimcae.list.andSuccessfully",
+      costReduction: "aboutProsimcae.list.costReduction",
+      andAccelerated: "aboutProsimcae.list.andAccelerated",
+    },
+    item4: {
+      part1: "aboutProsimcae.list.item4Part1",
+      consultancy: "aboutProsimcae.list.consultancy",
+      workingWithClients: "aboutProsimcae.list.workingWithClients",
+      services: "aboutProsimcae.list.services",
+      simulationServices: "aboutProsimcae.list.simulationServices",
+    },
+  },
+};
+
+export const joinNetworkSection = {
+  title: "joinNetworkSection.title",
+  paragraph: "joinNetworkSection.paragraph",
+  list: {
+    item1: "joinNetworkSection.list.item1",
+    item2: "joinNetworkSection.list.item2",
+    item3: "joinNetworkSection.list.item3",
+  },
+};
+
+export const navButtonLabels = {
+  simulationServices: "navButtonLabels.simulationServices",
+  howWeWork: "navButtonLabels.howWeWork",
+  caseStudies: "navButtonLabels.caseStudies",
+  partnerWithUs: "navButtonLabels.partnerWithUs",
+  aboutProsimcae: "navButtonLabels.aboutProsimcae",
+};
+
+export const dialogGetInTouchButton = "dialogGetInTouchButton";
+
+// content.ts
+
+export const ondemandContactForm = {
+  labels: {
+    companyName: "ondemandContactForm.labels.companyName",
+    companyCountry: "ondemandContactForm.labels.companyCountry",
+    contactName: "ondemandContactForm.labels.contactName",
+    contactEmail: "ondemandContactForm.labels.contactEmail",
+    projectDuration: "ondemandContactForm.labels.projectDuration",
+    expectedHours: "ondemandContactForm.labels.expectedHours",
+    requestExplanation: "ondemandContactForm.labels.requestExplanation",
+  },
+  placeholders: {
+    requestExplanation: "ondemandContactForm.placeholders.requestExplanation",
+  },
+  validation: {
+    required: "ondemandContactForm.validation.required",
+    minCharacters: "ondemandContactForm.validation.minCharacters",
+    invalidEmail: "ondemandContactForm.validation.invalidEmail",
+    yesOrNo: "ondemandContactForm.validation.yesOrNo",
+    maxWords: "ondemandContactForm.validation.maxWords",
+  },
+  buttons: {
+    submit: "ondemandContactForm.buttons.submit",
+  },
+};

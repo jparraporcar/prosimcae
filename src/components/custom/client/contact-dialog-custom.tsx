@@ -14,9 +14,12 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ContactDialogCustomForm } from "./contact-dialog-custom-form";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
+import { dialogGetInTouchButton } from "@/lib/content";
 
 export const ContactDialogCustom: React.FC = () => {
   const [switchDialog, setSwitchDialog] = useState<boolean>(false);
+  const t = useTranslations();
 
   const handleSwitchDialog = () => {
     setSwitchDialog((prevState) => !prevState);
@@ -26,13 +29,13 @@ export const ContactDialogCustom: React.FC = () => {
     <Dialog onOpenChange={handleSwitchDialog} open={switchDialog}>
       <DialogTrigger asChild>
         <Button className="px-6 py-2 text-xl rounded-md shadow gradient-effect">
-          Get In Touch
+          {t(dialogGetInTouchButton)}
         </Button>
       </DialogTrigger>
       <DialogContent className="p-16 max-md:p-4 w-[600px] max-md:w-[340px] max-w-[600px] max-md:max-w-[340px]">
         <DialogHeader>
           <DialogTitle className="mb-2 max-md:text-base">
-            Get in Touch
+            {t(dialogGetInTouchButton)}
           </DialogTitle>
           <DialogDescription className="max-md:text-xs">
             Please introduce the data indicated in the fields below and we will

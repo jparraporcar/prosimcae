@@ -18,6 +18,7 @@ import { useInView } from "react-intersection-observer";
 import { type CarouselApi } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
 import { imageItem } from "@/lib/types";
+import { useTranslations } from "next-intl";
 
 interface RotatingImageCarouselProps {
   images: imageItem[];
@@ -26,6 +27,7 @@ interface RotatingImageCarouselProps {
 export const CarouselMobile: React.FC<RotatingImageCarouselProps> = (props) => {
   const { ref: carouselRef, inView } = useInView({ threshold: 0.1 });
   const [api, setApi] = useState<CarouselApi>();
+  const t = useTranslations();
 
   useEffect(() => {
     if (!inView && !api?.plugins().autoplay.isPlaying()) {
@@ -63,7 +65,7 @@ export const CarouselMobile: React.FC<RotatingImageCarouselProps> = (props) => {
                   placeholder={image.placeholder}
                   className="image"
                 />
-                <p className="description-mobile">{image.description}</p>
+                <p className="description-mobile">{t(image.description)}</p>
               </div>
             </CarouselItem>
           ))}

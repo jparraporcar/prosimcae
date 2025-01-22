@@ -78,12 +78,14 @@
             "0": {
               "title": "Posición de impacto: explotada",
               "description": "Minimizar la aceleración en componentes sensibles es crucial, por lo tanto, el recinto de aluminio absorbe la energía del impacto, protegiendo la estructura interna. Se incluyen dimensiones clave, propiedades del material y otros datos para proporcionar contexto para la simulación.",
-              "caption": "Posición de impacto: explotada"
+              "caption": "Posición de impacto: explotada",
+              "alt": "Posición de impacto: explotada"
             },
             "1": {
               "title": "Posición de impacto: no explotada",
               "description": "El ensamblaje está posicionado cerca de una pared rígida para reducir el tiempo de simulación, con una velocidad inicial de -5.5 m/s en la dirección vertical. La no deformabilidad de la pared asegura que la integridad estructural del dispositivo pueda ser evaluada bajo condiciones controladas.",
-              "caption": "Posición de impacto: no explotada"
+              "caption": "Posición de impacto: no explotada",
+              "alt": "Posición de impacto: no explotada"
             },
             "2": {
               "title": "Deformación plástica: vista 1",
@@ -98,7 +100,8 @@
             "4": {
               "title": "Balance de energía",
               "description": "El gráfico ilustra la transferencia de energía durante el impacto, mostrando la energía cinética convirtiéndose en energía interna. La energía cinética disminuye rápidamente, mientras que la energía interna aumenta, reflejando la absorción de energía del material y la estabilización después de liberar cierta cantidad de energía elástica.",
-              "caption": "Balance de energía"
+              "caption": "Balance de energía",
+              "alt": "Balance de energía"
             }
           }
         },
@@ -108,7 +111,8 @@
             "0": {
               "title": "Prueba de perfil de aluminio: posición inicial",
               "description": "El montaje muestra un perfil de aluminio con un desplazamiento impuesto de 3 mm en la parte superior por una parte móvil rígida y soportado por fijaciones rígidas. Sus propiedades del material, condiciones de frontera y dimensiones clave proporcionan contexto para el análisis estructural.",
-              "caption": "Imagen 1"
+              "caption": "Prueba de perfil de aluminio: posición inicial",
+              "alt": "Prueba de perfil de aluminio: posición inicial"
             },
             "1": {
               "title": "Desplazamiento vs iteración",
@@ -138,7 +142,8 @@
             "0": {
               "title": "Estructura de marco de aluminio ligero",
               "description": "La estructura está diseñada para ser ligera y resistente a la corrosión. Cuenta con perfiles de vigas con dimensiones y espesores especificados, anclados al suelo. Se realiza un estudio de frecuencia natural para asegurar su idoneidad bajo condiciones dinámicas.",
-              "caption": "Imagen 1"
+              "caption": "Estructura de marco de aluminio ligero",
+              "alt": "Estructura de marco de aluminio ligero"
             },
             "1": {
               "title": "Primer modo de flexión - 81Hz",
@@ -178,12 +183,14 @@
             "0": {
               "title": "Dimensiones principales de la habitación del edificio",
               "description": "La imagen describe las dimensiones clave de la habitación del edificio, destacando fuentes de calor y muebles en tonos rojizos. La posición de la unidad de aire acondicionado (entrada) se detallará en la siguiente imagen. La simulación asume puertas cerradas y modela la transferencia de calor convectiva transitoria dentro de la habitación.",
-              "caption": "Imagen 1"
+              "caption": "Dimensiones principales de la habitación del edificio",
+              "alt": "Dimensiones principales de la habitación del edificio"
             },
             "1": {
               "title": "Fuentes de calor y BCs",
               "description": "La imagen muestra las condiciones de frontera de la habitación con una fuente de calor de ventana simplificada, ignorando radiación o conducción. Dos personas y un televisor actúan como fuentes de temperatura fija. El aire más frío entra desde el AC a un ángulo de 45°, mientras que las partes inferiores de las puertas sirven como salidas de presión.",
-              "caption": "Imagen 2"
+              "caption": "Fuentes de calor y BCs",
+              "alt": "Fuentes de calor y BCs"
             },
             "2": {
               "title": "Velocidad y temperatura - vista 1",
@@ -262,6 +269,71 @@
       "description": "Solucionador FEA explícito para simulaciones dinámicas",
       "alt": "LS-DYNA",
       "caption": "Solucionador FEA explícito para simulaciones dinámicas"
+    }
+  },
+  "aboutProsimcae": {
+    "createdByPart1": "Creado por",
+    "name": "Jordi Parra Porcar",
+    "createdByPart2": ", Ingeniero Mecánico especializado en CAE durante más de 8 años.",
+    "list": {
+      "item1Part1": "Experiencia en los sectores",
+      "automotive": "automotriz",
+      "and": "e",
+      "industrialSectors": "industrial.",
+      "item2Part1": "Experiencia en profundidad en",
+      "fea": "FEA (Análisis de Elementos Finitos)",
+      "andCFD": "y CFD (Mecánica de Fluidos Computacional).",
+      "item3Part1": "Autor de una",
+      "publication": "publicación CFD revisada por pares",
+      "andSuccessfully": "y supervisión exitosa de proyectos que",
+      "costReduction": "reducieron los costos de prototipado",
+      "andAccelerated": "y aceleraron los tiempos de diseño.",
+      "item4Part1": "Operando como una",
+      "consultancy": "consultoría remota",
+      "workingWithClients": "trabajando con clientes internacionalmente para",
+      "services": "servicios de simulación rápidos, flexibles y rentables",
+      "simulationServices": "."
+    }
+  },
+  "joinNetworkSection": {
+    "title": "Únete a nuestra red de profesionales",
+    "paragraph": "Invitamos a ingenieros calificados y expertos en simulación a colaborar en proyectos innovadores.",
+    "list": {
+      "item1": "Trabajar en proyectos diversos y emocionantes",
+      "item2": "Crecimiento profesional y mejora de habilidades",
+      "item3": "Arreglos de colaboración flexibles"
+    }
+  },
+  "navButtonLabels": {
+    "simulationServices": "Servicios de simulación",
+    "howWeWork": "Cómo trabajamos",
+    "caseStudies": "Estudios de caso",
+    "partnerWithUs": "Asóciate con nosotros",
+    "aboutProsimcae": "Acerca de Prosimcae"
+  },
+  "dialogGetInTouchButton": "Contáctanos",
+  "onDemandContactForm": {
+    "labels": {
+      "companyName": "Nombre de la empresa",
+      "companyCountry": "País de la empresa",
+      "contactName": "Nombre del contacto",
+      "contactEmail": "Correo electrónico del contacto",
+      "projectDuration": "Duración del proyecto",
+      "expectedHours": "Horas esperadas",
+      "requestExplanation": "Explicación de la solicitud"
+    },
+    "placeholders": {
+      "requestExplanation": "Explica brevemente tu solicitud de proyecto aquí, por favor. Nos pondremos en contacto contigo para conocer más detalles :)!"
+    },
+    "validation": {
+      "required": "Este campo es obligatorio",
+      "minCharacters": "Al menos {min} caracteres.",
+      "invalidEmail": "Dirección de correo electrónico inválida.",
+      "yesOrNo": "Respuestas: Sí o No.",
+      "maxWords": "La explicación del proyecto no debe exceder las 300 palabras."
+    },
+    "buttons": {
+      "submit": "Enviar"
     }
   }
 }

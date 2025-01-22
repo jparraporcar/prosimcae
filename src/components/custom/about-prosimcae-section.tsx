@@ -1,17 +1,22 @@
+// AboutProsimcaeSection.tsx
+
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Linkedin } from "lucide-react"; // Example icon import; adjust as needed
+import { Linkedin } from "lucide-react";
+import { about } from "@/lib/content";
+import { useTranslations } from "next-intl";
 
 export default function AboutProsimcaeSection() {
+  const t = useTranslations();
   return (
     <section>
       <div className="mt-6 mb-14 mx-8">
         <Card className="bg-white shadow-2xl rounded-xl">
-          <CardHeader className="p-4 bg-slate-300 rounded-t-xl ">
+          <CardHeader className="p-4 bg-slate-300 rounded-t-xl">
             <CardTitle>
               <p className="text-black text-xl max-md:text-base leading-relaxed text-center">
-                Created by{" "}
-                <span className="text-shadow ">Jordi Parra Porcar</span>,
-                Mechanical Engineer specialized in CAE for over 8 years
+                {t(about.createdBy.part1)}{" "}
+                <span className="text-shadow">{t(about.createdBy.name)}</span>
+                {t(about.createdBy.part2)}
               </p>
             </CardTitle>
           </CardHeader>
@@ -20,40 +25,41 @@ export default function AboutProsimcaeSection() {
             {/* Standard bullet list */}
             <ul className="list-disc list-inside space-y-4 text-gray-700 text-lg max-md:text-xs leading-relaxed">
               <li>
-                Background in both the{" "}
-                <span className="font-semibold">automotive</span> and{" "}
-                <span className="font-semibold">industrial sectors</span>
-              </li>
-              <li>
-                In-depth experience in{" "}
+                {t(about.list.item1.part1)}{" "}
                 <span className="font-semibold">
-                  FEA (Finite Element Analysis)
+                  {t(about.list.item1.automotive)}
                 </span>{" "}
-                and{" "}
+                {t(about.list.item1.and)}{" "}
                 <span className="font-semibold">
-                  CFD (Computational Fluid Mechanics)
+                  {t(about.list.item1.industrialSectors)}
                 </span>
               </li>
               <li>
-                Authored a{" "}
-                <span className="font-semibold">
-                  peer-reviewed CFD publication
-                </span>{" "}
-                and successfully oversaw projects that{" "}
-                <span className="font-semibold">reduced prototyping costs</span>{" "}
-                and{" "}
-                <span className="font-semibold">
-                  accelerated design timelines
-                </span>
+                {t(about.list.item2.part1)}{" "}
+                <span className="font-semibold">{t(about.list.item2.fea)}</span>{" "}
+                {t(about.list.item2.andCFD)}
               </li>
               <li>
-                Operating as a{" "}
-                <span className="font-semibold">remote-first consultancy</span>,
-                working with clients internationally for{" "}
+                {t(about.list.item3.part1)}{" "}
                 <span className="font-semibold">
-                  fast, flexible, and cost-effective
+                  {t(about.list.item3.publication)}
                 </span>{" "}
-                simulation services
+                {t(about.list.item3.andSuccessfully)}{" "}
+                <span className="font-semibold">
+                  {t(about.list.item3.costReduction)}
+                </span>{" "}
+                {t(about.list.item3.andAccelerated)}
+              </li>
+              <li>
+                {t(about.list.item4.part1)}{" "}
+                <span className="font-semibold">
+                  {t(about.list.item4.consultancy)}
+                </span>
+                {t(about.list.item4.workingWithClients)}{" "}
+                <span className="font-semibold">
+                  {t(about.list.item4.services)}
+                </span>{" "}
+                {t(about.list.item4.simulationServices)}
               </li>
             </ul>
           </CardContent>

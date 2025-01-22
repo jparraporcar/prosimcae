@@ -15,8 +15,12 @@ import {
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import logo from "@/images/provisional-logo-prosimcae.webp";
+import { navButtonLabels } from "@/lib/content";
+import { useTranslations } from "next-intl";
 
 export function Navigation() {
+  const t = useTranslations();
+
   return (
     <div className="fixed rounded-lg shadow-xl p-1 bg-white mt-4 align-middle">
       <NavigationMenu>
@@ -37,20 +41,32 @@ export function Navigation() {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem className="flex">
-            <Link href="/#main-section-title-services" legacyBehavior passHref>
+            <Link href="#main-section-title-services" legacyBehavior passHref>
               <NavigationMenuLink
                 className={cn([
                   navigationMenuTriggerStyle(),
                   "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
                 ])}
               >
-                Simulation services
+                {t(navButtonLabels.simulationServices)}
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="#main-section-title-technology" legacyBehavior passHref>
+              <NavigationMenuLink
+                className={cn([
+                  navigationMenuTriggerStyle(),
+                  "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
+                ])}
+              >
+                {t(navButtonLabels.howWeWork)}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link
-              href="/#main-section-title-technology"
+              href="#main-section-title-study-cases"
               legacyBehavior
               passHref
             >
@@ -60,13 +76,13 @@ export function Navigation() {
                   "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
                 ])}
               >
-                How we work
+                {t(navButtonLabels.caseStudies)}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link
-              href="/#main-section-title-study-cases"
+              href="#main-section-title-collaborations"
               legacyBehavior
               passHref
             >
@@ -76,13 +92,13 @@ export function Navigation() {
                   "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
                 ])}
               >
-                Case studies
+                {t(navButtonLabels.partnerWithUs)}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link
-              href="/#main-section-title-collaborations"
+              href="#main-section-title-about-prosimcae"
               legacyBehavior
               passHref
             >
@@ -92,23 +108,7 @@ export function Navigation() {
                   "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
                 ])}
               >
-                Partner with us
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link
-              href="/main-section-title-about-prosimcae"
-              legacyBehavior
-              passHref
-            >
-              <NavigationMenuLink
-                className={cn([
-                  navigationMenuTriggerStyle(),
-                  "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
-                ])}
-              >
-                About prosimcae
+                {t(navButtonLabels.aboutProsimcae)}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>

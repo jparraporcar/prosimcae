@@ -78,12 +78,14 @@
             "0": {
               "title": "Impact position: exploded",
               "description": "Minimizing acceleration at sensitive components is crucial, therefore the aluminum enclosure absorbs impact energy, protecting the internal structure. Key dimensions, material properties as well as other data is included to provide context for the simulation.",
-              "caption": "Impact position: exploded"
+              "caption": "Impact position: exploded",
+              "alt": "Impact position: exploded"
             },
             "1": {
               "title": "Impact position: non-exploded",
               "description": "The assembly is positioned close to a rigid wall to reduce simulation time, with an initial velocity of -5.5 m/s in the vertical direction. The non-deformability of the wall ensures that the structural integrity of the device can be evaluated under controlled conditions.",
-              "caption": "Impact position: non-exploded"
+              "caption": "Impact position: non-exploded",
+              "alt": "Impact position: non-exploded"
             },
             "2": {
               "title": "Plastic strain: view 1",
@@ -98,7 +100,8 @@
             "4": {
               "title": "Energy balance",
               "description": "The graph illustrates energy transfer during impact, showing kinetic energy converting into internal energy. Kinetic energy decreases rapidly, while internal energy rises, reflecting material energy absorption and stabilization after releasing a certain amount of elastic energy.",
-              "caption": "Energy balance"
+              "caption": "Energy balance",
+              "alt": "Energy balance"
             }
           }
         },
@@ -108,7 +111,8 @@
             "0": {
               "title": "Aluminum profile test: initial position",
               "description": "The setup shows an aluminum profile with 3mm of imposed displacement at the top by a rigid moving part and supported by rigid fixations. Its material properties, boundary conditions, and key dimensions provide context for structural analysis.",
-              "caption": "Image 1"
+              "caption": "Image 1",
+              "alt": "Aluminum profile test: initial position"
             },
             "1": {
               "title": "Displacement vs iteration",
@@ -138,7 +142,8 @@
             "0": {
               "title": "Lightweight Aluminum Frame Structure",
               "description": "The structure is designed to be lightweight and corrosion-resistant. It features beam profiles with specified dimensions and thicknesses, anchored to the ground. A natural frequency study is performed to ensure its suitability under dynamic conditions",
-              "caption": "Image 1"
+              "caption": "Image 1",
+              "alt": "Lightweight Aluminum Frame Structure"
             },
             "1": {
               "title": "First bending mode - 81Hz",
@@ -178,12 +183,14 @@
             "0": {
               "title": "Building room main dimensions",
               "description": "The image outlines the building room's key dimensions, highlighting heat sources and furniture in reddish tones. The air conditioning unit (inlet) position will be detailed in the next picture. The simulation assumes closed doors and models transient convective heat transfer within the room.",
-              "caption": "Image 1"
+              "caption": "Building room main dimensions",
+              "alt": "Building room main dimensions"
             },
             "1": {
               "title": "Heat sources and BCs",
               "description": "The image shows the room’s boundary conditions with a simplified window heat source, ignoring radiation or conduction. Two people and a TV act as fixed-temperature sources. Cooler air enters from the AC at a 45° angle, while the door bottoms serve as pressure outlets.",
-              "caption": "Image 2"
+              "caption": "Heat sources and BCs",
+              "alt": "Heat sources and BCs"
             },
             "2": {
               "title": "Velocity and temperature - view 1",
@@ -262,6 +269,71 @@
       "description": "Explicit FEA solver for dynamic simulations",
       "alt": "LS-DYNA",
       "caption": "Explicit FEA solver for dynamic simulations"
+    }
+  },
+  "aboutProsimcae": {
+    "createdByPart1": "Created by",
+    "name": "Jordi Parra Porcar",
+    "createdByPart2": ", Mechanical Engineer specialized in CAE for over 8 years.",
+    "list": {
+      "item1Part1": "Background in both the",
+      "automotive": "automotive",
+      "and": "and",
+      "industrialSectors": "industrial sectors.",
+      "item2Part1": "In-depth experience in",
+      "fea": "FEA (Finite Element Analysis)",
+      "andCFD": "and CFD (Computational Fluid Mechanics).",
+      "item3Part1": "Authored a",
+      "publication": "peer-reviewed CFD publication",
+      "andSuccessfully": "and successfully oversaw projects that",
+      "costReduction": "reduced prototyping costs",
+      "andAccelerated": "and accelerated design timelines.",
+      "item4Part1": "Operating as a",
+      "consultancy": "remote-first consultancy",
+      "workingWithClients": "working with clients internationally for",
+      "services": "fast, flexible, and cost-effective",
+      "simulationServices": "simulation services."
+    }
+  },
+  "joinNetworkSection": {
+    "title": "Join our network of professionals",
+    "paragraph": "We invite skilled engineers and simulation experts to collaborate on innovative projects.",
+    "list": {
+      "item1": "Work on diverse and exciting projects",
+      "item2": "Professional growth and skill enhancement",
+      "item3": "Flexible collaboration arrangements"
+    }
+  },
+  "navButtonLabels": {
+    "simulationServices": "Simulation services",
+    "howWeWork": "How we work",
+    "caseStudies": "Case studies",
+    "partnerWithUs": "Partner with us",
+    "aboutProsimcae": "About prosimcae"
+  },
+  "dialogGetInTouchButton": "Get In Touch",
+  "ondemandContactForm": {
+    "labels": {
+      "companyName": "Company name",
+      "companyCountry": "Company country",
+      "contactName": "Contact name",
+      "contactEmail": "Contact email",
+      "projectDuration": "Project Duration",
+      "expectedHours": "Expected (h)",
+      "requestExplanation": "Request explanation"
+    },
+    "placeholders": {
+      "requestExplanation": "Explain briefly your project request here please. We will contact you to know more details :)!"
+    },
+    "validation": {
+      "required": "This field is required",
+      "minCharacters": "At least {min} characters.",
+      "invalidEmail": "Invalid email address.",
+      "yesOrNo": "Answers: Yes or No.",
+      "maxWords": "Project explanation should not exceed 300 words."
+    },
+    "buttons": {
+      "submit": "Submit"
     }
   }
 }

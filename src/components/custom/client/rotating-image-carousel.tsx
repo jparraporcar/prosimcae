@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import "./rotating-image-carousel.css";
 import { imageItem } from "@/lib/types";
+import { useTranslations } from "next-intl";
 
 interface RotatingImageCarouselProps {
   images: imageItem[];
@@ -14,6 +15,7 @@ export const RotatingImageCarousel = ({
 }: RotatingImageCarouselProps) => {
   const [angle, setAngle] = useState(0);
   const radius = 165; // Adjust radius based on design needs
+  const t = useTranslations();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -41,13 +43,13 @@ export const RotatingImageCarousel = ({
             <div className="image-container">
               <Image
                 src={image.src}
-                alt={image.alt}
+                alt={t(image.alt)}
                 width={image.width}
                 height={image.height}
                 placeholder={image.placeholder}
                 className="image"
               />
-              <p className="description">{image.description}</p>
+              <p className="description">{t(image.description)}</p>
             </div>
           </div>
         );
