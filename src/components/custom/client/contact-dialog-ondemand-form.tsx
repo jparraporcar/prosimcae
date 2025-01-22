@@ -1,13 +1,12 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm, useWatch } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -22,42 +21,12 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import "./contact-dialog-custom-form.css";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
+import { ondemandContactForm } from "@/lib/content"; // Adjust path if needed
 
 const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(20[0-9]{2})$/;
-
-const formSchema = z.object({
-  companyName: z.string({ required_error: "This field is required" }).min(4, {
-    message: "At least 4 characters.",
-  }),
-  companyCountry: z
-    .string({ required_error: "This field is required" })
-    .min(4, {
-      message: "At least 4 characters.", // look for collection of states and change to selection component
-    }),
-  contactName: z.string({ required_error: "This field is required" }).min(6, {
-    message: "At least 4 characters.",
-  }),
-  contactEmail: z.string({ required_error: "This field is required" }).email({
-    message: "Invalid email address.",
-  }),
-  defProjDuration: z
-    .string({ required_error: "This field is required" })
-    .refine((value) => ["Yes", "No"].includes(value), {
-      message: "Answers: Yes or Not.",
-    }),
-  expectProjDurationHours: z.string().optional(),
-  explanation: z.string({ required_error: "This field is required" }).refine(
-    (value) => {
-      const wordCount = value.trim().split(/\s+/).length; // Count the number of words
-      return wordCount <= 300; // Validate the word count
-    },
-    {
-      message: "Project explanation should not exceed 300 words.",
-    }
-  ),
-});
 
 interface ContactDialogCustomForm {
   closeDialog: () => void;
@@ -66,6 +35,71 @@ interface ContactDialogCustomForm {
 export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
   props
 ) => {
+  const locale = useLocale();
+  const t = useTranslations();
+
+  const formSchema = useMemo(
+    () =>
+      z.object({
+        companyName: z
+          .string({
+            required_error: t(ondemandContactForm.validation.required),
+          })
+          .min(4, {
+            message: t(ondemandContactForm.validation.minCharacters, {
+              min: 4,
+            }),
+          }),
+        companyCountry: z
+          .string({
+            required_error: t(ondemandContactForm.validation.required),
+          })
+          .min(4, {
+            message: t(ondemandContactForm.validation.minCharacters, {
+              min: 4,
+            }),
+          }),
+        contactName: z
+          .string({
+            required_error: t(ondemandContactForm.validation.required),
+          })
+          .min(6, {
+            message: t(ondemandContactForm.validation.minCharacters, {
+              min: 6,
+            }),
+          }),
+        contactEmail: z
+          .string({
+            required_error: t(ondemandContactForm.validation.required),
+          })
+          .email({
+            message: t(ondemandContactForm.validation.invalidEmail),
+          }),
+        defProjDuration: z
+          .string({
+            required_error: t(ondemandContactForm.validation.required),
+          })
+          .refine((value) => ["Yes", "No"].includes(value), {
+            message: t(ondemandContactForm.validation.defProjDuration),
+          }),
+        expectProjDurationHours: z.string().optional(),
+        explanation: z
+          .string({
+            required_error: t(ondemandContactForm.validation.required),
+          })
+          .refine(
+            (value) => {
+              const wordCount = value.trim().split(/\s+/).length; // Count the number of words
+              return wordCount <= 300; // Validate the word count
+            },
+            {
+              message: t(ondemandContactForm.validation.maxWords),
+            }
+          ),
+      }),
+    [t]
+  );
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -73,13 +107,13 @@ export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
       companyCountry: "",
       contactName: "",
       contactEmail: "",
-      defProjDuration: "",
+      defProjDuration: "No",
       expectProjDurationHours: undefined,
       explanation: "",
     },
   });
 
-  const { isSubmitting, isSubmitSuccessful, errors } = form.formState;
+  const { isSubmitting, isSubmitSuccessful } = form.formState;
 
   useEffect(() => {
     if (isSubmitSuccessful) {
@@ -88,38 +122,23 @@ export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
   }, [isSubmitSuccessful]);
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
-    const rawData = {
-      companyName: data.companyName,
-      companyCountry: data.companyCountry,
-      contactName: data.contactName,
-      contactEmail: data.contactEmail,
-      defProjDuration: data.defProjDuration,
-      expectProjDurationHours: data.expectProjDurationHours,
-      explanation: data.explanation,
-    };
-
-    const res = await fetch("http://localhost:3001/api/ondemand", {
+    await fetch(`${process.env.SITE_URL}/${locale}/api/ondemand`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(rawData),
+      body: JSON.stringify(data),
     });
   };
+
   const defProjDurationFieldValue = form.watch("defProjDuration");
   const [projDurationFieldIsVisible, setProjDurationFieldIsVisible] =
     useState(true);
 
   useEffect(() => {
-    if (defProjDurationFieldValue === "No") {
-      setProjDurationFieldIsVisible(false);
-    }
-    if (defProjDurationFieldValue === "Yes") {
-      setProjDurationFieldIsVisible(true);
-    }
+    setProjDurationFieldIsVisible(defProjDurationFieldValue === "Yes");
   }, [defProjDurationFieldValue]);
 
-  console.log("projDurationFieldIsVisible=", projDurationFieldIsVisible);
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -128,32 +147,10 @@ export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
             <FormField
               control={form.control}
               name="companyName"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="max-md:text-xs">Company name</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder=""
-                      {...field}
-                      className="max-md:text-xs"
-                    />
-                  </FormControl>
-                  {/* <FormDescription>
-                Please indicate your company&apos;s full name
-              </FormDescription> */}
-                  <FormMessage className="max-md:text-xs" />
-                </FormItem>
-              )}
-            />
-          </div>
-          <div className="w-52 max-md:w-2/5">
-            <FormField
-              control={form.control}
-              name="companyCountry"
-              render={({ field }) => (
+              render={({ field, fieldState }) => (
                 <FormItem>
                   <FormLabel className="max-md:text-xs">
-                    Company country
+                    {t(ondemandContactForm.labels.companyName)}
                   </FormLabel>
                   <FormControl>
                     <Input
@@ -162,10 +159,34 @@ export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
                       className="max-md:text-xs"
                     />
                   </FormControl>
-                  {/* <FormDescription>
-                Please indicate your company&apos;s country
-              </FormDescription> */}
-                  <FormMessage className="max-md:text-xs" />
+                  <FormMessage className="max-md:text-xs">
+                    {fieldState.error ? t(fieldState.error.message) : null}
+                  </FormMessage>
+                </FormItem>
+              )}
+            />
+          </div>
+          <div className="w-52 max-md:w-2/5">
+            <FormField
+              control={form.control}
+              name="companyCountry"
+              render={({ field, fieldState }) => (
+                <FormItem>
+                  <FormLabel className="max-md:text-xs">
+                    {t(ondemandContactForm.labels.companyCountry)}
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder={t(
+                        ondemandContactForm.placeholders.companyCountry
+                      )}
+                      {...field}
+                      className="max-md:text-xs"
+                    />
+                  </FormControl>
+                  <FormMessage className="max-md:text-xs">
+                    {fieldState.error ? t(fieldState.error.message) : null}
+                  </FormMessage>
                 </FormItem>
               )}
             />
@@ -176,32 +197,10 @@ export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
             <FormField
               control={form.control}
               name="contactName"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="max-md:text-xs">Contact name</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder=""
-                      {...field}
-                      className="max-md:text-xs"
-                    />
-                  </FormControl>
-                  {/* <FormDescription>
-                Please indicate you name and surname
-              </FormDescription> */}
-                  <FormMessage className="max-md:text-xs" />
-                </FormItem>
-              )}
-            />
-          </div>
-          <div className="w-52 max-md:w-2/5">
-            <FormField
-              control={form.control}
-              name="contactEmail"
-              render={({ field }) => (
+              render={({ field, fieldState }) => (
                 <FormItem>
                   <FormLabel className="max-md:text-xs">
-                    Contact email
+                    {t(ondemandContactForm.labels.contactName)}
                   </FormLabel>
                   <FormControl>
                     <Input
@@ -210,10 +209,32 @@ export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
                       className="max-md:text-xs"
                     />
                   </FormControl>
-                  {/* <FormDescription>
-                Please indicate your corporate email
-              </FormDescription> */}
-                  <FormMessage className="max-md:text-xs" />
+                  <FormMessage className="max-md:text-xs">
+                    {fieldState.error ? t(fieldState.error.message) : null}
+                  </FormMessage>
+                </FormItem>
+              )}
+            />
+          </div>
+          <div className="w-52 max-md:w-2/5">
+            <FormField
+              control={form.control}
+              name="contactEmail"
+              render={({ field, fieldState }) => (
+                <FormItem>
+                  <FormLabel className="max-md:text-xs">
+                    {t(ondemandContactForm.labels.contactEmail)}
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder=""
+                      {...field}
+                      className="max-md:text-xs"
+                    />
+                  </FormControl>
+                  <FormMessage className="max-md:text-xs">
+                    {fieldState.error ? t(fieldState.error.message) : null}
+                  </FormMessage>
                 </FormItem>
               )}
             />
@@ -227,7 +248,7 @@ export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className="max-md:text-xs">
-                    Project Duration
+                    {t(ondemandContactForm.labels.defProjDuration)}
                   </FormLabel>
                   <Select
                     onValueChange={field.onChange}
@@ -241,12 +262,12 @@ export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
                         />
                       </SelectTrigger>
                     </FormControl>
-                    <SelectContent className="max-md:text-xs">
-                      <SelectItem value="Yes" className="max-md:text-xs">
-                        Yes
-                      </SelectItem>
+                    <SelectContent defaultValue="No" className="max-md:text-xs">
                       <SelectItem value="No" className="max-md:text-xs">
                         No
+                      </SelectItem>
+                      <SelectItem value="Yes" className="max-md:text-xs">
+                        Yes
                       </SelectItem>
                     </SelectContent>
                   </Select>
@@ -260,9 +281,11 @@ export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
               disabled={!projDurationFieldIsVisible}
               control={form.control}
               name="expectProjDurationHours"
-              render={({ field }) => (
+              render={({ field, fieldState }) => (
                 <FormItem>
-                  <FormLabel className="max-md:text-xs">Expected (h)</FormLabel>
+                  <FormLabel className="max-md:text-xs">
+                    {t(ondemandContactForm.labels.expectProjDurationHours)}
+                  </FormLabel>
                   <FormControl>
                     <Input
                       placeholder="200"
@@ -270,10 +293,9 @@ export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
                       className="placeholder:text-xs max-md:text-xs"
                     />
                   </FormControl>
-                  {/* <FormDescription>
-                Please indicate your corporate email
-              </FormDescription> */}
-                  <FormMessage className="max-md:text-xs" />
+                  <FormMessage className="max-md:text-xs">
+                    {fieldState.error ? t(fieldState.error.message) : null}
+                  </FormMessage>
                 </FormItem>
               )}
             />
@@ -282,26 +304,30 @@ export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
         <FormField
           control={form.control}
           name="explanation"
-          render={({ field }) => (
+          render={({ field, fieldState }) => (
             <FormItem>
               <FormLabel className="max-md:text-xs">
-                Request explanation
+                {t(ondemandContactForm.labels.explanation)}
               </FormLabel>
               <FormControl>
                 <Textarea
                   className="resize-none h-28 max-md:text-xs placeholder:text-xs"
-                  placeholder="Explain briefly your project request here please. We will contact you to know more details :)!"
+                  placeholder={t(
+                    ondemandContactForm.placeholders.projectExplanation
+                  )}
                   {...field}
                 />
               </FormControl>
-              <FormMessage className="max-md:text-xs" />
+              <FormMessage className="max-md:text-xs">
+                {fieldState.error ? t(fieldState.error.message) : null}
+              </FormMessage>
             </FormItem>
           )}
         />
 
         <div className="w-full flex flex-row justify-end">
           <Button className="mr-0 mt-2" type="submit">
-            Submit
+            {t(ondemandContactForm.buttons.submit)}
           </Button>
         </div>
       </form>

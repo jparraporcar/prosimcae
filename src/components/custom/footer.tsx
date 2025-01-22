@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Instagram, Linkedin } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 
 const XLogo = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" height="24" width="24">
@@ -8,46 +10,47 @@ const XLogo = () => (
 );
 
 export default function Footer() {
+  const t = useTranslations("footer");
+  const locale = useLocale();
+
   return (
     <footer className="bg-gray-600 text-gray-300">
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <nav className="flex flex-wrap justify-center md:justify-start gap-x-8 gap-y-4 mb-4 md:mb-0">
             <Link
-              href="/privacy-policy"
+              href={`/${locale}/privacy-policy`}
               className="hover:text-white transition-colors"
             >
-              Privacy Policy
+              {t("links.privacyPolicy")}
             </Link>
             <Link
-              href="/cookie-policy"
+              href={`/${locale}/cookie-policy`}
               className="hover:text-white transition-colors"
             >
-              Cookie Policy
+              {t("links.cookiePolicy")}
             </Link>
             <Link
-              href="/terms-of-service"
+              href={`/${locale}/terms-of-service`}
               className="hover:text-white transition-colors"
             >
-              Terms of Service
+              {t("links.termsOfService")}
             </Link>
             <Link
-              href="/legal-notice"
+              href={`/${locale}/legal-notice`}
               className="hover:text-white transition-colors"
             >
-              Legal Notice
+              {t("links.legalNotice")}
             </Link>
             <a
               href="mailto:info@prosimcae.com"
               className="hover:text-white transition-colors"
             >
-              Contact Us
+              {t("links.contactUs")}
             </a>
           </nav>
           <div className="flex gap-4 items-center">
-            <p className="max-md:text-xs">
-              &copy; 2025 prosimcae. All rights reserved.
-            </p>
+            <p className="max-md:text-xs">{t("copyRight")}</p>
             <a
               href="https://x.com"
               target="_blank"
@@ -55,16 +58,7 @@ export default function Footer() {
               className="hover:text-white transition-colors"
             >
               <XLogo />
-              <span className="sr-only">X</span>
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
-            >
-              <Instagram size={24} />
-              <span className="sr-only">Instagram</span>
+              <span className="sr-only">{t("social.x")}</span>
             </a>
             <a
               href="https://www.linkedin.com/in/jordiparraporcar/"
@@ -73,7 +67,7 @@ export default function Footer() {
               className="hover:text-white transition-colors"
             >
               <Linkedin size={24} />
-              <span className="sr-only">LinkedIn</span>
+              <span className="sr-only">{t("social.linkedin")}</span>
             </a>
           </div>
         </div>

@@ -312,28 +312,71 @@
     "aboutProsimcae": "About prosimcae"
   },
   "dialogGetInTouchButton": "Get In Touch",
+  "customContactForm": {
+    "labels": {
+      "companyName": "Company name",
+      "companyCountry": "Company country",
+      "contactName": "Contact name",
+      "contactEmail": "Contact email",
+      "projectComplexity": "Project complexity",
+      "estimatedDeadline": "Estimated Deadline",
+      "projectExplanation": "Project explanation"
+    },
+    "placeholders": {
+      "companyCountry": "Enter your company's country",
+      "projectExplanation": "Explain briefly your project request here please. We will contact you to know more details :)!"
+    },
+    "validation": {
+      "required": "This field is required.",
+      "minCharacters": "At least {min} characters.",
+      "invalidEmail": "Invalid email address.",
+      "complexityLevels": "Levels: Low, Middle, or High.",
+      "invalidDateFormat": "Format: DD/MM/YYYY",
+      "maxWords": "Project explanation should not exceed 300 words."
+    },
+    "buttons": {
+      "submit": "Submit"
+    }
+  },
   "ondemandContactForm": {
     "labels": {
       "companyName": "Company name",
       "companyCountry": "Company country",
       "contactName": "Contact name",
       "contactEmail": "Contact email",
-      "projectDuration": "Project Duration",
-      "expectedHours": "Expected (h)",
-      "requestExplanation": "Request explanation"
+      "defProjDuration": "Project Duration",
+      "expectProjDurationHours": "Expected (h)",
+      "explanation": "Request explanation"
     },
     "placeholders": {
-      "requestExplanation": "Explain briefly your project request here please. We will contact you to know more details :)!"
+      "companyCountry": "Enter your company's country",
+      "projectExplanation": "Explain briefly your project request here please. We will contact you to know more details :)!"
     },
     "validation": {
       "required": "This field is required",
       "minCharacters": "At least {min} characters.",
       "invalidEmail": "Invalid email address.",
-      "yesOrNo": "Answers: Yes or No.",
+      "defProjDuration": "Answers: Yes or Not.",
+      "complexityLevels": "Levels: Low, Middle, or High.",
+      "invalidDateFormat": "Format: DD/MM/YYYY",
       "maxWords": "Project explanation should not exceed 300 words."
     },
     "buttons": {
       "submit": "Submit"
+    }
+  },
+  "footer": {
+    "links": {
+      "privacyPolicy": "Privacy Policy",
+      "cookiePolicy": "Cookie Policy",
+      "termsOfService": "Terms of Service",
+      "legalNotice": "Legal Notice",
+      "contactUs": "Contact Us"
+    },
+    "copyRight": "© 2025 prosimcae. All rights reserved.",
+    "social": {
+      "x": "X",
+      "linkedin": "LinkedIn"
     }
   }
 }

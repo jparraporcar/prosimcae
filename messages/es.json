@@ -21,23 +21,23 @@
     "items": {
       "0": {
         "title": "Simulaciones BiW & Choques",
-        "description": "Maneja la seguridad de los ocupantes y eventos de choques dinámicos con cargas de alto impacto."
+        "description": "Maneja la seguridad de los ocupantes y eventos dinámicos de alto impacto fácilmente."
       },
       "1": {
         "title": "Estándares NCAP",
-        "description": "Cubre MDB, choques frontales, ODB y criterios de lesiones de ocupantes para cumplimiento regulado."
+        "description": "Cubre MDB, choques frontales y criterios de lesiones para cumplimiento regulado."
       },
       "2": {
         "title": "Maestría en Software Comercial",
-        "description": "LS-DYNA, Abaqus, ANSA y META integrados sin problemas en tus flujos de trabajo."
+        "description": "Integramos LS-DYNA, Abaqus, ANSA y META sin problemas en tus flujos de trabajo."
       },
       "3": {
         "title": "Postprocesamiento Profesional",
-        "description": "Ofrece visualizaciones claras y presentaciones para todos los interesados en el proyecto."
+        "description": "Ofrece visualizaciones claras y presentaciones aptas para los interesados."
       },
       "4": {
         "title": "Colaboración Flexible",
-        "description": "Escala horas diarias o proyectos completos—ya sea remotamente o en sitio—para coincidir con tus necesidades."
+        "description": "Escala horas diarias o proyectos—remotamente o en sitio—según tus necesidades."
       }
     }
   },
@@ -48,23 +48,23 @@
     "items": {
       "0": {
         "title": "Simulaciones Rentables",
-        "description": "Aprovecha el software de código abierto para reducir las altas tarifas de licencias y enfócate en las verdaderas necesidades de diseño."
+        "description": "Aprovecha el software abierto para reducir tarifas de licencias y enfócate en diseño."
       },
       "1": {
         "title": "Reducción de Requisitos de Prueba",
-        "description": "Utiliza análisis virtuales probados para minimizar prototipos físicos y acelerar el desarrollo."
+        "description": "Minimiza prototipos físicos y acelera el desarrollo con análisis virtuales probados."
       },
       "2": {
         "title": "Resolución de Problemas Mecánicos",
-        "description": "Aborda el flujo de fluidos, la integridad estructural y los problemas térmicos adaptados a los desafíos de tu producto."
+        "description": "Aborda fluidos, estructura y térmica adaptados a los desafíos de tu producto."
       },
       "3": {
         "title": "Cumplimiento y Confiabilidad",
-        "description": "Confía en solucionadores validados alineados con los estándares de la industria para resultados consistentes y precisos."
+        "description": "Utiliza solucionadores validados para resultados consistentes alineados a estándares."
       },
       "4": {
         "title": "Gestión de Proyectos Flexible",
-        "description": "Adapta recursos, cronogramas y entregables para ajustarse a tus objetivos y presupuesto únicos."
+        "description": "Adapta recursos y entregables para ajustarse a tus objetivos y presupuesto."
       }
     }
   },
@@ -312,28 +312,71 @@
     "aboutProsimcae": "Acerca de Prosimcae"
   },
   "dialogGetInTouchButton": "Contáctanos",
-  "onDemandContactForm": {
+  "customContactForm": {
     "labels": {
       "companyName": "Nombre de la empresa",
       "companyCountry": "País de la empresa",
       "contactName": "Nombre del contacto",
-      "contactEmail": "Correo electrónico del contacto",
-      "projectDuration": "Duración del proyecto",
-      "expectedHours": "Horas esperadas",
-      "requestExplanation": "Explicación de la solicitud"
+      "contactEmail": "Correo electrónico",
+      "projectComplexity": "Complejidad del proyecto",
+      "estimatedDeadline": "Fecha límite estimada",
+      "projectExplanation": "Explicación del proyecto"
     },
     "placeholders": {
-      "requestExplanation": "Explica brevemente tu solicitud de proyecto aquí, por favor. Nos pondremos en contacto contigo para conocer más detalles :)!"
+      "companyCountry": "Ingresa el país de tu empresa",
+      "projectExplanation": "Explica brevemente tu solicitud de proyecto aquí, por favor. Nos pondremos en contacto contigo para conocer más detalles :)!"
+    },
+    "validation": {
+      "required": "Este campo es obligatorio.",
+      "minCharacters": "Al menos {min} caracteres.",
+      "invalidEmail": "Dirección de correo electrónico inválida.",
+      "complexityLevels": "Niveles: Bajo, Medio o Alto.",
+      "invalidDateFormat": "Formato: DD/MM/AAAA",
+      "maxWords": "La explicación del proyecto no debe exceder las 300 palabras."
+    },
+    "buttons": {
+      "submit": "Enviar"
+    }
+  },
+  "ondemandContactForm": {
+    "labels": {
+      "companyName": "Nombre de la empresa",
+      "companyCountry": "País de la empresa",
+      "contactName": "Nombre del contacto",
+      "contactEmail": "Correo electrónico",
+      "defProjDuration": "Duración del proyecto",
+      "expectProjDurationHours": "Esperado (h)",
+      "explanation": "Explicación de la solicitud"
+    },
+    "placeholders": {
+      "companyCountry": "País de tu empresa",
+      "projectExplanation": "Explica brevemente tu solicitud de proyecto aquí, por favor. Nos pondremos en contacto contigo para conocer más detalles :)!"
     },
     "validation": {
       "required": "Este campo es obligatorio",
       "minCharacters": "Al menos {min} caracteres.",
       "invalidEmail": "Dirección de correo electrónico inválida.",
-      "yesOrNo": "Respuestas: Sí o No.",
+      "defProjDuration": "Respuestas: Sí o No.",
+      "complexityLevels": "Niveles: Bajo, Medio o Alto.",
+      "invalidDateFormat": "Formato: DD/MM/AAAA",
       "maxWords": "La explicación del proyecto no debe exceder las 300 palabras."
     },
     "buttons": {
       "submit": "Enviar"
+    }
+  },
+  "footer": {
+    "links": {
+      "privacyPolicy": "Política de Privacidad",
+      "cookiePolicy": "Política de Cookies",
+      "termsOfService": "Términos del Servicio",
+      "legalNotice": "Aviso Legal",
+      "contactUs": "Contáctanos"
+    },
+    "copyRight": "© 2025 prosimcae. Todos los derechos reservados.",
+    "social": {
+      "x": "X",
+      "linkedin": "LinkedIn"
     }
   }
 }

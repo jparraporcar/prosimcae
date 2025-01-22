@@ -648,6 +648,33 @@ export const navButtonLabels = {
 
 export const dialogGetInTouchButton = "dialogGetInTouchButton";
 
+export const customContactForm = {
+  labels: {
+    companyName: "customContactForm.labels.companyName",
+    companyCountry: "customContactForm.labels.companyCountry",
+    contactName: "customContactForm.labels.contactName",
+    contactEmail: "customContactForm.labels.contactEmail",
+    projectComplexity: "customContactForm.labels.projectComplexity",
+    estimatedDeadline: "customContactForm.labels.estimatedDeadline",
+    projectExplanation: "customContactForm.labels.projectExplanation",
+  },
+  placeholders: {
+    companyCountry: "customContactForm.placeholders.companyCountry",
+    projectExplanation: "customContactForm.placeholders.projectExplanation",
+  },
+  validation: {
+    required: "customContactForm.validation.required",
+    minCharacters: "customContactForm.validation.minCharacters",
+    invalidEmail: "customContactForm.validation.invalidEmail",
+    complexityLevels: "customContactForm.validation.complexityLevels",
+    invalidDateFormat: "customContactForm.validation.invalidDateFormat",
+    maxWords: "customContactForm.validation.maxWords",
+  },
+  buttons: {
+    submit: "customContactForm.buttons.submit",
+  },
+};
+
 // content.ts
 
 export const ondemandContactForm = {
@@ -656,21 +683,40 @@ export const ondemandContactForm = {
     companyCountry: "ondemandContactForm.labels.companyCountry",
     contactName: "ondemandContactForm.labels.contactName",
     contactEmail: "ondemandContactForm.labels.contactEmail",
-    projectDuration: "ondemandContactForm.labels.projectDuration",
-    expectedHours: "ondemandContactForm.labels.expectedHours",
-    requestExplanation: "ondemandContactForm.labels.requestExplanation",
+    defProjDuration: "ondemandContactForm.labels.defProjDuration",
+    expectProjDurationHours:
+      "ondemandContactForm.labels.expectProjDurationHours",
+    explanation: "ondemandContactForm.labels.explanation",
   },
   placeholders: {
-    requestExplanation: "ondemandContactForm.placeholders.requestExplanation",
+    companyCountry: "ondemandContactForm.placeholders.companyCountry",
+    projectExplanation: "ondemandContactForm.placeholders.projectExplanation",
   },
   validation: {
     required: "ondemandContactForm.validation.required",
     minCharacters: "ondemandContactForm.validation.minCharacters",
     invalidEmail: "ondemandContactForm.validation.invalidEmail",
-    yesOrNo: "ondemandContactForm.validation.yesOrNo",
+    defProjDuration: "ondemandContactForm.validation.defProjDuration",
+    complexityLevels: "ondemandContactForm.validation.complexityLevels",
+    invalidDateFormat: "ondemandContactForm.validation.invalidDateFormat",
     maxWords: "ondemandContactForm.validation.maxWords",
   },
   buttons: {
     submit: "ondemandContactForm.buttons.submit",
+  },
+};
+
+export const footer = {
+  links: {
+    privacyPolicy: "footer.links.privacyPolicy",
+    cookiePolicy: "footer.links.cookiePolicy",
+    termsOfService: "footer.links.termsOfService",
+    legalNotice: "footer.links.legalNotice",
+    contactUs: "footer.links.contactUs",
+  },
+  copyRight: "footer.copyRight",
+  social: {
+    x: "footer.social.x",
+    linkedin: "footer.social.linkedin",
   },
 };
