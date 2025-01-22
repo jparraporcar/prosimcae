@@ -38,53 +38,53 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
   const locale = useLocale();
   const t = useTranslations();
 
-  const formSchema = useMemo(
-    () =>
-      z.object({
-        companyName: z
-          .string({ required_error: t(customContactForm.validation.required) })
-          .min(4, {
-            message: t(customContactForm.validation.minCharacters, { min: 4 }),
-          }),
-        companyCountry: z
-          .string({ required_error: t(customContactForm.validation.required) })
-          .min(4, {
-            message: t(customContactForm.validation.minCharacters, { min: 4 }),
-          }),
-        contactName: z
-          .string({ required_error: t(customContactForm.validation.required) })
-          .min(6, {
-            message: t(customContactForm.validation.minCharacters, { min: 6 }),
-          }),
-        contactEmail: z
-          .string({ required_error: t(customContactForm.validation.required) })
-          .email({
-            message: t(customContactForm.validation.invalidEmail),
-          }),
-        complexity: z
-          .string({ required_error: t(customContactForm.validation.required) })
-          .refine((value) => ["Low", "Middle", "High"].includes(value), {
-            message: t(customContactForm.validation.complexityLevels),
-          }),
-        estDeadline: z
-          .string({ required_error: t(customContactForm.validation.required) })
-          .refine((value) => dateRegex.test(value), {
-            message: t(customContactForm.validation.invalidDateFormat),
-          }),
-        explanation: z
-          .string({ required_error: t(customContactForm.validation.required) })
-          .refine(
-            (value) => {
-              const wordCount = value.trim().split(/\s+/).length; // Count the number of words
-              return wordCount <= 300; // Validate the word count
-            },
-            {
-              message: t(customContactForm.validation.maxWords),
-            }
-          ),
+  useEffect(() => {
+    console.log(customContactForm.validation.required);
+  });
+
+  const formSchema = z.object({
+    companyName: z
+      .string({ required_error: t(customContactForm.validation.required) })
+      .min(4, {
+        message: t(customContactForm.validation.minCharacters),
       }),
-    [t]
-  );
+    companyCountry: z
+      .string({ required_error: t(customContactForm.validation.required) })
+      .min(4, {
+        message: t(customContactForm.validation.minCharacters, { min: 4 }),
+      }),
+    contactName: z
+      .string({ required_error: t(customContactForm.validation.required) })
+      .min(6, {
+        message: t(customContactForm.validation.minCharacters, { min: 6 }),
+      }),
+    contactEmail: z
+      .string({ required_error: t(customContactForm.validation.required) })
+      .email({
+        message: t(customContactForm.validation.invalidEmail),
+      }),
+    complexity: z
+      .string({ required_error: t(customContactForm.validation.required) })
+      .refine((value) => ["Low", "Middle", "High"].includes(value), {
+        message: t(customContactForm.validation.complexityLevels),
+      }),
+    estDeadline: z
+      .string({ required_error: t(customContactForm.validation.required) })
+      .refine((value) => dateRegex.test(value), {
+        message: t(customContactForm.validation.invalidDateFormat),
+      }),
+    explanation: z
+      .string({ required_error: t(customContactForm.validation.required) })
+      .refine(
+        (value) => {
+          const wordCount = value.trim().split(/\s+/).length; // Count the number of words
+          return wordCount <= 300; // Validate the word count
+        },
+        {
+          message: t(customContactForm.validation.maxWords),
+        }
+      ),
+  });
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -239,13 +239,20 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
                     </FormControl>
                     <SelectContent className="max-md:text-xs">
                       <SelectItem value="Low" className="max-md:text-xs">
-                        {t("Low")}
+                        {t(
+                          customContactForm.labels.projectComplexityLevels.low
+                        )}
                       </SelectItem>
                       <SelectItem value="Middle" className="max-md:text-xs">
-                        {t("Middle")}
+                        {t(
+                          customContactForm.labels.projectComplexityLevels
+                            .middle
+                        )}
                       </SelectItem>
                       <SelectItem value="High" className="max-md:text-xs">
-                        {t("High")}
+                        {t(
+                          customContactForm.labels.projectComplexityLevels.high
+                        )}
                       </SelectItem>
                     </SelectContent>
                   </Select>

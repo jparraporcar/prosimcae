@@ -50,10 +50,13 @@ export const ResumeUploadForm: React.FC<ResumeUploadFormProps> = (props) => {
     const formData = new FormData();
     formData.append("fileUpload", data.fileUpload);
     props.closeDialog();
-    const res = await fetch(`${process.env.SITE_URL}/${locale}/api/resumeup`, {
-      method: "POST",
-      body: formData,
-    });
+    const res = await fetch(
+      `https://www.prosimcae.com/${locale}/api/resumeup`,
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
   };
 
   return (

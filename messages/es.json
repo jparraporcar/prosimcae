@@ -319,6 +319,11 @@
       "contactName": "Nombre del contacto",
       "contactEmail": "Correo electrónico",
       "projectComplexity": "Complejidad del proyecto",
+      "projectComplexityLevels": {
+        "0": "Baja",
+        "1": "Media",
+        "2": "Alta"
+      },
       "estimatedDeadline": "Fecha límite estimada",
       "projectExplanation": "Explicación del proyecto"
     },

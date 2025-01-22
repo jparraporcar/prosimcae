@@ -28,9 +28,9 @@ export const ContactDialogOndemand: React.FC = () => {
   return (
     <Dialog onOpenChange={handleSwitchDialog} open={switchDialog}>
       <DialogTrigger asChild>
-        <Button className="px-6 py-2 text-xl rounded-md shadow gradient-effect">
+        {/* <Button className="px-6 py-2 text-xl rounded-md shadow gradient-effect">
           {t(dialogGetInTouchButton)}
-        </Button>
+        </Button> */}
       </DialogTrigger>
       <DialogContent className="p-16 max-md:p-4 w-[600px] max-md:w-[340px] max-w-[600px] max-md:max-w-[340px]">
         <DialogHeader>

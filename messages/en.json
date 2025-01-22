@@ -319,6 +319,11 @@
       "contactName": "Contact name",
       "contactEmail": "Contact email",
       "projectComplexity": "Project complexity",
+      "projectComplexityLevels": {
+        "0": "Low",
+        "1": "Middle",
+        "2": "High"
+      },
       "estimatedDeadline": "Estimated Deadline",
       "projectExplanation": "Project explanation"
     },
@@ -357,7 +362,6 @@
       "minCharacters": "At least {min} characters.",
       "invalidEmail": "Invalid email address.",
       "defProjDuration": "Answers: Yes or Not.",
-      "complexityLevels": "Levels: Low, Middle, or High.",
       "invalidDateFormat": "Format: DD/MM/YYYY",
       "maxWords": "Project explanation should not exceed 300 words."
     },
