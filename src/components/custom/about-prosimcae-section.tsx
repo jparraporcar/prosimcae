@@ -8,8 +8,8 @@ import { useTranslations } from "next-intl";
 export default function AboutProsimcaeSection() {
   const t = useTranslations();
   return (
-    <section>
-      <div className="mt-6 mb-14 mx-8">
+    <section className="flex flex-row justify-center">
+      <div className="mt-6 mb-14 w-11/12">
         <Card className="bg-white shadow-2xl rounded-xl">
           <CardHeader className="p-4 bg-slate-300 rounded-t-xl">
             <CardTitle>

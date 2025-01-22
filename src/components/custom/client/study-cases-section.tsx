@@ -49,7 +49,7 @@ export const StudyCasesSection: React.FC<StudyCasesSectionProps> = (props) => {
       ref={ref}
       className={cn([
         `${props.effectIsActive && (isVisible ? "box visible" : "box hidden")}`,
-        "flex flex-col w-8/12 max-md:w-[87.5%] max-h-fit items-center",
+        "flex flex-col w-8/12 max-md:w-11/12 max-h-fit items-center",
       ])}
     >
       <h2 className="text-center text-2xl max-md:text-xl max-md:-mx-1 font-bold mb-4">

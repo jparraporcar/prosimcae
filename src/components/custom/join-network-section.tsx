@@ -9,8 +9,8 @@ export default function JoinNetworkSection() {
   const t = useTranslations();
 
   return (
-    <section>
-      <Card className="bg-white shadow-2xl rounded-2xl mt-6 mx-8">
+    <section className="flex flex-row justify-center">
+      <Card className="bg-white shadow-2xl rounded-2xl mt-6 w-11/12">
         <CardHeader className="p-4 bg-slate-300 rounded-t-xl">
           <CardTitle className="text-black text-xl max-md:text-base text-center">
             {t(joinNetworkSection.title)}
