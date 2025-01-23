@@ -25,6 +25,7 @@ import { Textarea } from "@/components/ui/textarea";
 import "./contact-dialog-custom-form.css";
 import { useEffect, useState } from "react";
 import { useLocale } from "next-intl";
+import { Loader2 } from "lucide-react";
 
 const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(20[0-9]{2})$/;
 
@@ -286,8 +287,13 @@ export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
         />
 
         <div className="w-full flex flex-row justify-end">
-          <Button className="mr-0 mt-2" type="submit">
-            Submit
+          <Button
+            className="mr-0 mt-2"
+            type="submit"
+            disabled={isSubmitting ? true : false}
+          >
+            {isSubmitting ? <Loader2 className="animate-spin" /> : null}
+            {isSubmitting ? "Please wait" : "Submit"}
           </Button>
         </div>
       </form>

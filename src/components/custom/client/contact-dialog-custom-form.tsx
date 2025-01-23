@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
+import { Loader2 } from "lucide-react";
 import {
   Form,
   FormControl,
@@ -277,8 +278,13 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
         />
 
         <div className="w-full flex flex-row justify-end">
-          <Button className="mr-0 mt-2" type="submit">
-            Submit
+          <Button
+            className="mr-0 mt-2"
+            type="submit"
+            disabled={isSubmitting ? true : false}
+          >
+            {isSubmitting ? <Loader2 className="animate-spin" /> : null}
+            {isSubmitting ? "Please wait" : "Submit"}
           </Button>
         </div>
       </form>
