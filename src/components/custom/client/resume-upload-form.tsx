@@ -16,6 +16,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "../../ui/button";
 import { useLocale } from "next-intl";
+import { Loader2 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 interface ResumeUploadFormProps {
   closeDialog: () => void;
@@ -23,6 +25,8 @@ interface ResumeUploadFormProps {
 
 export const ResumeUploadForm: React.FC<ResumeUploadFormProps> = (props) => {
   const locale = useLocale();
+  const { toast } = useToast();
+
   const pdfFileSchema = z.object({
     fileUpload: z
       .instanceof(File)
@@ -41,6 +45,8 @@ export const ResumeUploadForm: React.FC<ResumeUploadFormProps> = (props) => {
     },
   });
 
+  const { isSubmitting, isSubmitSuccessful, errors } = form.formState;
+
   const onSubmit: SubmitHandler<{ fileUpload: File | undefined }> = async (
     data: z.infer<typeof pdfFileSchema>
   ) => {
@@ -49,14 +55,32 @@ export const ResumeUploadForm: React.FC<ResumeUploadFormProps> = (props) => {
     }
     const formData = new FormData();
     formData.append("fileUpload", data.fileUpload);
-    props.closeDialog();
-    const res = await fetch(
-      `https://www.prosimcae.com/${locale}/api/resumeup`,
-      {
+    try {
+      const res = await fetch(`https://prosimcae.com/api/resumeup`, {
         method: "POST",
         body: formData,
+      });
+
+      if (!isSubmitting && res.status === 200) {
+        toast({
+          duration: 3000,
+          title: "Submitted succesfully",
+          description: "We will review your profile asap!",
+        });
+        props.closeDialog();
       }
-    );
+
+      if (!isSubmitting && res.status !== 200) {
+        toast({
+          duration: 3000,
+          variant: "destructive",
+          title: "Error warning",
+          description: "Try again later please",
+        });
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -85,7 +109,14 @@ export const ResumeUploadForm: React.FC<ResumeUploadFormProps> = (props) => {
             </FormItem>
           )}
         />
-        <Button className="mt-4">Accept</Button>
+        <Button
+          className="mr-0 mt-2"
+          type="submit"
+          disabled={isSubmitting ? true : false}
+        >
+          {isSubmitting ? <Loader2 className="animate-spin" /> : null}
+          {isSubmitting ? "Please wait" : "Submit"}
+        </Button>
       </form>
     </Form>
   );
