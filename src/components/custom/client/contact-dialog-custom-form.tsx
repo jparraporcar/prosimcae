@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -21,12 +22,47 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { useEffect, useMemo } from "react";
-import { useTranslations } from "next-intl";
+import "./contact-dialog-custom-form.css";
+import { useEffect } from "react";
 import { useLocale } from "next-intl";
-import { customContactForm } from "@/lib/content";
 
 const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(20[0-9]{2})$/;
+
+const formSchema = z.object({
+  companyName: z.string({ required_error: "This field is required" }).min(4, {
+    message: "At least 4 characters.",
+  }),
+  companyCountry: z
+    .string({ required_error: "This field is required" })
+    .min(4, {
+      message: "At least 4 characters.", // look for collection of states and change to selection component
+    }),
+  contactName: z.string({ required_error: "This field is required" }).min(6, {
+    message: "At least 4 characters.",
+  }),
+  contactEmail: z.string({ required_error: "This field is required" }).email({
+    message: "Invalid email address.",
+  }),
+  complexity: z
+    .string({ required_error: "This field is required" })
+    .refine((value) => ["Low", "Middle", "High"].includes(value), {
+      message: "Levels: Low, Middle, or High.",
+    }),
+  estDeadline: z
+    .string({ required_error: "This field is required" })
+    .refine((value) => dateRegex.test(value), {
+      message: "Format: DD/MM/YYYY",
+    }),
+  explanation: z.string({ required_error: "This field is required" }).refine(
+    (value) => {
+      const wordCount = value.trim().split(/\s+/).length; // Count the number of words
+      return wordCount <= 300; // Validate the word count
+    },
+    {
+      message: "Project explanation should not exceed 300 words.",
+    }
+  ),
+});
 
 interface ContactDialogCustomForm {
   closeDialog: () => void;
@@ -36,56 +72,6 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
   props
 ) => {
   const locale = useLocale();
-  const t = useTranslations();
-
-  useEffect(() => {
-    console.log(customContactForm.validation.required);
-  });
-
-  const formSchema = z.object({
-    companyName: z
-      .string({ required_error: t(customContactForm.validation.required) })
-      .min(4, {
-        message: t(customContactForm.validation.minCharacters),
-      }),
-    companyCountry: z
-      .string({ required_error: t(customContactForm.validation.required) })
-      .min(4, {
-        message: t(customContactForm.validation.minCharacters, { min: 4 }),
-      }),
-    contactName: z
-      .string({ required_error: t(customContactForm.validation.required) })
-      .min(6, {
-        message: t(customContactForm.validation.minCharacters, { min: 6 }),
-      }),
-    contactEmail: z
-      .string({ required_error: t(customContactForm.validation.required) })
-      .email({
-        message: t(customContactForm.validation.invalidEmail),
-      }),
-    complexity: z
-      .string({ required_error: t(customContactForm.validation.required) })
-      .refine((value) => ["Low", "Middle", "High"].includes(value), {
-        message: t(customContactForm.validation.complexityLevels),
-      }),
-    estDeadline: z
-      .string({ required_error: t(customContactForm.validation.required) })
-      .refine((value) => dateRegex.test(value), {
-        message: t(customContactForm.validation.invalidDateFormat),
-      }),
-    explanation: z
-      .string({ required_error: t(customContactForm.validation.required) })
-      .refine(
-        (value) => {
-          const wordCount = value.trim().split(/\s+/).length; // Count the number of words
-          return wordCount <= 300; // Validate the word count
-        },
-        {
-          message: t(customContactForm.validation.maxWords),
-        }
-      ),
-  });
-
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -99,7 +85,7 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
     },
   });
 
-  const { isSubmitting, isSubmitSuccessful } = form.formState;
+  const { isSubmitting, isSubmitSuccessful, errors } = form.formState;
 
   useEffect(() => {
     if (isSubmitSuccessful) {
@@ -108,12 +94,22 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
   }, [isSubmitSuccessful]);
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
-    const res = await fetch(`${process.env.SITE_URL}/${locale}/api/custom`, {
+    const rawData = {
+      companyName: data.companyName,
+      companyCountry: data.companyCountry,
+      contactName: data.contactName,
+      contactEmail: data.contactEmail,
+      complexity: data.complexity,
+      estDeadline: data.estDeadline,
+      explanation: data.explanation,
+    };
+
+    const res = await fetch(`https://www.prosimcae/${locale}/api/custom`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(rawData),
     });
   };
 
@@ -125,11 +121,9 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
             <FormField
               control={form.control}
               name="companyName"
-              render={({ field, fieldState }) => (
+              render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="max-md:text-xs">
-                    {t(customContactForm.labels.companyName)}
-                  </FormLabel>
+                  <FormLabel className="max-md:text-xs">Company name</FormLabel>
                   <FormControl>
                     <Input
                       placeholder=""
@@ -137,9 +131,7 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
                       className="max-md:text-xs"
                     />
                   </FormControl>
-                  <FormMessage className="max-md:text-xs">
-                    {fieldState.error ? t(fieldState.error.message) : null}
-                  </FormMessage>
+                  <FormMessage className="max-md:text-xs" />
                 </FormItem>
               )}
             />
@@ -148,23 +140,19 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
             <FormField
               control={form.control}
               name="companyCountry"
-              render={({ field, fieldState }) => (
+              render={({ field }) => (
                 <FormItem>
                   <FormLabel className="max-md:text-xs">
-                    {t(customContactForm.labels.companyCountry)}
+                    Company country
                   </FormLabel>
                   <FormControl>
                     <Input
-                      placeholder={t(
-                        customContactForm.placeholders.companyCountry
-                      )}
+                      placeholder=""
                       {...field}
                       className="max-md:text-xs"
                     />
                   </FormControl>
-                  <FormMessage className="max-md:text-xs">
-                    {fieldState.error ? t(fieldState.error.message) : null}
-                  </FormMessage>
+                  <FormMessage className="max-md:text-xs" />
                 </FormItem>
               )}
             />
@@ -175,11 +163,9 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
             <FormField
               control={form.control}
               name="contactName"
-              render={({ field, fieldState }) => (
+              render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="max-md:text-xs">
-                    {t(customContactForm.labels.contactName)}
-                  </FormLabel>
+                  <FormLabel className="max-md:text-xs">Contact name</FormLabel>
                   <FormControl>
                     <Input
                       placeholder=""
@@ -187,9 +173,7 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
                       className="max-md:text-xs"
                     />
                   </FormControl>
-                  <FormMessage className="max-md:text-xs">
-                    {fieldState.error ? t(fieldState.error.message) : null}
-                  </FormMessage>
+                  <FormMessage className="max-md:text-xs" />
                 </FormItem>
               )}
             />
@@ -198,10 +182,10 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
             <FormField
               control={form.control}
               name="contactEmail"
-              render={({ field, fieldState }) => (
+              render={({ field }) => (
                 <FormItem>
                   <FormLabel className="max-md:text-xs">
-                    {t(customContactForm.labels.contactEmail)}
+                    Contact email
                   </FormLabel>
                   <FormControl>
                     <Input
@@ -210,9 +194,7 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
                       className="max-md:text-xs"
                     />
                   </FormControl>
-                  <FormMessage className="max-md:text-xs">
-                    {fieldState.error ? t(fieldState.error.message) : null}
-                  </FormMessage>
+                  <FormMessage className="max-md:text-xs" />
                 </FormItem>
               )}
             />
@@ -223,10 +205,10 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
             <FormField
               control={form.control}
               name="complexity"
-              render={({ field, fieldState }) => (
+              render={({ field }) => (
                 <FormItem>
                   <FormLabel className="max-md:text-xs">
-                    {t(customContactForm.labels.projectComplexity)}
+                    Project complexity
                   </FormLabel>
                   <Select
                     onValueChange={field.onChange}
@@ -239,26 +221,17 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
                     </FormControl>
                     <SelectContent className="max-md:text-xs">
                       <SelectItem value="Low" className="max-md:text-xs">
-                        {t(
-                          customContactForm.labels.projectComplexityLevels.low
-                        )}
+                        Low
                       </SelectItem>
                       <SelectItem value="Middle" className="max-md:text-xs">
-                        {t(
-                          customContactForm.labels.projectComplexityLevels
-                            .middle
-                        )}
+                        Middle
                       </SelectItem>
                       <SelectItem value="High" className="max-md:text-xs">
-                        {t(
-                          customContactForm.labels.projectComplexityLevels.high
-                        )}
+                        High
                       </SelectItem>
                     </SelectContent>
                   </Select>
-                  <FormMessage className="max-md:text-xs">
-                    {fieldState.error ? t(fieldState.error.message) : null}
-                  </FormMessage>
+                  <FormMessage className="max-md:text-xs" />
                 </FormItem>
               )}
             />
@@ -267,23 +240,19 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
             <FormField
               control={form.control}
               name="estDeadline"
-              render={({ field, fieldState }) => (
+              render={({ field }) => (
                 <FormItem>
                   <FormLabel className="max-md:text-xs">
-                    {t(customContactForm.labels.estimatedDeadline)}
+                    Estimated Deadline
                   </FormLabel>
                   <FormControl>
                     <Input
-                      placeholder={t(
-                        customContactForm.validation.invalidDateFormat
-                      )}
+                      placeholder="DD/MM/YYYY"
                       {...field}
                       className="placeholder:text-xs max-md:text-xs"
                     />
                   </FormControl>
-                  <FormMessage className="max-md:text-xs">
-                    {fieldState.error ? t(fieldState.error.message) : null}
-                  </FormMessage>
+                  <FormMessage className="max-md:text-xs" />
                 </FormItem>
               )}
             />
@@ -292,30 +261,26 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
         <FormField
           control={form.control}
           name="explanation"
-          render={({ field, fieldState }) => (
+          render={({ field }) => (
             <FormItem>
               <FormLabel className="max-md:text-xs">
-                {t(customContactForm.labels.projectExplanation)}
+                Project explanation
               </FormLabel>
               <FormControl>
                 <Textarea
                   className="resize-none h-28 max-md:text-xs placeholder:text-xs"
-                  placeholder={t(
-                    customContactForm.placeholders.projectExplanation
-                  )}
+                  placeholder="Explain briefly your project request here please. We will contact you to know more details :)!"
                   {...field}
                 />
               </FormControl>
-              <FormMessage className="max-md:text-xs">
-                {fieldState.error ? t(fieldState.error.message) : null}
-              </FormMessage>
+              <FormMessage className="max-md:text-xs" />
             </FormItem>
           )}
         />
 
         <div className="w-full flex flex-row justify-end">
           <Button className="mr-0 mt-2" type="submit">
-            {t(customContactForm.buttons.submit)}
+            Submit
           </Button>
         </div>
       </form>
