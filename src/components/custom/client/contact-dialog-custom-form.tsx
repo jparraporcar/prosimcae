@@ -24,7 +24,6 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import "./contact-dialog-custom-form.css";
 import { useEffect } from "react";
-import { useLocale } from "next-intl";
 
 const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(20[0-9]{2})$/;
 
@@ -71,7 +70,6 @@ interface ContactDialogCustomForm {
 export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
   props
 ) => {
-  const locale = useLocale();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -104,13 +102,21 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
       explanation: data.explanation,
     };
 
-    const res = await fetch(`https://www.prosimcae/${locale}/api/custom`, {
+    const res = await fetch(`http://www.prosimcae.com/api/custom`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(rawData),
     });
+
+    // const res = await fetch(`http://localhost:3000/api/custom`, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(rawData),
+    // });
   };
 
   return (
