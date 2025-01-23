@@ -19,6 +19,7 @@ import AboutProsimcaeSection from "@/components/custom/about-prosimcae-section";
 import JoinNetworkSection from "@/components/custom/join-network-section";
 import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
+import FloatingButton from "@/components/custom/client/floating-button";
 
 const Home = ({ params: { locale } }: { params: { locale: string } }) => {
   const t = useTranslations();
@@ -26,6 +27,7 @@ const Home = ({ params: { locale } }: { params: { locale: string } }) => {
 
   return (
     <main className="w-full flex flex-col items-center max-md:mt-0 overflow-x-hidden mt-12">
+      <FloatingButton />
       <div
         id="main-section-intro"
         className=" text-slate-700 mb-2 max-md:mb-1 mt-14 max-md:mt-16 pb-4"
