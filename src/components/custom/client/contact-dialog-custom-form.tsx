@@ -25,6 +25,7 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import "./contact-dialog-custom-form.css";
 import { useEffect } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(20[0-9]{2})$/;
 
@@ -83,14 +84,8 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
       explanation: "",
     },
   });
-
+  const { toast } = useToast();
   const { isSubmitting, isSubmitSuccessful, errors } = form.formState;
-
-  useEffect(() => {
-    if (isSubmitSuccessful) {
-      props.closeDialog();
-    }
-  }, [isSubmitSuccessful]);
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     const rawData = {
@@ -103,13 +98,35 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
       explanation: data.explanation,
     };
 
-    const res = await fetch(`https://www.prosimcae.com/api/custom`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(rawData),
-    });
+    try {
+      const res = await fetch(`https://www.prosimcae.com/api/custom`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(rawData),
+      });
+      console.log(res);
+      if (!isSubmitting && res.status === 201) {
+        toast({
+          duration: 3000,
+          title: "Submitted succesfully",
+          description: "We will contact you very soon!",
+        });
+        props.closeDialog();
+      }
+
+      if (!isSubmitting && res.status !== 201) {
+        toast({
+          duration: 3000,
+          variant: "destructive",
+          title: "Error warning",
+          description: "Try again later please",
+        });
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

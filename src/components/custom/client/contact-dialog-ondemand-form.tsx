@@ -26,6 +26,7 @@ import "./contact-dialog-custom-form.css";
 import { useEffect, useState } from "react";
 import { useLocale } from "next-intl";
 import { Loader2 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(20[0-9]{2})$/;
 
@@ -77,18 +78,13 @@ export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
       contactName: "",
       contactEmail: "",
       defProjDuration: "",
-      expectProjDurationHours: undefined,
+      expectProjDurationHours: "",
       explanation: "",
     },
   });
 
   const { isSubmitting, isSubmitSuccessful, errors } = form.formState;
-
-  useEffect(() => {
-    if (isSubmitSuccessful) {
-      props.closeDialog();
-    }
-  }, [isSubmitSuccessful]);
+  const { toast } = useToast();
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     const rawData = {
@@ -101,26 +97,36 @@ export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
       explanation: data.explanation,
     };
 
-    const res = await fetch(`https://www.prosimcae.com/api/ondemand`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(rawData),
-    });
-  };
-  const defProjDurationFieldValue = form.watch("defProjDuration");
-  const [projDurationFieldIsVisible, setProjDurationFieldIsVisible] =
-    useState(true);
+    try {
+      const res = await fetch(`https://www.prosimcae.com/api/ondemand`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(rawData),
+      });
+      console.log(res);
+      if (!isSubmitting && res.status === 201) {
+        toast({
+          duration: 3000,
+          title: "Submitted succesfully",
+          description: "We will contact you very soon!",
+        });
+        props.closeDialog();
+      }
 
-  useEffect(() => {
-    if (defProjDurationFieldValue === "No") {
-      setProjDurationFieldIsVisible(false);
+      if (!isSubmitting && res.status !== 201) {
+        toast({
+          duration: 3000,
+          variant: "destructive",
+          title: "Error warning",
+          description: "Try again later please",
+        });
+      }
+    } catch (error) {
+      console.log(error);
     }
-    if (defProjDurationFieldValue === "Yes") {
-      setProjDurationFieldIsVisible(true);
-    }
-  }, [defProjDurationFieldValue]);
+  };
 
   return (
     <Form {...form}>
@@ -240,14 +246,13 @@ export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
                       </SelectItem>
                     </SelectContent>
                   </Select>
-                  <FormMessage />
+                  <FormMessage className="max-md:text-xs" />
                 </FormItem>
               )}
             />
           </div>
           <div className="w-52 max-md:w-2/5">
             <FormField
-              disabled={!projDurationFieldIsVisible}
               control={form.control}
               name="expectProjDurationHours"
               render={({ field }) => (
