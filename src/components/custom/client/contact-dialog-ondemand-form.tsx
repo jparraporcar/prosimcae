@@ -100,16 +100,13 @@ export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
       explanation: data.explanation,
     };
 
-    const res = await fetch(
-      `https://www.prosimcae.com/${locale}/api/ondemand`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(rawData),
-      }
-    );
+    const res = await fetch(`https://www.prosimcae.com/api/ondemand`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(rawData),
+    });
   };
   const defProjDurationFieldValue = form.watch("defProjDuration");
   const [projDurationFieldIsVisible, setProjDurationFieldIsVisible] =

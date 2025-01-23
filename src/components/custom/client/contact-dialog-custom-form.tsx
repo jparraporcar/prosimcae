@@ -101,16 +101,7 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
       estDeadline: data.estDeadline,
       explanation: data.explanation,
     };
-    // DONT WORK IN PRODUCTION (HTTPS IS NEEDED)
-    // const res = await fetch(`http://www.prosimcae.com/api/custom`, {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(rawData),
-    // });
 
-    // TESTING PRODUCTION
     const res = await fetch(`https://www.prosimcae.com/api/custom`, {
       method: "POST",
       headers: {
@@ -118,25 +109,6 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
       },
       body: JSON.stringify(rawData),
     });
-
-    //WORK LOCALLY
-    //   const res = await fetch(`http://localhost:3000/api/custom`, {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify(rawData),
-    //   });
-    // };
-
-    // DONT WORK LOCALLY
-    // const res = await fetch(`https://localhost:3000/api/custom`, {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(rawData),
-    // });
   };
 
   return (
