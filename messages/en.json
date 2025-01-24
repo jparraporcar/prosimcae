@@ -1,18 +1,18 @@
 {
   "metadata": {
-    "title": "Cost-Effective Accurate Engineering Simulations | Prosimcae",
-    "description": "Prosimcae offers expert engineering simulation services to optimize your product designs and reduce costs. Enhance performance and accelerate development with our reliable solutions. Contact us now!",
+    "title": "Prosimcae: Engineering simulations, CFD|FEM/FEA|thermal",
+    "description": "Prosimcae: Simulation service: finite elements (FEM), thermal analysis and fluid dynamics (CFD). We optimize your development costs.",
     "alternates": {
       "canonical": "https://www.prosimcae.com/en/"
     }
   },
-  "mainSectionIntroDescription": "From Fluid Dynamics to Structural Analysis and Thermal Management, we use efficient methods to help you optimize product performance and reduce testing expenses. Contact us and we will support you every step of the way!",
+  "mainSectionIntroDescription": "From Fluid Dynamics (CFD) to structural analysis (FEM/FEA) and thermal, we help you optimize your product development and assist you with any unexpected problems. We have tailored solutions!",
   "mainSectionTitles": {
-    "simulationServices": "Simulation Services",
+    "simulationServices": "Simulation Services: CFD, FEM/FEA and thermal",
     "howWeWork": "How we work",
     "caseStudies": "Case studies",
     "partnerWithUs": "Partner with Us",
-    "aboutProsimcae": "About prosimcae"
+    "aboutProsimcae": "About Prosimcae"
   },
   "onDemandEngineering": {
     "serviceName": "On-Demand Engineering",
@@ -25,46 +25,46 @@
       },
       "1": {
         "title": "NCAP Standards",
-        "description": "Cover MDB, frontal crash, ODB, and occupant injury criteria for regulated compliance."
+        "description": "We have broad knowledge about the worldwide NCAP regulation. We also help you in your active and passive safety systems optimization"
       },
       "2": {
         "title": "Commercial Software Mastery",
-        "description": "LS-DYNA, Abaqus, ANSA, and META integrated seamlessly into your workflows."
+        "description": "Our software expertise goes beyond open-source software, including the use of LS-DYNA, Abaqus, ANSA and META."
       },
       "3": {
         "title": "Professional Post-Processing",
-        "description": "Deliver clear visualizations and presentations for all project stakeholders."
+        "description": "We reach conclusions based on expertise and we create clear and customer oriented presentations"
       },
       "4": {
         "title": "Flexible Collaboration",
-        "description": "Scale daily hours or full projects—either remotely or on-site—to match your needs."
+        "description": "We help you in your product development whether is remotely or in-house, always taking into account the specific characteristics of your infrastructure."
       }
     }
   },
   "customEngineering": {
     "serviceName": "Custom Engineering",
-    "serviceIntro": "Need simulations to reduce testing and solve mechanical problems? Our custom engineering approach finds solutions using battle-tested open-source tools. We reduce cost, ensure accuracy, and meet compliance standards—all while adapting to your timeline.",
+    "serviceIntro": "Would you like to optimize testing costs and your product development?, Have you encountered any mechanical challenge you need to solve?, Would you like to test your prototype in a fast, efficient and cost-efficient way?, Do you need to pass some specific standards in order to market your product?, You can count on us!",
     "hrefDiscover": "Discover More",
     "items": {
       "0": {
-        "title": "Cost-Effective Simulations",
+        "title": "Effective Simulations",
         "description": "Tap into open-source software to cut heavy licensing fees and focus on real design needs."
       },
       "1": {
-        "title": "Reduce Testing Requirements",
-        "description": "Use proven virtual analyses to minimize physical prototypes and accelerate development."
+        "title": "Reduce Testing time",
+        "description": "Accelerate your product development by using our software in finite elements (FEM/FEA) and computational fluid dynamics (CFD)"
       },
       "2": {
-        "title": "Mechanical Problem-Solving",
-        "description": "Address fluid flow, structural integrity, and thermal issues tailored to your product challenges."
+        "title": "Helping you in solving mechanical and fluid-related problems",
+        "description": "We help you to solve any encountered mechanical problem, applying computational methods in numerical simulation"
       },
       "3": {
-        "title": "Compliance & Reliability",
-        "description": "Rely on validated solvers aligned with industry standards for consistent, accurate outcomes."
+        "title": "Scientifically proven accuracy",
+        "description": "The utilize open-source software that is widely adopted among the scientific community with proben and accurate results."
       },
       "4": {
         "title": "Flexible Project Management",
-        "description": "Adapt resources, schedules, and deliverables to fit your unique goals and budget."
+        "description": "We adapt resources and tasks to fit your goals and budget."
       }
     }
   },
@@ -83,13 +83,13 @@
             },
             "1": {
               "title": "Impact position: non-exploded",
-              "description": "The assembly is positioned close to a rigid wall to reduce simulation time, with an initial velocity of -5.5 m/s in the vertical direction. The non-deformability of the wall ensures that the structural integrity of the device can be evaluated under controlled conditions.",
+              "description": "The assembly is positioned close to the rigid wall to reduce simulation time, with an initial velocity of -5.5 m/s in the vertical direction. The non-deformability of the wall ensures that the structural integrity of the device can be evaluated under controlled conditions.",
               "caption": "Impact position: non-exploded",
               "alt": "Impact position: non-exploded"
             },
             "2": {
               "title": "Plastic strain: view 1",
-              "description": "The video illustrates the evolution of plastic strain at the impact corner, the most disadvantageous position due to resulting stress concetration. Despite this, the aluminum enclosure effectively absorbs energy, limiting plastic strain to a low max value of ~0.02.",
+              "description": "The video illustrates the evolution of plastic strain at the impact corner, the most disadvantageous position due to resulting stress concentration. Despite this, the aluminum enclosure effectively absorbs energy, limiting plastic strain to a low max value of ~0.02.",
               "caption": "Plastic strain: view 1"
             },
             "3": {
@@ -106,32 +106,32 @@
           }
         },
         "1": {
-          "studyCaseTitle": "Implicit simulation of a 3 point bending test",
+          "studyCaseTitle": "Static simulation of a 3 point bending test",
           "mediaItems": {
             "0": {
-              "title": "Aluminum profile test: initial position",
-              "description": "The setup shows an aluminum profile with 3mm of imposed displacement at the top by a rigid moving part and supported by rigid fixations. Its material properties, boundary conditions, and key dimensions provide context for structural analysis.",
-              "caption": "Image 1",
-              "alt": "Aluminum profile test: initial position"
+              "title": "Aluminum profile: initial position",
+              "description": "The setup shows an aluminum profile with 3mm of imposed displacement at the top by a rigid moving part and supported by rigid fixations. Its mechanical properties, boundary conditions, and key dimensions provide context for structural analysis.",
+              "caption": "Aluminum profile: initial position",
+              "alt": "Aluminum profile: initial position"
             },
             "1": {
               "title": "Displacement vs iteration",
-              "description": "The video shows the aluminum profile undergoing iterative displacement until reaching the imposed 3mm Z displacement boundary condition. The deformation evolves symmetrically in both sides of the profile across iterations, as anticipated.",
+              "description": "The video shows the aluminum profile undergoing iterative displacement until reaching the imposed 3mm Z displacement boundary condition. The deformation evolves symmetrically in both sides of the profile across iterations.",
               "caption": "Displacement vs iteration"
             },
             "2": {
               "title": "Plastic strain vs iteration",
-              "description": "The video illustrates the evolution of plastic strain as the aluminum profile reaches the imposed 3mm Z displacement. Maximum plastic strain occurs symmetrically at the center of symetry of the profile, as expected.",
+              "description": "The video illustrates the evolution of plastic strain as the aluminum profile reaches the imposed 3mm Z displacement. Maximum plastic strain occurs at the center of symmetry of the profile.",
               "caption": "Plastic strain vs iteration"
             },
             "3": {
               "title": "Reaction forces vs iteration",
-              "description": "The video shows the reaction forces during the simulation, peaking at maximum displacement. Forces are uniformly distributed across the surface where displacement is applied and also concentrated at the fixations, showcasing the interaction through contact surfaces.",
+              "description": "The video shows the reaction forces during the simulation, peaking at maximum displacement. Forces are uniformly distributed across the surface where displacement is applied and also concentrated at the fixations base, showcasing the interaction through contact surfaces.",
               "caption": "Reaction forces vs iteration"
             },
             "4": {
-              "title": "Von misses vs iteration",
-              "description": "The video illustrates the von Mises stress distribution, primarily concentrated around the interaction area of the moving part. Additional stress concentrations appear in regions with sharp geometric changes in the profile.",
+              "title": "Von Misses vs iteration",
+              "description": "The video illustrates the von Mises stress distribution, primarily concentrated around the interaction area of the moving part. Additional stress concentration appear in regions with sharp geometric changes in the profile.",
               "caption": "Von misses vs iteration"
             }
           }
@@ -141,8 +141,8 @@
           "mediaItems": {
             "0": {
               "title": "Lightweight Aluminum Frame Structure",
-              "description": "The structure is designed to be lightweight and corrosion-resistant. It features beam profiles with specified dimensions and thicknesses, anchored to the ground. A natural frequency study is performed to ensure its suitability under dynamic conditions",
-              "caption": "Image 1",
+              "description": "The structure is designed to be lightweight and corrosion-resistant. It features extruded profiles with specified dimensions and thicknesses, anchored to the ground. A natural frequency study is performed to ensure its suitability under dynamic conditions",
+              "caption": "Lightweight Aluminum Frame Structure",
               "alt": "Lightweight Aluminum Frame Structure"
             },
             "1": {
@@ -156,14 +156,14 @@
               "caption": "Second bending mode - 84Hz"
             },
             "3": {
-              "title": "First torsinal mode - 110Hz",
+              "title": "First torsional mode - 110Hz",
               "description": "The top ring twists about the vertical axis. There’s minimal out-of-plane bending and the ring stays nearly flat in the plane parallel to the floor. The four legs serve as pivot points, and the 'open' rectangular geometry of the frame allows each corner to shift slightly, creating that in-plane twisting motion.",
-              "caption": "First torsinal mode - 110Hz"
+              "caption": "First torsional mode - 110Hz"
             },
             "4": {
-              "title": "local in-plane bending - 147Hz",
+              "title": "Local In-plane Bending - 147Hz",
               "description": "This mode primarily involves the table’s smaller middle ring profiles along its longer axis moving inward and outward, while the upper, stiffer ring sees less motion. Because these profiles are thinner, they flex more easily, explaining why the top ring remains relatively still during this vibration.",
-              "caption": "local in-plane bending - 147Hz"
+              "caption": "Local In-plane Bending - 147Hz"
             },
             "5": {
               "title": "In-plane shear mode - 155Hz",
@@ -178,11 +178,11 @@
       "title": "Computer Fluid Dynamics (CFD)",
       "studyCases": {
         "0": {
-          "studyCaseTitle": "Study of a room thermal efficiency",
+          "studyCaseTitle": "Study of a room thermal efficiency (HVAC)",
           "mediaItems": {
             "0": {
-              "title": "Building room main dimensions",
-              "description": "The image outlines the building room's key dimensions, highlighting heat sources and furniture in reddish tones. The air conditioning unit (inlet) position will be detailed in the next picture. The simulation assumes closed doors and models transient convective heat transfer within the room.",
+              "title": "Building floor room main dimensions",
+              "description": "The image depicts the boundary conditions of the room with a window that maintains a fixed temperature, disregarding radiation and conduction as a simplification. Two people and a television interact with the environment through a fixed temperature. Colder air enters from the air conditioning unit (HVAC) at a 45° angle and uniform velocity, while the lower parts of the doors serve as pressure outlets.",
               "caption": "Building room main dimensions",
               "alt": "Building room main dimensions"
             },
@@ -194,7 +194,7 @@
             },
             "2": {
               "title": "Velocity and temperature - view 1",
-              "description": "This video tracks velocity magnitudes and temperatures over a 50s simulation. Tracer lines from the AC show cooling air mostly affecting a less critical zone, leaving occupants’ area relatively warm. Although only some paths are displayed, friction implies a similar pattern near the pathlines. These findings confirm the AC’s suboptimal placement.",
+              "description": "This video tracks velocity magnitudes and temperatures over a 50s transient simulation. Tracer lines from the AC show cooling air mostly affecting a less critical zone, leaving occupants’ area relatively warm. Although only some paths are displayed, friction implies a similar pattern near the pathlines. These findings confirm the HVAC unit suboptimal placement.",
               "caption": "Velocity and temperature - view 1"
             },
             "3": {
@@ -204,7 +204,7 @@
             },
             "4": {
               "title": "Recirculation pattern",
-              "description": "This video presents a plane section through the AC unit, displaying in-plane velocity vectors. Notably, the flow descending from the top of the unit forms a recirculation loop constrained by surrounding walls, limiting direct airflow to occupant areas and suggesting inefficiencies in the system's placement.",
+              "description": "This video presents a plane section through the HVAC unit, displaying in-plane velocity vectors. Notably, the flow descending from the top of the unit forms a recirculation loop constrained by surrounding walls, limiting direct airflow to occupant areas and suggesting inefficiencies in the system's placement.",
               "caption": "Recirculation pattern"
             },
             "5": {
@@ -219,19 +219,19 @@
   },
   "openImages": {
     "0": {
-      "description": "Open-source FEA solver for structural analysis",
+      "description": "Calculix: Open-source FEM/FEA solver for structural analysis",
       "alt": "CalculiX",
-      "caption": "Open-source FEA solver for structural analysis"
+      "caption": "Calculix: Open-source FEM/FEA solver for structural analysis"
     },
     "1": {
-      "description": "Tool for LS-DYNA solver result processing",
+      "description": "LS-Prepost: Tool for LS-DYNA solver result processing",
       "alt": "LS-PrePost",
       "caption": "Tool for LS-DYNA solver result processing"
     },
     "2": {
-      "description": "Dynamic analysis solver for crash simulations",
-      "alt": "OpenRadioss",
-      "caption": "Dynamic analysis solver for crash simulations"
+      "description": "Paraview: Dynamic analysis solver for crash simulations",
+      "alt": "Paraview: Dynamic analysis solver for crash simulations",
+      "caption": "Paraview: Dynamic analysis solver for crash simulations"
     },
     "3": {
       "description": "3D visualization for simulation data",
@@ -239,42 +239,42 @@
       "caption": "3D visualization for simulation data"
     },
     "4": {
-      "description": "Pre-processor for CalculiX solver",
-      "alt": "PrePoMax",
-      "caption": "Pre-processor for CalculiX solver"
+      "description": "Prepromax: Pre-processor for CalculiX solver",
+      "alt": "Prepromax: Pre-processor for CalculiX solver",
+      "caption": "Prepromax: Pre-processor for CalculiX solver"
     },
     "5": {
-      "description": "CFD solver for fluid simulations",
-      "alt": "OpenFOAM",
-      "caption": "CFD solver for fluid simulations"
+      "description": "OpenFoam: CFD solver for fluid dynamics simulations",
+      "alt": "OpenFoam: CFD solver for fluid dynamics simulations",
+      "caption": "OpenFoam: CFD solver for fluid dynamics simulations"
     }
   },
   "comImages": {
     "0": {
-      "description": "Pre-processor for advanced CAE modeling",
-      "alt": "ANSA",
-      "caption": "Pre-processor for advanced CAE modeling"
+      "description": "ANSA (© Beta CAE Systems): Pre-processing tool for advanced CAE modeling",
+      "alt": "ANSA (© Beta CAE Systems): Pre-processing tool for advanced CAE modeling",
+      "caption": "ANSA (© Beta CAE Systems): Pre-processing tool for advanced CAE modeling"
     },
     "1": {
-      "description": "Post-processing tool for CAE data analysis",
-      "alt": "META",
-      "caption": "Post-processing tool for CAE data analysis"
+      "description": "META (© Beta CAE Systems): Post-processing tool for CAE results analysis",
+      "alt": "META (© Beta CAE Systems): Post-processing tool for CAE results analysis",
+      "caption": "META (© Beta CAE Systems): Post-processing tool for CAE results analysis"
     },
     "2": {
-      "description": "Implicit FEA solver for structural analysis",
-      "alt": "SIMULIA Abaqus Standard",
-      "caption": "Implicit FEA solver for structural analysis"
+      "description": "Abaqus Standard (© SIMULIA): Solver FEM/FEA for structural analysis",
+      "alt": "Abaqus Standard (© SIMULIA): Solver FEM/FEA for structural analysis",
+      "caption": "Abaqus Standard (© SIMULIA): Solver FEM/FEA for structural analysis"
     },
     "3": {
-      "description": "Explicit FEA solver for dynamic simulations",
-      "alt": "LS-DYNA",
-      "caption": "Explicit FEA solver for dynamic simulations"
+      "description": "LS-Dyna (© Ansys): FEM/FEA solver for dynamic simulations",
+      "alt": "LS-Dyna (© Ansys): FEA solver for dynamic simulations",
+      "caption": "LS-Dyna (© Ansys): FEA solver for dynamic simulations"
     }
   },
   "aboutProsimcae": {
     "createdByPart1": "Created by",
     "name": "Jordi Parra Porcar",
-    "createdByPart2": ", Mechanical Engineer specialized in CAE for over 8 years.",
+    "createdByPart2": ", Mechanical Engineer specialized in CAE analysis for over 8 years.",
     "list": {
       "item1Part1": "Background in both the",
       "automotive": "automotive",
@@ -290,17 +290,17 @@
       "andAccelerated": "and accelerated design timelines.",
       "item4Part1": "Operating as a",
       "consultancy": "remote-first consultancy",
-      "workingWithClients": "working with clients internationally for",
+      "workingWithClients": "working with clients nationally and internationally for",
       "services": "fast, flexible, and cost-effective",
       "simulationServices": "simulation services."
     }
   },
   "joinNetworkSection": {
-    "title": "Join our network of professionals",
-    "paragraph": "We invite skilled engineers and simulation experts to collaborate on innovative projects.",
+    "title": "Collaborate with us B2B",
+    "paragraph": "We invite skilled simulation engineers to collaborate on innovative projects.",
     "list": {
       "item1": "Work on diverse and exciting projects",
-      "item2": "Professional growth and skill enhancement",
+      "item2": "Professional growth and development",
       "item3": "Flexible collaboration arrangements"
     }
   },

@@ -43,7 +43,7 @@ const FloatingButton: React.FC = () => {
         xl:p-7              /* From xl (1280px) and up: revert to 24px */
 
         /* Text Size */
-        text-xs             /* Base: 12px */
+        text-[11px]             /* Base: 12px */
         md:text-sm           /* From md (768px) and up: 14px */
         xl:text-xs           /* From xl (1280px) and up: revert to 12px */
 

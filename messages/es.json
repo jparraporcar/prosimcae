@@ -1,70 +1,70 @@
 {
   "metadata": {
-    "title": "Simulaciones de Ingeniería Precisas y Rentables | Prosimcae",
-    "description": "Prosimcae ofrece servicios expertos de simulación para optimizar el diseño de sus productos y reducir costos. Mejore el rendimiento y acelere el desarrollo con nuestras soluciones. ¡Contáctenos ahora!",
+    "title": "Prosimcae: Simulación en Ingeniería, CFD|FEM/FEA|térmica",
+    "description": "Prosimcae: Servicio de simulación: elementos finitos (FEM), análisis térmico y de fluidos (CFD). Optimizamos tus costos de desarrollo.",
     "alternates": {
       "canonical": "https://www.prosimcae.com/es/"
     }
   },
-  "mainSectionIntroDescription": "Desde la Dinámica de Fluidos hasta el Análisis Estructural y la Gestión Térmica, utilizamos métodos eficientes para ayudarle a optimizar el rendimiento de su producto y reducir los gastos en tests. ¡Contáctenos y le apoyaremos en cada fase del proyecto!",
+  "mainSectionIntroDescription": "Desde la Dinámica de Fluidos (CFD) hasta el Análisis Estructural (FEM/FEA) y Térmico, te ayudamos a optimizar el desarrollo de tu producto así como a solucionar cualquier problema relacionado que te surga. ¡Tenemos soluciones a tu medida!",
   "mainSectionTitles": {
-    "simulationServices": "Servicios de Simulación",
+    "simulationServices": "Servicios de Simulación: CFD, FEM/FEA y térmica",
     "howWeWork": "Cómo trabajamos",
-    "caseStudies": "Casos de ejemplo",
+    "caseStudies": "Casos de estudio",
     "partnerWithUs": "Colabora con Nosotros",
     "aboutProsimcae": "Sobre prosimcae"
   },
   "onDemandEngineering": {
-    "serviceName": "Ingeniería por demanda",
-    "serviceIntro": "¿Necesitas ayuda especializada con software de simulación comercial? Nuestro enfoque por demanda aborda tanto casos áltamente dinámicos así como estáticos, para todo tipo de industrias. Nos adaptamos a tu entorno—remoto o en oficina—y entregamos resultados bajo tu propia infraestructura.",
+    "serviceName": "Ingeniería por contrato",
+    "serviceIntro": "¿Necesitas ayuda especializada en el desarrollo de producto con tu software de simulación comercial? Puedes subcontratar nuestros servicios por el tiempo que necesites, nos adaptamos a tus necesidades aportando nuestra experiencia en simulación. Nos adaptamos a tu entorno—remoto o en oficina—y entregamos resultados bajo tu propia infraestructura.",
     "hrefDiscover": "/contact",
     "items": {
       "0": {
-        "title": "Simulaciones BiW & Choques",
-        "description": "Estudia la seguridad de los ocupantes, modela y analiza impactos con precisión."
+        "title": "Seguridad de impactos en vehículos: estructuras (BiW) y materiales",
+        "description": "Estudia la seguridad del vehículo, modela y analiza impactos con el objetivo de minimizar daños a los ocupantes. Optimiza el uso de materiales para lograr tus objetivos reduciendo costes."
       },
       "1": {
         "title": "Estándares NCAP",
-        "description": "Estudiamos cualquier tipo de impacto dentro de su normativa estatal."
+        "description": "Tenemos amplio conocimiento de la normativa NCAP a nivel mundial. También te ayudamos en la optimización de tus sistemas de seguridad activa y pasiva."
       },
       "2": {
         "title": "Dominio en Software Comercial",
-        "description": "Te ayudamos a lograr tus objetivos en tu desarrollo con LS-DYNA, Abaqus, ANSA y META."
+        "description": "Más allá de nuestra experiencia en software abierto también abarcamos el uso de LS-DYNA, Abaqus, ANSA y META."
       },
       "3": {
         "title": "Postprocesamiento Profesional",
-        "description": "Ofrece visualizaciones claras y presentaciones aptas para el cliente."
+        "description": "Llegamos a conclusiones basadas en la experiencia y creamos presentaciones claras enfocadas al cliente."
       },
       "4": {
         "title": "Colaboración Flexible",
-        "description": "Escala horas diarias o proyectos—remotamente o en oficina—según tus necesidades."
+        "description": "Te ayudamos en el desarrollo de tu producto ya sea en remoto o en oficina, siempre teniendo en cuenta las características de tu infraestructura y tus necesidades."
       }
     }
   },
   "customEngineering": {
     "serviceName": "Ingeniería por proyecto",
-    "serviceIntro": "¿Necesitas simulaciones para reducir pruebas y resolver problemas mecánicos? Nuestro enfoque de ingeniería por proyecto encuentra soluciones utilizando herramientas de código abierto. Reducimos costos, garantizamos precisión y cumplimos con los estándares de cumplimiento, todo mientras nos adaptamos a tus fechas de entrega.",
+    "serviceIntro": "¿Te gustaría optimizar el coste en testing y el desarrollo de tu producto?, ¿Tienes problemas mecánicos que necesitas solucionar?, ¿Te gustaría poner a prueba tu prototipo de una manera rápida, eficiente y rentable?, ¿Necesitas pasar estándares específicos para poder comercializar tu producto?, ¡Puedes contar con nosotros!",
     "hrefDiscover": "/contact",
     "items": {
       "0": {
-        "title": "Simulaciones Rentables",
+        "title": "Simulaciones eficientes",
         "description": "Aprovecha el software abierto para reducir tarifas de licencias y enfócate en diseño."
       },
       "1": {
-        "title": "Reducción de Requisitos de Prueba",
-        "description": "Minimiza prototipos físicos y acelera el desarrollo con análisis virtuales probados."
+        "title": "Minimiza el tiempo hasta comercialización",
+        "description": "Acelera el desarrollo de tu producto, a través de nuestro software en elementos finitos (FEM/FEA) y mecánica de fluídos computacional (CFD)"
       },
       "2": {
-        "title": "Resolución de Problemas Mecánicos",
-        "description": "Aborda fluidos, estructura y térmica adaptados a los desafíos de tu producto."
+        "title": "Resolución de Problemas Mecánicos y de fluidos",
+        "description": "Te ayudamos a solucionar cualquier problema mecánico que te surja, aplicando métodos computacionales de simulación numérica"
       },
       "3": {
-        "title": "Cumplimiento y Confiabilidad",
-        "description": "Utiliza solvers validados para resultados consistentes alineados a estándares."
+        "title": "Precisión probada científicamente",
+        "description": "Los software de código abierto que usamos, se utilizan ampliamente entre la comunidad científica con resultados probados y precisos."
       },
       "4": {
         "title": "Gestión de Proyectos Flexible",
-        "description": "Adapta recursos y entregables para ajustarse a tus objetivos y presupuesto."
+        "description": "Adaptamos recursos y tareas para ajustarnos a tus objetivos y presupuesto."
       }
     }
   },
@@ -73,7 +73,7 @@
       "title": "Mecánica Sólida por Computadora (FEM)",
       "studyCases": {
         "0": {
-          "studyCaseTitle": "Prueba de caída de un dispositivo de almacenamiento portátil (PSD)",
+          "studyCaseTitle": "Prueba de caída de un dispositivo portátil USB",
           "mediaItems": {
             "0": {
               "title": "Posición de impacto: explotada",
@@ -83,13 +83,13 @@
             },
             "1": {
               "title": "Posición de impacto: no explotada",
-              "description": "El ensamblaje está posicionado cerca de una pared rígida para reducir el tiempo de simulación, con una velocidad inicial de -5.5 m/s en la dirección vertical. La no deformabilidad de la pared asegura que la integridad estructural del dispositivo pueda ser evaluada bajo condiciones controladas.",
+              "description": "El ensamblaje está posicionado cerca de la pared rígida para reducir el tiempo de simulación, con una velocidad inicial de -5.5 m/s en la dirección vertical. La no deformabilidad de la pared asegura que la integridad estructural del dispositivo pueda ser evaluada bajo condiciones controladas.",
               "caption": "Posición de impacto: no explotada",
               "alt": "Posición de impacto: no explotada"
             },
             "2": {
               "title": "Deformación plástica: vista 1",
-              "description": "El video ilustra la evolución de la deformación plástica en la esquina de impacto, la posición más desfavorable debido a la concentración de tensiones resultante. A pesar de esto, el recinto de aluminio absorbe efectivamente la energía, limitando la deformación plástica a un valor máximo bajo de ~0.02.",
+              "description": "El video ilustra la evolución de la deformación plástica en la esquina de impacto, siendo esta la posición más desfavorable debido a la concentración de tensiones resultante. A pesar de esto, el recinto de aluminio absorbe efectivamente la energía, limitando la deformación plástica a un valor máximo bajo de ~0.02.",
               "caption": "Deformación plástica: vista 1"
             },
             "3": {
@@ -106,28 +106,28 @@
           }
         },
         "1": {
-          "studyCaseTitle": "Simulación implícita de una prueba de flexión de 3 puntos",
+          "studyCaseTitle": "Simulación estática de flexión a 3 puntos",
           "mediaItems": {
             "0": {
-              "title": "Prueba de perfil de aluminio: posición inicial",
-              "description": "El montaje muestra un perfil de aluminio con un desplazamiento impuesto de 3 mm en la parte superior por una parte móvil rígida y soportado por fijaciones rígidas. Sus propiedades del material, condiciones de frontera y dimensiones clave proporcionan contexto para el análisis estructural.",
-              "caption": "Prueba de perfil de aluminio: posición inicial",
-              "alt": "Prueba de perfil de aluminio: posición inicial"
+              "title": "Perfil de aluminio: posición inicial",
+              "description": "El montaje muestra un perfil de aluminio con un desplazamiento impuesto de 3 mm en la parte superior por una parte móvil rígida y soportado por fijaciones rígidas. Sus propiedades mecánicas, condiciones de contorno y dimensiones clave proporcionan contexto para el análisis estructural.",
+              "caption": "Perfil de aluminio: posición inicial",
+              "alt": "Perfil de aluminio: posición inicial"
             },
             "1": {
               "title": "Desplazamiento vs iteración",
-              "description": "El video muestra el perfil de aluminio sometiéndose a desplazamiento iterativo hasta alcanzar el desplazamiento impuesto de 3 mm en la condición de frontera Z. La deformación evoluciona simétricamente en ambos lados del perfil a través de iteraciones, como se anticipó.",
+              "description": "El video muestra el perfil de aluminio sometiéndose a desplazamiento iterativo hasta alcanzar el desplazamiento impuesto de 3 mm en la condición de contorno Z. La deformación evoluciona simétricamente en ambos lados del perfil a través de las iteraciones.",
               "caption": "Desplazamiento vs iteración"
             },
             "2": {
               "title": "Deformación plástica vs iteración",
-              "description": "El video ilustra la evolución de la deformación plástica a medida que el perfil de aluminio alcanza el desplazamiento impuesto de 3 mm en Z. La deformación plástica máxima ocurre simétricamente en el centro de simetría del perfil, como se esperaba.",
+              "description": "El video ilustra la evolución de la deformación plástica a medida que el perfil de aluminio alcanza el desplazamiento impuesto de 3 mm en Z. La deformación plástica máxima ocurre en el centro de simetría del perfil.",
               "caption": "Deformación plástica vs iteración"
             },
             "3": {
-              "title": "Fuerzas de reacción vs iteración",
-              "description": "El video muestra las fuerzas de reacción durante la simulación, alcanzando su pico en el desplazamiento máximo. Las fuerzas están distribuidas uniformemente a lo largo de la superficie donde se aplica el desplazamiento y también concentradas en las fijaciones, mostrando la interacción a través de las superficies de contacto.",
-              "caption": "Fuerzas de reacción vs iteración"
+              "title": "Fuerzas reactivas vs iteración",
+              "description": "El video muestra las fuerzas reactivas durante la simulación, alcanzando su pico en el desplazamiento máximo. Las fuerzas están distribuidas uniformemente a lo largo de la superficie donde se aplica el desplazamiento y también concentradas en la base fijaciones, mostrando la interacción a través de las superficies de contacto.",
+              "caption": "Fuerzas reactivas vs iteración"
             },
             "4": {
               "title": "Tensión de Von Mises vs iteración",
@@ -137,11 +137,11 @@
           }
         },
         "2": {
-          "studyCaseTitle": "Estudio de los modos vibracionales naturales",
+          "studyCaseTitle": "Estudio de los modos normales vibracionales",
           "mediaItems": {
             "0": {
               "title": "Estructura de marco de aluminio ligero",
-              "description": "La estructura está diseñada para ser ligera y resistente a la corrosión. Cuenta con perfiles de vigas con dimensiones y espesores especificados, anclados al suelo. Se realiza un estudio de frecuencia natural para asegurar su idoneidad bajo condiciones dinámicas.",
+              "description": "La estructura está diseñada para ser ligera y resistente a la corrosión. Cuenta con perfiles extrusionados con dimensiones y espesores especificados, fijados al suelo. Se realiza un estudio de frecuencia natural para asegurar su idoneidad bajo condiciones dinámicas.",
               "caption": "Estructura de marco de aluminio ligero",
               "alt": "Estructura de marco de aluminio ligero"
             },
@@ -157,18 +157,18 @@
             },
             "3": {
               "title": "Primer modo torsional - 110Hz",
-              "description": "El anillo superior gira alrededor del eje vertical. Hay una mínima flexión fuera del plano y el anillo se mantiene casi plano en el plano paralelo al suelo. Las cuatro patas sirven como puntos de pivote, y la geometría rectangular 'abierta' del marco permite que cada esquina se desplace ligeramente, creando ese movimiento de torsión en el plano.",
+              "description": "El anillo superior gira alrededor del eje vertical. Hay una mínima flexión fuera del plano y el anillo se mantiene prácticamente paralelo al plano del suelo. Las cuatro patas sirven como puntos de pivote, y la geometría rectangular 'abierta' del marco permite que cada esquina se desplace ligeramente, creando ese movimiento de torsión en el plano.",
               "caption": "Primer modo torsional - 110Hz"
             },
             "4": {
               "title": "Flexión en el plano - 147Hz",
-              "description": "Este modo implica principalmente los perfiles de anillo medio más pequeños de la mesa a lo largo de su eje más largo moviéndose hacia adentro y hacia afuera, mientras que el anillo superior, más rígido, muestra menos movimiento. Debido a que estos perfiles son más delgados, se flexionan más fácilmente, lo que explica por qué el anillo superior permanece relativamente quieto durante esta vibración.",
+              "description": "Este modo implica principalmente el anillo medio de perfiles más pequeños de la mesa, a lo largo de su eje más largo, moviéndose hacia adentro y hacia afuera, mientras que el anillo superior, más rígido, muestra menos movimiento. Debido a que estos perfiles son más delgados, se flexionan más fácilmente, lo que explica por qué el anillo superior permanece relativamente quieto durante esta vibración.",
               "caption": "Flexión en el plano - 147Hz"
             },
             "5": {
-              "title": "Modo de corte en el plano - 155Hz",
+              "title": "Modo de cortante en el plano - 155Hz",
               "description": "El marco superior oscila entre dos formas romboides. Debido a que la rigidez en el plano del anillo es relativamente baja, cada esquina soldada puede pivotar ligeramente, permitiendo que el marco rectangular se deforme como un rombo. Este movimiento permanece mayormente en el plano de la mesa, en lugar de flexionar fuera del plano.",
-              "caption": "Modo de corte en el plano - 155Hz"
+              "caption": "Modo de cortante en el plano - 155Hz"
             }
           }
         }
@@ -178,38 +178,38 @@
       "title": "Dinámica de Fluidos por Computadora (CFD)",
       "studyCases": {
         "0": {
-          "studyCaseTitle": "Estudio de la eficiencia térmica de una habitación",
+          "studyCaseTitle": "Eficiencia térmica en espacio interior (HVAC)",
           "mediaItems": {
             "0": {
-              "title": "Dimensiones principales de la habitación del edificio",
-              "description": "La imagen describe las dimensiones clave de la habitación del edificio, destacando fuentes de calor y muebles en tonos rojizos. La posición de la unidad de aire acondicionado (entrada) se detallará en la siguiente imagen. La simulación asume puertas cerradas y modela la transferencia de calor convectiva transitoria dentro de la habitación.",
-              "caption": "Dimensiones principales de la habitación del edificio",
-              "alt": "Dimensiones principales de la habitación del edificio"
+              "title": "Dimensiones principales del espacio interior del edificio",
+              "description": "La imagen describe las dimensiones clave del espacio interior, destacando fuentes de calor y muebles en tonos rojizos. La posición de la unidad de aire acondicionado (HVAC) se detallará en la siguiente imagen. La simulación asume puertas cerradas y modela la transferencia de calor convectiva transitoria dentro de la habitación.",
+              "caption": "Dimensiones principales del espacio interior del edificio",
+              "alt": "Dimensiones principales del espacio interior del edificio"
             },
             "1": {
-              "title": "Fuentes de calor y BCs",
-              "description": "La imagen muestra las condiciones de frontera de la habitación con una fuente de calor de ventana simplificada, ignorando radiación o conducción. Dos personas y un televisor actúan como fuentes de temperatura fija. El aire más frío entra desde el AC a un ángulo de 45°, mientras que las partes inferiores de las puertas sirven como salidas de presión.",
-              "caption": "Fuentes de calor y BCs",
-              "alt": "Fuentes de calor y BCs"
+              "title": "Fuentes de calor y condiciones de contorno",
+              "description": "La imagen muestra las condiciones de contorno del espacio interior con una ventana que presenta una temperatura fija, ignorando radiación y conducción a modo de simplificación. Dos personas y un televisor interactúan con el ambiente mediante una temperatura fija. El aire más frío entra desde la unidad de aire acondicionado (HVAC) a un ángulo de 45° y con velocidad uniforme, mientras que las partes inferiores de las puertas sirven como salidas de presión.",
+              "caption": "Fuentes de calor y condiciones de contorno",
+              "alt": "Fuentes de calor y condiciones de contorno"
             },
             "2": {
               "title": "Velocidad y temperatura - vista 1",
-              "description": "Este video rastrea las magnitudes de velocidad y temperaturas durante una simulación de 50s. Las líneas trazadoras del AC muestran que el aire frío afecta principalmente a una zona menos crítica, dejando el área de los ocupantes relativamente cálida. Aunque solo se muestran algunos caminos, la fricción implica un patrón similar cerca de las trayectorias. Estos hallazgos confirman la ubicación subóptima del AC.",
+              "description": "Este video monitorea las magnitudes de velocidad y temperatura durante una simulación transitoria de 50s. Las líneas trazadoras desde el AC muestran que el aire frío afecta principalmente a una zona menos crítica, dejando el área de los ocupantes relativamente cálida. Aunque solo se muestran algunas trazas, la fricción implica un patrón similar cerca de la trayectoria de dichas trazas. Estos puntos confirman la ubicación subóptima del aire acondiconado (HVAC).",
               "caption": "Velocidad y temperatura - vista 1"
             },
             "3": {
               "title": "Velocidad y temperatura - vista 2",
-              "description": "Este video destaca cómo el aire frío permanece principalmente dentro de una zona confinada, lo que sugiere una posible recirculación y disipación de calor ineficiente. Aunque la recirculación no es directamente visible aquí, las paredes circundantes crean un espacio propenso a bucles de flujo de aire, situación que se examinará en el próximo video.",
+              "description": "Este video destaca cómo el aire frío permanece principalmente dentro de una zona confinada, lo que sugiere una posible recirculación y disipación ineficiente de calor. Aunque la recirculación no es directamente visible aquí, las paredes circundantes crean un espacio propenso a bucles de flujo de aire, situación que se examinará en el próximo video.",
               "caption": "Velocidad y temperatura - vista 2"
             },
             "4": {
               "title": "Patrón de recirculación",
-              "description": "Este video presenta una sección plana a través de la unidad de AC, mostrando vectores de velocidad en el plano. Notablemente, el flujo que desciende desde la parte superior de la unidad forma un bucle de recirculación limitado por paredes circundantes, limitando el flujo de aire directo a las áreas de los ocupantes y sugiriendo ineficiencias en la ubicación del sistema.",
+              "description": "Este video presenta una sección plana a través de la unidad de aire acondicionado (HVAC), mostrando vectores de velocidad en el plano. Notablemente, el flujo que desciende desde la parte superior de la unidad forma un bucle de recirculación limitado por paredes circundantes, limitando el flujo de aire directo a las áreas de los ocupantes y sugiriendo ineficiencias en la ubicación del sistema.",
               "caption": "Patrón de recirculación"
             },
             "5": {
               "title": "Isovolumen de temperatura",
-              "description": "Este video muestra una zona de isovolumen que marca temperaturas dentro de un rango especificado, destacando la distribución 3D del aire más frío. La habitación, inicialmente a 300K, experimenta una disminución máxima de aproximadamente 1.5K en estas regiones, mientras que otras áreas permanecen por encima del umbral. Esta área de enfriamiento limitada indica una distribución de aire subóptima y, potencialmente, la necesidad de mayor potencia del AC, resultando en un aumento de los costos de energía con la posición actual del AC.",
+              "description": "Este video muestra una zona de isovolumen que marca temperaturas dentro de un rango especificado, destacando la distribución 3D del aire más frío. La habitación, inicialmente a 300K (27°C), experimenta una disminución máxima de aproximadamente 1.5K (1.5°C) en estas regiones, mientras que otras áreas permanecen por encima del umbral. Esta área de enfriamiento limitada indica una distribución de aire subóptima y, potencialmente, la necesidad de mayor potencia del aire acondiconado (HVAC), resultando en un aumento de los costos de energía manteniendo la posición actual.",
               "caption": "Isovolumen de temperatura"
             }
           }
@@ -219,62 +219,62 @@
   },
   "openImages": {
     "0": {
-      "description": "Solucionador FEA de código abierto para análisis estructural",
+      "description": "Calculix: Solver FEM/FEA de código abierto para análisis estructural",
       "alt": "CalculiX",
-      "caption": "Solucionador FEA de código abierto para análisis estructural"
+      "caption": "Calculix: Solver FEM/FEA de código abierto para análisis estructural"
     },
     "1": {
-      "description": "Herramienta para el procesamiento de resultados del solucionador LS-DYNA",
+      "description": "LS-Prepost: Herramienta para el procesamiento de resultados del solucionador LS-DYNA",
       "alt": "LS-PrePost",
       "caption": "Herramienta para el procesamiento de resultados del solucionador LS-DYNA"
     },
     "2": {
-      "description": "Solucionador de análisis dinámico para simulaciones de choques",
+      "description": "OpenRadioss: Solver de análisis dinámico para simulaciones de impactos",
       "alt": "OpenRadioss",
-      "caption": "Solucionador de análisis dinámico para simulaciones de choques"
+      "caption": "OpenRadioss: Solver de análisis dinámico para simulaciones de impactos"
     },
     "3": {
-      "description": "Visualización 3D para datos de simulación",
-      "alt": "ParaView",
-      "caption": "Visualización 3D para datos de simulación"
+      "description": "Paraview: Visualización 3D para datos de simulación",
+      "alt": "Paraview: Visualización 3D para datos de simulación",
+      "caption": "Paraview: Visualización 3D para datos de simulación"
     },
     "4": {
-      "description": "Preprocesador para el solucionador CalculiX",
-      "alt": "PrePoMax",
-      "caption": "Preprocesador para el solucionador CalculiX"
+      "description": "PrePomax: Preprocesador para el solver CalculiX",
+      "alt": "PrePomax: Preprocesador para el solver CalculiX",
+      "caption": "PrePomax: Preprocesador para el solver CalculiX"
     },
     "5": {
-      "description": "Solucionador CFD para simulaciones de fluidos",
-      "alt": "OpenFOAM",
-      "caption": "Solucionador CFD para simulaciones de fluidos"
+      "description": "OpenFoam: Solver CFD para simulaciones de dinámica de fluidos",
+      "alt": "OpenFoam: Solver CFD para simulaciones de dinámica de fluidos",
+      "caption": "OpenFoam: Solver CFD para simulaciones de dinámica de fluidos"
     }
   },
   "comImages": {
     "0": {
-      "description": "Preprocesador para modelado CAE avanzado",
-      "alt": "ANSA",
-      "caption": "Preprocesador para modelado CAE avanzado"
+      "description": "ANSA (© Beta CAE Systems): Herramienta de preproceso para modelado CAE avanzado",
+      "alt": "ANSA (© Beta CAE Systems): Herramienta de preproceso para modelado CAE avanzado",
+      "caption": "ANSA (© Beta CAE Systems): Herramienta de preproceso para modelado CAE avanzado"
     },
     "1": {
-      "description": "Herramienta de postprocesamiento para análisis de datos CAE",
-      "alt": "META",
-      "caption": "Herramienta de postprocesamiento para análisis de datos CAE"
+      "description": "ANSA (© Beta CAE Systems): Herramienta de postproceso para análisis de resultados en CAE",
+      "alt": "META (© Beta CAE Systems): Herramienta de postproceso para análisis de resultados en CAE",
+      "caption": "META (© Beta CAE Systems): Herramienta de postproceso para análisis de resultados en CAE"
     },
     "2": {
-      "description": "Solucionador FEA implícito para análisis estructural",
-      "alt": "SIMULIA Abaqus Standard",
-      "caption": "Solucionador FEA implícito para análisis estructural"
+      "description": "Abaqus Standard (© SIMULIA): Solver FEM/FEA para análisis estructural",
+      "alt": "Abaqus Standard (© SIMULIA): Solver FEM/FEA para análisis estructural",
+      "caption": "Abaqus Standard (© SIMULIA): Solver FEM/FEA para análisis estructural"
     },
     "3": {
-      "description": "Solucionador FEA explícito para simulaciones dinámicas",
-      "alt": "LS-DYNA",
-      "caption": "Solucionador FEA explícito para simulaciones dinámicas"
+      "description": "LS-Dyna (© Ansys): Solver FEM/FEA para simulaciones dinámicas",
+      "alt": "LS-Dyna (© Ansys): Solver FEM/FEA para simulaciones dinámicas",
+      "caption": "LS-Dyna (© Ansys): Solver FEM/FEA para simulaciones dinámicas"
     }
   },
   "aboutProsimcae": {
     "createdByPart1": "Creado por",
     "name": "Jordi Parra Porcar",
-    "createdByPart2": ", Ingeniero Mecánico especializado en CAE durante más de 8 años.",
+    "createdByPart2": ", Ingeniero Mecánico especializado en análisis CAE durante más de 8 años.",
     "list": {
       "item1Part1": "Experiencia en los sectores",
       "automotive": "automotriz",
@@ -284,23 +284,23 @@
       "fea": "FEA (Análisis de Elementos Finitos)",
       "andCFD": "y CFD (Mecánica de Fluidos Computacional).",
       "item3Part1": "Autor de una",
-      "publication": "publicación CFD revisada por pares",
-      "andSuccessfully": "y supervisión exitosa de proyectos que",
-      "costReduction": "reducieron los costos de prototipado",
+      "publication": "publicación CFD revisada",
+      "andSuccessfully": "y supervisión con éxito de proyectos que",
+      "costReduction": "reducieron los costos de prototipo",
       "andAccelerated": "y aceleraron los tiempos de diseño.",
       "item4Part1": "Operando como una",
-      "consultancy": "consultoría remota",
-      "workingWithClients": "trabajando con clientes internacionalmente para",
+      "consultancy": "consultoría en remoto",
+      "workingWithClients": "y trabajando con clientes nacional e internacionalmente para",
       "services": "servicios de simulación rápidos, flexibles y rentables",
       "simulationServices": "."
     }
   },
   "joinNetworkSection": {
-    "title": "Únete a nuestra red de profesionales",
-    "paragraph": "Invitamos a ingenieros calificados y expertos en simulación a colaborar en proyectos innovadores.",
+    "title": "Colabora con nosotros B2B",
+    "paragraph": "Invitamos a ingenieros expertos en simulación a colaborar en proyectos innovadores.",
     "list": {
       "item1": "Trabajar en proyectos diversos y emocionantes",
-      "item2": "Crecimiento profesional y mejora de habilidades",
+      "item2": "Crecimiento profesional y desarrollo",
       "item3": "Arreglos de colaboración flexibles"
     }
   },
@@ -308,7 +308,7 @@
     "simulationServices": "Servicios de simulación",
     "howWeWork": "Cómo trabajamos",
     "caseStudies": "Estudios de caso",
-    "partnerWithUs": "Asóciate con nosotros",
+    "partnerWithUs": "Colabora con nosotros",
     "aboutProsimcae": "Acerca de Prosimcae"
   },
   "dialogGetInTouchButton": "Contáctanos",

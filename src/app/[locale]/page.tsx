@@ -34,7 +34,7 @@ const Home = ({ params: { locale } }: { params: { locale: string } }) => {
       >
         <MainSectionIntro
           descriptionContainerClass="appear-fading"
-          descriptionClass="text-gray-500 text-2xl max-md:text-base max-md:px-2 px-3 max-md:px-6 italic text-center max-md:text-justify max-md:mt-8 "
+          descriptionClass="text-gray-500 text-2xl max-md:text-base max-md:px-2 px-3 max-md:px-4 italic text-center max-md:text-justify max-md:mt-8 "
           descriptionText={mainSectionIntroDescription}
         />
       </div>

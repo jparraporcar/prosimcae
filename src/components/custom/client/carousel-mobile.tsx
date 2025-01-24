@@ -44,6 +44,7 @@ export const CarouselMobile: React.FC<RotatingImageCarouselProps> = (props) => {
   return (
     <div ref={carouselRef}>
       <Carousel
+        id="carousel-mobile-overflow"
         className="w-full max-w-sm"
         setApi={setApi}
         plugins={[

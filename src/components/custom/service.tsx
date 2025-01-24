@@ -43,7 +43,7 @@ export const Service: React.FC<ServiceProps> = (props) => {
               key={index}
               className="flex flex-row items-start text-base max-md:text-xs"
             >
-              <div className="w-6 mr-2 flex justify-center items-start">
+              <div className="w-6 min-w-6 mr-2 flex justify-center items-start">
                 <FaCheck className="text-gray-500 mt-1" />
               </div>
               <div className="flex flex-col">
