@@ -54,10 +54,6 @@ const FloatingButton: React.FC = () => {
         border
         active:border-2
 
-        /* Interaction */
-        hover:bg-slate-300 
-        transition-all duration-300 
-
         /* Layout */
         flex justify-center items-center
         z-50
