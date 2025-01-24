@@ -104,12 +104,12 @@ const Home = ({ params: { locale } }: { params: { locale: string } }) => {
           />
         ))}
       </div>
-      <Separator orientation="horizontal" className="mb-14" />
+      <Separator orientation="horizontal" className="mb-10 max-md:mb-8" />
       <div id="main-section-title-collaborations" className="section">
         <MainSectionTitle title={mainSectionTitles.partnerWithUs} />
       </div>
       <JoinNetworkSection />
-      <Separator orientation="horizontal" className="mb-10 mt-14" />
+      <Separator orientation="horizontal" className="mb-8 mt-14" />
       <div id="main-section-title-about-prosimcae" className="section">
         <MainSectionTitle title={mainSectionTitles.aboutProsimcae} />
       </div>

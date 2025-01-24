@@ -9,7 +9,7 @@ export default function AboutProsimcaeSection() {
   const t = useTranslations();
   return (
     <section className="flex flex-row justify-center">
-      <div className="mt-6 mb-14 w-11/12">
+      <div className="mt-6 mb-16 w-11/12 2xl:w-full">
         <Card className="bg-white shadow-2xl rounded-xl">
           <CardHeader className="p-4 bg-slate-300 rounded-t-xl">
             <CardTitle>
@@ -37,7 +37,9 @@ export default function AboutProsimcaeSection() {
               <li>
                 {t(about.list.item2.part1)}{" "}
                 <span className="font-semibold">{t(about.list.item2.fea)}</span>{" "}
-                {t(about.list.item2.andCFD)}
+                <span className="font-semibold">
+                  {t(about.list.item2.andCFD)}
+                </span>
               </li>
               <li>
                 {t(about.list.item3.part1)}{" "}
@@ -54,7 +56,7 @@ export default function AboutProsimcaeSection() {
                 {t(about.list.item4.part1)}{" "}
                 <span className="font-semibold">
                   {t(about.list.item4.consultancy)}
-                </span>
+                </span>{" "}
                 {t(about.list.item4.workingWithClients)}{" "}
                 <span className="font-semibold">
                   {t(about.list.item4.services)}

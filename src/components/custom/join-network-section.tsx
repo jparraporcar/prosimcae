@@ -16,7 +16,7 @@ export default function JoinNetworkSection() {
             {t(joinNetworkSection.title)}
           </CardTitle>
         </CardHeader>
-        <CardContent className="p-10 max-md:p-6 space-y-6 flex flex-col items-center">
+        <CardContent className="p-8 max-md:p-4 space-y-6 flex flex-col items-center">
           <p className="text-center text-gray-700 text-xl max-md:text-sm leading-relaxed">
             {t(joinNetworkSection.paragraph)}
           </p>
