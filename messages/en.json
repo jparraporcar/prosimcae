@@ -384,7 +384,7 @@
     }
   },
   "resumeUploadDialog": {
-    "submitButton": "Submit Your CV",
+    "submitButton": "Send CV",
     "dialogTitle": "Upload your resume please"
   }
 }
