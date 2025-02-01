@@ -6,13 +6,14 @@
       "canonical": "https://www.prosimcae.com/en/"
     }
   },
-  "mainSectionIntroDescription": "From Fluid Dynamics (CFD) to structural analysis (FEM/FEA) and thermal, we help you optimize your product development and assist you with any unexpected problems. We have tailored solutions!",
+  "mainSectionIntroDescription": "From Fluid Dynamics (CFD) to structural analysis and thermal (FEM/FEA), we help you optimize your product development and assist you with any unexpected problems. We have tailored solutions!",
   "mainSectionTitles": {
     "simulationServices": "Simulation Services: CFD, FEM/FEA and thermal",
     "howWeWork": "How we work",
     "caseStudies": "Case studies",
-    "partnerWithUs": "Partner with Us",
-    "aboutProsimcae": "About Prosimcae"
+    "partnerWithUs": "Work with us B2B",
+    "aboutProsimcae": "About Prosimcae",
+    "blog": "Blog"
   },
   "onDemandEngineering": {
     "serviceName": "On-Demand Engineering",
@@ -272,6 +273,7 @@
     }
   },
   "aboutProsimcae": {
+    "title": "Get to know more about us",
     "createdByPart1": "Created by",
     "name": "Jordi Parra Porcar",
     "createdByPart2": ", Mechanical Engineer specialized in CAE analysis for over 8 years.",
@@ -296,7 +298,7 @@
     }
   },
   "joinNetworkSection": {
-    "title": "Collaborate with us B2B",
+    "title": "Work with us B2B",
     "paragraph": "We invite skilled simulation engineers to collaborate on innovative projects.",
     "list": {
       "item1": "Work on diverse and exciting projects",
@@ -308,7 +310,8 @@
     "simulationServices": "Simulation services",
     "howWeWork": "How we work",
     "caseStudies": "Case studies",
-    "partnerWithUs": "Partner with us",
+    "blog": "Blog",
+    "partnerWithUs": "Work with us B2B",
     "aboutProsimcae": "About prosimcae"
   },
   "dialogGetInTouchButton": "Get In Touch",
@@ -386,5 +389,29 @@
   "resumeUploadDialog": {
     "submitButton": "Send CV",
     "dialogTitle": "Upload your resume please"
+  },
+  "blog": {
+    "latestBlogEntries": "Latest blog entries",
+    "blogEntries": {
+      "0": {
+        "slug": "what-is-the-finite-element-method-fem",
+        "title": "What is the Finite Element Method (FEM)?",
+        "date": "2025-Jan-30",
+        "difficulty": "Low difficulty",
+        "content": {
+          "mainTitle": "What is the Finite Element Method (FEM)?",
+          "heading1": "1. Understanding the Basics",
+          "paragraph1": "<p class=\"mb-4\">The Finite Element Method (FEM) is a numerical technique widely used in engineering to predict how physical objects or systems behave under various conditions. It splits a structure into smaller parts, called elements, which connect at nodes. Each element is assigned properties that replicate the real material, so the virtual model closely mimics reality. This approach is especially helpful when analyzing shapes or materials that would be difficult or expensive to test through conventional methods.</p><p class=\"mb-4\">For instance, imagine a wooden chair and the need to see how it bends under different weights. Instead of building multiple prototypes, a computer-based FEM model is generated. The seat, legs, and supports are broken down into elements. Applying a simulated load helps identify weak spots and guides design adjustments, visualizing stress and strain distributions under daily or extreme conditions.</p>",
+          "heading2": "2. Why FEM Is Crucial in Engineering",
+          "paragraph2": "<p class=\"mb-4\">FEM has become essential in modern product development because it uncovers potential issues before a real prototype is built. This saves time and resources by reducing the need for repeated physical tests. Whether for aircraft components, medical devices, or everyday products, FEM helps ensure safety and performance.</p><p class=\"mb-4\">By leveraging powerful computing resources, engineers can examine how forces, temperatures, and even electromagnetic fields affect a design. Common applications include:</p><ul class=\"list-disc list-inside pl-4 mb-4\"><li class=\"mb-1\"><strong>Automotive:</strong> analyzing crash behavior of vehicle frames.</li><li class=\"mb-1\"><strong>Civil engineering:</strong> evaluating bridges and high-rises under wind or seismic loads.</li><li class=\"mb-1\"><strong>Aerospace:</strong> optimizing structures for weight reduction and durability.</li></ul>",
+          "heading3": "3. Key Steps in an FEM Study",
+          "paragraph3": "<p class=\"mb-4\">Although it may seem complex, an FEM study follows a structured workflow:</p><ul class=\"list-disc list-inside pl-4 mb-4\"><li class=\"mb-1\"><strong>Digital geometry:</strong> create or import a 3D model.</li><li class=\"mb-1\"><strong>Meshing:</strong> subdivide the model into small elements (triangles, quadrilaterals, tetrahedrons, etc.).</li><li class=\"mb-1\"><strong>Material properties:</strong> assign values like elasticity, density, or thermal conductivity.</li><li class=\"mb-1\"><strong>Boundary conditions:</strong> apply forces, pressures, or temperature loads.</li><li class=\"mb-1\"><strong>Solving and interpretation:</strong> calculate stress, strain, and other results to assess performance.</li></ul><p class=\"mb-4\">If results fall short, modifications can be made and tested again, speeding up the optimization process.</p>",
+          "heading4": "4. Benefits and Future Prospects",
+          "paragraph4": "<p class=\"mb-4\">FEM accelerates development and reduces costs by identifying structural issues or stress concentrations before building physical prototypes. This approach fosters innovative solutions and leads to more efficient, lighter designs.</p><p class=\"mb-4\">As computing power grows, simulations become faster and more detailed, and automated optimization techniques are gaining ground. FEM therefore remains a cornerstone of engineering, driving continuous improvement across numerous industries.</p>",
+          "metaTitle": "FEM Basics: Introduction to the Finite Element Method",
+          "metaDescription": "Discover how the finite element method transforms engineering simulation. Learn FEM basics and real-world applications."
+        }
+      }
+    }
   }
 }

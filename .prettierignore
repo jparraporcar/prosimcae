@@ -1,5 +1,0 @@
-node_modules
-build
-
-# code to be formatted in a specific commit
-src/components/ui/navigation-menu.tsx

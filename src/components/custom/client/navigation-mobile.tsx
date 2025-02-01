@@ -19,16 +19,18 @@ import "./navigation-mobile.css";
 import Link from "next/link";
 import { navButtonLabels } from "@/lib/content";
 import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 
 export const NavigationMobile: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
   const t = useTranslations();
+  const locale = useLocale();
 
   const handleClick = (id: string) => {
     setIsOpen((prevState) => !prevState);
-    if (pathname === "/" || "/en" || "/es") {
+    if (pathname === "/" || pathname === "/en" || pathname === "/es") {
       // On the main page, scroll to the section
       setTimeout(() => {
         const section = document.querySelector(id);
@@ -38,7 +40,8 @@ export const NavigationMobile: React.FC = () => {
       }, 400);
     } else {
       // Navigate to the main page and reset to the top
-      router.push(pathname);
+      console.log(router);
+      router.replace(`/${locale}`);
       setTimeout(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
         const section = document.querySelector(id);
@@ -94,6 +97,12 @@ export const NavigationMobile: React.FC = () => {
             className="text-black bg-white inline-flex border-white h-10 w-max items-center justify-center rounded-md bg-transparent px-4 text-lg font-medium py-4 pr-4 active:bg-slate-300 active:border-white focus:outline-none focus:border-white -webkit-appearance-none"
           >
             {t(navButtonLabels.caseStudies)}
+          </button>
+          <button
+            onClick={() => handleClick("#main-section-title-blog")}
+            className="text-black bg-white inline-flex border-white h-10 w-max items-center justify-center rounded-md bg-transparent px-4 text-lg font-medium py-4 pr-4 active:bg-slate-300 active:border-white focus:outline-none focus:border-white -webkit-appearance-none"
+          >
+            {t(navButtonLabels.blog)}
           </button>
           <button
             onClick={() => handleClick("#main-section-title-collaborations")}

@@ -11,6 +11,7 @@ import {
 import { useState } from "react";
 import { ResumeUploadForm } from "./resume-upload-form";
 import { useTranslations } from "next-intl";
+import { DialogDescription } from "@radix-ui/react-dialog";
 
 export const ResumeUploadDialog: React.FC = () => {
   const [switchDialog, setSwitchDialog] = useState<boolean>(false);

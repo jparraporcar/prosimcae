@@ -9,20 +9,17 @@ export default function AboutProsimcaeSection() {
   const t = useTranslations();
   return (
     <section className="flex flex-row justify-center">
-      <div className="mt-6 mb-16 w-11/12 2xl:w-full">
+      <div className="mt-6 mb-16 max-md:w-11/12 2xl:w-full">
         <Card className="bg-white shadow-2xl rounded-xl">
           <CardHeader className="p-4 bg-slate-300 rounded-t-xl">
-            <CardTitle>
-              <p className="text-black text-xl max-md:text-base leading-relaxed text-center">
-                {t(about.createdBy.part1)}{" "}
-                <span className="text-shadow">{t(about.createdBy.name)}</span>
-                {t(about.createdBy.part2)}
-              </p>
-            </CardTitle>
+            <CardTitle></CardTitle>
           </CardHeader>
-
           <CardContent className="p-10 max-md:p-6 space-y-6">
-            {/* Standard bullet list */}
+            <p className="text-black text-xl max-md:text-base leading-relaxed text-center">
+              {t(about.createdBy.part1)}{" "}
+              <span className="text-shadow">{t(about.createdBy.name)}</span>
+              {t(about.createdBy.part2)}
+            </p>
             <ul className="list-disc list-inside space-y-4 text-gray-700 text-lg max-md:text-xs leading-relaxed">
               <li>
                 {t(about.list.item1.part1)}{" "}

@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     getEntry("/legal-notice"),
     getEntry("/privacy-policy"),
     getEntry("/terms-of-service"),
+    getEntry("/blog-entries/what-is-the-finite-element-method-fem"),
   ];
 }
 

@@ -9,6 +9,7 @@ export const mainSectionTitles = {
   caseStudies: "mainSectionTitles.caseStudies",
   partnerWithUs: "mainSectionTitles.partnerWithUs",
   aboutProsimcae: "mainSectionTitles.aboutProsimcae",
+  blog: "mainSectionTitles.blog",
 };
 
 export const customEngineering = {
@@ -642,6 +643,7 @@ export const navButtonLabels = {
   simulationServices: "navButtonLabels.simulationServices",
   howWeWork: "navButtonLabels.howWeWork",
   caseStudies: "navButtonLabels.caseStudies",
+  blog: "navButtonLabels.blog",
   partnerWithUs: "navButtonLabels.partnerWithUs",
   aboutProsimcae: "navButtonLabels.aboutProsimcae",
 };
@@ -728,4 +730,29 @@ export const footer = {
 export const resumeUploadDialog = {
   submitButton: "resumeUploadDialog.submitButton",
   dialogTitle: "resumeUploadDialog.dialogTitle",
+};
+
+export const blog = {
+  latestBlogEntries: "blog.latestBlogEntries",
+  blogEntries: [
+    {
+      slug: "blog.blogEntries.0.slug",
+      title: "blog.blogEntries.0.title",
+      date: "blog.blogEntries.0.date",
+      difficulty: "blog.blogEntries.0.difficulty",
+      content: {
+        mainTitle: "blog.blogEntries.0.content.mainTitle",
+        heading1: "blog.blogEntries.0.content.heading1",
+        paragraph1: "blog.blogEntries.0.content.paragraph1",
+        heading2: "blog.blogEntries.0.content.heading2",
+        paragraph2: "blog.blogEntries.0.content.paragraph2",
+        heading3: "blog.blogEntries.0.content.heading3",
+        paragraph3: "blog.blogEntries.0.content.paragraph3",
+        heading4: "blog.blogEntries.0.content.heading4",
+        paragraph4: "blog.blogEntries.0.content.paragraph4",
+        metaTitle: "blog.blogEntries.0.content.paragraph4",
+        metaDescription: "blog.blogEntries.0.content.paragraph5",
+      },
+    },
+  ],
 };

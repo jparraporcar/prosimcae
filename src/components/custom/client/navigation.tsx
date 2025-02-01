@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 
 import {
   NavigationMenu,
@@ -18,6 +18,7 @@ import logo from "@/images/provisional-logo-prosimcae.webp";
 import { navButtonLabels } from "@/lib/content";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
+import { usePathname } from "next/navigation";
 
 export function Navigation() {
   const t = useTranslations();
@@ -28,7 +29,7 @@ export function Navigation() {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem id="navitemtest" className="-mt-1 mr-4">
-            <Link href={`/${locale}`} legacyBehavior passHref>
+            <Link href="/" legacyBehavior passHref>
               <NavigationMenuLink>
                 <div className="mr-auto ml-4">
                   <Image
@@ -43,7 +44,7 @@ export function Navigation() {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem className="flex">
-            <Link href="#main-section-title-services" legacyBehavior passHref>
+            <Link href="/#main-section-title-services" legacyBehavior passHref>
               <NavigationMenuLink
                 className={cn([
                   navigationMenuTriggerStyle(),
@@ -55,7 +56,11 @@ export function Navigation() {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="#main-section-title-technology" legacyBehavior passHref>
+            <Link
+              href="/#main-section-title-technology"
+              legacyBehavior
+              passHref
+            >
               <NavigationMenuLink
                 className={cn([
                   navigationMenuTriggerStyle(),
@@ -68,7 +73,7 @@ export function Navigation() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link
-              href="#main-section-title-study-cases"
+              href="/#main-section-title-study-cases"
               legacyBehavior
               passHref
             >
@@ -83,8 +88,20 @@ export function Navigation() {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
+            <Link href="/#main-section-title-blog" legacyBehavior passHref>
+              <NavigationMenuLink
+                className={cn([
+                  navigationMenuTriggerStyle(),
+                  "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
+                ])}
+              >
+                {t(navButtonLabels.blog)}
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
             <Link
-              href="#main-section-title-collaborations"
+              href="/#main-section-title-collaborations"
               legacyBehavior
               passHref
             >
@@ -100,7 +117,7 @@ export function Navigation() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link
-              href="#main-section-title-about-prosimcae"
+              href="/#main-section-title-about-prosimcae"
               legacyBehavior
               passHref
             >

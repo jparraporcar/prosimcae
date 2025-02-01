@@ -13,6 +13,7 @@ import { routing } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 import { Toaster } from "@/components/ui/toaster";
+import FloatingButton from "@/components/custom/client/floating-button";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,11 +22,11 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: {
-  params: { locale: string };
+  params: any;
 }): Promise<Metadata> {
-  // Enable static rendering
+  const { locale } = await params;
   const t = await getTranslations({ locale });
 
   return {
@@ -42,12 +43,12 @@ export async function generateMetadata({
 
 export default async function LocaleLayout({
   children,
-  params: { locale },
+  params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: any;
 }) {
-  // Ensure that the incoming `locale` is valid
+  const { locale } = await params;
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
@@ -60,6 +61,7 @@ export default async function LocaleLayout({
     <html lang={locale} className="mx-0">
       <NextIntlClientProvider messages={messages}>
         <body className={inter.className}>
+          <FloatingButton />
           <CookieBanner />
           <AnalyticsProvider />
           <SpeedInsights />

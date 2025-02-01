@@ -9,12 +9,10 @@ export default function JoinNetworkSection() {
   const t = useTranslations();
 
   return (
-    <section className="flex flex-row justify-center">
-      <Card className="bg-white shadow-2xl rounded-2xl mt-6 w-11/12">
+    <section className="flex flex-row justify-center max-md:w-11/12">
+      <Card className="bg-white shadow-2xl rounded-2xl mt-6">
         <CardHeader className="p-4 bg-slate-300 rounded-t-xl">
-          <CardTitle className="text-black text-xl max-md:text-base text-center">
-            {t(joinNetworkSection.title)}
-          </CardTitle>
+          <CardTitle className="text-black text-xl max-md:text-base text-center"></CardTitle>
         </CardHeader>
         <CardContent className="p-8 max-md:p-4 space-y-6 flex flex-col items-center">
           <p className="text-center text-gray-700 text-xl max-md:text-sm leading-relaxed">
