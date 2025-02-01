@@ -14,6 +14,7 @@ import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 import { Toaster } from "@/components/ui/toaster";
 import FloatingButton from "@/components/custom/client/floating-button";
+import { setRequestLocale } from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -52,9 +53,8 @@ export default async function LocaleLayout({
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
+  setRequestLocale(locale);
 
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
 
   return (

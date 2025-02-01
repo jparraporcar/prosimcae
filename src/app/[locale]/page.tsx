@@ -17,13 +17,11 @@ import { ContactDialogOndemand } from "@/components/custom/client/contact-dialog
 import { CarouselWrapper } from "@/components/custom/client/carousel-wrapper";
 import AboutProsimcaeSection from "@/components/custom/about-prosimcae-section";
 import JoinNetworkSection from "@/components/custom/join-network-section";
-import { setRequestLocale } from "next-intl/server";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { BlogEntriesSection } from "@/components/custom/client/blog-entries-section";
 
 const Home = () => {
   const t = useTranslations();
-  const locale = useLocale();
 
   return (
     <main className="w-full flex flex-col items-center max-md:mt-0 overflow-x-hidden mt-12">
