@@ -740,6 +740,8 @@ export const blog = {
       title: "blog.blogEntries.0.title",
       date: "blog.blogEntries.0.date",
       difficulty: "blog.blogEntries.0.difficulty",
+      titleMeta: "blog.blogEntries.0.metaTitle",
+      descriptionMeta: "blog.blogEntries.0.metaDescription",
       content: {
         mainTitle: "blog.blogEntries.0.content.mainTitle",
         heading1: "blog.blogEntries.0.content.heading1",

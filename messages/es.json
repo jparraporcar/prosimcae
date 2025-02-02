@@ -398,6 +398,8 @@
         "title": "¿Qué es el método de los elementos finitos (MEF)?",
         "date": "2025-Ene-30",
         "difficulty": "Dificultad baja",
+        "metaTitle": "Fundamentos del MEF: Introducción al Método de Elementos Finitos",
+        "metaDescription": "Descubre cómo el Método de Elementos Finitos transforma la simulación en ingeniería. Conoce sus bases y aplicaciones reales.",
         "content": {
           "mainTitle": "¿Qué es el Método de Elementos Finitos (MEF)?",
           "heading1": "1. Comprender los Fundamentos",

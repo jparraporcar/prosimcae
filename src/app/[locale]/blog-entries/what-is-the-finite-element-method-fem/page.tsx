@@ -1,10 +1,23 @@
-"use client";
-
 import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { blog } from "@/lib/content";
 import { type DifficultyLevel, getDifficultyColor } from "@/lib/types";
+import { Metadata } from "next";
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+export async function generateMetadata({
+  params,
+}: {
+  params: any;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale });
+
+  return {
+    title: t(blog.blogEntries[0].titleMeta),
+    description: t(blog.blogEntries[0].descriptionMeta),
+  };
+}
 
 const WhatIsTheFiniteElementMethodFem = () => {
   const t = useTranslations();
