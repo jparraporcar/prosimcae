@@ -16,6 +16,12 @@ export async function generateMetadata({
   return {
     title: t(blog.blogEntries[0].titleMeta),
     description: t(blog.blogEntries[0].descriptionMeta),
+    icons: {
+      icon: "/favicon.ico",
+    },
+    alternates: {
+      canonical: t("metadata.alternates.canonical"),
+    },
   };
 }
 
