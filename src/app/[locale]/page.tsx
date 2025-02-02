@@ -18,7 +18,7 @@ import { CarouselWrapper } from "@/components/custom/client/carousel-wrapper";
 import AboutProsimcaeSection from "@/components/custom/about-prosimcae-section";
 import JoinNetworkSection from "@/components/custom/join-network-section";
 import { useTranslations } from "next-intl";
-import { BlogEntriesSection } from "@/components/custom/client/blog-entries-section";
+import { BlogEntriesSection } from "@/components/custom/blog-entries-section";
 
 const Home = () => {
   const t = useTranslations();

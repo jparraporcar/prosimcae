@@ -5,7 +5,7 @@ import {
   type BlogEntry,
   DifficultyLevel,
   getDifficultyColor,
-} from "../../../lib/types";
+} from "../../lib/types";
 import { useTranslations } from "next-intl";
 import { blog } from "@/lib/content";
 
@@ -29,11 +29,11 @@ export function BlogEntriesSection() {
                   <CardContent className="p-4 max-md:p-2 flex flex-col h-full">
                     <div className="flex justify-between items-start mb-2">
                       <Badge
-                        className={`${getDifficultyColor(t(blog.blogEntries[0].difficulty) as DifficultyLevel)} text-xs font-semibold max-md:mb-2 max-md:text-[10px]`}
+                        className={`${getDifficultyColor(t(blog.blogEntries[0].difficulty) as DifficultyLevel)} text-xs font-semibold max-md:mb-2 max-md:text-[8px] max-md:px-1`}
                       >
                         {t(blog.blogEntries[0].difficulty) as DifficultyLevel}
                       </Badge>
-                      <span className="text-sm text-gray-500 max-md:text-[10px]">
+                      <span className="text-sm text-gray-500 max-md:text-[8px] ">
                         {t(blog.blogEntries[0].date)}
                       </span>
                     </div>
