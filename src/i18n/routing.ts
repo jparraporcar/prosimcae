@@ -6,7 +6,10 @@ export const routing = defineRouting({
   defaultLocale: "es",
   localeDetection: false,
   pathnames: {
-    "/": "/",
+    "/": {
+      en: "/",
+      es: "/",
+    },
     "/cookie-policy": {
       en: "/cookie-policy",
       es: "/politica-de-cookies",
