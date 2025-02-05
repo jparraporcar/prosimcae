@@ -16,10 +16,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 type Href = Parameters<typeof getPathname>[0]["href"];
 
 function getEntry(href: Href) {
+  const isRoot = href === "/";
+
   return {
     url: getUrl(href, routing.defaultLocale),
     alternates: {
-      canonical: getUrl(href, routing.defaultLocale),
+      canonical: isRoot
+        ? "https://www.prosimcae.com/"
+        : getUrl(href, routing.defaultLocale),
       languages: Object.fromEntries(
         routing.locales.map((locale) => [locale, getUrl(href, locale)])
       ),
