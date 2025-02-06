@@ -401,6 +401,7 @@
         "difficulty": "Low difficulty",
         "metaTitle": "FEM Basics: Introduction to the Finite Element Method",
         "metaDescription": "Discover how the finite element method transforms engineering simulation. Learn FEM basics and real-world applications.",
+        "canonical": "https://www.prosimcae.com/en/blog-entries/what-is-the-finite-element-method-fem",
         "content": {
           "mainTitle": "What is the Finite Element Method (FEM)?",
           "heading1": "Understanding the Basics",

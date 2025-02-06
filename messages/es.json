@@ -401,6 +401,7 @@
         "difficulty": "Dificultad baja",
         "metaTitle": "Fundamentos del MEF: Introducción al Método de Elementos Finitos",
         "metaDescription": "Descubre cómo el Método de Elementos Finitos transforma la simulación en ingeniería. Conoce sus bases y aplicaciones reales.",
+        "canonical": "https://www.prosimcae.com/entradas-del-blog/que-es-el-metodo-de-los-elementos-finitos-fem",
         "content": {
           "mainTitle": "¿Qué es el Método de Elementos Finitos (MEF)?",
           "heading1": "Comprender los Fundamentos",
