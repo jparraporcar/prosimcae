@@ -734,6 +734,7 @@ export const resumeUploadDialog = {
 
 export const blog = {
   latestBlogEntries: "blog.latestBlogEntries",
+  subfolderName: "blog.subfolderName",
   blogEntries: [
     {
       slug: "blog.blogEntries.0.slug",
@@ -752,8 +753,25 @@ export const blog = {
         paragraph3: "blog.blogEntries.0.content.paragraph3",
         heading4: "blog.blogEntries.0.content.heading4",
         paragraph4: "blog.blogEntries.0.content.paragraph4",
-        metaTitle: "blog.blogEntries.0.content.paragraph4",
-        metaDescription: "blog.blogEntries.0.content.paragraph5",
+      },
+    },
+    {
+      slug: "blog.blogEntries.1.slug",
+      title: "blog.blogEntries.1.title",
+      date: "blog.blogEntries.1.date",
+      difficulty: "blog.blogEntries.1.difficulty",
+      titleMeta: "blog.blogEntries.1.metaTitle",
+      descriptionMeta: "blog.blogEntries.1.metaDescription",
+      content: {
+        mainTitle: "blog.blogEntries.1.content.mainTitle",
+        heading1: "blog.blogEntries.1.content.heading1",
+        paragraph1: "blog.blogEntries.1.content.paragraph1",
+        heading2: "blog.blogEntries.1.content.heading2",
+        paragraph2: "blog.blogEntries.1.content.paragraph2",
+        heading3: "blog.blogEntries.1.content.heading3",
+        paragraph3: "blog.blogEntries.1.content.paragraph3",
+        heading4: "blog.blogEntries.1.content.heading4",
+        paragraph4: "blog.blogEntries.1.content.paragraph4",
       },
     },
   ],

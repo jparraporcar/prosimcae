@@ -105,7 +105,9 @@ const Home = () => {
       <div id="main-section-title-blog" className="section">
         <MainSectionTitle title={mainSectionTitles.blog} />
       </div>
-      <BlogEntriesSection />
+      <div className="w-11/12 max-md:w-11/12">
+        <BlogEntriesSection />
+      </div>
       <Separator orientation="horizontal" className="mb-10 mt-14 max-md:mb-8" />
       <div id="main-section-title-collaborations" className="section">
         <MainSectionTitle title={mainSectionTitles.partnerWithUs} />

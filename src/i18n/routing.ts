@@ -31,6 +31,11 @@ export const routing = defineRouting({
       en: "/blog-entries/what-is-the-finite-element-method-fem",
       es: "/entradas-del-blog/que-es-el-metodo-de-los-elementos-finitos-fem",
     },
+    "/blog-entries/failure-analysis-and-breakage-in-parts-how-to-avoid-costly-design-errors":
+      {
+        en: "/blog-entries/failure-analysis-and-breakage-in-parts-how-to-avoid-costly-design-errors",
+        es: "/entradas-del-blog/analisis-de-rotura-y-fallos-en-piezas-como-evitar-caros-errores-de-diseno",
+      },
     "/#main-section-title-services": {
       en: "#main-section-title-services",
       es: "/#main-section-title-services",
