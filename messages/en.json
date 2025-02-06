@@ -420,6 +420,7 @@
         "difficulty": "Medium difficulty",
         "metaTitle": "Failure analysis: Avoid costly design errors",
         "metaDescription": "Discover how stress analysis, impact simulations, and design optimization prevent costly failures in mechanical parts.",
+        "canonical": "https://www.prosimcae.com/en/blog-entries/failure-analysis-and-breakage-in-parts-how-to-avoid-costly-design-errors",
         "content": {
           "mainTitle": "Failure analysis and breakage in parts: How to avoid costly design errors?",
           "heading1": "Common causes of part failures",

@@ -20,7 +20,7 @@ export async function generateMetadata({
       icon: "/favicon.ico",
     },
     alternates: {
-      canonical: t("metadata.alternates.canonical"),
+      canonical: t(blog.blogEntries[1].canonical),
     },
   };
 }

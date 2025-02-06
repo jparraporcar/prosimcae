@@ -735,6 +735,7 @@ export const resumeUploadDialog = {
 export const blog = {
   latestBlogEntries: "blog.latestBlogEntries",
   subfolderName: "blog.subfolderName",
+
   blogEntries: [
     {
       slug: "blog.blogEntries.0.slug",
@@ -743,6 +744,7 @@ export const blog = {
       difficulty: "blog.blogEntries.0.difficulty",
       titleMeta: "blog.blogEntries.0.metaTitle",
       descriptionMeta: "blog.blogEntries.0.metaDescription",
+      canonical: "blog.blogEntries.0.canonical",
       content: {
         mainTitle: "blog.blogEntries.0.content.mainTitle",
         heading1: "blog.blogEntries.0.content.heading1",
@@ -762,6 +764,7 @@ export const blog = {
       difficulty: "blog.blogEntries.1.difficulty",
       titleMeta: "blog.blogEntries.1.metaTitle",
       descriptionMeta: "blog.blogEntries.1.metaDescription",
+      canonical: "blog.blogEntries.1.canonical",
       content: {
         mainTitle: "blog.blogEntries.1.content.mainTitle",
         heading1: "blog.blogEntries.1.content.heading1",
