@@ -23,6 +23,7 @@ export const NavigationWrapper: React.FC = () => {
               width={200}
               height={15}
               placeholder="blur"
+              priority
             />
           </Link>
         </div>
