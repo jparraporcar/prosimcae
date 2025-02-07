@@ -38,6 +38,7 @@ export function Navigation() {
                     width={150}
                     height={15}
                     placeholder="blur"
+                    priority
                   />
                 </div>
               </NavigationMenuLink>
