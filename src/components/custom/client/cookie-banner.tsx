@@ -35,9 +35,9 @@ const CookieBanner = () => {
   if (!isVisible) return null; // Don't render the banner if not visible
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 z-50 md:bottom-8 md:left-8 md:right-8">
-      <Card className="border border-gray-300 shadow-lg bg-gray-50 text-gray-800">
-        <CardHeader>
+    <div className="fixed flex flex-row justify-center bottom-4 left-4 right-4 z-50 md:bottom-8 md:left-8 md:right-8">
+      <Card className="border border-gray-300 shadow-lg bg-gray-50 text-gray-800 max-md:w-9/12 w-6/12">
+        <CardHeader className="flex flex-row justify-center p-2">
           <CardTitle className="text-base md:text-lg font-semibold">
             Cookies Notice
           </CardTitle>
