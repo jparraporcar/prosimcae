@@ -43,7 +43,7 @@ const CookieBanner = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <CardDescription className="text-sm md:text-base">
+          <CardDescription className="text-sm max-md:text-[10px]">
             We use cookies to improve your experience. Do you accept analytics
             cookies?
           </CardDescription>
