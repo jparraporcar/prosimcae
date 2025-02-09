@@ -10,6 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     getEntry("/privacy-policy"),
     getEntry("/terms-of-service"),
     getEntry("/blog-entries/what-is-the-finite-element-method-fem"),
+    getEntry(
+      "/blog-entries/failure-analysis-and-breakage-in-parts-how-to-avoid-costly-design-errors"
+    ),
   ];
 }
 
