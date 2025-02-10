@@ -33,25 +33,31 @@ export const RotatingImageCarousel = ({
         const y = Math.round(radius * Math.sin(theta + angle));
 
         return (
-          <div
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
             key={index}
-            className="image-wrapper"
-            style={{
-              transform: `translate(${x}px, ${y}px)`,
-            }}
+            href={image.referenceUrl as string}
           >
-            <div className="image-container">
-              <Image
-                src={image.src}
-                alt={t(image.alt)}
-                width={image.width}
-                height={image.height}
-                placeholder={image.placeholder}
-                className="image"
-              />
-              <p className="description">{t(image.description)}</p>
+            <div
+              className="image-wrapper"
+              style={{
+                transform: `translate(${x}px, ${y}px)`,
+              }}
+            >
+              <div className="image-container">
+                <Image
+                  src={image.src}
+                  alt={t(image.alt)}
+                  width={image.width}
+                  height={image.height}
+                  placeholder={image.placeholder}
+                  className="image"
+                />
+                <p className="description">{t(image.description)}</p>
+              </div>
             </div>
-          </div>
+          </a>
         );
       })}
     </div>

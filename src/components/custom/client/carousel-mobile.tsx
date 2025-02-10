@@ -56,19 +56,26 @@ export const CarouselMobile: React.FC<RotatingImageCarouselProps> = (props) => {
       >
         <CarouselContent className="max-md:h-120">
           {props.images.map((image, index) => (
-            <CarouselItem key={index}>
-              <div className="image-container-mobile">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={image.width}
-                  height={image.height}
-                  placeholder={image.placeholder}
-                  className="image"
-                />
-                <p className="description-mobile">{t(image.description)}</p>
-              </div>
-            </CarouselItem>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              key={index}
+              href={image.referenceUrl as string}
+            >
+              <CarouselItem>
+                <div className="image-container-mobile">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={image.width}
+                    height={image.height}
+                    placeholder={image.placeholder}
+                    className="image"
+                  />
+                  <p className="description-mobile">{t(image.description)}</p>
+                </div>
+              </CarouselItem>
+            </a>
           ))}
         </CarouselContent>
       </Carousel>

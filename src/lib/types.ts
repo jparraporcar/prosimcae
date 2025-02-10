@@ -14,6 +14,7 @@ export type mediaItem =
       placeholder?: "blur";
       className?: string;
       caption: string;
+      referenceUrl?: string;
     }
   | {
       type: "video";

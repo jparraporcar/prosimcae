@@ -493,6 +493,7 @@ export const openImages = [
     src: openLogosCalculix,
     placeholder: "blur",
     caption: "openImages.0.caption",
+    referenceUrl: "https://www.calculix.de/",
   },
   {
     type: "image",
@@ -503,6 +504,7 @@ export const openImages = [
     src: openLogosLsprepost,
     placeholder: "blur",
     caption: "openImages.1.caption",
+    referenceUrl: "https://lsdyna.ansys.com/knowledge-base/ls-prepost/",
   },
   {
     type: "image",
@@ -513,6 +515,7 @@ export const openImages = [
     src: openLogosOpenradioss,
     placeholder: "blur",
     caption: "openImages.2.caption",
+    referenceUrl: "https://openradioss.org/",
   },
   {
     type: "image",
@@ -523,6 +526,7 @@ export const openImages = [
     src: openLogosParaview,
     placeholder: "blur",
     caption: "openImages.3.caption",
+    referenceUrl: "https://www.paraview.org/",
   },
   {
     type: "image",
@@ -533,6 +537,7 @@ export const openImages = [
     src: openLogosPrepomax,
     placeholder: "blur",
     caption: "openImages.4.caption",
+    referenceUrl: "https://prepomax.fs.um.si/",
   },
   {
     type: "image",
@@ -543,6 +548,7 @@ export const openImages = [
     src: openLogosOpenfoam,
     placeholder: "blur",
     caption: "openImages.5.caption",
+    referenceUrl: "https://openfoam.org/",
   },
 ] as imageItem[];
 
@@ -561,6 +567,7 @@ export const comImages = [
     src: comLogosAnsa,
     placeholder: "blur",
     caption: "comImages.0.caption",
+    referenceUrl: "https://www.beta-cae.com/ansa.htm",
   },
   {
     type: "image",
@@ -571,6 +578,7 @@ export const comImages = [
     src: comLogosMeta,
     placeholder: "blur",
     caption: "comImages.1.caption",
+    referenceUrl: "https://www.beta-cae.com/meta.htm",
   },
   {
     type: "image",
@@ -581,6 +589,7 @@ export const comImages = [
     src: comLogosSimuliaAbaqus,
     placeholder: "blur",
     caption: "comImages.2.caption",
+    referenceUrl: "https://www.3ds.com/products/simulia/abaqus/standard",
   },
   {
     type: "image",
@@ -591,6 +600,7 @@ export const comImages = [
     src: comLogosLsdyna,
     placeholder: "blur",
     caption: "comImages.3.caption",
+    referenceUrl: "https://www.ansys.com/products/structures/ansys-ls-dyna",
   },
 ] as imageItem[];
 
