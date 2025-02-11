@@ -68,7 +68,7 @@ const Home = () => {
           <h2 className="text-3xl max-md:text-2xl font-bold text-gray-900 dark:text-gray-50">
             {t(customEngineering.serviceName)}
           </h2>
-          <div>
+          <div className="mr-32">
             <CarouselWrapper images={openImages} />
           </div>
         </section>
@@ -76,7 +76,7 @@ const Home = () => {
           <h2 className="text-3xl max-md:text-2xl font-bold text-gray-900 dark:text-gray-50">
             {t(onDemandEngineering.serviceName)}
           </h2>
-          <div>
+          <div className="mr-32">
             <CarouselWrapper images={comImages} />
           </div>
         </section>
