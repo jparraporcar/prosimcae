@@ -66,9 +66,9 @@ export default async function LocaleLayout({
           <AnalyticsProvider />
           <SpeedInsights />
           <Analytics />
-          <div className="w-full flex flex-row max-md:justify-end justify-center relative z-10">
+          <header className="w-full flex flex-row max-md:justify-end justify-center relative z-10">
             <NavigationWrapper />
-          </div>
+          </header>
           {children}
           <section className="w-full">
             <Footer />

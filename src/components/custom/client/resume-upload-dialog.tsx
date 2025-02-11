@@ -31,10 +31,11 @@ export const ResumeUploadDialog: React.FC = () => {
           {t("submitButton")}
         </Button>
       </DialogTrigger>
-      <DialogContent className="flex flex-col items-center mt-8 p-16">
-        <DialogHeader>
-          <DialogTitle className="mb-2">{t("dialogTitle")}</DialogTitle>
-        </DialogHeader>
+      <DialogContent
+        aria-describedby={undefined}
+        className="flex flex-col items-center mt-8 p-16"
+      >
+        <DialogTitle className="mb-2">{t("dialogTitle")}</DialogTitle>
         <ResumeUploadForm closeDialog={() => setSwitchDialog(false)} />
       </DialogContent>
     </Dialog>

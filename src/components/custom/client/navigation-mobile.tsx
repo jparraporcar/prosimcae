@@ -20,6 +20,7 @@ import Link from "next/link";
 import { navButtonLabels } from "@/lib/content";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 export const NavigationMobile: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,6 +62,15 @@ export const NavigationMobile: React.FC = () => {
         onInteractOutside={() => setIsOpen(false)}
         className="ml-auto"
       >
+        <VisuallyHidden asChild>
+          <SheetTitle>Mobile navigation menu</SheetTitle>
+        </VisuallyHidden>
+        <VisuallyHidden asChild>
+          <SheetDescription>
+            Use this menu to navigate through the main sections of the website.
+            Press the dark area outside the element to close.
+          </SheetDescription>
+        </VisuallyHidden>
         <div
           id="mobile-nav-container"
           className="flex flex-col -mt-2 -ml-2 gap-y-6 text-xl"

@@ -15,18 +15,16 @@ export const NavigationWrapper: React.FC = () => {
         id="menu-trigger"
         className="flex flex-row justify-end w-full xl:hidden bg-white fixed m-0 p-2 border-b-2"
       >
-        <div className="mr-auto ml-4">
-          <Link href="/" passHref>
-            <Image
-              src={logo}
-              alt="logo"
-              width={200}
-              height={15}
-              placeholder="blur"
-              priority
-            />
-          </Link>
-        </div>
+        <Link href="/" passHref className="mr-auto ml-4">
+          <Image
+            src={logo}
+            alt="logo"
+            width={200}
+            height={15}
+            placeholder="blur"
+            priority
+          />
+        </Link>
         <div style={{ placeContent: "center", marginTop: "4px" }}>
           <NavigationMobile />
         </div>
