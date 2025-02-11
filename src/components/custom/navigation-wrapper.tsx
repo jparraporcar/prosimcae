@@ -13,7 +13,7 @@ export const NavigationWrapper: React.FC = () => {
       </div>
       <div
         id="menu-trigger"
-        className="flex flex-row justify-end w-full md:hidden bg-white fixed m-0 p-2 border-b-2"
+        className="flex flex-row justify-end w-full xl:hidden bg-white fixed m-0 p-2 border-b-2"
       >
         <div className="mr-auto ml-4">
           <Link href="/" passHref>

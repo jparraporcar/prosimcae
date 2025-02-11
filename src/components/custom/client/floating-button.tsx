@@ -22,39 +22,24 @@ const FloatingButton: React.FC = () => {
       aria-label={`Switch to ${linkText}`}
       className="
         fixed 
-        /* Top Position */
-        top-[13px]          /* Base: 13px for small screens */
-        md:top-[70px]       /* From md (768px) and up: 26px */
-        xl:top-[13px]       /* From xl (1280px) and up: revert to 13px */
-
-        /* Right Position */
-        right-14            /* Base: 56px for small screens */
-        md:right-6          /* From md (768px) and up: 24px */
-        xl:right-14         /* From xl (1280px) and up: revert to 56px */
-
-        /* Size */
-        w-9 h-9            /* Base: 36px */
-        md:w-14 md:h-14    /* From md (768px) and up: 56px */
-        xl:w-12 xl:h-12       /* From xl (1280px) and up: revert to 36px */
-
-        /* Padding */
-        p-6                /* Base: 24px */
-        md:p-7              /* From md (768px) and up: 28px */
-        xl:p-7              /* From xl (1280px) and up: revert to 24px */
-
-        /* Text Size */
-        text-[11px]             /* Base: 12px */
-        md:text-sm           /* From md (768px) and up: 14px */
-        xl:text-xs           /* From xl (1280px) and up: revert to 12px */
-
-        /* Appearance */
+        top-[13px]         
+        xl:top-[13px]       
+        right-14            
+        xl:right-6
+        w-9 h-9           
+        md:w-14 md:h-14    
+        xl:w-12 xl:h-12      
+        p-6                
+        md:p-7              
+        xl:p-7             
+        text-[11px]          
+        md:text-sm          
+        xl:text-xs        
         rounded-full 
         bg-white text-black 
         shadow-xl
         border
         active:border-2
-
-        /* Layout */
         flex justify-center items-center
         z-50
       "
