@@ -52,13 +52,13 @@ export default function Footer() {
           <div className="flex gap-4 items-center">
             <p className="max-md:text-xs">{t("copyRight")}</p>
             <a
-              href="https://x.com"
+              href="https://www.instagram.com/prosimcae/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
             >
-              <XLogo />
-              <span className="sr-only">{t("social.x")}</span>
+              <Instagram />
+              <span className="sr-only">Instagram</span>
             </a>
             <a
               href="https://www.linkedin.com/in/jordiparraporcar/"
