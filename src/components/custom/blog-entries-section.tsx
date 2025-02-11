@@ -31,6 +31,7 @@ export function BlogEntriesSection() {
                   <CardContent className="p-4 max-md:p-2 flex flex-col h-full">
                     <div className="flex justify-between items-start mb-2">
                       <Badge
+                        variant="outline"
                         className={`${getDifficultyColor(t(blog.blogEntries[index].difficulty) as DifficultyLevel)} text-xs font-semibold max-md:mb-2 max-md:text-[8px] max-md:px-1`}
                       >
                         {

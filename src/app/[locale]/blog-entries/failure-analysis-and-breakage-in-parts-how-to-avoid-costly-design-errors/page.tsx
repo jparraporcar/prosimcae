@@ -35,6 +35,7 @@ const AnalisisDeRoturaYFallosEnPiezasComoEvitarCarosErroresDeDiseno = () => {
           <CardHeader className="p-6 bg-slate-300">
             <div className="flex justify-between items-center mb-4">
               <Badge
+                variant="outline"
                 className={`${getDifficultyColor(t(blog.blogEntries[1].difficulty) as DifficultyLevel)} text-xs max-md:text-[10px] font-semibold px-3 py-1`}
               >
                 {t(blog.blogEntries[1].difficulty) as DifficultyLevel}
