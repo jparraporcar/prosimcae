@@ -22,10 +22,9 @@ export const Service: React.FC<ServiceProps> = (props) => {
 
   return (
     <section
-      className={cn([
-        "flex flex-col justify-between w-[47%] max-md:w-11/12 mt-4 max-md:mt-0 border rounded-2xl shadow-md bg-white dark:bg-gray-800",
-        props.sectionClass,
-      ])}
+      className={`
+        flex flex-col justify-between w-[47%] max-md:w-11/12 mt-4 max-md:mt-0 border rounded-2xl shadow-md bg-white dark:bg-gray-800
+        ${props.sectionClass}`}
       style={{ minHeight: "600px" }}
     >
       <div>
