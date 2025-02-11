@@ -1,8 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { Link } from "@/i18n/routing";
-
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -19,6 +17,7 @@ import { navButtonLabels } from "@/lib/content";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
+import { Link } from "@/i18n/routing";
 
 export function Navigation() {
   const t = useTranslations();
@@ -29,107 +28,83 @@ export function Navigation() {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem id="navitemtest" className="-mt-1 mr-4">
-            <Link href="/" legacyBehavior passHref>
-              <NavigationMenuLink>
-                <div className="mr-auto ml-4">
-                  <Image
-                    src={logo}
-                    alt="logo"
-                    width={150}
-                    height={15}
-                    placeholder="blur"
-                    priority
-                  />
-                </div>
-              </NavigationMenuLink>
+            <Link href="/">
+              <div className="mr-auto ml-4">
+                <Image
+                  src={logo}
+                  alt="logo"
+                  width={150}
+                  height={15}
+                  placeholder="blur"
+                  priority
+                />
+              </div>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem className="flex">
-            <Link href="/#main-section-title-services" legacyBehavior passHref>
-              <NavigationMenuLink
-                className={cn([
-                  navigationMenuTriggerStyle(),
-                  "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
-                ])}
-              >
-                {t(navButtonLabels.simulationServices)}
-              </NavigationMenuLink>
+            <Link
+              href="/#main-section-title-services"
+              className={cn([
+                navigationMenuTriggerStyle(),
+                "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
+              ])}
+            >
+              {t(navButtonLabels.simulationServices)}
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link
               href="/#main-section-title-technology"
-              legacyBehavior
-              passHref
+              className={cn([
+                navigationMenuTriggerStyle(),
+                "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
+              ])}
             >
-              <NavigationMenuLink
-                className={cn([
-                  navigationMenuTriggerStyle(),
-                  "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
-                ])}
-              >
-                {t(navButtonLabels.howWeWork)}
-              </NavigationMenuLink>
+              {t(navButtonLabels.howWeWork)}
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link
               href="/#main-section-title-study-cases"
-              legacyBehavior
-              passHref
+              className={cn([
+                navigationMenuTriggerStyle(),
+                "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
+              ])}
             >
-              <NavigationMenuLink
-                className={cn([
-                  navigationMenuTriggerStyle(),
-                  "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
-                ])}
-              >
-                {t(navButtonLabels.caseStudies)}
-              </NavigationMenuLink>
+              {t(navButtonLabels.caseStudies)}
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/#main-section-title-blog" legacyBehavior passHref>
-              <NavigationMenuLink
-                className={cn([
-                  navigationMenuTriggerStyle(),
-                  "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
-                ])}
-              >
-                {t(navButtonLabels.blog)}
-              </NavigationMenuLink>
+            <Link
+              href="/#main-section-title-blog"
+              className={cn([
+                navigationMenuTriggerStyle(),
+                "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
+              ])}
+            >
+              {t(navButtonLabels.blog)}
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link
               href="/#main-section-title-collaborations"
-              legacyBehavior
-              passHref
+              className={cn([
+                navigationMenuTriggerStyle(),
+                "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
+              ])}
             >
-              <NavigationMenuLink
-                className={cn([
-                  navigationMenuTriggerStyle(),
-                  "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
-                ])}
-              >
-                {t(navButtonLabels.partnerWithUs)}
-              </NavigationMenuLink>
+              {t(navButtonLabels.partnerWithUs)}
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link
               href="/#main-section-title-about-prosimcae"
-              legacyBehavior
-              passHref
+              className={cn([
+                navigationMenuTriggerStyle(),
+                "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
+              ])}
             >
-              <NavigationMenuLink
-                className={cn([
-                  navigationMenuTriggerStyle(),
-                  "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
-                ])}
-              >
-                {t(navButtonLabels.aboutProsimcae)}
-              </NavigationMenuLink>
+              {t(navButtonLabels.aboutProsimcae)}
             </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
