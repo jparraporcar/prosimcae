@@ -649,13 +649,13 @@ export const joinNetworkSection = {
   },
 };
 
-export const navButtonLabels = {
-  simulationServices: "navButtonLabels.simulationServices",
-  howWeWork: "navButtonLabels.howWeWork",
-  caseStudies: "navButtonLabels.caseStudies",
-  blog: "navButtonLabels.blog",
-  partnerWithUs: "navButtonLabels.partnerWithUs",
-  aboutProsimcae: "navButtonLabels.aboutProsimcae",
+export const navLinkLabels = {
+  simulationServices: "navLinkLabels.simulationServices",
+  howWeWork: "navLinkLabels.howWeWork",
+  caseStudies: "navLinkLabels.caseStudies",
+  blog: "navLinkLabels.blog",
+  partnerWithUs: "navLinkLabels.partnerWithUs",
+  aboutProsimcae: "navLinkLabels.aboutProsimcae",
 };
 
 export const dialogGetInTouchButton = "dialogGetInTouchButton";

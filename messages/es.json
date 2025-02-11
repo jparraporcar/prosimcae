@@ -305,7 +305,7 @@
       "item3": "Flexibilidad horaria de acuerdo a tu disponibilidad"
     }
   },
-  "navButtonLabels": {
+  "navLinkLabels": {
     "simulationServices": "Servicios de simulación",
     "howWeWork": "Cómo trabajamos",
     "caseStudies": "Estudios de caso",

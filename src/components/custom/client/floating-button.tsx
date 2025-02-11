@@ -22,8 +22,9 @@ const FloatingButton: React.FC = () => {
       aria-label={`Switch to ${linkText}`}
       className="
         fixed 
-        top-[13px]         
-        xl:top-[13px]       
+        max-md:top-[10px]
+        max-xl:top-[8px]    
+        top-[12px]   
         right-14            
         xl:right-6
         w-9 h-9           

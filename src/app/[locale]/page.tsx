@@ -25,16 +25,10 @@ const Home = () => {
 
   return (
     <main className="w-full flex flex-col items-center max-md:mt-0 overflow-x-hidden mt-12">
-      <div
-        id="main-section-intro"
-        className=" text-slate-700 mb-2 max-md:mb-1 mt-14 max-md:mt-16 pb-4"
-      >
-        <MainSectionIntro
-          descriptionContainerClass="appear-fading"
-          descriptionClass="text-gray-500 text-2xl max-md:text-base max-md:px-2 px-3 max-md:px-4 italic text-center max-md:text-justify max-md:mt-8 "
-          descriptionText={mainSectionIntroDescription}
-        />
-      </div>
+      <MainSectionIntro
+        descriptionClass="appear-fading"
+        descriptionText={mainSectionIntroDescription}
+      />
       <div id="main-section-title-services" className="slide-in-top section">
         <MainSectionTitle title={mainSectionTitles.simulationServices} />
       </div>

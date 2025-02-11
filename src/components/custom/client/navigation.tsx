@@ -13,7 +13,7 @@ import {
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import logo from "@/images/provisional-logo-prosimcae.webp";
-import { navButtonLabels } from "@/lib/content";
+import { navLinkLabels } from "@/lib/content";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
@@ -49,7 +49,7 @@ export function Navigation() {
                 "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
               ])}
             >
-              {t(navButtonLabels.simulationServices)}
+              {t(navLinkLabels.simulationServices)}
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
@@ -60,7 +60,7 @@ export function Navigation() {
                 "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
               ])}
             >
-              {t(navButtonLabels.howWeWork)}
+              {t(navLinkLabels.howWeWork)}
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
@@ -71,7 +71,7 @@ export function Navigation() {
                 "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
               ])}
             >
-              {t(navButtonLabels.caseStudies)}
+              {t(navLinkLabels.caseStudies)}
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
@@ -82,7 +82,7 @@ export function Navigation() {
                 "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
               ])}
             >
-              {t(navButtonLabels.blog)}
+              {t(navLinkLabels.blog)}
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
@@ -93,7 +93,7 @@ export function Navigation() {
                 "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
               ])}
             >
-              {t(navButtonLabels.partnerWithUs)}
+              {t(navLinkLabels.partnerWithUs)}
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
@@ -104,7 +104,7 @@ export function Navigation() {
                 "border-transparent border-2 hover:border-2 hover:bg-slate-200 active:bg-slate-300 py-4 pr-4",
               ])}
             >
-              {t(navButtonLabels.aboutProsimcae)}
+              {t(navLinkLabels.aboutProsimcae)}
             </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
