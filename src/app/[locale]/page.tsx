@@ -26,10 +26,12 @@ const Home = () => {
   return (
     <main className="w-full flex flex-col items-center max-md:mt-0 overflow-x-hidden mt-12">
       <MainSectionIntro descriptionText={mainSectionIntroDescription} />
-      <div id="main-section-title-services" className="slide-in-top section">
-        <MainSectionTitle title={mainSectionTitles.simulationServices} />
-      </div>
-      <div className="w-full flex flex-row max-md:flex-col flex-wrap gap-y-20 max-md:gap-y-8 justify-evenly max-md:items-center mt-4">
+      <MainSectionTitle
+        id="main-section-title-services"
+        title={mainSectionTitles.simulationServices}
+        titleClass="slide-in-top section"
+      />
+      <section className="w-full flex flex-row max-md:flex-col flex-wrap gap-y-20 max-md:gap-y-8 justify-evenly max-md:items-center mt-4">
         <Service
           sectionClass="slide-in-left"
           serviceIntro={customEngineering.serviceIntro}
@@ -46,40 +48,44 @@ const Home = () => {
           items={onDemandEngineering.items}
           dialogElement={<ContactDialogOndemand />}
         />
-      </div>
+      </section>
       <Separator
         orientation="horizontal"
         className="mt-16 mb-12 max-md:mt-12 max-md:mb-8"
       />
-      <div id="main-section-title-technology" className="section">
-        <MainSectionTitle title={mainSectionTitles.howWeWork} />
-      </div>
-      <div className="w-full flex flex-row max-lg:flex-col flex-wrap gap-y-20 max-lg:gap-y-0 justify-evenly max-lg:items-center">
-        <section className="w-6/12 max-md:h-[300px] max-md:w-full flex flex-col px-6 max-md:px-3 py-0 mt-2 bg-white dark:bg-gray-800 items-center max-md:justify-center">
+      <MainSectionTitle
+        title={mainSectionTitles.howWeWork}
+        id="main-section-title-technology"
+        titleClass="section"
+      />
+      <section className="w-full flex flex-row max-lg:flex-col flex-wrap gap-y-20 max-lg:gap-y-0 justify-evenly max-lg:items-center">
+        <div className="w-6/12 max-md:h-[300px] max-md:w-full flex flex-col px-6 max-md:px-3 py-0 mt-2 bg-white dark:bg-gray-800 items-center max-md:justify-center">
           <h2 className="text-3xl max-md:text-2xl font-bold text-gray-900 dark:text-gray-50">
             {t(customEngineering.serviceName)}
           </h2>
           <div className="mr-32">
             <CarouselWrapper images={openImages} />
           </div>
-        </section>
-        <section className="w-6/12 max-md:h-[300px] max-md:w-full flex flex-col px-6 max-md:px-3 py-0 mt-2 bg-white dark:bg-gray-800 items-center max-md:justify-center">
+        </div>
+        <div className="w-6/12 max-md:h-[300px] max-md:w-full flex flex-col px-6 max-md:px-3 py-0 mt-2 bg-white dark:bg-gray-800 items-center max-md:justify-center">
           <h2 className="text-3xl max-md:text-2xl font-bold text-gray-900 dark:text-gray-50">
             {t(onDemandEngineering.serviceName)}
           </h2>
           <div className="mr-32">
             <CarouselWrapper images={comImages} />
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
       <Separator
         orientation="horizontal"
         className="mb-16 -mt-4 max-md:mt-4 max-md:mb-12"
       />
-      <div id="main-section-title-study-cases" className="section">
-        <MainSectionTitle title={mainSectionTitles.caseStudies} />
-      </div>
-      <div
+      <MainSectionTitle
+        title={mainSectionTitles.caseStudies}
+        id="main-section-title-study-cases"
+        titleClass="section"
+      />
+      <section
         id="study-cases-container"
         className="flex flex-col text-lg items-center mt-6 max-md:w-full w-11/12"
       >
@@ -91,23 +97,27 @@ const Home = () => {
             effectIsActive={studyCaseSection.effectIsActive}
           />
         ))}
-      </div>
+      </section>
       <Separator orientation="horizontal" className="mb-10 max-md:mb-8" />
-      <div id="main-section-title-blog" className="section">
-        <MainSectionTitle title={mainSectionTitles.blog} />
-      </div>
-      <div className="w-11/12 max-md:w-full">
-        <BlogEntriesSection />
-      </div>
+      <MainSectionTitle
+        title={mainSectionTitles.blog}
+        id="main-section-title-blog"
+        titleClass="section"
+      />
+      <BlogEntriesSection />
       <Separator orientation="horizontal" className="mb-10 mt-14 max-md:mb-8" />
-      <div id="main-section-title-collaborations" className="section">
-        <MainSectionTitle title={mainSectionTitles.partnerWithUs} />
-      </div>
+      <MainSectionTitle
+        title={mainSectionTitles.partnerWithUs}
+        id="main-section-title-collaborations"
+        titleClass="section"
+      />
       <JoinNetworkSection />
       <Separator orientation="horizontal" className="mb-8 mt-14" />
-      <div id="main-section-title-about-prosimcae" className="section">
-        <MainSectionTitle title={mainSectionTitles.aboutProsimcae} />
-      </div>
+      <MainSectionTitle
+        title={mainSectionTitles.aboutProsimcae}
+        id="main-section-title-about-prosimcae"
+        titleClass="section"
+      />
       <AboutProsimcaeSection />
     </main>
   );
