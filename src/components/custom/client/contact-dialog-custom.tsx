@@ -29,7 +29,7 @@ export const ContactDialogCustom: React.FC = () => {
   return (
     <Dialog onOpenChange={handleSwitchDialog} open={switchDialog}>
       <DialogTrigger asChild>
-        <Button className="px-6 py-2 mb-4 text-xl rounded-md shadow gradient-effect">
+        <Button className="px-6 py-2 mb-4 text-xl max-md:text-base rounded-md shadow gradient-effect">
           {t(dialogGetInTouchButton)}
         </Button>
       </DialogTrigger>
