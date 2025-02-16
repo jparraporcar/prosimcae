@@ -10,7 +10,7 @@ export default function JoinNetworkSection() {
 
   return (
     <section className="flex flex-row justify-center max-md:w-full max-[2000px]:w-10/12">
-      <Card className="bg-white shadow-2xl rounded-2xl mt-6 w-full">
+      <Card className="bg-white shadow-2xl rounded-2xl mt-6 w-full max-md:w-11/12">
         <CardHeader className=" bg-slate-300 rounded-t-xl">
           <CardTitle className="text-black text-xl max-md:text-base text-center"></CardTitle>
         </CardHeader>

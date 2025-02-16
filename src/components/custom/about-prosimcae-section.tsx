@@ -9,7 +9,7 @@ export default function AboutProsimcaeSection() {
   const t = useTranslations();
   return (
     <section className="flex flex-row justify-center max-[2000px]:w-10/12 max-md:w-full">
-      <Card className="bg-white shadow-2xl rounded-xl mt-6 mb-16 max-[2000px]:w-full">
+      <Card className="bg-white shadow-2xl rounded-xl mt-6 mb-16 max-[2000px]:w-full max-md:w-11/12">
         <CardHeader className="p-4 bg-slate-300 rounded-t-xl">
           <CardTitle></CardTitle>
         </CardHeader>
