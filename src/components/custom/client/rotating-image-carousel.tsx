@@ -14,7 +14,7 @@ export const RotatingImageCarousel = ({
   images,
 }: RotatingImageCarouselProps) => {
   const [angle, setAngle] = useState(0);
-  const radius = 165; // Adjust radius based on design needs
+  const radius = 185; // Adjust radius based on design needs
   const t = useTranslations();
 
   useEffect(() => {

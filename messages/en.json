@@ -239,6 +239,11 @@
       "description": "OpenFoam: CFD solver for fluid dynamics simulations",
       "alt": "OpenFoam: CFD solver for fluid dynamics simulations",
       "caption": "OpenFoam: CFD solver for fluid dynamics simulations"
+    },
+    "6": {
+      "description": "CloudHPC: High Performance Computing in the cloud",
+      "alt": "CloudHPC: High Performance Computing in the cloud",
+      "caption": "CloudHPC: High Performance Computing in the cloud"
     }
   },
   "comImages": {

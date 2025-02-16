@@ -474,6 +474,7 @@ import openLogosOpenradioss from "@/images/open-logos/open-logos-openradioss.jpg
 import openLogosParaview from "@/images/open-logos/open-logos-paraview.png";
 import openLogosPrepomax from "@/images/open-logos/open-logos-prepomax.jpg";
 import openLogosOpenfoam from "@/images/open-logos/open-logos-openfoam.png";
+import openLogosCloudHPC from "@/images/open-logos/cloud-hpc-logo.png";
 
 export const openImages = [
   {
@@ -541,6 +542,17 @@ export const openImages = [
     placeholder: "blur",
     caption: "openImages.5.caption",
     referenceUrl: "https://openfoam.org/",
+  },
+  {
+    type: "image",
+    description: "openImages.6.description",
+    alt: "openImages.6.alt",
+    width: 100,
+    height: 100,
+    src: openLogosCloudHPC,
+    placeholder: "blur",
+    caption: "openImages.6.caption",
+    referenceUrl: "https://cloud.cfdfeaservice.it/",
   },
 ] as imageItem[];
 
