@@ -10,7 +10,7 @@ export const MainSectionIntro: React.FC<PageIntroProps> = (props) => {
   const t = useTranslations();
 
   return (
-    <div className="relative overflow-hidden w-[96%] max-md:w-11/12 bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 p-8 shadow-lg mt-14 max-md:mt-24 rounded-lg">
+    <div className="relative overflow-hidden w-[96%] max-md:w-11/12 bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 p-8 shadow-lg mt-14 max-md:mt-24 max-md:mb-2 mb-6 rounded-lg">
       <div className="absolute inset-0 opacity-20">
         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
           <defs>
