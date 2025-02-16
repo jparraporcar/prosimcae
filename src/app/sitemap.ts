@@ -13,6 +13,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     getEntry(
       "/blog-entries/failure-analysis-and-breakage-in-parts-how-to-avoid-costly-design-errors"
     ),
+    getEntry(
+      "/blog-entries/custom-engineering-workflow-from-cad-to-optimized-design"
+    ),
   ];
 }
 

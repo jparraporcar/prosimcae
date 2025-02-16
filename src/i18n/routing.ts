@@ -36,6 +36,10 @@ export const routing = defineRouting({
         en: "/blog-entries/failure-analysis-and-breakage-in-parts-how-to-avoid-costly-design-errors",
         es: "/entradas-del-blog/analisis-de-rotura-y-fallos-en-piezas-como-evitar-caros-errores-de-diseno",
       },
+    "/blog-entries/custom-engineering-workflow-from-cad-to-optimized-design": {
+      en: "/blog-entries/custom-engineering-workflow-from-cad-to-optimized-design",
+      es: "/entradas-del-blog/flujo-de-trabajo-de-ingenieria-por-proyecto-del-cad-al-diseno-optimizado",
+    },
     "/#main-section-title-services": {
       en: "/#main-section-title-services",
       es: "/#main-section-title-services",
