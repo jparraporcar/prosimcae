@@ -12,7 +12,7 @@ import { blog } from "@/lib/content";
 export function BlogEntriesSection() {
   const t = useTranslations();
   return (
-    <section className="max-[2000px]:w-10/12 max-md:w-full flex flex-row justify-center py-12 max-md:pb-2 max-md:pt-8 ">
+    <section className="max-[2000px]:w-10/12 max-md:w-full flex flex-row justify-center py-12 max-md:py-0 max-md:pb-2 max-md:pt-8 ">
       <Card className="bg-white shadow-2xl rounded-2xl max-md:w-11/12 max-2xl:w-full">
         <CardHeader className="p-4 bg-slate-300 rounded-t-xl">
           <CardTitle className="text-black text-xl max-md:text-xl text-center"></CardTitle>
