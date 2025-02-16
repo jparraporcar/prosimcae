@@ -6,9 +6,9 @@
       "canonical": "https://www.prosimcae.com/en/"
     }
   },
-  "mainSectionIntroDescription": "From Fluid Dynamics (CFD) to structural analysis and thermal (FEM/FEA), we help you optimize your product development and assist you with any unexpected problems. We have tailored solutions!",
+  "mainSectionIntroDescription": "<span class='text-2xl font-bold mb-4 max-md:text-xs max-md:px-2 max-md:text-justify max-md:mx-1'>From fluid dynamics (CFD) to structural and thermal analysis using <strong>simulations by finite elements (FEM, FEA)</strong>, we <strong>optimize your product development</strong> and help you solve all kinds of <strong>mechanical problems</strong>. We <strong>test your prototypes</strong> virtually to accelerate your market launch and provide support to <strong>secure certifications</strong>. If you wish to <strong>adapt machinery</strong>, we assist you in your decision-making process to find the most efficient design.</span>",
   "mainSectionTitles": {
-    "simulationServices": "Simulation Services: CFD, FEM/FEA and thermal",
+    "simulationServices": "Simulation Services: Finite elements (FEM) and fluid dynamics (CFD)",
     "howWeWork": "How we work",
     "caseStudies": "Case studies",
     "partnerWithUs": "Work with us B2B",
@@ -17,61 +17,52 @@
   },
   "onDemandEngineering": {
     "serviceName": "On-Demand Engineering",
-    "serviceIntro": "Need specialized help with commercial simulation software? Our on-demand approach tackles advanced crash or mechanical challenges for automotive and beyond. We adapt to your environment—remote or on-site—and deliver results under your own infrastructure.",
     "hrefDiscover": "Discover More",
     "items": {
       "0": {
         "title": "BiW & Crash Simulations",
-        "description": "Handle occupant safety and dynamic crash events with high-impact loads."
+        "description": "Handle occupant safety and dynamic crash events with high-impact loads. Optimize material usage to achieve your goals while reducing costs."
       },
       "1": {
         "title": "NCAP Standards",
-        "description": "We have broad knowledge about the worldwide NCAP regulation. We also help you in your active and passive safety systems optimization"
+        "description": "We have broad knowledge about the worldwide NCAP regulation, we also help you in your active and passive safety systems optimization"
       },
       "2": {
-        "title": "Commercial Software Mastery",
+        "title": "Commercial Software",
         "description": "Our software expertise goes beyond open-source software, including the use of LS-DYNA, Abaqus, ANSA and META."
       },
       "3": {
-        "title": "Professional Post-Processing",
-        "description": "We reach conclusions based on expertise and we create clear and customer oriented presentations"
-      },
-      "4": {
         "title": "Flexible Collaboration",
-        "description": "We help you in your product development whether is remotely or in-house, always taking into account the specific characteristics of your infrastructure."
+        "description": "We help you in your product development whether is remotely or in-house."
       }
     }
   },
   "customEngineering": {
     "serviceName": "Custom Engineering",
-    "serviceIntro": "Would you like to optimize testing costs and your product development?, Have you encountered any mechanical challenge you need to solve?, Would you like to test your prototype in a fast, efficient and cost-efficient way?, Do you need to pass some specific standards in order to market your product?, You can count on us!",
     "hrefDiscover": "Discover More",
+
     "items": {
       "0": {
-        "title": "Effective Simulations",
-        "description": "Tap into open-source software to remove heavy licensing fees and focus on real design needs."
+        "title": "Maximize Quality/Cost Ratio",
+        "description": "We use open-source software widely adopted by the scientific community, giving you the possibility to eliminate the cost of commercial licenses."
       },
       "1": {
-        "title": "Reduce Testing time",
-        "description": "Accelerate your product development by using our software in finite elements (FEM/FEA) and computational fluid dynamics (CFD)"
+        "title": "Minimize Time to Market",
+        "description": "We accelerate your product development through our finite element (FEM) and computational fluid dynamics (CFD) software."
       },
       "2": {
-        "title": "Helping you in solving mechanical and fluid-related problems",
-        "description": "We help you to solve any encountered mechanical problem, applying computational methods in numerical simulation"
+        "title": "Problem solving",
+        "description": "If you have any issues with a design or a part of your production system, we help you find a solution by reproducing the case through our engineering simulations."
       },
       "3": {
-        "title": "Scientifically proven accuracy",
-        "description": "The utilize open-source software that is widely adopted among the scientific community with proben and accurate results."
-      },
-      "4": {
         "title": "Flexible Project Management",
-        "description": "We adapt resources and tasks to fit your goals and budget."
+        "description": "We adapt resources and tasks to align with your goals and budget."
       }
     }
   },
   "studyCasesSections": {
     "solid": {
-      "title": "Computer Solid Mechanics (FEM)",
+      "title": "Finite Element Method (FEM) Solutions",
       "studyCases": {
         "0": {
           "studyCaseTitle": "Drop test of a Portable Storage Device (PSD)",

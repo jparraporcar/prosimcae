@@ -23,19 +23,15 @@ export const Service: React.FC<ServiceProps> = (props) => {
   return (
     <section
       className={`
-        flex flex-col justify-between w-[47%] max-md:w-11/12 mt-4 max-md:mt-0 border rounded-2xl shadow-md bg-white dark:bg-gray-800
+        flex flex-col justify-start w-[47%] max-md:w-11/12 mt-4 gap-y-2 max-md:mt-0 border rounded-2xl shadow-md bg-white dark:bg-gray-800
         ${props.sectionClass}`}
-      style={{ minHeight: "600px" }}
     >
       <div>
-        <h2 className="text-2xl max-md:text-xl font-bold text-gray-900 dark:text-gray-50 mb-3 text-center p-4 bg-slate-300 rounded-t-xl ">
+        <h2 className="text-2xl max-md:text-xl font-bold text-gray-900 dark:text-gray-50 text-center py-4 bg-slate-300 rounded-t-xl ">
           {t(props.serviceName)}
         </h2>
-        <p className="text-gray-700 px-4 dark:text-gray-300 text-lg max-md:text-sm leading-relaxed text-center max-md:text-justify max-md:px-4">
-          {t(props.serviceIntro)}
-        </p>
       </div>
-      <div className="my-6 px-4">
+      <div className="p-2">
         <ul className="flex flex-col gap-4 text-gray-700">
           {props.items.map((item, index) => (
             <li
@@ -53,7 +49,7 @@ export const Service: React.FC<ServiceProps> = (props) => {
           ))}
         </ul>
       </div>
-      <div className="mt-2 flex justify-center">{props.dialogElement}</div>
+      <div className="flex justify-center mt-auto">{props.dialogElement}</div>
     </section>
   );
 };

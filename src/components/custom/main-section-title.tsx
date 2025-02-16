@@ -13,7 +13,7 @@ export const MainSectionTitle: React.FC<MainSectiontitleProps> = (props) => {
     <>
       <h1
         id={props.id}
-        className={`text-center p-4 text-3xl max-md:text-2xl font-bold bg-gradient-to-r from-slate-600 via-gray-700 to-gray-400 bg-clip-text text-transparent max-md:pb-1 ${props.titleClass}`}
+        className={`text-center p-4 text-3xl max-md:text-lg font-bold bg-gradient-to-r from-slate-600 via-gray-700 to-gray-400 bg-clip-text text-transparent max-md:pb-1 ${props.titleClass}`}
       >
         {t(props.title)}
       </h1>

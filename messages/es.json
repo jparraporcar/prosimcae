@@ -6,9 +6,9 @@
       "canonical": "https://www.prosimcae.com/es/"
     }
   },
-  "mainSectionIntroDescription": "Desde la dinámica de Fluidos (CFD) hasta el análisis estructural y térmico (FEM/FEA), te ayudamos a optimizar el desarrollo de tu producto así como a solucionar cualquier problema relacionado que te surga. ¡Tenemos soluciones a tu medida!",
+  "mainSectionIntroDescription": "<span class='text-2xl font-bold mb-4 max-md:text-xs max-md:px-2 max-md:text-justify max-md:mx-1'>Desde la dinámica de fluidos (CFD) hasta el análisis estructural y térmico mediante <strong>simulaciones por elementos finitos (MEF, FEM)</strong>, <strong>optimizamos el desarrollo de tu producto</strong> y te ayudamos a resolver <strong>problemas mecánicos</strong> de todo tipo. <strong>Testeamos tus prototipos</strong> virtualmente para acelerar el lanzamiento al mercado y ofrecemos soporte para <strong>pasar certificaciones</strong>. En caso de querer <strong>adaptar maquinaria</strong>, te asistimos en tu toma de decisiones para encontrar el diseño más eficiente.</span>",
   "mainSectionTitles": {
-    "simulationServices": "Servicios de Simulación: CFD, FEM/FEA y térmica",
+    "simulationServices": "Servicios de Simulación: Elementos finitos (MEF) y dinámica de fluidos (CFD)",
     "howWeWork": "Cómo trabajamos",
     "caseStudies": "Casos de estudio",
     "partnerWithUs": "Trabaja con Nosotros B2B",
@@ -17,7 +17,6 @@
   },
   "onDemandEngineering": {
     "serviceName": "Ingeniería por contrato",
-    "serviceIntro": "¿Necesitas ayuda especializada en el desarrollo de producto con tu software de simulación comercial? Puedes subcontratar nuestros servicios por el tiempo que necesites, nos adaptamos a tus necesidades aportando nuestra experiencia en simulación. Nos adaptamos a tu entorno—remoto o en oficina—y entregamos resultados bajo tu propia infraestructura.",
     "hrefDiscover": "/contact",
     "items": {
       "0": {
@@ -29,41 +28,32 @@
         "description": "Tenemos amplio conocimiento de la normativa NCAP a nivel mundial. También te ayudamos en la optimización de tus sistemas de seguridad activa y pasiva."
       },
       "2": {
-        "title": "Dominio en Software Comercial",
+        "title": "Software Comercial",
         "description": "Más allá de nuestra experiencia en software abierto también abarcamos el uso de LS-DYNA, Abaqus, ANSA y META."
       },
       "3": {
-        "title": "Postprocesamiento Profesional",
-        "description": "Llegamos a conclusiones basadas en la experiencia y creamos presentaciones claras enfocadas al cliente."
-      },
-      "4": {
         "title": "Colaboración Flexible",
-        "description": "Te ayudamos en el desarrollo de tu producto ya sea en remoto o en oficina, siempre teniendo en cuenta las características de tu infraestructura y tus necesidades."
+        "description": "Te ayudamos en el desarrollo de tu producto ya sea en remoto o en oficina."
       }
     }
   },
   "customEngineering": {
     "serviceName": "Ingeniería por proyecto",
-    "serviceIntro": "¿Te gustaría optimizar el coste en testing y el desarrollo de tu producto?, ¿Tienes problemas mecánicos que necesitas solucionar?, ¿Te gustaría poner a prueba tu prototipo de una manera rápida, eficiente y rentable?, ¿Necesitas pasar estándares específicos para poder comercializar tu producto?, ¡Puedes contar con nosotros!",
     "hrefDiscover": "/contact",
     "items": {
       "0": {
-        "title": "Simulaciones eficientes",
-        "description": "Aprovecha el software abierto para eliminar tarifas de licencias y enfócate en diseño."
+        "title": "Maximiza la relación calidad/coste",
+        "description": "Usamos código abierto ampliamente utilizado por la comunidad científica, lo que te ofrece la posibilidad de eliminar el coste de licencias comerciales."
       },
       "1": {
         "title": "Minimiza el tiempo hasta comercialización",
-        "description": "Acelera el desarrollo de tu producto, a través de nuestro software en elementos finitos (FEM/FEA) y mecánica de fluídos computacional (CFD)"
+        "description": "Aceleramos el desarrollo de tu producto a través de nuestros software en elementos finitos (MEF) y mecánica de fluídos computacional (CFD)."
       },
       "2": {
-        "title": "Resolución de Problemas Mecánicos y de fluidos",
-        "description": "Te ayudamos a solucionar cualquier problema mecánico que te surja, aplicando métodos computacionales de simulación numérica"
+        "title": "Resolución de Problemas",
+        "description": "Si tiene cualquier problema con algún diseño o parte de tu sistema productivo, te ayudamos a encontrar la solución, reproduciendo el caso a través de nuestras simulaciones de ingeniería."
       },
       "3": {
-        "title": "Precisión probada científicamente",
-        "description": "Los software de código abierto que usamos, se utilizan ampliamente entre la comunidad científica con resultados probados y precisos."
-      },
-      "4": {
         "title": "Gestión de Proyectos Flexible",
         "description": "Adaptamos recursos y tareas para ajustarnos a tus objetivos y presupuesto."
       }
@@ -71,7 +61,7 @@
   },
   "studyCasesSections": {
     "solid": {
-      "title": "Mecánica Sólida por Computadora (FEM)",
+      "title": "Resolución por elementos finitos (MEF)",
       "studyCases": {
         "0": {
           "studyCaseTitle": "Prueba de caída de un dispositivo portátil USB",

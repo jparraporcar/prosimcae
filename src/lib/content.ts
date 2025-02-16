@@ -34,10 +34,6 @@ export const customEngineering = {
       title: "customEngineering.items.3.title",
       description: "customEngineering.items.3.description",
     },
-    {
-      title: "customEngineering.items.4.title",
-      description: "customEngineering.items.4.description",
-    },
   ],
 };
 
@@ -62,10 +58,6 @@ export const onDemandEngineering = {
     {
       title: "onDemandEngineering.items.3.title",
       description: "onDemandEngineering.items.3.description",
-    },
-    {
-      title: "onDemandEngineering.items.4.title",
-      description: "onDemandEngineering.items.4.description",
     },
   ],
 };
