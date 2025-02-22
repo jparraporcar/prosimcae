@@ -14,11 +14,6 @@ export default function AboutProsimcaeSection() {
           <CardTitle></CardTitle>
         </CardHeader>
         <CardContent className="p-10 max-md:p-6 space-y-6">
-          <p className="text-black text-xl max-md:text-base leading-relaxed text-center">
-            {t(about.createdBy.part1)}{" "}
-            <span className="text-shadow">{t(about.createdBy.name)}</span>
-            {t(about.createdBy.part2)}
-          </p>
           <ul className="list-disc list-inside space-y-4 text-gray-700 text-lg max-md:text-xs leading-relaxed">
             <li>
               {t(about.list.item1.part1)}{" "}
