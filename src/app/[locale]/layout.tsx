@@ -62,7 +62,6 @@ export default async function LocaleLayout({
       <NextIntlClientProvider messages={messages}>
         <body className={inter.className}>
           <FloatingButton />
-          <CookieBanner />
           <AnalyticsProvider />
           <SpeedInsights />
           <Analytics />
