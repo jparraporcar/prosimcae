@@ -18,6 +18,7 @@ import { Button } from "../../ui/button";
 import { useLocale } from "next-intl";
 import { Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
 
 interface ResumeUploadFormProps {
   closeDialog: () => void;
@@ -26,6 +27,7 @@ interface ResumeUploadFormProps {
 export const ResumeUploadForm: React.FC<ResumeUploadFormProps> = (props) => {
   const locale = useLocale();
   const { toast } = useToast();
+  const [buttonIsActive, setButtonIsActive] = useState<boolean>(false);
 
   const pdfFileSchema = z.object({
     fileUpload: z
@@ -98,9 +100,11 @@ export const ResumeUploadForm: React.FC<ResumeUploadFormProps> = (props) => {
                 <Input
                   type="file"
                   accept="application/pdf"
+                  disabled={isSubmitting ? true : false}
                   onChange={(e) => {
                     if (e.target.files && e.target.files[0]) {
                       field.onChange(e.target.files[0]);
+                      setButtonIsActive(true);
                     }
                   }}
                 />
@@ -112,7 +116,7 @@ export const ResumeUploadForm: React.FC<ResumeUploadFormProps> = (props) => {
         <Button
           className="mr-0 mt-2"
           type="submit"
-          disabled={isSubmitting ? true : false}
+          disabled={isSubmitting || !buttonIsActive ? true : false}
         >
           {isSubmitting ? <Loader2 className="animate-spin" /> : null}
           {isSubmitting ? "Please wait" : "Submit"}
