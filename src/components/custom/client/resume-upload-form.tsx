@@ -1,16 +1,13 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import type { PutBlobResult } from "@vercel/blob";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -25,7 +22,6 @@ interface ResumeUploadFormProps {
 }
 
 export const ResumeUploadForm: React.FC<ResumeUploadFormProps> = (props) => {
-  const locale = useLocale();
   const { toast } = useToast();
   const [buttonIsActive, setButtonIsActive] = useState<boolean>(false);
 

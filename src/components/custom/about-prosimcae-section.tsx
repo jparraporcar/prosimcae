@@ -1,7 +1,6 @@
 // AboutProsimcaeSection.tsx
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Linkedin } from "lucide-react";
 import { about } from "@/lib/content";
 import { useTranslations } from "next-intl";
 

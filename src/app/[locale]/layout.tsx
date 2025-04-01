@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { NavigationWrapper } from "@/components/custom/navigation-wrapper";
-import CookieBanner from "@/components/custom/client/cookie-banner";
 import { AnalyticsProvider } from "@/components/custom/client/analytics-provider";
 import Footer from "@/components/custom/footer";
 import { Analytics } from "@vercel/analytics/react";

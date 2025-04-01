@@ -1,17 +1,12 @@
 "use client";
 
 import * as React from "react";
-
-import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import "./carousel-mobile.css";
 import { useInView } from "react-intersection-observer";

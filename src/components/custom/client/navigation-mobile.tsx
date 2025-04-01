@@ -5,52 +5,22 @@ import {
   SheetClose,
   SheetContent,
   SheetDescription,
-  SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { useState } from "react";
 import Image from "next/image";
 import logo from "@/images/provisional-logo-prosimcae.webp";
 import "./navigation-mobile.css";
 import { navLinkLabels } from "@/lib/content";
 import { useTranslations } from "next-intl";
-import { useLocale } from "next-intl";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { Link } from "@/i18n/routing";
 
 export const NavigationMobile: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
-  const router = useRouter();
   const t = useTranslations();
-  const locale = useLocale();
-
-  const handleClick = (id: string) => {
-    setIsOpen((prevState) => !prevState);
-    if (pathname === "/" || pathname === "/en" || pathname === "/es") {
-      // On the main page, scroll to the section
-      setTimeout(() => {
-        const section = document.querySelector(id);
-        if (section) {
-          section.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      }, 400);
-    } else {
-      // Navigate to the main page and reset to the top
-      console.log(router);
-      router.replace(`/${locale}`);
-      setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-        const section = document.querySelector(id);
-        if (section) {
-          section.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      }, 400);
-    }
-  };
 
   return (
     <Sheet open={isOpen}>

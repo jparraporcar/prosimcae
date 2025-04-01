@@ -1,11 +1,7 @@
 import { Link } from "@/i18n/routing";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-  type BlogEntry,
-  DifficultyLevel,
-  getDifficultyColor,
-} from "../../lib/types";
+import { DifficultyLevel, getDifficultyColor } from "../../lib/types";
 import { useTranslations } from "next-intl";
 import { blog } from "@/lib/content";
 

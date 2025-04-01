@@ -1,11 +1,8 @@
 import * as React from "react";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
@@ -14,7 +11,6 @@ import logo from "@/images/provisional-logo-prosimcae.webp";
 import { navLinkLabels } from "@/lib/content";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
-import { usePathname } from "next/navigation";
 import { Link } from "@/i18n/routing";
 
 export function Navigation() {

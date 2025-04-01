@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import { FaCheck } from "react-icons/fa";
 import "./service.css";
 import { useTranslations } from "next-intl";
