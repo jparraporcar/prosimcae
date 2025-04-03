@@ -43,6 +43,7 @@ export const VideoItem: React.FC<VideoItemProps> = ({ videoItem }) => {
       ])}
     >
       <video
+        preload="none"
         ref={videoRef}
         loop={videoItem.loop}
         muted={videoItem.muted}
