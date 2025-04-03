@@ -14,6 +14,7 @@ import { Metadata } from "next";
 import { Toaster } from "@/components/ui/toaster";
 import FloatingButton from "@/components/custom/client/floating-button";
 import { setRequestLocale } from "next-intl/server";
+import { WebVitals } from "@/components/custom/client/web-vitals";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -64,6 +65,7 @@ export default async function LocaleLayout({
           <AnalyticsProvider />
           <SpeedInsights />
           <Analytics />
+          <WebVitals />
           <header className="w-full flex flex-row max-md:justify-end justify-center relative z-10">
             <NavigationWrapper />
           </header>

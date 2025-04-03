@@ -5,6 +5,7 @@ import Image from "next/image";
 import "./rotating-image-carousel.css";
 import { imageItem } from "@/lib/types";
 import { useTranslations } from "next-intl";
+import { useInView } from "react-intersection-observer";
 
 interface RotatingImageCarouselProps {
   images: imageItem[];
@@ -16,6 +17,7 @@ export const RotatingImageCarousel = ({
   const [angle, setAngle] = useState(0);
   const radius = 185; // Adjust radius based on design needs
   const t = useTranslations();
+  const { ref: carouselRef, inView } = useInView({ threshold: 0.1 });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -26,7 +28,7 @@ export const RotatingImageCarousel = ({
   }, []);
 
   return (
-    <div className="carousel-container">
+    <div className="carousel-container" ref={carouselRef}>
       {images.map((image, index) => {
         const theta = (2 * Math.PI * index) / images.length;
         const x = Math.round(radius * Math.cos(theta + angle));

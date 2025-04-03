@@ -15,11 +15,11 @@ import { useEffect, useState } from "react";
 import { imageItem } from "@/lib/types";
 import { useTranslations } from "next-intl";
 
-interface RotatingImageCarouselProps {
+interface CarouselMobileProps {
   images: imageItem[];
 }
 
-export const CarouselMobile: React.FC<RotatingImageCarouselProps> = (props) => {
+export const CarouselMobile: React.FC<CarouselMobileProps> = (props) => {
   const { ref: carouselRef, inView } = useInView({ threshold: 0.1 });
   const [api, setApi] = useState<CarouselApi>();
   const t = useTranslations();
