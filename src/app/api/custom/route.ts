@@ -1,4 +1,3 @@
-import { sql } from "@vercel/postgres";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
@@ -12,11 +11,28 @@ export async function POST(request: Request) {
     explanation,
   } = await request.json();
 
+  const { sql } = await import("@vercel/postgres");
+
   try {
     await sql`
-            INSERT INTO contacts_custom (companyName, companyCountry, contactName, contactEmail, complexity, estDeadline, explanation)
-            VALUES (${companyName}, ${companyCountry}, ${contactName}, ${contactEmail}, ${complexity}, ${estDeadline}, ${explanation});
-          `;
+      INSERT INTO contacts_custom (
+        companyName,
+        companyCountry,
+        contactName,
+        contactEmail,
+        complexity,
+        estDeadline,
+        explanation
+      ) VALUES (
+        ${companyName},
+        ${companyCountry},
+        ${contactName},
+        ${contactEmail},
+        ${complexity},
+        ${estDeadline},
+        ${explanation}
+      );
+    `;
   } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }

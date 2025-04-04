@@ -1,4 +1,3 @@
-import { sql } from "@vercel/postgres";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
@@ -14,6 +13,8 @@ export async function POST(request: Request) {
 
   const projDuration =
     expectProjDurationHours !== undefined ? expectProjDurationHours : null;
+
+  const { sql } = await import("@vercel/postgres");
 
   try {
     await sql`
