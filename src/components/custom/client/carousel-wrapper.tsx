@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { CarouselMobile } from "./carousel-mobile";
-import { RotatingImageCarousel } from "./rotating-image-carousel";
+import dynamic from "next/dynamic";
 import { useMediaQuery } from "react-responsive";
 import { imageItem } from "@/lib/types";
 
@@ -10,9 +9,21 @@ interface NavigationWrapperProps {
   images: imageItem[];
 }
 
-export const CarouselWrapper: React.FC<NavigationWrapperProps> = (props) => {
-  const isSmall = useMediaQuery({ query: "(max-width: 767px)" });
+const CarouselMobile = dynamic(() => import("./carousel-mobile"), {
+  ssr: false,
+  loading: () => <div style={{ height: 300 }} className="bg-gray-100" />,
+});
 
+const RotatingImageCarousel = dynamic(
+  () => import("./rotating-image-carousel"),
+  {
+    ssr: false,
+    loading: () => <div style={{ height: 300 }} className="bg-gray-100" />,
+  }
+);
+
+const CarouselWrapper: React.FC<NavigationWrapperProps> = ({ images }) => {
+  const isSmall = useMediaQuery({ query: "(max-width: 767px)" });
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -26,10 +37,12 @@ export const CarouselWrapper: React.FC<NavigationWrapperProps> = (props) => {
   return (
     <>
       {isSmall ? (
-        <CarouselMobile images={props.images} />
+        <CarouselMobile images={images} />
       ) : (
-        <RotatingImageCarousel images={props.images} />
+        <RotatingImageCarousel images={images} />
       )}
     </>
   );
 };
+
+export default CarouselWrapper;

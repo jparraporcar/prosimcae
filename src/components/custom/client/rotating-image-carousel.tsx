@@ -11,9 +11,7 @@ interface RotatingImageCarouselProps {
   images: imageItem[];
 }
 
-export const RotatingImageCarousel = ({
-  images,
-}: RotatingImageCarouselProps) => {
+const RotatingImageCarousel = ({ images }: RotatingImageCarouselProps) => {
   const [angle, setAngle] = useState(0);
   const radius = 185; // Adjust radius based on design needs
   const t = useTranslations();
@@ -65,3 +63,5 @@ export const RotatingImageCarousel = ({
     </div>
   );
 };
+
+export default RotatingImageCarousel;

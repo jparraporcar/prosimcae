@@ -8,13 +8,17 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { ContactDialogOndemandForm } from "./contact-dialog-ondemand-form";
+// ⬇️ dynamic import for the ondemand form
+import dynamic from "next/dynamic";
+const ContactDialogOndemandForm = dynamic(
+  () => import("./contact-dialog-ondemand-form")
+);
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { dialogGetInTouchButton } from "@/lib/content";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
-export const ContactDialogOndemand: React.FC = () => {
+const ContactDialogOndemand: React.FC = () => {
   const [switchDialog, setSwitchDialog] = useState<boolean>(false);
   const t = useTranslations();
 
@@ -47,3 +51,5 @@ export const ContactDialogOndemand: React.FC = () => {
     </Dialog>
   );
 };
+
+export default ContactDialogOndemand;

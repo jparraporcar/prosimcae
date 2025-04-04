@@ -67,9 +67,7 @@ interface ContactDialogCustomForm {
   closeDialog: () => void;
 }
 
-export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
-  props
-) => {
+const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (props) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -306,3 +304,5 @@ export const ContactDialogCustomForm: React.FC<ContactDialogCustomForm> = (
     </Form>
   );
 };
+
+export default ContactDialogCustomForm;

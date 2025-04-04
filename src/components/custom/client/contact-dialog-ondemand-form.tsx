@@ -62,7 +62,7 @@ interface ContactDialogCustomForm {
   closeDialog: () => void;
 }
 
-export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
+const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
   props
 ) => {
   const locale = useLocale();
@@ -301,3 +301,5 @@ export const ContactDialogOndemandForm: React.FC<ContactDialogCustomForm> = (
     </Form>
   );
 };
+
+export default ContactDialogOndemandForm;

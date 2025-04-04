@@ -19,7 +19,7 @@ interface CarouselMobileProps {
   images: imageItem[];
 }
 
-export const CarouselMobile: React.FC<CarouselMobileProps> = (props) => {
+const CarouselMobile: React.FC<CarouselMobileProps> = (props) => {
   const { ref: carouselRef, inView } = useInView({ threshold: 0.1 });
   const [api, setApi] = useState<CarouselApi>();
   const t = useTranslations();
@@ -77,3 +77,5 @@ export const CarouselMobile: React.FC<CarouselMobileProps> = (props) => {
     </div>
   );
 };
+
+export default CarouselMobile;

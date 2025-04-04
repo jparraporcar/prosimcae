@@ -8,13 +8,16 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { ContactDialogCustomForm } from "./contact-dialog-custom-form";
+import dynamic from "next/dynamic";
+const ContactDialogCustomForm = dynamic(
+  () => import("./contact-dialog-custom-form")
+);
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { dialogGetInTouchButton } from "@/lib/content";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
-export const ContactDialogCustom: React.FC = () => {
+const ContactDialogCustom: React.FC = () => {
   const [switchDialog, setSwitchDialog] = useState<boolean>(false);
   const t = useTranslations();
 
@@ -47,3 +50,5 @@ export const ContactDialogCustom: React.FC = () => {
     </Dialog>
   );
 };
+
+export default ContactDialogCustom;

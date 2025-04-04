@@ -12,9 +12,10 @@ import {
   openImages,
   studyCasesSections,
 } from "@/lib/content";
-import { ContactDialogCustom } from "@/components/custom/client/contact-dialog-custom";
-import { ContactDialogOndemand } from "@/components/custom/client/contact-dialog-ondemand";
-import { CarouselWrapper } from "@/components/custom/client/carousel-wrapper";
+
+import ContactDialogCustom from "@/components/custom/client/contact-dialog-custom";
+import ContactDialogOndemand from "@/components/custom/client/contact-dialog-ondemand";
+import CarouselWrapper from "@/components/custom/client/carousel-wrapper";
 import AboutProsimcaeSection from "@/components/custom/about-prosimcae-section";
 import JoinNetworkSection from "@/components/custom/join-network-section";
 import { useTranslations } from "next-intl";
