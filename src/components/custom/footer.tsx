@@ -66,24 +66,6 @@ export default function Footer() {
               <Instagram />
               <span className="sr-only">Instagram</span>
             </a>
-            <a
-              href="https://www.linkedin.com/in/jordiparraporcar/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
-            >
-              <Linkedin size={24} />
-              <span className="sr-only">{t("social.linkedin")}</span>
-            </a>
-            <a
-              href="https://www.x.com/prosimcae"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
-            >
-              <FaXTwitter size={24} />
-              <span className="sr-only">X (Twitter)</span>
-            </a>
           </div>
         </div>
       </div>
